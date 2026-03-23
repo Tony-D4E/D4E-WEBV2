@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, Phone, Mail, Building2, User, MessageSquare, CheckCircle, ArrowRight, Loader2, AlertCircle } from 'lucide-react';
+import { Send, Phone, Mail, Building2, MessageSquare, CheckCircle, ArrowRight, Loader2, AlertCircle } from 'lucide-react';
 
 const FORMSPREE_URL = 'https://formspree.io/f/xdawrgoz';
 
