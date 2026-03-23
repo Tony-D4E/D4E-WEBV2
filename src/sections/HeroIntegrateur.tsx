@@ -86,7 +86,7 @@ export function HeroIntegrateur() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white/20 text-white hover:bg-white/10 hover:border-white/40 rounded-xl text-lg btn-glow"
+                className="border-[#F59E0B]/50 text-[#F59E0B] hover:bg-[#F59E0B]/10 hover:border-[#F59E0B] rounded-xl text-lg btn-glow"
               >
                 <a href="/#contact-form">Discuter de mon projet</a>
               </Button>
