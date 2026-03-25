@@ -420,30 +420,69 @@ export default function ElvyBatPage() {
         </div>
       </section>
 
-      {/* ═══ ÉQUIPE ═══ */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-black text-[#0F1D3A] mb-4">Vos interlocuteurs dédiés</h2>
-          <p className="text-gray-500 mb-12">Une équipe à taille humaine, basée à Genève, Sion et Barcelone</p>
+            {/* ═══ ÉQUIPE ═══ */}
+      <section className="py-24 bg-[#0F1D3A]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00D4C8]/20 border border-[#00D4C8]/40 rounded-full mb-4">
+              <span className="text-sm font-semibold text-[#00D4C8]">Votre équipe dédiée</span>
+            </div>
+            <h2 className="text-4xl font-black text-white mb-3">Des experts à votre écoute</h2>
+            <p className="text-gray-400 text-lg">Une équipe à taille humaine, basée à Genève, Sion et Barcelone</p>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { nom: 'Antonio Spedicato', role: 'Consultant Odoo & Fondateur', tel: '0764344595', email: 'antonio@d4e.cool', photo: '/team-antonio.jpg' },
-              { nom: 'Laëtitia André', role: 'Chef de projet ElvyBat', tel: '0764822139', email: 'laetita@d4e.cool', photo: '/team-laetitia.jpg' },
-            ].map((p, i) => (
-              <div key={i} className="flex flex-col items-center text-center p-6 border border-gray-100 rounded-2xl">
-                <img src={p.photo} alt={p.nom} className="w-20 h-20 rounded-full object-cover mb-4" />
-                <h3 className="font-bold text-[#0F1D3A]">{p.nom}</h3>
-                <p className="text-sm text-gray-500 mb-4">{p.role}</p>
-                <div className="flex gap-3">
-                  <a href={`tel:${p.tel}`} className="flex items-center gap-1 text-sm text-[#00D4C8] hover:underline">
-                    <Phone className="h-4 w-4" />{p.tel}
-                  </a>
-                  <a href={`mailto:${p.email}`} className="flex items-center gap-1 text-sm text-[#00D4C8] hover:underline">
-                    <Mail className="h-4 w-4" />Email
-                  </a>
-                </div>
+            {/* Antonio */}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center hover:bg-white/10 transition-all">
+              <img src="/team-antonio.jpg" alt="Antonio Spedicato"
+                className="w-32 h-32 rounded-full object-cover border-4 border-[#00D4C8] mb-6 shadow-xl" />
+              <h3 className="text-2xl font-black text-white mb-1">Antonio Spedicato</h3>
+              <p className="text-[#00D4C8] font-semibold mb-1">Consultant Odoo & Fondateur</p>
+              <p className="text-gray-400 text-sm mb-6">15 ans d'expérience · Expert ERP BTP</p>
+              <div className="flex flex-col gap-3 w-full">
+                <a href="tel:0764344595"
+                  className="flex items-center justify-center gap-2 px-5 py-3 bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold rounded-xl transition-all">
+                  <Phone className="h-4 w-4" />
+                  0764 344 595
+                </a>
+                <a href="mailto:antonio@d4e.cool"
+                  className="flex items-center justify-center gap-2 px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all border border-white/20">
+                  <Mail className="h-4 w-4" />
+                  antonio@d4e.cool
+                </a>
               </div>
-            ))}
+            </div>
+
+            {/* Laëtitia */}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center hover:bg-white/10 transition-all">
+              <img src="/team-laetitia.jpg" alt="Laëtitia André"
+                className="w-32 h-32 rounded-full object-cover border-4 border-[#F59E0B] mb-6 shadow-xl" />
+              <h3 className="text-2xl font-black text-white mb-1">Laëtitia André</h3>
+              <p className="text-[#F59E0B] font-semibold mb-1">Chef de projet ElvyBat</p>
+              <p className="text-gray-400 text-sm mb-6">Spécialiste déploiement BTP · Suisse & France</p>
+              <div className="flex flex-col gap-3 w-full">
+                <a href="tel:0764822139"
+                  className="flex items-center justify-center gap-2 px-5 py-3 bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold rounded-xl transition-all">
+                  <Phone className="h-4 w-4" />
+                  0764 822 139
+                </a>
+                <a href="mailto:laetita@d4e.cool"
+                  className="flex items-center justify-center gap-2 px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all border border-white/20">
+                  <Mail className="h-4 w-4" />
+                  laetita@d4e.cool
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-12 text-center">
+            <a href="#contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold text-lg rounded-xl transition-all shadow-lg">
+              <ArrowRight className="h-5 w-5" />
+              Prendre contact maintenant
+            </a>
+            <p className="mt-3 text-gray-500 text-sm">Réponse garantie sous 24h</p>
           </div>
         </div>
       </section>
