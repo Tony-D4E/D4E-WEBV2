@@ -3,10 +3,9 @@ import { ArrowRight, Award, MapPin, CheckCircle } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const services = [
-  'Implémentation Odoo',
-  'Personnalisation',
-  'Formation',
-  'Support',
+  'Prix fixe transparent',
+  'Déploiement en 8h',
+  'Spécificités suisses incluses',
 ];
 
 export function HeroIntegrateur() {
@@ -36,7 +35,7 @@ export function HeroIntegrateur() {
             >
               <Award className="h-5 w-5 text-white" />
               <span className="text-sm font-bold text-white">
-                Partenaire Odoo Gold Suisse
+                Gold Partner Odoo · Suisse · France · Espagne
               </span>
             </div>
 
@@ -46,15 +45,15 @@ export function HeroIntegrateur() {
               className={`space-y-4 animate-on-scroll delay-1 ${titleVisible ? 'is-visible' : ''}`}
             >
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[0.95] tracking-tight">
-                Intégrateur <span className="text-gradient-animated">Odoo</span> en Suisse
+                Éditeur & intégrateur <span className="text-gradient-animated">Odoo</span> en Suisse
               </h1>
               <p className="text-xl text-gray-400 max-w-xl leading-relaxed">
-                Experts Odoo depuis 2019. Nous accompagnons les PME et grandes entreprises 
-                suisses dans leur transformation digitale avec des solutions ERP sur mesure.
+                D4E conçoit la suite Elvy — des solutions métier prêtes à l'emploi pour le BTP, 
+                le juridique et l'imprimerie, construites sur Odoo Enterprise.
               </p>
             </div>
             
-            {/* Services */}
+            {/* Checks */}
             <div 
               ref={servicesRef}
               className={`flex flex-wrap gap-3 stagger-children ${servicesVisible ? 'is-visible' : ''}`}
@@ -77,8 +76,8 @@ export function HeroIntegrateur() {
                 size="lg"
                 className="bg-gradient-to-r from-[#00B4A6] via-[#00D4C8] to-[#06B6D4] hover:opacity-90 text-white font-bold px-8 rounded-xl glow-cyan text-lg btn-glow pulse-glow"
               >
-                <a href="/tarifs">
-                  Découvrir nos offres
+                <a href="/#elvy">
+                  Découvrir la suite Elvy
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
@@ -104,6 +103,10 @@ export function HeroIntegrateur() {
               <div className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 card-lift">
                 <MapPin className="h-4 w-4 text-[#00D4C8]" />
                 <span className="text-sm text-gray-300">Sion</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 card-lift">
+                <MapPin className="h-4 w-4 text-[#00D4C8]" />
+                <span className="text-sm text-gray-300">Barcelone</span>
               </div>
             </div>
           </div>
@@ -136,22 +139,6 @@ export function HeroIntegrateur() {
             </div>
           </div>
         </div>
-      </div>
-      
-      {/* SEO Hidden Content */}
-      <div className="sr-only">
-        <h2>Intégrateur Odoo Suisse - Partenaire Odoo Gold</h2>
-        <p>
-          Digital4Efficiency est votre partenaire Odoo Gold en Suisse. Basés à Genève et Sion, 
-          nous accompagnons les entreprises suisses dans leur transformation digitale avec Odoo ERP. 
-          Nos services incluent l'implémentation Odoo, la personnalisation, la formation des équipes 
-          et le support technique. Avec plus de 150 projets réalisés depuis 2019, nous sommes 
-          experts dans le déploiement d'Odoo pour les PME et grandes entreprises en Suisse romande.
-        </p>
-        <p>
-          Intégrateur Odoo Suisse, partenaire Odoo Gold, ERP Suisse, Odoo Genève, Odoo Sion, 
-          implémentation Odoo, consultant Odoo, formation Odoo, support Odoo, transformation digitale PME.
-        </p>
       </div>
     </section>
   );
