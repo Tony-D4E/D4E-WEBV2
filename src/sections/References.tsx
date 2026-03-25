@@ -1,39 +1,39 @@
-import { Quote, Star, Building2, HardHat, Home, Wrench } from 'lucide-react';
+import { Quote, Star, Building2, HardHat, Wrench, Shield, Watch, Paintbrush } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const clients = [
-  { name: 'CSD', sector: 'Construction', icon: Building2 },
-  { name: 'CSD Energie', sector: 'Énergie & BTP', icon: HardHat },
-  { name: 'CSD Home', sector: 'Rénovation', icon: Home },
-  { name: 'CSD Rénovation', sector: 'Rénovation', icon: Wrench },
-  { name: 'CSD Menuiserie', sector: 'Menuiserie', icon: Building2 },
-  { name: 'CSD Peinture', sector: 'Peinture', icon: HardHat },
-  { name: 'CSD Carrelage', sector: 'Carrelage', icon: Home },
-  { name: 'CSD Plâtrerie', sector: 'Plâtrerie', icon: Wrench },
+  { name: 'État de Genève', sector: 'Administration publique', icon: Building2 },
+  { name: 'ACRO BTP Suisse', sector: 'BTP · Travaux en hauteur', icon: HardHat },
+  { name: 'Sanitherme by Adtek', sector: 'Chauffage · Sanitaire', icon: Wrench },
+  { name: 'Caragnano', sector: 'Peinture · Rénovation', icon: Paintbrush },
+  { name: 'Art du Temps', sector: 'Horlogerie · Luxe', icon: Watch },
+  { name: 'ADSI Sécurité', sector: 'Sécurité · Alarme', icon: Shield },
+  { name: 'Czapek', sector: 'Horlogerie', icon: Watch },
+  { name: 'Et bien d\'autres...', sector: 'PME suisses', icon: Building2 },
 ];
 
 const testimonials = [
   {
-    quote: "ElvyBat a complètement transformé notre gestion. On facture 3x plus vite et on a enfin une vision claire de nos marges sur chaque chantier. L'IA pour les bons de régie est un game-changer.",
-    author: "Marc Dupont",
+    quote: "Grâce à ElvyBat, nous pilotons nos chantiers en temps réel et maîtrisons enfin la rentabilité de chaque projet. La facturation de situation est devenue automatique.",
+    author: "Directeur Général",
     role: "Directeur Général",
-    company: "CSD Construction SA",
+    company: "ACRO BTP Suisse",
     rating: 5,
     photo: "/client-testimonial-1.jpg",
   },
   {
-    quote: "Avant ElvyBat, on passait des heures à faire des situations. Maintenant c'est automatique. L'équipe de Digital4Efficiency nous a accompagnés de A à Z avec une réactivité impressionnante.",
-    author: "Sophie Martin",
+    quote: "Un outil structurant pour suivre nos chantiers, établir nos factures de situation et analyser notre rentabilité en temps réel. L'équipe D4E nous a accompagnés de A à Z.",
+    author: "Responsable Administratif",
     role: "Responsable Administratif",
-    company: "CSD Rénovation",
+    company: "Sanitherme by Adtek",
     rating: 5,
     photo: "/client-testimonial-2.jpg",
   },
   {
-    quote: "Le rapport vocal multilingue est génial. Nos ouvriers portugais dictent leur rapport en portugais, et ça arrive en français dans Odoo. Gain de temps énorme !",
-    author: "Antonio Spedicato",
-    role: "Consultant Odoo",
-    company: "Digital4Efficiency",
+    quote: "D4E nous a accompagnés avec une vraie compréhension de notre secteur. De l'analyse initiale à la mise en production, leur réactivité est impressionnante.",
+    author: "Directeur",
+    role: "Directeur",
+    company: "ADSI Sécurité",
     rating: 5,
     photo: "/team-antonio.jpg",
   },
