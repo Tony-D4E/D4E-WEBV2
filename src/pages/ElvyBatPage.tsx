@@ -1,5 +1,5 @@
 import { 
-  HardHat, CheckCircle, ArrowRight, Star, Sparkles, 
+  HardHat, CheckCircle, ArrowRight, Sparkles, 
   Mic, FileText, Building2, Clock, TrendingUp, 
   Calendar, BarChart3, ClipboardList, Calculator,
   Shield, Zap, ChevronRight, Phone, Mail
@@ -66,27 +66,6 @@ const miseEnPlace = [
   'Mise en place de vos documents et de votre image',
   'Structuration des articles et des ouvrages',
   'Configuration comptable et suivi de rentabilité chantier',
-];
-
-const temoignages = [
-  {
-    texte: 'Grâce à ElvyBat, nous pilotons nos chantiers en temps réel et maîtrisons enfin la rentabilité de chaque projet. La facturation de situation est devenue automatique.',
-    auteur: 'Directeur Général',
-    societe: 'ACRO BTP Suisse',
-    photo: '/btp-carreleur2.jpg',
-  },
-  {
-    texte: 'Un outil structurant pour suivre nos chantiers, établir nos factures de situation et analyser notre rentabilité en temps réel. L\'équipe D4E nous a accompagnés de A à Z.',
-    auteur: 'Responsable Administratif',
-    societe: 'Sanitherme by Adtek',
-    photo: '/btp-carreleur1.jpg',
-  },
-  {
-    texte: 'D4E nous a accompagnés avec une vraie compréhension de notre secteur. De l\'analyse initiale à la mise en production, leur réactivité est impressionnante.',
-    auteur: 'Directeur',
-    societe: 'ADSI Sécurité',
-    photo: '/btp-chauffage.jpg',
-  },
 ];
 
 export default function ElvyBatPage() {
