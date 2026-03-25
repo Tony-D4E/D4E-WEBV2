@@ -49,7 +49,7 @@ export function HeroIntegrateur() {
               </h1>
               <p className="text-xl text-gray-400 max-w-xl leading-relaxed">
                 D4E conçoit la suite Elvy — des solutions métier prêtes à l'emploi pour le BTP, 
-                le juridique et l'imprimerie, construites sur Odoo Enterprise.
+                le juridique et l'éducation, construites sur Odoo Enterprise.
               </p>
             </div>
             
