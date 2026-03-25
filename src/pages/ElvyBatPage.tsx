@@ -99,7 +99,7 @@ export default function ElvyBatPage() {
             </div>
 
             {/* H1 — Stratégie A validée */}
-            <h1 className="text-5xl sm:text-6xl font-black text-white leading-tight mb-6 drop-shadow-lg">
+            <h1 className="text-5xl sm:text-6xl font-black leading-tight mb-6">
               <span className="text-white drop-shadow-lg">Pilotez vos chantiers.</span><br />
               <span className="text-[#00D4C8]">Maîtrisez vos marges.</span>
             </h1>
