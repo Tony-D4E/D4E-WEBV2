@@ -135,7 +135,7 @@ export default function ElvyBatPage() {
           
 
             {/* Multi-pays */}
-            <div className="mt-8 pt-6 border-t border-white/20">
+            <div className="mt-8">
               <p className="text-xs font-bold text-[#00D4C8] uppercase tracking-widest mb-4">
                 Localisation Odoo incluse · Multi-pays · Multi-langues
               </p>
