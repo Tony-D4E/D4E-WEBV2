@@ -131,27 +131,33 @@ export default function ElvyBatPage() {
               <Button asChild size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl">
                 <a href="#pack">Voir le pack de mise en place</a>
               </Button>
-            
-            {/* Bloc multi-pays */}
+                ))}
+              </div>
+            </div>
+          
+
+            {/* Multi-pays */}
             <div className="mt-8 pt-6 border-t border-white/20">
-              <p className="text-xs font-semibold text-[#00D4C8] uppercase tracking-widest mb-3">
+              <p className="text-xs font-bold text-[#00D4C8] uppercase tracking-widest mb-4">
                 Localisation Odoo incluse · Multi-pays · Multi-langues
               </p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { flag: '🇨🇭', pays: 'Suisse', detail: 'CHF · TVA CH' },
-                  { flag: '🇫🇷', pays: 'France', detail: 'EUR · TVA FR' },
-                  { flag: '🇪🇸', pays: 'Espagne', detail: 'EUR · TVA ES' },
-                  { flag: '🇮🇹', pays: 'Italie', detail: 'EUR · TVA IT' },
-                ].map((p, i) => (
-                  <div key={i} className="flex items-center gap-2 px-3 py-2 bg-white/10 border border-white/20 rounded-xl backdrop-blur-sm">
-                    <span className="text-xl">{p.flag}</span>
-                    <div>
-                      <p className="text-white font-bold text-sm leading-none">{p.pays}</p>
-                      <p className="text-gray-400 text-xs mt-0.5">{p.detail}</p>
-                    </div>
-                  </div>
-                ))}
+              <div className="flex flex-row flex-wrap gap-3">
+                <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
+                  <span className="font-bold text-white text-sm">🇨🇭</span>
+                  <div><p className="text-white font-bold text-sm">Suisse</p><p className="text-[#00D4C8] text-xs">CHF · TVA CH</p></div>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
+                  <span className="font-bold text-white text-sm">🇫🇷</span>
+                  <div><p className="text-white font-bold text-sm">France</p><p className="text-[#00D4C8] text-xs">EUR · TVA FR</p></div>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
+                  <span className="font-bold text-white text-sm">🇪🇸</span>
+                  <div><p className="text-white font-bold text-sm">Espagne</p><p className="text-[#00D4C8] text-xs">EUR · TVA ES</p></div>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
+                  <span className="font-bold text-white text-sm">🇮🇹</span>
+                  <div><p className="text-white font-bold text-sm">Italie</p><p className="text-[#00D4C8] text-xs">EUR · TVA IT</p></div>
+                </div>
               </div>
             </div>
           </div>
