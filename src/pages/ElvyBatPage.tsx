@@ -100,7 +100,7 @@ export default function ElvyBatPage() {
 
             {/* H1 — Stratégie A validée */}
             <h1 className="text-5xl sm:text-6xl font-black leading-tight mb-6">
-              <span className="text-white drop-shadow-lg">Pilotez vos chantiers.</span><br />
+              <span style={{color: '#FFFFFF'}} className="drop-shadow-lg">Pilotez vos chantiers.</span><br />
               <span className="text-[#00D4C8]">Maîtrisez vos marges.</span>
             </h1>
 
@@ -134,15 +134,14 @@ export default function ElvyBatPage() {
             </div>
 
             
-          </div>
-        </div>
-      </section>
-
-      
+          
             <p className="mt-5 text-sm text-gray-300">
               <span className="text-[#00D4C8] font-bold">✓</span>{' '}
               Localisation Odoo incluse — Plans comptables, TVA et documents légaux adaptés à chaque pays&nbsp;: Suisse · France · Espagne · Italie
             </p>
+          </div>
+        </div>
+      </section>
       
             
       {/* ═══ STATS corrigées ═══ */}
