@@ -4,7 +4,7 @@ import { WhatsAppWidget } from './components/WhatsAppWidget';
 import { CookieBanner } from './components/CookieBanner';
 import { Home } from './pages/Home';
 import { Elvy } from './pages/Elvy';
-import { ElvyBatPage } from './pages/ElvyBatPage';
+import import ElvyBatPage from './pages/ElvyBatPage';
 import { TarifsPage } from './pages/TarifsPage';
 import { Support } from './pages/Support';
 import { NotFound } from './pages/NotFound';
