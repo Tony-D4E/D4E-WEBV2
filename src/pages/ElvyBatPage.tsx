@@ -131,9 +131,7 @@ export default function ElvyBatPage() {
               <Button asChild size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl">
                 <a href="#pack">Voir le pack de mise en place</a>
               </Button>
-                ))}
               </div>
-            </div>
           
 
             {/* Multi-pays */}
@@ -162,7 +160,6 @@ export default function ElvyBatPage() {
             </div>
           </div>
           </div>
-        </div>
       </section>
       
             
