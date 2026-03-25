@@ -3,7 +3,7 @@ import {
   GraduationCap, 
   Printer, 
   Scale,
-  Building2,
+  
   Shield,
   ArrowRight,
   CheckCircle,
