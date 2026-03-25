@@ -132,8 +132,6 @@ export default function ElvyBatPage() {
                 <a href="#pack">Voir le pack de mise en place</a>
               </Button>
             </div>
-
-            
           
             <p className="mt-5 text-sm text-gray-300">
               <span className="text-[#00D4C8] font-bold">✓</span>{' '}
