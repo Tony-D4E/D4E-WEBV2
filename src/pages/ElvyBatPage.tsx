@@ -129,7 +129,7 @@ export default function ElvyBatPage() {
                 </a>
               </Button>
               <Button asChild size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl">
-                <a href="#pack">Voir le pack de mise en place</a>
+                <a href="#contact">Voir le pack de mise en place</a>
               </Button>
               </div>
           
