@@ -74,7 +74,6 @@ export default function ElvyBatPage() {
   const { ref: featRef, isVisible: featVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
   const { ref: iaRef, isVisible: iaVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
   const { ref: packRef, isVisible: packVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
-  const { ref: temRef, isVisible: temVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
 
   return (
     <div className="min-h-screen bg-white pt-20">
