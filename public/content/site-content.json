@@ -1,119 +1,96 @@
 {
   "hero": {
-    "badge": "Partenaire Odoo Gold Suisse",
-    "titre": "Intégrateur Odoo en Suisse",
-    "description": "Experts Odoo depuis 2019. Nous accompagnons les entreprises suisses dans leur transformation digitale avec des solutions ERP sur mesure.",
-    "cta": {
-      "principal": "Découvrir nos offres",
-      "secondaire": "Discuter de mon projet"
-    },
+    "badge": "Gold Partner Odoo · Suisse · France · Espagne",
+    "titre": "Éditeur & intégrateur Odoo en Suisse",
+    "description": "D4E conçoit la suite Elvy — des solutions métier prêtes à l'emploi pour le BTP, le juridique et l'imprimerie, construites sur Odoo Enterprise.",
+    "cta": { "principal": "Découvrir la suite Elvy", "secondaire": "Discuter de mon projet" },
+    "checks": ["Prix fixe transparent", "Déploiement en 8h", "Spécificités suisses incluses"],
     "stats": [
-      { "valeur": "150+", "label": "Projets" },
-      { "valeur": "50+", "label": "Clients" },
-      { "valeur": "6+", "label": "Années" },
-      { "valeur": "2", "label": "Bureaux" }
+      { "valeur": "154+", "label": "Projets livrés" },
+      { "valeur": "3", "label": "Produits en prod" },
+      { "valeur": "7+", "label": "Années d'expérience" },
+      { "valeur": "3", "label": "Pays" }
     ]
   },
   "metiers": {
-    "titre": "Deux métiers, une expertise",
+    "titre": "Éditeur ET intégrateur — la différence qui compte",
     "integrateur": {
-      "titre": "Intégrateur Odoo",
-      "sousTitre": "Partenaire Gold",
-      "description": "Experts Odoo depuis 2019, nous accompagnons les entreprises suisses dans leur transformation digitale.",
+      "titre": "Intégrateur Odoo", "sousTitre": "Gold Partner",
+      "description": "Gold Partner Odoo depuis 2019. Spécificités suisses nativement intégrées.",
       "services": [
-        { "titre": "Implémentation", "desc": "Déploiement complet d'Odoo" },
-        { "titre": "Personnalisation", "desc": "Développements sur mesure" },
-        { "titre": "Formation", "desc": "Formation de vos équipes" },
-        { "titre": "Support", "desc": "Assistance technique" }
+        { "titre": "Implémentation", "desc": "Déploiement complet d'Odoo adapté à vos processus" },
+        { "titre": "Personnalisation", "desc": "Développements sur mesure et intégrations" },
+        { "titre": "Formation", "desc": "Formation de vos équipes à tous les modules" },
+        { "titre": "Support", "desc": "Assistance technique réactive et maintenance" }
       ]
     },
     "editeur": {
-      "titre": "Éditeur de solutions",
-      "sousTitre": "Gamme Elvy",
-      "description": "Solutions métiers packagées basées sur Odoo. Déploiement rapide, coût maîtrisé.",
+      "titre": "Éditeur de solutions", "sousTitre": "Gamme Elvy",
+      "description": "Suite Elvy — solutions verticales packagées sur Odoo. Prix fixe, déploiement rapide.",
       "produits": [
-        { "nom": "ElvyBat", "tag": "Disponible", "desc": "BTP & Construction", "lien": "/elvybat" },
-        { "nom": "ElvyPrint", "tag": "Bientôt", "desc": "Imprimerie", "lien": "#" },
-        { "nom": "ElvyLaw", "tag": "Bientôt", "desc": "Juridique", "lien": "#" },
-        { "nom": "ElvyImmo", "tag": "Bientôt", "desc": "Immobilier", "lien": "#" }
+        { "nom": "ElvyBat", "tag": "En production", "desc": "BTP & Construction", "lien": "/elvybat" },
+        { "nom": "ElvyPrint", "tag": "En production", "desc": "Imprimerie & Bureautique", "lien": "/elvy" },
+        { "nom": "ElvyLaw", "tag": "En production", "desc": "Avocats & Notaires", "lien": "/elvy" },
+        { "nom": "ElvyAssurance", "tag": "Bientôt", "desc": "Courtiers en assurance", "lien": "#" }
       ]
     }
   },
+  "stats": [
+    { "valeur": "−50%", "label": "Délais de facturation", "note": "avec ElvyBat" },
+    { "valeur": "+20%", "label": "Rentabilité chantier", "note": "clients BTP" },
+    { "valeur": "154+", "label": "Projets livrés", "note": "depuis 2019" },
+    { "valeur": "8h", "label": "Mise en place standard", "note": "chef de projet inclus" }
+  ],
   "tarifs": {
-    "titre": "Nos tarifs",
+    "titre": "Tarifs transparents",
     "starterPack": {
-      "nom": "Starter Pack",
-      "prix": "2'500",
-      "devise": "CHF HT",
-      "description": "Démarrez avec Odoo sans vous ruiner. Tout ce qu'il faut pour professionnaliser votre gestion.",
-      "features": [
-        "CRM & Pipeline commercial",
-        "Devis & Facturation",
-        "Comptabilité Suisse",
-        "Site Web inclus",
-        "Configuration initiale",
-        "Formation utilisateur",
-        "Support 30 jours"
-      ],
-      "note": "Licences Odoo et hébergement non inclus. À prendre directement chez Odoo."
+      "nom": "Starter Pack Odoo", "prix": "2500", "devise": "CHF HT",
+      "description": "Démarrez avec Odoo rapidement. Configuration complète, formation incluse.",
+      "features": ["CRM & Pipeline commercial", "Devis & Facturation", "Comptabilité Suisse QR-factures", "Site Web inclus", "Configuration initiale", "Formation utilisateur", "Support 30 jours"],
+      "note": "Licences Odoo et hébergement non inclus."
+    },
+    "elvybat": {
+      "nom": "ElvyBat Pack BTP", "licence": "490 CHF / an", "installation": "+ 2960 CHF",
+      "description": "Solution BTP complète. Déploiement en 8h, chef de projet inclus.",
+      "features": ["Facturation de situation automatisée", "Suivi rentabilité par chantier", "Planification équipes & ressources", "GED & rapports d'intervention", "8h chef de projet + 1 déplacement inclus"]
     },
     "support": {
       "nom": "Support & Formation",
       "options": [
         { "label": "Forfait 5h", "prix": "750", "unite": "CHF" },
-        { "label": "Forfait 10h", "prix": "1'400", "unite": "CHF" },
-        { "label": "Forfait 20h", "prix": "2'600", "unite": "CHF" }
+        { "label": "Forfait 10h", "prix": "1400", "unite": "CHF" },
+        { "label": "Forfait 20h", "prix": "2600", "unite": "CHF" }
       ]
     }
   },
   "equipe": [
     {
-      "nom": "Antonio Spedicato",
-      "role": "Consultant Odoo & Fondateur",
+      "nom": "Antonio Spedicato", "role": "Consultant Odoo & Fondateur",
       "description": "Expert Odoo depuis 2019. Accompagne les PME suisses dans leur transformation digitale.",
-      "email": "antonio@d4e.cool",
-      "telephone": "0764344595",
-      "photo": "/team-antonio.jpg",
-      "linkedin": "https://www.linkedin.com/in/antoniospedicato"
+      "email": "antonio@d4e.cool", "telephone": "0764344595",
+      "photo": "/team-antonio.jpg", "linkedin": "https://www.linkedin.com/in/antoniospedicato"
     },
     {
-      "nom": "Laëtitia André",
-      "role": "Consultante Odoo & Chef de projet",
-      "description": "Spécialiste en implémentation ERP et gestion de projet.",
-      "email": "laetita@d4e.cool",
-      "telephone": "0764822139",
-      "photo": "/team-laetitia.jpg",
-      "linkedin": "https://www.linkedin.com/in/laëtitia-andré-6b09b4153"
+      "nom": "Laëtitia André", "role": "Consultante Odoo & Chef de projet",
+      "description": "Spécialiste en implémentation ERP et gestion de projet. À l'écoute de vos besoins.",
+      "email": "laetita@d4e.cool", "telephone": "0764822139",
+      "photo": "/team-laetitia.jpg", "linkedin": "https://www.linkedin.com/in/laetitia-andre"
     }
   ],
   "faq": [
-    {
-      "question": "Qu'est-ce qu'un intégrateur Odoo ?",
-      "reponse": "Un intégrateur Odoo est un expert certifié qui accompagne les entreprises dans le déploiement d'Odoo ERP. Digital4Efficiency est partenaire Odoo Gold."
-    },
-    {
-      "question": "Quel est le prix d'une implémentation Odoo ?",
-      "reponse": "Notre Starter Pack débute à 2500 CHF pour une configuration de base. Pour les besoins plus complexes, nous établissons un devis personnalisé."
-    },
-    {
-      "question": "Combien de temps dure une implémentation ?",
-      "reponse": "Un Starter Pack standard se déploie en 2-4 semaines. Un projet plus complexe peut prendre 2-6 mois."
-    }
+    { "question": "Quelle différence avec un intégrateur classique ?", "reponse": "D4E est Gold Partner Odoo ET éditeur de la suite Elvy. Solutions verticales packagées, prix fixe, déploiement en 8h." },
+    { "question": "Qu'est-ce qu'ElvyBat ?", "reponse": "Solution BTP sur Odoo Enterprise. Gestion chantiers, facturation situation, rentabilité. Dès 490 CHF/an, en 8h." },
+    { "question": "Prix d'une implémentation Odoo ?", "reponse": "Starter Pack à 2500 CHF. ElvyBat à 490 CHF/an + 2960 CHF installation clé en main." },
+    { "question": "Intervenez-vous en France ?", "reponse": "Oui, clients en France sur ElvyBat BTP. Bureau à Barcelone pour l'Espagne." }
   ],
   "contact": {
     "telephone": "+41 58 255 11 15",
+    "whatsapp": "+41764344595",
     "email": "info@digital4efficiency.ch",
     "adresses": [
-      {
-        "rue": "Chemin du Pavillon 2",
-        "ville": "1218 Le Grand-Saconnex",
-        "canton": "Genève"
-      },
-      {
-        "rue": "Place du Midi 48",
-        "ville": "1950 Sion",
-        "canton": "Valais"
-      }
+      { "rue": "Chemin du Pavillon 2", "ville": "1218 Le Grand-Saconnex", "canton": "Genève" },
+      { "rue": "Place du Midi 48", "ville": "1950 Sion", "canton": "Valais" },
+      { "rue": "Carrer de la Riera de Sant Miquel 1 BIS", "ville": "08029 Barcelona", "canton": "Espagne" }
     ]
   }
 }
