@@ -1,359 +1,428 @@
-import { Footer } from '../sections/Footer';
 import { 
-  HardHat, 
-  ClipboardList, 
-  Calendar, 
-  FileText, 
-  TrendingUp, 
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Sparkles,
-  Building2,
-  Paintbrush,
-  Wrench,
-  Home,
-  Factory,
-  Calculator,
-  BarChart3
+  HardHat, CheckCircle, ArrowRight, Star, Sparkles, 
+  Mic, FileText, Building2, Clock, TrendingUp, 
+  Calendar, BarChart3, ClipboardList, Calculator,
+  Shield, Zap, ChevronRight, Phone, Mail
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
-const features = [
+const resultats = [
+  { valeur: '−50%', label: 'Délais de facturation', icon: Clock },
+  { valeur: '+20%', label: 'Rentabilité chantier', icon: TrendingUp },
+  { valeur: '−10h', label: 'Tâches admin / semaine', icon: BarChart3 },
+  { valeur: '500+', label: 'Entreprises équipées', icon: Building2 },
+];
+
+const fonctionnalites = [
   {
     icon: ClipboardList,
-    title: 'Gestion de chantiers',
-    description: 'Suivez tous vos chantiers en temps réel. Avancement, budget, délais, documents. Logiciel de gestion de chantier complet.',
+    titre: 'Gestion de chantiers',
+    desc: 'Suivez tous vos chantiers en temps réel. Avancement, budget, délais, documents. Logiciel de gestion de chantier complet.',
   },
   {
     icon: FileText,
-    title: 'Facturation par situation',
-    description: 'Facturez selon l\'avancement des travaux. Génération automatique des situations conformes aux normes suisses.',
+    titre: 'Facturation par situation',
+    desc: 'Facturez selon l\'avancement des travaux. Génération automatique des situations conformes aux normes suisses.',
   },
   {
     icon: Calendar,
-    title: 'Planning chantier',
-    description: 'Planifiez vos équipes et ressources. Vue Gantt intuitive. Planning chantier BTP optimisé.',
+    titre: 'Planning chantier',
+    desc: 'Planifiez vos équipes et ressources. Vue Gantt intuitive. Planning chantier BTP optimisé.',
   },
   {
     icon: Clock,
-    title: 'Suivi du temps',
-    description: 'Pointage des équipes sur chantier. Analyse de la productivité. Suivi des heures de travail.',
+    titre: 'Suivi du temps',
+    desc: 'Pointage des équipes sur chantier. Analyse de la productivité. Suivi des heures de travail.',
   },
   {
     icon: TrendingUp,
-    title: 'Rentabilité chantier',
-    description: 'Suivez la marge de chaque chantier en temps réel. Alertes sur dépassements budgétaires.',
+    titre: 'Rentabilité chantier',
+    desc: 'Suivez la marge de chaque chantier en temps réel. Alertes sur dépassements budgétaires.',
   },
   {
     icon: Calculator,
-    title: 'Devis et chiffrage',
-    description: 'Créez vos devis rapidement avec les tarifs et articles prédéfinis. Conversion en commande en un clic.',
+    titre: 'Devis et chiffrage',
+    desc: 'Créez vos devis rapidement avec les tarifs et articles prédéfinis. Conversion en commande en un clic.',
   },
 ];
 
-const aiFeatures = [
+const modulesInclus = [
+  { nom: 'Comptabilité ElvyBat', desc: 'Liaison bancaire, plan comptable CH, configuration TVA' },
+  { nom: 'Rentabilité Chantier', desc: 'Analytique complète, marges, coûts réels vs prévisionnels' },
+  { nom: 'Accès Odoo standard', desc: 'CRM, Achats, Marketing, Projets, Service sur Site et plus' },
+];
+
+const modulesOption = [
+  { nom: 'ElvyTime', desc: 'Saisie des temps sur chantier depuis mobile' },
+  { nom: 'ElvyDoc', desc: 'Gestion documentaire avancée (GED)' },
+  { nom: 'ElvyTrack', desc: 'Temps, machines, matériaux, bons de livraison' },
+  { nom: 'ElvyCalc', desc: 'Chiffrage & prix de revient automatisés' },
+];
+
+const miseEnPlace = [
+  'Ouverture de la base de données',
+  'Paramétrage et installation des composants ElvyBat',
+  'Création des utilisateurs et des accès',
+  'Mise en place de votre logo et documents',
+  'Structuration des articles et des ouvrages',
+  'Configuration comptable (TVA, plan comptable CH)',
+  'Suivi de rentabilité chantier activé',
+  'Accompagnement personnalisé par un chef de projet',
+  '1 déplacement sur site inclus',
+];
+
+const temoignages = [
   {
-    icon: Sparkles,
-    title: 'Bons de régie par IA',
-    description: 'Recevez un mail ou PDF d\'une régie, notre logiciel reconnaît automatiquement toutes les informations et crée la tâche avec les bonnes données.',
+    texte: 'Grâce à ElvyBat, nous pilotons nos chantiers en temps réel et maîtrisons enfin la rentabilité de chaque projet. La facturation de situation est devenue automatique.',
+    auteur: 'Directeur Général',
+    societe: 'ACRO BTP Suisse',
+    photo: '/btp-carreleur2.jpg',
   },
   {
-    icon: BarChart3,
-    title: 'Rapports vocaux multilingues',
-    description: 'Vos collaborateurs dictent leurs rapports dans leur langue sur mobile. Conversion automatique en français.',
+    texte: 'Un outil structurant pour suivre nos chantiers, établir nos factures de situation et analyser notre rentabilité en temps réel. L\'équipe D4E nous a accompagnés de A à Z.',
+    auteur: 'Responsable Administratif',
+    societe: 'Sanitherme by Adtek',
+    photo: '/btp-carreleur1.jpg',
+  },
+  {
+    texte: 'D4E nous a accompagnés avec une vraie compréhension de notre secteur. De l\'analyse initiale à la mise en production, leur réactivité est impressionnante.',
+    auteur: 'Directeur',
+    societe: 'ADSI Sécurité',
+    photo: '/btp-chauffage.jpg',
   },
 ];
 
-const metiers = [
-  { icon: Building2, name: 'Maçonnerie' },
-  { icon: Paintbrush, name: 'Peinture' },
-  { icon: Wrench, name: 'Plomberie' },
-  { icon: Home, name: 'Menuiserie' },
-  { icon: Factory, name: 'Gros œuvre' },
-  { icon: HardHat, name: 'Entreprise générale' },
-  { icon: Building2, name: 'Rénovation' },
-  { icon: Wrench, name: 'Électricité' },
-];
+export default function ElvyBatPage() {
+  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
+  const { ref: statsRef, isVisible: statsVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
+  const { ref: featRef, isVisible: featVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
+  const { ref: iaRef, isVisible: iaVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
+  const { ref: packRef, isVisible: packVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
+  const { ref: temRef, isVisible: temVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
 
-const avantages = [
-  'Déploiement rapide en 2-4 semaines',
-  'Formation utilisateur incluse',
-  'Support technique réactif',
-  'Mises à jour régulières',
-  'Base Odoo Enterprise stable',
-  'Intégrations avec vos outils existants',
-  'Conforme normes suisses',
-  'Sauvegarde automatique des données',
-];
-
-export function ElvyBatPage() {
   return (
-    <main className="min-h-screen bg-[#0B0F19] pt-20">
-      {/* Hero Section - SEO Optimisé */}
-      <section className="py-24 lg:py-32 bg-[#0F172A] relative overflow-hidden">
-        <div className="blob-glow w-[800px] h-[800px] bg-[#00D4C8]/20 top-0 right-0" />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/10 rounded-full border border-[#00D4C8]/30 mb-6">
-                <HardHat className="h-5 w-5 text-[#00D4C8]" />
-                <span className="text-sm font-bold text-[#00D4C8]">Logiciel BTP Suisse</span>
-              </div>
-              
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
-                Logiciel de gestion de chantier <span className="text-gradient">BTP en Suisse</span>
-              </h1>
-              
-              <p className="text-xl text-gray-400 mb-8">
-                ERP Odoo spécialisé pour les entreprises du bâtiment. Gérez vos chantiers, 
-                facturez par situation, suivez votre rentabilité en temps réel. Solution packagée 
-                pour artisans et PME du BTP.
-              </p>
+    <div className="min-h-screen bg-white pt-20">
 
-              {/* SEO Hidden Content */}
-              <div className="sr-only">
-                <h2>Logiciel ERP BTP Suisse - Gestion chantier Odoo Construction</h2>
-                <p>
-                  Notre logiciel de gestion de chantier pour le BTP est basé sur Odoo, 
-                  le ERP open source leader en Europe. Spécialement adapté aux entreprises 
-                  du bâtiment suisses, il inclut la facturation par situation, le planning 
-                  des équipes, le suivi des chantiers et la gestion de la rentabilité. 
-                  Idéal pour les maçons, peintres, plombiers, menuisiers et entreprises 
-                  générales du bâtiment en Suisse romande.
-                </p>
-              </div>
+      {/* ═══ HERO ═══ */}
+      <section className="relative overflow-hidden bg-[#0B0F19] min-h-[80vh] flex items-center">
+        <div className="absolute inset-0">
+          <img
+            src="/btp-hero.jpg"
+            alt="Chantier BTP ElvyBat"
+            className="w-full h-full object-cover opacity-25"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/80 to-transparent" />
+        </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] hover:opacity-90 text-white font-bold px-8 rounded-xl glow-cyan text-lg">
-                  <a href="/#contact-form">
-                    Demander une démo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 hover:border-white/40 rounded-xl text-lg">
-                  <a href="/tarifs">
-                    Voir les tarifs
-                  </a>
-                </Button>
-              </div>
+        <div ref={heroRef} className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 animate-on-scroll ${heroVisible ? 'is-visible' : ''}`}>
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00D4C8]/20 border border-[#00D4C8]/40 rounded-full mb-6">
+              <HardHat className="h-4 w-4 text-[#00D4C8]" />
+              <span className="text-sm font-semibold text-[#00D4C8]">Suite Elvy · BTP / Construction</span>
             </div>
-            
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#00D4C8]/20 to-[#06B6D4]/20 rounded-3xl blur-3xl" />
-              <div className="relative rounded-3xl overflow-hidden border border-white/10">
-                <img 
-                  src="/btp-illustration.png" 
-                  alt="Gestion de chantier BTP avec ElvyBat" 
-                  className="w-full h-auto"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[#0B0F19] via-[#0B0F19]/80 to-transparent">
-                  <div className="grid grid-cols-3 gap-4">
-                    {[
-                      { value: '500+', label: 'Clients' },
-                      { value: '30%', label: 'Temps gagné' },
-                      { value: '2-4s', label: 'Déploiement' },
-                    ].map((stat, i) => (
-                      <div key={i} className="text-center">
-                        <div className="text-2xl font-bold text-[#00D4C8]">{stat.value}</div>
-                        <div className="text-xs text-gray-400">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
+
+            <h1 className="text-5xl sm:text-6xl font-black text-white leading-tight mb-6">
+              ElvyBat —<br />
+              <span className="text-[#00D4C8]">Gestion de chantier</span><br />
+              sur Odoo
+            </h1>
+
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Démarrez votre gestion de chantier rapidement et simplement. 
+              Solution métier complète, clé en main, pour artisans et PME du bâtiment.
+            </p>
+
+            <div className="flex flex-wrap gap-4 mb-10">
+              {['Clé en main', '1 déplacement inclus', 'Basé sur Odoo Enterprise'].map((item) => (
+                <div key={item} className="flex items-center gap-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-[#00D4C8] flex-shrink-0" />
+                  <span>{item}</span>
                 </div>
-              </div>
+              ))}
             </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-8 rounded-xl">
+                <a href="#contact">
+                  Demander une démo
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 rounded-xl">
+                <a href="#pack">Voir le pack mise en place</a>
+              </Button>
+            </div>
+
+            <p className="mt-4 text-sm text-gray-500">
+              Tarification adaptée · Suisse · France · Espagne
+            </p>
           </div>
         </div>
       </section>
 
-      {/* AI Features */}
-      <section className="py-24 bg-[#0B0F19]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 rounded-full border border-purple-500/30 mb-6">
-              <Sparkles className="h-5 w-5 text-purple-400" />
-              <span className="text-sm font-bold text-purple-400">Intelligence Artificielle</span>
-            </div>
-            <h2 className="text-4xl font-black text-white mb-6">
-              Fonctionnalités <span className="text-gradient">IA</span> pour le BTP
-            </h2>
-            <p className="text-lg text-gray-400">
-              Notre logiciel de gestion de chantier intègre l'intelligence artificielle 
-              pour automatiser vos tâches répétitives.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {aiFeatures.map((feature, i) => (
-              <div key={i} className="p-8 bg-gradient-to-br from-purple-500/10 to-[#00D4C8]/5 rounded-2xl border border-purple-500/20">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-[#00D4C8] flex items-center justify-center mb-6">
-                  <feature.icon className="h-7 w-7 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
+      {/* ═══ RÉSULTATS ═══ */}
+      <section className="py-16 bg-white border-b border-gray-100">
+        <div ref={statsRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${statsVisible ? 'is-visible' : ''}`}>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {resultats.map((r, i) => (
+              <div key={i} className="text-center">
+                <p className="text-4xl font-black text-[#0F1D3A] mb-1">{r.valeur}</p>
+                <p className="text-sm text-gray-500 font-medium">{r.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-24 bg-[#0F172A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ═══ FONCTIONNALITÉS ═══ */}
+      <section className="py-24 bg-gray-50">
+        <div ref={featRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${featVisible ? 'is-visible' : ''}`}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-black text-white mb-6">
-              Tout ce qu'il faut pour votre <span className="text-gradient">entreprise du bâtiment</span>
+            <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">
+              Tout ce qu'il faut pour votre entreprise du bâtiment
             </h2>
-            <p className="text-lg text-gray-400">
+            <p className="text-lg text-gray-500">
               Une solution ERP complète qui couvre tous les besoins de la gestion de chantier.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, i) => (
-              <div key={i} className="p-6 bg-[#111827] rounded-2xl border border-white/10 hover:border-[#00D4C8]/30 transition-all">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#00B4A6] to-[#06B6D4] flex items-center justify-center mb-5 glow-cyan-sm">
-                  <feature.icon className="h-6 w-6 text-white" />
+            {fonctionnalites.map((f, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-xl bg-[#0F1D3A] flex items-center justify-center mb-4">
+                  <f.icon className="h-6 w-6 text-[#00D4C8]" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm">{feature.description}</p>
+                <h3 className="font-bold text-[#0F1D3A] mb-2">{f.titre}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Métiers du BTP */}
-      <section className="py-24 bg-[#0B0F19]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-black text-white mb-6">
-              Adapté à tous les métiers du bâtiment
+      {/* ═══ BLOC IA ═══ */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute w-[600px] h-[600px] bg-purple-50 rounded-full -top-40 -right-40 opacity-60" />
+        </div>
+        <div ref={iaRef} className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${iaVisible ? 'is-visible' : ''}`}>
+          
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-purple-50 border border-purple-200 rounded-full mb-4">
+              <Sparkles className="h-4 w-4 text-purple-600" />
+              <span className="text-sm font-semibold text-purple-600">Intelligence Artificielle</span>
+            </div>
+            <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">
+              Fonctionnalités <span className="text-[#00D4C8]">IA</span> pour le BTP
             </h2>
-            <p className="text-lg text-gray-400">
-              Notre logiciel de gestion de chantier s'adapte à tous les corps de métier du BTP.
+            <p className="text-gray-500 text-lg">
+              Notre logiciel de gestion de chantier intègre l'intelligence artificielle pour automatiser vos tâches répétitives.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {metiers.map((metier, i) => (
-              <div key={i} className="p-6 bg-[#111827] rounded-2xl border border-white/10 text-center hover:border-[#00D4C8]/30 transition-all">
-                <metier.icon className="h-10 w-10 text-[#00D4C8] mx-auto mb-4" />
-                <h3 className="text-lg font-bold text-white">{metier.name}</h3>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 border border-purple-100">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mb-6">
+                <FileText className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0F1D3A] mb-3">Bons de régie par IA</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Recevez un mail ou PDF d'une régie, notre logiciel reconnaît automatiquement toutes les informations et crée la tâche avec les bonnes données.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 border border-teal-100">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center mb-6">
+                <Mic className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#0F1D3A] mb-3">Rapports vocaux multilingues</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Vos collaborateurs dictent leurs rapports dans leur langue sur mobile. Conversion automatique en français dans Odoo.
+              </p>
+            </div>
+          </div>
+
+          {/* Photo chantier */}
+          <div className="mt-16 rounded-3xl overflow-hidden shadow-xl">
+            <img
+              src="/btp-chantier.jpg"
+              alt="Ouvrier BTP sur chantier"
+              className="w-full h-64 object-cover object-center"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ PACK MISE EN PLACE ═══ */}
+      <section id="pack" className="py-24 bg-[#0F1D3A] text-white">
+        <div ref={packRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${packVisible ? 'is-visible' : ''}`}>
+          
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black mb-4">Pack de mise en place</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Clé en main, déploiement rapide. Nous configurons tout pour vous — vous êtes opérationnel rapidement, sans complexité.
+            </p>
+            <p className="mt-4 text-[#00D4C8] font-semibold">
+              Tarification CH · FR · ES — <a href="#contact" className="underline underline-offset-4">Demander un devis</a>
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Ce qu'inclut la mise en place */}
+            <div>
+              <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+                <Shield className="h-5 w-5 text-[#00D4C8]" />
+                Ce que comprend la mise en place
+              </h3>
+              <div className="space-y-3">
+                {miseEnPlace.map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-[#00D4C8] flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-300">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Modules */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <Zap className="h-5 w-5 text-[#F59E0B]" />
+                  Modules inclus d'office
+                </h3>
+                <div className="space-y-3">
+                  {modulesInclus.map((m, i) => (
+                    <div key={i} className="bg-white/5 rounded-xl p-4 border border-white/10">
+                      <p className="font-semibold text-white mb-1">{m.nom}</p>
+                      <p className="text-sm text-gray-400">{m.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-4 text-gray-300">Modules en option</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {modulesOption.map((m, i) => (
+                    <div key={i} className="bg-white/5 rounded-xl p-3 border border-white/10">
+                      <p className="font-semibold text-sm text-white mb-0.5">{m.nom}</p>
+                      <p className="text-xs text-gray-500">{m.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA dévis */}
+          <div className="mt-16 bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
+            <p className="text-xl font-bold mb-2">Vous voulez en savoir plus sur les tarifs ?</p>
+            <p className="text-gray-400 mb-6">Nous adaptons notre offre à votre pays, votre taille et vos besoins.</p>
+            <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl">
+              <a href="#contact">
+                Demander un devis personnalisé
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+            <p className="mt-3 text-sm text-gray-500">Réponse sous 24h · Suisse · France · Espagne</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ TÉMOIGNAGES ═══ */}
+      <section className="py-24 bg-gray-50">
+        <div ref={temRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${temVisible ? 'is-visible' : ''}`}>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">Ils ont transformé leur gestion</h2>
+            <p className="text-gray-500">Des entreprises du BTP qui font confiance à ElvyBat</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {temoignages.map((t, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                <div className="flex gap-1 mb-4">
+                  {[1,2,3,4,5].map((s) => (
+                    <Star key={s} className="h-4 w-4 text-[#F59E0B] fill-[#F59E0B]" />
+                  ))}
+                </div>
+                <p className="text-gray-700 italic leading-relaxed mb-6">"{t.texte}"</p>
+                <div className="flex items-center gap-3">
+                  <img
+                    src={t.photo}
+                    alt={t.auteur}
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                  <div>
+                    <p className="font-bold text-[#0F1D3A] text-sm">{t.auteur}</p>
+                    <p className="text-xs text-gray-500">{t.societe}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Avantages */}
-      <section className="py-24 bg-[#0F172A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-black text-white mb-6">
-                Pourquoi choisir notre <span className="text-gradient">logiciel ERP BTP</span> ?
-              </h2>
-              <p className="text-lg text-gray-400 mb-8">
-                Une solution éprouvée, développée avec des professionnels du bâtiment en Suisse. 
-                Déploiement rapide et accompagnement personnalisé.
-              </p>
-              
-              <ul className="space-y-4">
-                {avantages.map((avantage, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#00D4C8] flex-shrink-0" />
-                    <span className="text-gray-300">{avantage}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#00D4C8]/20 to-[#06B6D4]/20 rounded-3xl blur-3xl" />
-              <div className="relative p-8 bg-[#111827]/80 backdrop-blur-xl rounded-3xl border border-white/10">
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">
-                  Prêt à optimiser votre gestion ?
-                </h3>
-                <div className="space-y-4">
-                  <Button asChild className="w-full bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] hover:opacity-90 text-white font-bold py-6 rounded-xl glow-cyan">
-                    <a href="/#contact-form">
-                      Demander une démo gratuite
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </a>
-                  </Button>
-                  <p className="text-center text-sm text-gray-500">
-                    Démonstration personnalisée de 30 minutes sans engagement
-                  </p>
+      {/* ══╀�ÉQUIPE ═══ */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-black text-[#0F1D3A] mb-4">Vos interlocuteurs dédiés</h2>
+          <p className="text-gray-500 mb-12">Une équipe à taille humaine, basée à Genève, Sion et Barcelone</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              { nom: 'Antonio Spedicato', role: 'Consultant Odoo & Fondateur', tel: '0764344595', email: 'antonio@d4e.cool', photo: '/team-antonio.jpg' },
+              { nom: 'Laëtitia André', role: 'Chef de projet ElvyBat', tel: '0764822139', email: 'laetita@d4e.cool', photo: '/team-laetitia.jpg' },
+            ].map((p, i) => (
+              <div key={i} className="flex flex-col items-center text-center p-6 border border-gray-100 rounded-2xl">
+                <img src={p.photo} alt={p.nom} className="w-20 h-20 rounded-full object-cover mb-4" />
+                <h3 className="font-bold text-[#0F1D3A]">{p.nom}</h3>
+                <p className="text-sm text-gray-500 mb-4">{p.role}</p>
+                <div className="flex gap-3">
+                  <a href={`tel:${p.tel}`} className="flex items-center gap-1 text-sm text-[#00D4C8] hover:underline">
+                    <Phone className="h-4 w-4" />{p.tel}
+                  </a>
+                  <a href={`mailto:${p.email}`} className="flex items-center gap-1 text-sm text-[#00D4C8] hover:underline">
+                    <Mail className="h-4 w-4" />Email
+                  </a>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* SEO Content - Hidden */}
-      <section className="sr-only">
-        <h2>Qu'est-ce qu'un logiciel de gestion de chantier BTP ?</h2>
-        <p>
-          Un logiciel de gestion de chantier BTP est un outil informatique spécialement conçu 
-          pour les entreprises du bâtiment. Il permet de centraliser la gestion de tous les chantiers, 
-          depuis le devis initial jusqu'à la facturation finale. Les fonctionnalités clés incluent 
-          la planification des équipes, le suivi de l'avancement, la gestion des stocks et matériaux, 
-          la facturation par situation, et le calcul de la rentabilité par chantier.
-        </p>
-        
-        <h2>Comment choisir un logiciel ERP pour le BTP ?</h2>
-        <p>
-          Pour choisir le bon logiciel ERP pour votre entreprise du BTP, vérifiez ces critères essentiels : 
-          1) Facilité d'utilisation et interface intuitive, 2) Fonctionnalités spécifiques au BTP 
-          (facturation situation, planning chantier), 3) Conformité aux normes suisses, 4) Support local 
-          en français, 5) Évolutivité selon votre croissance, 6) Intégration avec vos outils existants, 
-          7) Rapport qualité-prix. Odoo répond à tous ces critères et est la solution ERP la plus 
-          utilisée par les PME en Suisse.
-        </p>
-        
-        <h2>Quel est le prix d'un logiciel de gestion de chantier en Suisse ?</h2>
-        <p>
-          Le prix d'un logiciel de gestion de chantier en Suisse varie selon les fonctionnalités 
-          et le nombre d'utilisateurs. Les solutions basiques démarrent autour de 50-100 CHF par mois, 
-          tandis que les ERP complets peuvent coûter plusieurs milliers de francs. Chez Digital4Efficiency, 
-          nous proposons un Starter Pack à 2500 CHF qui inclut la configuration, la formation et le support. 
-          Contactez-nous pour un devis personnalisé adapté à vos besoins spécifiques.
-        </p>
-        
-        <h2>Logiciel BTP Suisse : avantages d'une solution locale</h2>
-        <p>
-          Opter pour un logiciel BTP proposé par un intégrateur suisse présente de nombreux avantages : 
-          conformité parfaite avec la législation suisse (TVA, comptabilité), support technique en français 
-          et dans votre fuseau horaire, connaissance approfondie du marché local, et proximité géographique 
-          pour les formations et interventions sur site. Digital4Efficiency, avec ses bureaux à Genève et Sion, 
-          est votre partenaire idéal pour la digitalisation de votre entreprise du bâtiment en Suisse romande.
-        </p>
-      </section>
-
-      {/* CTA Final */}
-      <section className="py-24 bg-gradient-to-br from-[#00B4A6]/10 to-[#06B6D4]/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-black text-white mb-6">
-            Rejoignez les 500+ entreprises qui utilisent notre logiciel
-          </h2>
-          <p className="text-lg text-gray-400 mb-8">
-            Découvrez comment notre ERP BTP peut transformer la gestion de vos chantiers. 
-            Demandez une démo personnalisée dès aujourd'hui.
-          </p>
-          <Button asChild size="lg" className="bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] hover:opacity-90 text-white font-bold px-8 rounded-xl glow-cyan text-lg">
-            <a href="/#contact-form">
-              Prendre rendez-vous
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
+      {/* ═══ CONTACT FORM ═══ */}
+      <section id="contact" className="py-24 bg-[#0F1D3A]">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-black text-white mb-4">Discutons de votre projet</h2>
+          <p className="text-gray-300 mb-8">Notre équipe vous recontacte sous 24h ouvrées.</p>
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-left space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <input placeholder="Prénom *" className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8]" />
+              <input placeholder="Nom *" className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8]" />
+            </div>
+            <input placeholder="Email *" className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8]" />
+            <input placeholder="Entreprise" className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8]" />
+            <input placeholder="Téléphone" className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8]" />
+            <select className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-gray-400 w-full focus:outline-none focus:border-[#00D4C8]">
+              <option value="">Pays *</option>
+              <option>Suisse</option>
+              <option>France</option>
+              <option>Espagne</option>
+              <option>Autre</option>
+            </select>
+            <textarea placeholder="Votre message *" rows={4} className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] resize-none" />
+            <Button className="w-full bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold py-3 rounded-xl">
+              Envoyer ma demande
+              <ChevronRight className="ml-2 h-5 w-5" />
+            </Button>
+            <p className="text-center text-xs text-gray-600">Vos données ne seront jamais partagées avec des tiers.</p>
+          </div>
         </div>
       </section>
 
-      <Footer />
-    </main>
+    </div>
   );
 }
