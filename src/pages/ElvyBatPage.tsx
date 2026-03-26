@@ -88,7 +88,7 @@ export default function ElvyBatPage() {
             alt="Chantier BTP — logiciel gestion de chantier ElvyBat"
             className="w-full h-full object-cover opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/85 to-[#0B0F19]/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/90 to-[#0B0F19]/50" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/60 via-transparent to-transparent" />
         </div>
 
@@ -110,7 +110,7 @@ export default function ElvyBatPage() {
               </h1>
 
               {/* Sous-titre */}
-              <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+              <p className="text-xl text-white mb-10 leading-relaxed max-w-xl drop-shadow-lg">
                 ElvyBat est le logiciel de gestion de chantier sur Odoo conçu pour les dirigeants du bâtiment qui veulent suivre leur rentabilité en temps réel — avec un déploiement rapide, sans Excel ni ressaisie.
               </p>
 
