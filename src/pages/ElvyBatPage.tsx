@@ -110,7 +110,7 @@ export default function ElvyBatPage() {
               </h1>
 
               {/* Sous-titre */}
-              <p className="text-xl text-white mb-10 leading-relaxed max-w-xl drop-shadow-lg">
+              <p style={{color: '#FFFFFF', textShadow: '0 2px 8px rgba(0,0,0,0.8)'}} className="text-xl mb-10 leading-relaxed max-w-xl">
                 ElvyBat est le logiciel de gestion de chantier sur Odoo conçu pour les dirigeants du bâtiment qui veulent suivre leur rentabilité en temps réel — avec un déploiement rapide, sans Excel ni ressaisie.
               </p>
 
