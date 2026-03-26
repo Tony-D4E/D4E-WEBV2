@@ -79,90 +79,121 @@ export default function ElvyBatPage() {
     <div className="min-h-screen bg-white pt-20">
 
       {/* ═══ HERO ═══ */}
-      <section className="relative overflow-hidden bg-[#0B0F19] min-h-[80vh] flex items-center">
+      <section className="relative overflow-hidden bg-[#0B0F19] min-h-screen flex items-center">
+
+        {/* Photo fond */}
         <div className="absolute inset-0">
           <img
             src="/btp-hero.jpg"
             alt="Chantier BTP — logiciel gestion de chantier ElvyBat"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-25"
           />
-          {/* Double gradient pour garantir lisibilité du texte partout */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/90 to-[#0B0F19]/60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/80 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/85 to-[#0B0F19]/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/60 via-transparent to-transparent" />
         </div>
 
-        <div ref={heroRef} className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 animate-on-scroll ${heroVisible ? 'is-visible' : ''}`}>
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00D4C8]/20 border border-[#00D4C8]/40 rounded-full mb-6">
-              <HardHat className="h-4 w-4 text-[#00D4C8]" />
-              <span className="text-sm font-semibold text-[#00D4C8]">Suite Elvy · BTP / Construction</span>
-            </div>
+        <div ref={heroRef} className={`relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 animate-on-scroll ${heroVisible ? 'is-visible' : ''}`}>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            {/* H1 — Stratégie A validée */}
-            <h1 className="text-5xl sm:text-6xl font-black leading-tight mb-6">
-              <span style={{color: '#FFFFFF'}} className="drop-shadow-lg">Pilotez vos chantiers.</span><br />
-              <span className="text-[#00D4C8]">Maîtrisez vos marges.</span>
-            </h1>
-
-            <p className="text-xl text-gray-200 mb-8 leading-relaxed drop-shadow">
-              ElvyBat est le logiciel de gestion de chantier sur Odoo conçu pour les dirigeants du bâtiment qui veulent suivre leur rentabilité en temps réel — avec un déploiement rapide, sans Excel ni ressaisie.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mb-10">
-              {[
-                'Rentabilité chantier en temps réel',
-                'Facturation de situation automatisée',
-                'Déploiement clé en main en quelques jours',
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-sm text-gray-200">
-                  <CheckCircle className="h-4 w-4 text-[#00D4C8] flex-shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-8 rounded-xl">
-                <a href="#contact">
-                  Demander une démonstration
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <Button asChild size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl">
-                <a href="#contact">Voir le pack de mise en place</a>
-              </Button>
+            {/* Colonne gauche — texte */}
+            <div>
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00D4C8]/20 border border-[#00D4C8]/40 rounded-full mb-8">
+                <HardHat className="h-4 w-4 text-[#00D4C8]" />
+                <span className="text-sm font-semibold text-[#00D4C8]">Suite Elvy · BTP / Construction</span>
               </div>
-          
 
-            {/* Multi-pays */}
-            <div className="mt-8">
-              <p className="text-xs font-bold text-[#00D4C8] uppercase tracking-widest mb-4">
-                Localisation Odoo incluse · Multi-pays · Multi-langues
+              {/* H1 */}
+              <h1 className="text-6xl lg:text-7xl font-black leading-[1.05] mb-8">
+                <span style={{color: '#FFFFFF'}}>Pilotez vos chantiers.</span><br />
+                <span className="text-[#00D4C8]">Maîtrisez vos marges.</span>
+              </h1>
+
+              {/* Sous-titre */}
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+                ElvyBat est le logiciel de gestion de chantier sur Odoo conçu pour les dirigeants du bâtiment qui veulent suivre leur rentabilité en temps réel — avec un déploiement rapide, sans Excel ni ressaisie.
               </p>
-              <div className="flex flex-row flex-wrap gap-3">
-                <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
-                  <span className="font-bold text-white text-sm">🇨🇭</span>
-                  <div><p className="text-white font-bold text-sm">Suisse</p><p className="text-[#00D4C8] text-xs">CHF · TVA CH</p></div>
-                </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
-                  <span className="font-bold text-white text-sm">🇫🇷</span>
-                  <div><p className="text-white font-bold text-sm">France</p><p className="text-[#00D4C8] text-xs">EUR · TVA FR</p></div>
-                </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
-                  <span className="font-bold text-white text-sm">🇪🇸</span>
-                  <div><p className="text-white font-bold text-sm">Espagne</p><p className="text-[#00D4C8] text-xs">EUR · TVA ES</p></div>
-                </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
-                  <span className="font-bold text-white text-sm">🇮🇹</span>
-                  <div><p className="text-white font-bold text-sm">Italie</p><p className="text-[#00D4C8] text-xs">EUR · TVA IT</p></div>
+
+              {/* Checkmarks — 1 ligne */}
+              <div className="flex flex-wrap gap-6 mb-10">
+                {[
+                  'Rentabilité chantier en temps réel',
+                  'Facturation de situation automatisée',
+                  'Déploiement clé en main',
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-sm text-gray-200">
+                    <CheckCircle className="h-5 w-5 text-[#00D4C8] flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 py-4 text-lg rounded-xl">
+                  <a href="#contact">
+                    Demander une démonstration
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+                <Button asChild size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-10 py-4 text-lg rounded-xl">
+                  <a href="#contact">Voir le pack de mise en place</a>
+                </Button>
+              </div>
+
+              {/* Multi-pays */}
+              <div>
+                <p className="text-xs font-bold text-[#00D4C8] uppercase tracking-widest mb-3">
+                  Localisation Odoo incluse · Multi-pays · Multi-langues
+                </p>
+                <div className="flex flex-row flex-wrap gap-3">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
+                    <span className="text-lg">🇨🇭</span>
+                    <div><p className="text-white font-bold text-sm leading-none">Suisse</p><p className="text-[#00D4C8] text-xs mt-0.5">CHF · TVA CH</p></div>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
+                    <span className="text-lg">🇫🇷</span>
+                    <div><p className="text-white font-bold text-sm leading-none">France</p><p className="text-[#00D4C8] text-xs mt-0.5">EUR · TVA FR</p></div>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
+                    <span className="text-lg">🇪🇸</span>
+                    <div><p className="text-white font-bold text-sm leading-none">Espagne</p><p className="text-[#00D4C8] text-xs mt-0.5">EUR · TVA ES</p></div>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/20 border border-[#00D4C8]/50 rounded-lg">
+                    <span className="text-lg">🇮🇹</span>
+                    <div><p className="text-white font-bold text-sm leading-none">Italie</p><p className="text-[#00D4C8] text-xs mt-0.5">EUR · TVA IT</p></div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            {/* Colonne droite — stats visuelles */}
+            <div className="hidden lg:flex flex-col gap-5">
+              {/* Stat cards */}
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { val: '−50%', label: 'Délais de facturation', color: '#00D4C8' },
+                  { val: '50+', label: 'Références BTP', color: '#F59E0B' },
+                  { val: 'Temps réel', label: 'Rentabilité chantier', color: '#00D4C8' },
+                  { val: '4 pays', label: 'Localisation Odoo', color: '#F59E0B' },
+                ].map((s, i) => (
+                  <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+                    <p className="text-3xl font-black mb-1" style={{color: s.color}}>{s.val}</p>
+                    <p className="text-gray-400 text-sm">{s.label}</p>
+                  </div>
+                ))}
+              </div>
+              {/* Image chantier */}
+              <div className="rounded-2xl overflow-hidden border border-white/10">
+                <img src="/btp-chantier.jpg" alt="Chantier BTP ElvyBat"
+                  className="w-full h-52 object-cover" />
+              </div>
+            </div>
+
           </div>
-          </div>
+        </div>
       </section>
-      
-            
+
       {/* ═══ STATS corrigées ═══ */}
       <section className="py-16 bg-white border-b border-gray-100">
         <div ref={statsRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${statsVisible ? 'is-visible' : ''}`}>
