@@ -185,7 +185,7 @@ export default function ElvyBatPage() {
               </div>
               {/* Image chantier */}
               <div className="rounded-2xl overflow-hidden border border-white/10">
-                <img src="/btp-chantier.jpg" alt="Chantier BTP ElvyBat"
+                <img src="/btp-tablet.jpg" alt="Chef de chantier BTP avec tablette ElvyBat"
                   className="w-full h-52 object-cover" />
               </div>
             </div>
