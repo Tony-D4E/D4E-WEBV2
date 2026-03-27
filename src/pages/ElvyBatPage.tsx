@@ -27,7 +27,7 @@ const pays = [
 const packInclus = [
   { icon: FileText,     titre: 'Devis & Facturation BTP',       desc: 'Gestion complète des devis et factures avec processus spécifiques au secteur du bâtiment.' },
   { icon: Calculator,   titre: 'Comptabilité ElvyBat',          desc: 'Plan comptable CH, liaison bancaire, TVA, imputations et suivi financier des chantiers.' },
-  { icon: TrendingUp,   titre: 'Rentabilité chantier',          desc: 'Analytique complète par projet — marges, coûts réels vs prévisionnels, indicateurs financiers.' },
+  { icon: TrendingUp,   titre: 'Rentabilité chantier',          desc: 'Analytique complète par projet : marges, coûts réels vs prévisionnels, indicateurs financiers.' },
   { icon: ClipboardList,titre: 'Planning & Suivi chantier',     desc: 'Planifiez vos équipes, suivez l\'avancement et les délais en temps réel.' },
   { icon: Calendar,     titre: '8h d\'accompagnement incluses', desc: 'Un chef de projet D4E vous accompagne de la mise en place à la prise en main.' },
   { icon: Shield,       titre: '1 déplacement sur site inclus', desc: 'Nous venons chez vous pour sécuriser le démarrage et former vos équipes.' },
@@ -35,7 +35,7 @@ const packInclus = [
 
 const modulesOptionnels = [
   { icon: Calculator, nom: 'ElvyCalc',       badge: 'Chiffrage',     couleur: '#00D4C8', desc: 'Automatise le chiffrage des devis et le calcul du prix de revient avec coefficient de marge automatique.' },
-  { icon: Timer,      nom: 'ElvyTime',       badge: 'Pointage',      couleur: '#F59E0B', desc: 'Pointage des temps de travail via portail internet — sans licence Odoo supplémentaire.' },
+  { icon: Timer,      nom: 'ElvyTime',       badge: 'Pointage',      couleur: '#F59E0B', desc: 'Pointage des temps de travail via portail internet : sans licence Odoo supplémentaire.' },
   { icon: Truck,      nom: 'ElvyTrack',      badge: 'Terrain',       couleur: '#00D4C8', desc: 'Saisie du temps, machines, matériel et bons de livraison sur chantier. Coûts affectés automatiquement.' },
   { icon: Mic,        nom: 'ElvyService IA', badge: 'IA',            couleur: '#8B5CF6', desc: 'Interventions terrain avec dictée multilingue, reconnaissance bons de régie et facturation automatique.' },
   { icon: FolderOpen, nom: 'ElvyDoc',        badge: 'GED',           couleur: '#F59E0B', desc: 'Gestion électronique de documents intégrée à Odoo. 600 pages/mois incluses.' },
@@ -48,14 +48,14 @@ const pourQui = [
   {
     icon: Building2,
     titre: 'Entreprises de chantier',
-    desc: 'Charpentiers, maçons, sanitaires, peintres, électriciens — toute entreprise BTP qui gère des chantiers avec devis, planning et facturation de situation.',
+    desc: 'Charpentiers, maçons, sanitaires, peintres, électriciens : toute entreprise BTP qui gère des chantiers avec devis, planning et facturation de situation.',
     exemples: ['Charpente & menuiserie', 'Sanitaires & plomberie', 'Peinture & gypserie', 'Électricité & CVSE'],
     couleur: '#00D4C8',
   },
   {
     icon: Wrench,
     titre: "Entreprises d'intervention",
-    desc: 'Techniciens de maintenance, SAV, dépannage — planification des interventions terrain, rapports sur mobile, facturation immédiate.',
+    desc: 'Techniciens de maintenance, SAV, dépannage : planification des interventions terrain, rapports sur mobile, facturation immédiate.',
     exemples: ['Maintenance & SAV', 'Chauffagistes', 'Nettoyage & entretien', 'Sécurité & alarmes'],
     couleur: '#F59E0B',
   },
@@ -111,7 +111,7 @@ export default function ElvyBatPage() {
         <div className="absolute inset-0">
           <img
             src="/btp-hero.jpg"
-            alt="Chantier BTP — logiciel gestion de chantier ElvyBat Odoo"
+            alt="Chantier BTP : logiciel gestion de chantier ElvyBat Odoo"
             className="w-full h-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/90 to-[#0B0F19]/50" />
@@ -138,16 +138,16 @@ export default function ElvyBatPage() {
               <p style={{ color: '#FFFFFF', textShadow: '0 2px 12px rgba(0,0,0,0.9)' }}
                 className="text-xl mb-10 leading-relaxed max-w-xl">
                 ElvyBat est le logiciel de gestion de chantier sur Odoo conçu pour
-                les dirigeants du bâtiment — rentabilité en temps réel, facturation
+                les dirigeants du bâtiment : rentabilité en temps réel, facturation
                 de situation automatisée, déploiement clé en main en quelques jours.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
                 {[
-                  'Prise en main rapide — vos équipes utilisent ElvyBat dès le premier jour',
-                  'Personnalisable selon votre métier — adapté à votre façon de travailler',
-                  "Accès à toute la puissance d'Odoo — CRM, achats, RH, projets et plus encore",
-                  'Une seule plateforme pour toute votre activité — plus de fichiers éparpillés',
+                  'Prise en main rapide : vos équipes utilisent ElvyBat dès le premier jour',
+                  'Personnalisable selon votre métier : adapté à votre façon de travailler',
+                  "Accès à toute la puissance d'Odoo : CRM, achats, RH, projets et plus encore",
+                  'Une seule plateforme pour toute votre activité : plus de fichiers éparpillés',
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-2 text-sm" style={{ color: '#FFFFFF' }}>
                     <CheckCircle className="h-5 w-5 text-[#00D4C8] flex-shrink-0 mt-0.5" />
@@ -345,7 +345,7 @@ export default function ElvyBatPage() {
               <p style={{ color: '#FFFFFF' }} className="text-lg font-medium mb-4 max-w-2xl mx-auto">
                 Une solution claire, structurée et prête à être utilisée pour piloter efficacement votre activité bâtiment.
               </p>
-              <p style={{ color: '#CBD5E1' }} className="mb-6">Passez à l'action — demandez une démonstration ou démarrez votre projet dès maintenant.</p>
+              <p style={{ color: '#CBD5E1' }} className="mb-6">Passez à l'action : demandez une démonstration ou démarrez votre projet dès maintenant.</p>
               <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base">
                 <a href="#contact">
                   Demander une démonstration
@@ -420,7 +420,7 @@ export default function ElvyBatPage() {
               <span className="text-sm font-semibold text-purple-400">Intelligence Artificielle · Nouveau</span>
             </div>
             <h2 className="text-4xl font-black text-white mb-4">
-              ElvyService IA — De l'intervention à la facture en quelques clics
+              ElvyService IA : De l'intervention à la facture en quelques clics
             </h2>
             <p className="text-gray-300 text-lg">
               Pour les équipes terrain : techniciens, installateurs, maintenanciers.
@@ -433,7 +433,7 @@ export default function ElvyBatPage() {
               { icon: Mic,      titre: 'Rapports vocaux multilingues', color: '#8B5CF6',
                 desc: 'Vos techniciens dictent leur rapport en espagnol, portugais ou italien sur mobile. Transcription automatique en français dans Odoo.' },
               { icon: FileText, titre: 'Reconnaissance bons de régie', color: '#00D4C8',
-                desc: 'Envoyez un PDF ou photo d\'un bon de régie — ElvyService IA extrait toutes les informations et crée la tâche automatiquement.' },
+                desc: 'Envoyez un PDF ou photo d\'un bon de régie : ElvyService IA extrait toutes les informations et crée la tâche automatiquement.' },
               { icon: Receipt,  titre: 'Facturation immédiate',        color: '#F59E0B',
                 desc: 'De l\'intervention à la facture en quelques clics. La chaîne opérationnelle complète est automatisée et fiabilisée.' },
             ].map((item, i) => (
@@ -456,7 +456,7 @@ export default function ElvyBatPage() {
           <div className="bg-white/5 border border-purple-500/30 rounded-3xl p-8 text-center">
             <p className="text-purple-300 font-semibold mb-2">Intégré nativement à Odoo Field Service</p>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              ElvyService IA s'appuie sur Odoo Field Service amélioré par D4E — planning des techniciens,
+              ElvyService IA s'appuie sur Odoo Field Service amélioré par D4E : planning des techniciens,
               signature mobile du client, dispatch depuis le bureau et reporting en temps réel.
             </p>
             <Button asChild size="lg" className="bg-purple-600 hover:bg-purple-700 text-white font-bold px-8 rounded-xl">
@@ -597,7 +597,7 @@ export default function ElvyBatPage() {
           <div className="text-center mb-10">
             <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">Discutons de votre projet</h2>
             <p className="text-gray-500 text-lg">
-              Dites-nous où vous en êtes — on vous rappelle sous 24h avec une proposition adaptée.
+              Dites-nous où vous en êtes : on vous rappelle sous 24h avec une proposition adaptée.
             </p>
           </div>
 
@@ -624,8 +624,8 @@ export default function ElvyBatPage() {
             </select>
             <select className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-gray-400 w-full focus:outline-none focus:border-[#00D4C8] transition-colors">
               <option value="">Votre besoin principal</option>
-              <option>Gestion de chantiers — ElvyBat</option>
-              <option>Interventions terrain — ElvyService IA</option>
+              <option>Gestion de chantiers : ElvyBat</option>
+              <option>Interventions terrain : ElvyService IA</option>
               <option>Les deux</option>
               <option>Je veux en savoir plus</option>
             </select>
