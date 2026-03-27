@@ -24,12 +24,12 @@ const team = [
 
 export function Team() {
   return (
-    <section id="equipe" className="py-24 lg:py-32 bg-[#0F172A] relative overflow-hidden">
+    <section id="equipe" className="py-12 bg-[#0F172A] relative overflow-hidden">
       {/* Background glow */}
       <div className="blob-glow w-[600px] h-[600px] bg-[#00D4C8]/10 top-0 right-0" />
       
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 tracking-tight">
             Vos <span className="text-gradient">interlocuteurs</span>
           </h2>
