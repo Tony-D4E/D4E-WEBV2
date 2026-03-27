@@ -259,11 +259,11 @@ export default function ElvyBatPage() {
           {/* Description complète du pack */}
           <div className="bg-[#0F1D3A] rounded-3xl p-8 md:p-12 text-white">
             <div className="text-center mb-10">
-              <h3 className="text-2xl font-black text-white mb-3">ElvyBat</h3>
-              <p className="text-gray-200 text-lg max-w-2xl mx-auto leading-relaxed">
+              <h3 style={{ color: '#00D4C8' }} className="text-xl font-black mb-4 uppercase tracking-widest">ElvyBat</h3>
+              <p style={{ color: '#FFFFFF' }} className="text-2xl font-bold max-w-2xl mx-auto leading-snug mb-4">
                 Démarrez votre gestion de chantier sur Odoo, rapidement et simplement.
               </p>
-              <p className="text-gray-400 mt-2 max-w-2xl mx-auto">
+              <p style={{ color: '#CBD5E1' }} className="text-base max-w-2xl mx-auto leading-relaxed">
                 Le Pack de mise en place ElvyBat vous permet de déployer une solution métier complète,
                 prête à l'emploi, sans complexité.
               </p>
