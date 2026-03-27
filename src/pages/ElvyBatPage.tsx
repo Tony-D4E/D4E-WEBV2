@@ -181,23 +181,23 @@ export default function ElvyBatPage() {
               </div>
             </div>
 
-            <div className="hidden lg:flex flex-col gap-5">
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { val: '1 400+',  label: 'Chantiers gérés',       color: '#00D4C8' },
-                  { val: '260+',    label: 'Utilisateurs actifs',    color: '#F59E0B' },
-                  { val: '4 ans',   label: "D'expertise terrain",    color: '#00D4C8' },
-                  { val: '4 pays',  label: 'Localisation Odoo',      color: '#F59E0B' },
-                ].map((s, i) => (
-                  <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                    <p className="text-3xl font-black mb-1" style={{ color: s.color }}>{s.val}</p>
-                    <p className="text-gray-400 text-sm">{s.label}</p>
+            <div className="hidden lg:flex flex-col gap-4">
+              {[
+                { titre: 'Sachez si votre chantier est rentable avant la fin du mois', desc: 'Suivi des marges en temps réel, par affaire. Aucune surprise en fin de projet.' },
+                { titre: 'Vos situations de travaux générées en 2 clics', desc: 'Facturation de situation automatisée, conforme aux normes suisses.' },
+                { titre: 'Opérationnel en quelques jours, pas en quelques mois', desc: 'Déploiement clé en main par un chef de projet dédié, 1 déplacement sur site inclus.' },
+              ].map((item, i) => (
+                <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex gap-4 items-start">
+                  <div className="w-1 rounded-full bg-[#00D4C8] flex-shrink-0 mt-1" style={{ minHeight: '40px' }} />
+                  <div>
+                    <p className="text-white font-bold text-base leading-snug mb-1">{item.titre}</p>
+                    <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
               <div className="rounded-2xl overflow-hidden border border-white/10">
                 <img src="/btp-tablet.jpg" alt="Chef de chantier BTP avec tablette ElvyBat"
-                  className="w-full h-56 object-cover" />
+                  className="w-full h-48 object-cover" />
               </div>
             </div>
 
@@ -251,18 +251,104 @@ export default function ElvyBatPage() {
             ))}
           </div>
 
-          <div className="bg-[#0F1D3A] rounded-3xl p-8 md:p-12 text-center text-white">
-            <p className="text-[#00D4C8] font-bold text-sm uppercase tracking-widest mb-3">Forfait de démarrage tout inclus</p>
-            <p className="text-5xl font-black mb-2">3'290 CHF</p>
-            <p className="text-gray-400 mb-1">+ 690 CHF / an · Licence ElvyBat Entreprise</p>
-            <p className="text-gray-500 text-sm mb-8">Prix HT · TVA 8.1% en sus · Société supplémentaire : 1'290 CHF</p>
-            <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base">
-              <a href="#contact">
-                Demander un devis personnalisé
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            <p className="mt-4 text-gray-500 text-sm">Réponse sous 24h · Suisse · France · Espagne · Italie</p>
+          {/* Description complète du pack */}
+          <div className="bg-[#0F1D3A] rounded-3xl p-8 md:p-12 text-white">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl font-black text-white mb-3">ElvyBat</h3>
+              <p className="text-gray-200 text-lg max-w-2xl mx-auto leading-relaxed">
+                Démarrez votre gestion de chantier sur Odoo, rapidement et simplement.
+              </p>
+              <p className="text-gray-400 mt-2 max-w-2xl mx-auto">
+                Le Pack de mise en place ElvyBat vous permet de déployer une solution métier complète,
+                prête à l'emploi, sans complexité.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {/* Bloc 1 */}
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Shield className="h-5 w-5 text-[#00D4C8]" />
+                  <h4 className="text-white font-bold">Une mise en place clé en main</h4>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">Nous configurons pour vous un environnement opérationnel :</p>
+                <ul className="space-y-2">
+                  {[
+                    'Installation et paramétrage ElvyBat',
+                    'Création des utilisateurs et des accès',
+                    'Mise en place de vos documents et de votre image',
+                    'Structuration des articles et des ouvrages',
+                    'Configuration comptable et suivi de rentabilité chantier',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-[#00D4C8] flex-shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Bloc 2 */}
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Zap className="h-5 w-5 text-[#F59E0B]" />
+                  <h4 className="text-white font-bold">Une solution immédiatement exploitable</h4>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">Vous disposez dès le départ d'un outil structuré pour :</p>
+                <ul className="space-y-2">
+                  {[
+                    'Gérer vos devis et votre facturation',
+                    'Suivre vos chantiers et vos marges',
+                    'Piloter votre activité en temps réel',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-[#F59E0B] flex-shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Bloc 3 */}
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Users className="h-5 w-5 text-[#00D4C8]" />
+                  <h4 className="text-white font-bold">Accompagnement inclus avec un chef de projet</h4>
+                </div>
+                <ul className="space-y-2 mb-4">
+                  {[
+                    'Mise en route et prise en main',
+                    'Validation des premiers flux',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-[#00D4C8] flex-shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-4 pt-4 border-t border-white/10">
+                  <p className="text-[#F59E0B] font-semibold text-sm">
+                    1 déplacement sur site inclus pour sécuriser le démarrage.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Résultat + CTA */}
+            <div className="bg-white/5 border border-[#00D4C8]/30 rounded-2xl p-6 text-center">
+              <p className="text-[#00D4C8] font-bold text-sm uppercase tracking-widest mb-2">Résultat</p>
+              <p className="text-white text-lg font-medium mb-6 max-w-2xl mx-auto">
+                Une solution claire, structurée et prête à être utilisée pour piloter efficacement votre activité bâtiment.
+              </p>
+              <p className="text-gray-300 mb-6">Passez à l'action — demandez une démonstration ou démarrez votre projet dès maintenant.</p>
+              <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base">
+                <a href="#contact">
+                  Demander une démonstration
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+              <p className="mt-4 text-gray-500 text-sm">Réponse sous 24h · Suisse · France · Espagne · Italie</p>
+            </div>
           </div>
         </div>
       </section>
