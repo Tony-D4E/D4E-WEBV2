@@ -1,96 +1,46 @@
 import { Building2, Factory, ShoppingCart, Truck, Landmark, Stethoscope, HardHat } from 'lucide-react';
 
 const sectors = [
-  {
-    icon: Landmark,
-    title: 'Finance',
-    description: 'Reporting, conformance, automatisation comptable.',
-  },
-  {
-    icon: Building2,
-    title: 'Services',
-    description: 'Gestion de projets, temps, rentabilité par mission.',
-  },
-  {
-    icon: HardHat,
-    title: 'Construction',
-    description: 'Gestion de chantiers avec ElvyBat.',
-    featured: true,
-    link: '#elvybat',
-  },
-  {
-    icon: Factory,
-    title: 'Industrie',
-    description: 'Production, supply chain, traçabilité.',
-  },
-  {
-    icon: ShoppingCart,
-    title: 'Commerce',
-    description: 'Multi-canal, stocks, relation client.',
-  },
-  {
-    icon: Truck,
-    title: 'Logistique',
-    description: 'Flux, entrepôts, expéditions.',
-  },
-  {
-    icon: Stethoscope,
-    title: 'Santé',
-    description: 'Normes, stocks, traçabilité lots.',
-  },
+  { icon: Landmark,    title: 'Finance',      description: 'Reporting, conformance, automatisation comptable.', featured: false },
+  { icon: Building2,   title: 'Services',     description: 'Gestion de projets, temps, rentabilité par mission.', featured: false },
+  { icon: HardHat,     title: 'Construction', description: 'Gestion de chantiers avec ElvyBat.',                  featured: true,  link: '/elvybat' },
+  { icon: Factory,     title: 'Industrie',    description: 'Production, supply chain, traçabilité.',              featured: false },
+  { icon: ShoppingCart,title: 'Commerce',     description: 'Multi-canal, stocks, relation client.',               featured: false },
+  { icon: Truck,       title: 'Logistique',   description: 'Flux, entrepôts, expéditions.',                       featured: false },
+  { icon: Stethoscope, title: 'Santé',        description: 'Normes, stocks, traçabilité lots.',                   featured: false },
 ];
 
 export function Sectors() {
   return (
-    <section id="secteurs" className="py-24 lg:py-32 bg-[#0B0F19] relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="blob-glow w-[500px] h-[500px] bg-[#7C3AED] top-0 right-0" />
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="secteurs" className="py-24 bg-[#F8FAFC]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 tracking-tight">
-            Secteurs <span className="text-gradient">d'activité</span>
+          <h2 className="text-4xl sm:text-5xl font-black text-[#0F1D3A] mb-6 tracking-tight">
+            Secteurs <span className="text-[#00D4C8]">d'activité</span>
           </h2>
-          <p className="text-lg text-gray-400">
-            Expertise sectorielle pour des solutions adaptées à votre industrie.
-          </p>
+          <p className="text-lg text-gray-500">Expertise sectorielle pour des solutions adaptées à votre industrie.</p>
         </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {sectors.map((sector, index) => {
-            const CardContent = (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {sectors.map((s, i) => {
+            const inner = (
               <>
-                <div className="w-14 h-14 rounded-xl bg-[#1F2937] flex items-center justify-center mb-5 group-hover:bg-gradient-to-br group-hover:from-[#00B4A6] group-hover:to-[#06B6D4] transition-all duration-300">
-                  <sector.icon className="h-7 w-7 text-gray-400 group-hover:text-white transition-colors" />
+                <div className="w-12 h-12 bg-[#0F1D3A] rounded-2xl flex items-center justify-center mb-4">
+                  <s.icon className="h-6 w-6 text-[#F59E0B]" />
                 </div>
                 <div className="flex items-center gap-2 mb-2">
-                  <h3 className="text-lg font-bold text-white">
-                    {sector.title}
-                  </h3>
-                  {sector.featured && (
-                    <span className="px-2 py-0.5 text-xs bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] text-white rounded-full">
-                      Elvy
-                    </span>
-                  )}
+                  <h3 className="text-base font-bold text-[#0F1D3A]">{s.title}</h3>
+                  {s.featured && <span className="text-xs font-bold bg-[#00D4C8] text-white px-2 py-0.5 rounded-full">Elvy</span>}
                 </div>
-                <p className="text-sm text-gray-400">{sector.description}</p>
+                <p className="text-sm text-gray-400">{s.description}</p>
               </>
             );
-
-            return sector.link ? (
-              <a
-                key={index}
-                href={sector.link}
-                className="group block p-6 card-glow rounded-2xl border-2 border-[#00D4C8]/30 glow-cyan-sm hover:border-[#00D4C8] transition-all"
-              >
-                {CardContent}
+            return s.link ? (
+              <a key={i} href={s.link} className="block p-6 bg-white rounded-2xl border-2 border-[#00D4C8]/30 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
+                {inner}
               </a>
             ) : (
-              <div
-                key={index}
-                className="group p-6 card-glow rounded-2xl card-glow-hover"
-              >
-                {CardContent}
+              <div key={i} className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
+                {inner}
               </div>
             );
           })}
