@@ -592,20 +592,24 @@ export default function ElvyBatPage() {
             </p>
           </div>
 
-          <div className="bg-[#0F1D3A] rounded-3xl p-8 space-y-4">
+          <form
+            action="https://formspree.io/f/xdawrgoz"
+            method="POST"
+            className="bg-[#0F1D3A] rounded-3xl p-8 space-y-4"
+          >
             <div className="grid grid-cols-2 gap-4">
-              <input placeholder="Prénom *"
+              <input type="text" name="prenom" placeholder="Prénom *" required
                 className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors" />
-              <input placeholder="Nom *"
+              <input type="text" name="nom" placeholder="Nom *" required
                 className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors" />
             </div>
-            <input placeholder="Email *"
+            <input type="email" name="email" placeholder="Email *" required
               className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors" />
-            <input placeholder="Entreprise"
+            <input type="text" name="entreprise" placeholder="Entreprise"
               className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors" />
-            <input placeholder="Téléphone"
+            <input type="tel" name="telephone" placeholder="Téléphone"
               className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors" />
-            <select className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-gray-400 w-full focus:outline-none focus:border-[#00D4C8] transition-colors">
+            <select name="pays" required className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-gray-400 w-full focus:outline-none focus:border-[#00D4C8] transition-colors">
               <option value="">Pays *</option>
               <option>Suisse</option>
               <option>France</option>
@@ -613,22 +617,24 @@ export default function ElvyBatPage() {
               <option>Italie</option>
               <option>Autre</option>
             </select>
-            <select className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-gray-400 w-full focus:outline-none focus:border-[#00D4C8] transition-colors">
+            <select name="besoin" className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-gray-400 w-full focus:outline-none focus:border-[#00D4C8] transition-colors">
               <option value="">Votre besoin principal</option>
               <option>Gestion de chantiers : ElvyBat</option>
               <option>Interventions terrain : ElvyService IA</option>
               <option>Les deux</option>
               <option>Je veux en savoir plus</option>
             </select>
-            <textarea placeholder="Décrivez votre activité et vos besoins *" rows={4}
+            <textarea name="message" placeholder="Décrivez votre activité et vos besoins *" rows={4} required
               className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors resize-none" />
-            <button className="w-full bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2 text-base">
+            <input type="hidden" name="_subject" value="Nouveau lead ElvyBat" />
+            <button type="submit" className="w-full bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2 text-base">
               Envoyer ma demande
               <ChevronRight className="h-5 w-5" />
             </button>
             <p className="text-center text-xs text-gray-600">
               Vos données ne seront jamais partagées avec des tiers.
             </p>
+          </form>
           </div>
         </div>
       </section>
