@@ -233,9 +233,9 @@ export default function ElvyBatPage() {
       <section id="pack" className="py-24 bg-[#F0FDF9]">
         <div ref={packRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${packVisible ? 'is-visible' : ''}`}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00D4C8]/10 border border-[#00D4C8]/30 rounded-full mb-4">
-              <Shield className="h-4 w-4 text-[#00D4C8]" />
-              <span className="text-sm font-semibold text-[#00D4C8]">Pack de mise en place ElvyBat</span>
+            <div className="inline-flex items-center gap-2 px-5 py-2 bg-[#00D4C8]/10 border border-[#00D4C8]/30 rounded-full mb-4">
+              <Shield className="h-5 w-5 text-[#00D4C8]" />
+              <span className="text-base font-bold text-[#00D4C8]">Pack de mise en place ElvyBat</span>
             </div>
             <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">Tout ce qu'il faut pour démarrer</h2>
             <p className="text-lg text-gray-500">
@@ -364,9 +364,9 @@ export default function ElvyBatPage() {
       <section className="py-24 bg-white">
         <div ref={modsRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${modsVisible ? 'is-visible' : ''}`}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-orange-50 border border-orange-200 rounded-full mb-4">
-              <Zap className="h-4 w-4 text-[#F59E0B]" />
-              <span className="text-sm font-semibold text-[#F59E0B]">Modules optionnels</span>
+            <div className="inline-flex items-center gap-2 px-5 py-2 bg-orange-50 border border-orange-200 rounded-full mb-4">
+              <Zap className="h-5 w-5 text-[#F59E0B]" />
+              <span className="text-base font-bold text-[#F59E0B]">Modules optionnels</span>
             </div>
             <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">Étendez ElvyBat selon vos besoins</h2>
             <p className="text-lg text-gray-500">
@@ -395,8 +395,8 @@ export default function ElvyBatPage() {
           </div>
 
           <div className="mt-10 text-center">
-            <Button asChild size="lg" className="bg-[#0F1D3A] hover:bg-[#1a2d4a] text-white font-bold px-8 rounded-xl">
-              <a href="#contact">
+            <Button asChild size="lg" className="bg-[#0F1D3A] hover:bg-[#1a2d4a] font-bold px-8 rounded-xl" style={{ color: '#FFFFFF' }}>
+              <a href="#contact" style={{ color: '#FFFFFF' }}>
                 Discuter de vos besoins
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
