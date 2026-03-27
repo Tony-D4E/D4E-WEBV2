@@ -27,13 +27,13 @@ export function Probleme() {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
 
   return (
-    <section className="py-24 bg-[#F8FAFC]">
+    <section className="py-12 bg-[#F8FAFC]">
       <div
         ref={ref}
         className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
       >
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#00D4C8]/40 rounded-full text-[#00D4C8] text-sm font-semibold mb-6 bg-[#00D4C8]/5">
             ⚠ Le problème
           </div>
