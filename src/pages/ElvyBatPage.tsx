@@ -1,6 +1,6 @@
 import {
   HardHat, CheckCircle, ArrowRight, Sparkles,
-  Mic, FileText, Building2, Clock, TrendingUp,
+  Mic, FileText, Building2, TrendingUp,
   Calendar, ClipboardList, Calculator, Shield,
   Zap, Phone, Mail, Users, BarChart3, Wrench,
   FolderOpen, Timer, Receipt, Truck, ChevronRight
