@@ -77,7 +77,7 @@ export function ContactForm() {
 
   if (status === 'success') {
     return (
-      <section id="contact-form" className="py-24 lg:py-32 relative overflow-hidden">
+      <section id="contact-form" className="py-12 relative overflow-hidden">
         <div className="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="p-12 bg-white rounded-3xl border-2 border-[#00B4A6]/30 shadow-lg">
             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#00B4A6] to-[#06B6D4] flex items-center justify-center mx-auto mb-6">
@@ -111,9 +111,9 @@ export function ContactForm() {
   }
 
   return (
-    <section id="contact-form" className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="contact-form" className="py-12 relative overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
+        <div className="grid lg:grid-cols-5 gap-8 items-start">
           <div className="lg:col-span-2 lg:sticky lg:top-32 space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00B4A6]/10 rounded-full border border-[#00B4A6]/30">
               <MessageSquare className="h-4 w-4 text-[#00B4A6]" />
