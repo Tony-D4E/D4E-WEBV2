@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, MapPin, CheckCircle, TrendingUp, Clock, Users } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
