@@ -10,7 +10,7 @@ const slides = [
     badgeBorder: 'rgba(0,212,200,0.3)',
     badgeColor: '#00D4C8',
     headline: 'Vous pilotez encore',
-    headlineAccent: 'à l\'aveugle ?',
+    headlineAccent: "à l'aveugle ?",
     sub: 'Excel, données éparpillées, marges floues… La plupart des PME perdent 15 à 20% de marge faute de visibilité.',
   },
   {
@@ -39,7 +39,6 @@ const slides = [
 
 export function HeroIntegrateur() {
   const [current, setCurrent] = useState(0);
-  const [prev, setPrev] = useState<number|null>(null);
   const [animating, setAnimating] = useState(false);
 
   useEffect(() => {
@@ -52,12 +51,11 @@ export function HeroIntegrateur() {
   function goTo(idx: number) {
     if (idx === current || animating) return;
     setAnimating(true);
-    setPrev(current);
     setCurrent(idx);
-    setTimeout(() => { setPrev(null); setAnimating(false); }, 900);
+    setTimeout(() => { setAnimating(false); }, 900);
   }
 
-  const s = slides[current];
+  const sl = slides[current];
 
   return (
     <section style={{
@@ -70,24 +68,19 @@ export function HeroIntegrateur() {
       alignItems: 'center',
     }}>
 
-      {/* BG Images */}
-      {slides.map((sl, i) => (
+      {slides.map((slide, i) => (
         <div key={i} style={{
           position: 'absolute', inset: 0,
-          backgroundImage: `url(${sl.img})`,
+          backgroundImage: `url(${slide.img})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          transition: 'opacity 0.9s cubic-bezier(0.4,0,0.2,1)',
           opacity: i === current ? 1 : 0,
           transform: i === current ? 'scale(1.04)' : 'scale(1)',
-          transitionProperty: 'opacity, transform',
-          transitionDuration: '0.9s, 6s',
-          transitionTimingFunction: 'ease, ease-out',
+          transition: 'opacity 0.9s ease, transform 6s ease-out',
           zIndex: 0,
         }} />
       ))}
 
-      {/* Overlay gradient */}
       <div style={{
         position: 'absolute', inset: 0, zIndex: 1,
         background: 'linear-gradient(90deg, rgba(11,15,25,0.82) 0%, rgba(11,15,25,0.55) 60%, rgba(11,15,25,0.2) 100%)',
@@ -97,7 +90,6 @@ export function HeroIntegrateur() {
         background: 'linear-gradient(0deg, rgba(11,15,25,0.7) 0%, transparent 40%)',
       }} />
 
-      {/* Content */}
       <div style={{
         position: 'relative', zIndex: 2,
         maxWidth: '800px',
@@ -105,20 +97,18 @@ export function HeroIntegrateur() {
         padding: '0 24px',
       }}>
 
-        {/* Badge */}
         <div key={current + '-badge'} style={{
           display: 'inline-flex', alignItems: 'center', gap: '8px',
           padding: '7px 18px',
-          border: `1px solid ${s.badgeBorder}`,
+          border: `1px solid ${sl.badgeBorder}`,
           borderRadius: '999px',
-          backgroundColor: s.badgeBg,
+          backgroundColor: sl.badgeBg,
           marginBottom: '24px',
           animation: 'fadeUp 0.6s ease both',
         }}>
-          <span style={{ fontSize: '14px', fontWeight: 700, color: s.badgeColor }}>{s.badge}</span>
+          <span style={{ fontSize: '14px', fontWeight: 700, color: sl.badgeColor }}>{sl.badge}</span>
         </div>
 
-        {/* H1 */}
         <h1 key={current + '-h1'} style={{
           fontSize: 'clamp(2.8rem, 6vw, 6rem)',
           fontWeight: 900,
@@ -128,11 +118,10 @@ export function HeroIntegrateur() {
           marginBottom: '20px',
           animation: 'fadeUp 0.65s 0.05s ease both',
         }}>
-          {s.headline}<br />
-          <span style={{ color: s.accent }}>{s.headlineAccent}</span>
+          {sl.headline}<br />
+          <span style={{ color: sl.accent }}>{sl.headlineAccent}</span>
         </h1>
 
-        {/* Sub */}
         <p key={current + '-sub'} style={{
           fontSize: 'clamp(1rem, 1.6vw, 1.25rem)',
           color: 'rgba(255,255,255,0.75)',
@@ -141,10 +130,9 @@ export function HeroIntegrateur() {
           marginBottom: '36px',
           animation: 'fadeUp 0.7s 0.1s ease both',
         }}>
-          {s.sub}
+          {sl.sub}
         </p>
 
-        {/* CTAs */}
         <div style={{
           display: 'flex', gap: '14px', flexWrap: 'wrap',
           animation: 'fadeUp 0.75s 0.15s ease both',
@@ -165,13 +153,11 @@ export function HeroIntegrateur() {
             backgroundColor: 'rgba(255,255,255,0.08)',
             color: '#FFFFFF', fontWeight: 600, borderRadius: '12px',
             fontSize: '1rem', textDecoration: 'none',
-            backdropFilter: 'blur(4px)',
           }}>
             Découvrir la suite Elvy
           </a>
         </div>
 
-        {/* Locations */}
         <div style={{
           display: 'flex', gap: '12px', marginTop: '32px', flexWrap: 'wrap',
           animation: 'fadeUp 0.8s 0.2s ease both',
@@ -192,7 +178,6 @@ export function HeroIntegrateur() {
         </div>
       </div>
 
-      {/* Progress dots */}
       <div style={{
         position: 'absolute', bottom: '36px', left: '50%',
         transform: 'translateX(-50%)',
@@ -212,7 +197,6 @@ export function HeroIntegrateur() {
         ))}
       </div>
 
-      {/* Badge Odoo Gold */}
       <div style={{
         position: 'absolute', top: '100px', right: '40px', zIndex: 3,
         backgroundColor: 'rgba(255,255,255,0.1)',
