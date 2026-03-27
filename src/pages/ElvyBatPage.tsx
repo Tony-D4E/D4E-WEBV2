@@ -146,7 +146,7 @@ export default function ElvyBatPage() {
                 {[
                   'Prise en main rapide — vos équipes utilisent ElvyBat dès le premier jour',
                   'Personnalisable selon votre métier — adapté à votre façon de travailler',
-                  'Accès à toute la puissance d'Odoo — CRM, achats, RH, projets et plus encore',
+                  "Accès à toute la puissance d'Odoo — CRM, achats, RH, projets et plus encore",
                   'Une seule plateforme pour toute votre activité — plus de fichiers éparpillés',
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-2 text-sm" style={{ color: '#FFFFFF' }}>
