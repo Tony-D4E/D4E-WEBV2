@@ -142,10 +142,15 @@ export default function ElvyBatPage() {
                 de situation automatisée, déploiement clé en main en quelques jours.
               </p>
 
-              <div className="flex flex-wrap gap-5 mb-10">
-                {['Rentabilité chantier en temps réel', 'Facturation de situation automatisée', 'Déploiement clé en main'].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-sm" style={{ color: '#FFFFFF' }}>
-                    <CheckCircle className="h-5 w-5 text-[#00D4C8] flex-shrink-0" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+                {[
+                  'Prise en main rapide — vos équipes utilisent ElvyBat dès le premier jour',
+                  'Personnalisable selon votre métier — adapté à votre façon de travailler',
+                  'Accès à toute la puissance d'Odoo — CRM, achats, RH, projets et plus encore',
+                  'Une seule plateforme pour toute votre activité — plus de fichiers éparpillés',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2 text-sm" style={{ color: '#FFFFFF' }}>
+                    <CheckCircle className="h-5 w-5 text-[#00D4C8] flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
