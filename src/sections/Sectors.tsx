@@ -1,13 +1,14 @@
-import { Building2, Factory, ShoppingCart, Truck, Landmark, Stethoscope, HardHat } from 'lucide-react';
+import { Building2, Factory, ShoppingCart, Truck, Landmark, Stethoscope, HardHat, BookOpen } from 'lucide-react';
 
 const sectors = [
-  { icon: Landmark,    title: 'Finance',      description: 'Reporting, conformance, automatisation comptable.', featured: false },
-  { icon: Building2,   title: 'Services',     description: 'Gestion de projets, temps, rentabilité par mission.', featured: false },
-  { icon: HardHat,     title: 'Construction', description: 'Gestion de chantiers avec ElvyBat.',                  featured: true,  link: '/elvybat' },
-  { icon: Factory,     title: 'Industrie',    description: 'Production, supply chain, traçabilité.',              featured: false },
-  { icon: ShoppingCart,title: 'Commerce',     description: 'Multi-canal, stocks, relation client.',               featured: false },
-  { icon: Truck,       title: 'Logistique',   description: 'Flux, entrepôts, expéditions.',                       featured: false },
-  { icon: Stethoscope, title: 'Santé',        description: 'Normes, stocks, traçabilité lots.',                   featured: false },
+  { icon: Landmark,    title: 'Finance',      description: 'Reporting, conformance, automatisation comptable.',       featured: false },
+  { icon: Building2,   title: 'Services',     description: 'Gestion de projets, temps, rentabilité par mission.',     featured: false },
+  { icon: HardHat,     title: 'Construction', description: 'Gestion de chantiers avec ElvyBat.',                      featured: true,  link: '/#/elvybat' },
+  { icon: Factory,     title: 'Industrie',    description: 'Production, supply chain, traçabilité.',                  featured: false },
+  { icon: ShoppingCart,title: 'Commerce',     description: 'Multi-canal, stocks, relation client.',                   featured: false },
+  { icon: Truck,       title: 'Logistique',   description: 'Flux, entrepôts, expéditions.',                           featured: false },
+  { icon: Stethoscope, title: 'Santé',        description: 'Normes, stocks, traçabilité lots.',                       featured: false },
+  { icon: BookOpen,    title: 'Éducation',    description: 'Gestion administrative, plannings, suivi des apprenants.', featured: false },
 ];
 
 export function Sectors() {
