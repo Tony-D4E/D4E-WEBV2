@@ -15,7 +15,7 @@ export function HeroIntegrateur() {
           <div ref={leftRef} className={`space-y-8 animate-on-scroll ${leftVisible ? 'is-visible' : ''}`}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#F59E0B] text-white rounded-full shadow-lg">
               <Award className="h-4 w-4" />
-              <span className="text-sm font-bold">Gold Partner Odoo · Suisse · France · Espagne</span>
+              <span className="text-sm font-bold">Gold Partner Odoo · Suisse</span>
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#0F1D3A] leading-[0.95] tracking-tight">
               Éditeur &amp; intégrateur <span className="text-[#00D4C8]">Odoo</span> en Suisse
