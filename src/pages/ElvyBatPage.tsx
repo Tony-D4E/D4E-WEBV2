@@ -635,7 +635,6 @@ export default function ElvyBatPage() {
               Vos données ne seront jamais partagées avec des tiers.
             </p>
           </form>
-          </div>
         </div>
       </section>
 
