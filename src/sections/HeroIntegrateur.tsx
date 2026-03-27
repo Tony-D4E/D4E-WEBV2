@@ -39,7 +39,7 @@ const slides = [
 
 export function HeroIntegrateur() {
   const [current, setCurrent] = useState(0);
-  const [prev, setPrev] = useState<number | null>(null);
+  const [prev, setPrev] = useState<number|null>(null);
   const [animating, setAnimating] = useState(false);
 
   useEffect(() => {
