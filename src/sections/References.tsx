@@ -21,11 +21,11 @@ export function References() {
   const { ref: temsRef,   isVisible: temsVisible   } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
 
   return (
-    <section className="py-20 bg-[#F8FAFC]">
+    <section className="py-10 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Clients */}
-        <div ref={logosRef} className={`mb-16 animate-on-scroll ${logosVisible ? 'is-visible' : ''}`}>
+        <div ref={logosRef} className={`mb-8 animate-on-scroll ${logosVisible ? 'is-visible' : ''}`}>
           <div className="text-center mb-10">
             <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Ils nous font confiance</p>
             <h3 className="text-3xl sm:text-4xl font-black text-[#0F1D3A]">
