@@ -29,26 +29,35 @@ export function Probleme() {
   return (
     <section
       ref={ref}
-      className={`py-20 bg-[#0F1D3A] relative overflow-hidden animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
+      className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
+      style={{ backgroundColor: '#0F1D3A', padding: '80px 0', position: 'relative', overflow: 'hidden' }}
     >
       {/* Glow */}
-      <div
-        className="absolute w-[600px] h-[600px] rounded-full -top-40 -right-40 opacity-10 pointer-events-none"
-        style={{ background: 'radial-gradient(circle, #00D4C8, transparent)' }}
-      />
+      <div style={{
+        position: 'absolute', width: '600px', height: '600px', borderRadius: '50%',
+        top: '-160px', right: '-160px', opacity: 0.08, pointerEvents: 'none',
+        background: 'radial-gradient(circle, #00D4C8, transparent)',
+      }} />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ position: 'relative' }}>
 
         {/* Header */}
-        <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#00D4C8]/30 rounded-full mb-6 bg-[#00D4C8]/10">
-            <span className="text-sm font-semibold text-[#00D4C8]">⚠ Le problème</span>
+        <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '8px',
+            padding: '6px 16px', border: '1px solid rgba(0,212,200,0.35)',
+            borderRadius: '999px', backgroundColor: 'rgba(0,212,200,0.1)',
+            marginBottom: '24px',
+          }}>
+            <span style={{ fontSize: '13px', fontWeight: 600, color: '#00D4C8' }}>⚠ Le problème</span>
           </div>
-          <h2 className="text-5xl sm:text-6xl font-black mb-6 leading-tight" style={{ color: '#FFFFFF' }}>
+
+          <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.75rem)', fontWeight: 900, lineHeight: 1.1, marginBottom: '20px', color: '#FFFFFF' }}>
             Vous pilotez encore{' '}
             <span style={{ color: '#00D4C8' }}>à l'aveugle ?</span>
           </h2>
-          <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#94A3B8' }}>
+
+          <p style={{ fontSize: '1.2rem', color: '#94A3B8', maxWidth: '640px', margin: '0 auto', lineHeight: 1.7 }}>
             La plupart des PME perdent{' '}
             <strong style={{ color: '#FFFFFF' }}>15 à 20% de marge</strong>{' '}
             faute de visibilité en temps réel. Est-ce votre cas ?
@@ -56,34 +65,46 @@ export function Probleme() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
+        <div style={{
+          display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '20px', maxWidth: '900px', margin: '0 auto',
+        }}>
           {douleurs.map((d, i) => (
-            <div
-              key={i}
-              className="bg-white/5 border border-white/10 rounded-2xl p-8 flex gap-5 items-start hover:bg-white/10 hover:border-white/20 transition-all"
-            >
-              <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl"
-                style={{ background: 'rgba(255,255,255,0.08)' }}
-              >
+            <div key={i} style={{
+              backgroundColor: 'rgba(255,255,255,0.06)',
+              border: '1px solid rgba(255,255,255,0.1)',
+              borderRadius: '16px', padding: '28px',
+              display: 'flex', gap: '16px', alignItems: 'flex-start',
+            }}>
+              <div style={{
+                width: '52px', height: '52px', flexShrink: 0,
+                backgroundColor: 'rgba(255,255,255,0.08)',
+                borderRadius: '14px', display: 'flex',
+                alignItems: 'center', justifyContent: 'center', fontSize: '22px',
+              }}>
                 {d.emoji}
               </div>
               <div>
-                <p className="text-xl font-black mb-2" style={{ color: '#FFFFFF' }}>{d.titre}</p>
-                <p className="text-base leading-relaxed" style={{ color: '#94A3B8' }}>{d.desc}</p>
+                <p style={{ color: '#FFFFFF', fontWeight: 800, fontSize: '1.1rem', marginBottom: '8px' }}>{d.titre}</p>
+                <p style={{ color: '#94A3B8', fontSize: '0.95rem', lineHeight: 1.6 }}>{d.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-lg mb-6" style={{ color: '#64748B' }}>
+        <div style={{ textAlign: 'center', marginTop: '48px' }}>
+          <p style={{ color: '#64748B', fontSize: '1.05rem', marginBottom: '20px' }}>
             Il existe une solution — déployée en quelques jours, pas en plusieurs mois.
           </p>
           <a
             href="/#contact-form"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold rounded-xl text-lg transition-colors"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              padding: '14px 32px', backgroundColor: '#00D4C8',
+              color: '#FFFFFF', fontWeight: 700, borderRadius: '12px',
+              fontSize: '1.1rem', textDecoration: 'none', transition: 'background 0.2s',
+            }}
           >
             Voir la solution →
           </a>
