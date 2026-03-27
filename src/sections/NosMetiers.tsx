@@ -11,11 +11,11 @@ const integrateurServices = [
 
 const elvySectors = [
   { name: 'ElvyBat',       tag: 'BTP',     desc: 'Construction & chantiers', link: '/#/elvybat', active: true },
-  { name: 'ElvyPrint',     tag: 'Bientôt', desc: 'Imprimerie & machines',    link: '#',          active: false },
+  { name: 'ElvyPrint',     tag: 'Disponible', desc: 'Imprimerie & machines',    link: '#',          active: true  },
   { name: 'ElvyLaw',       tag: 'Bientôt', desc: 'Juridique & notaires',     link: '#',          active: false },
   { name: 'ElvyImmo',      tag: 'Bientôt', desc: 'Immobilier & location',    link: '#',          active: false },
-  { name: 'ElvyAssurance', tag: 'Bientôt', desc: 'Assurance & courtage',     link: '#',          active: false },
-  { name: 'ElvyEduca',     tag: 'Bientôt', desc: 'Éducation & formation',    link: '#',          active: false },
+  { name: 'ElvyAssurance', tag: 'Disponible', desc: 'Assurance & courtage',     link: '#',          active: true  },
+  { name: 'ElvyEduca',     tag: 'Disponible', desc: 'Éducation & formation',    link: '#',          active: true  },
 ];
 
 export function NosMetiers() {
