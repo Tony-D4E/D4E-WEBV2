@@ -1,4 +1,5 @@
 import { HeroIntegrateur } from '../sections/HeroIntegrateur';
+import { Probleme } from '../sections/Probleme';
 import { NosMetiers } from '../sections/NosMetiers';
 import { Services } from '../sections/Services';
 import { Sectors } from '../sections/Sectors';
@@ -13,6 +14,7 @@ export function Home() {
   return (
     <main>
       <HeroIntegrateur />
+      <Probleme />
       <NosMetiers />
       <Services />
       <Sectors />
