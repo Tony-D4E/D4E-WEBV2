@@ -259,8 +259,8 @@ export default function ElvyBatPage() {
           {/* Description complète du pack */}
           <div className="bg-[#0F1D3A] rounded-3xl p-8 md:p-12 text-white">
             <div className="text-center mb-10">
-              <h3 style={{ color: '#00D4C8' }} className="text-xl font-black mb-4 uppercase tracking-widest">ElvyBat</h3>
-              <p style={{ color: '#FFFFFF' }} className="text-2xl font-bold max-w-2xl mx-auto leading-snug mb-4">
+              <h3 style={{ color: '#00D4C8' }} className="text-5xl font-black mb-4">ElvyBat</h3>
+              <p style={{ color: '#FFFFFF' }} className="text-3xl font-bold max-w-3xl mx-auto leading-snug mb-4">
                 Démarrez votre gestion de chantier sur Odoo, rapidement et simplement.
               </p>
               <p style={{ color: '#CBD5E1' }} className="text-base max-w-2xl mx-auto leading-relaxed">
