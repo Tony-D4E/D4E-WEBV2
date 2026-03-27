@@ -274,9 +274,9 @@ export default function ElvyBatPage() {
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Shield className="h-5 w-5 text-[#00D4C8]" />
-                  <h4 className="text-white font-bold">Une mise en place clé en main</h4>
+                  <h4 style={{ color: '#FFFFFF' }} className="font-bold">Une mise en place clé en main</h4>
                 </div>
-                <p className="text-gray-300 text-sm mb-4">Nous configurons pour vous un environnement opérationnel :</p>
+                <p style={{ color: '#CBD5E1' }} className="text-sm mb-4">Nous configurons pour vous un environnement opérationnel :</p>
                 <ul className="space-y-2">
                   {[
                     'Installation et paramétrage ElvyBat',
@@ -285,8 +285,8 @@ export default function ElvyBatPage() {
                     'Structuration des articles et des ouvrages',
                     'Configuration comptable et suivi de rentabilité chantier',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-[#00D4C8] flex-shrink-0 mt-0.5" />
+                    <li key={i} className="flex items-start gap-2 text-sm" style={{ color: '#CBD5E1' }}>
+                      <CheckCircle className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: '#00D4C8' }} />
                       {item}
                     </li>
                   ))}
@@ -297,17 +297,17 @@ export default function ElvyBatPage() {
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Zap className="h-5 w-5 text-[#F59E0B]" />
-                  <h4 className="text-white font-bold">Une solution immédiatement exploitable</h4>
+                  <h4 style={{ color: '#FFFFFF' }} className="font-bold">Une solution immédiatement exploitable</h4>
                 </div>
-                <p className="text-gray-300 text-sm mb-4">Vous disposez dès le départ d'un outil structuré pour :</p>
+                <p style={{ color: '#CBD5E1' }} className="text-sm mb-4">Vous disposez dès le départ d'un outil structuré pour :</p>
                 <ul className="space-y-2">
                   {[
                     'Gérer vos devis et votre facturation',
                     'Suivre vos chantiers et vos marges',
                     'Piloter votre activité en temps réel',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-[#F59E0B] flex-shrink-0 mt-0.5" />
+                    <li key={i} className="flex items-start gap-2 text-sm" style={{ color: '#CBD5E1' }}>
+                      <CheckCircle className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: '#F59E0B' }} />
                       {item}
                     </li>
                   ))}
@@ -318,21 +318,21 @@ export default function ElvyBatPage() {
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Users className="h-5 w-5 text-[#00D4C8]" />
-                  <h4 className="text-white font-bold">Accompagnement inclus avec un chef de projet</h4>
+                  <h4 style={{ color: '#FFFFFF' }} className="font-bold">Accompagnement inclus avec un chef de projet</h4>
                 </div>
                 <ul className="space-y-2 mb-4">
                   {[
                     'Mise en route et prise en main',
                     'Validation des premiers flux',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-[#00D4C8] flex-shrink-0 mt-0.5" />
+                    <li key={i} className="flex items-start gap-2 text-sm" style={{ color: '#CBD5E1' }}>
+                      <CheckCircle className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: '#00D4C8' }} />
                       {item}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-4 pt-4 border-t border-white/10">
-                  <p className="text-[#F59E0B] font-semibold text-sm">
+                  <p style={{ color: '#F59E0B' }} className="font-semibold text-sm">
                     1 déplacement sur site inclus pour sécuriser le démarrage.
                   </p>
                 </div>
@@ -341,18 +341,18 @@ export default function ElvyBatPage() {
 
             {/* Résultat + CTA */}
             <div className="bg-white/5 border border-[#00D4C8]/30 rounded-2xl p-6 text-center">
-              <p className="text-[#00D4C8] font-bold text-sm uppercase tracking-widest mb-2">Résultat</p>
-              <p className="text-white text-lg font-medium mb-6 max-w-2xl mx-auto">
+              <p style={{ color: '#00D4C8' }} className="font-bold text-sm uppercase tracking-widest mb-2">Résultat</p>
+              <p style={{ color: '#FFFFFF' }} className="text-lg font-medium mb-4 max-w-2xl mx-auto">
                 Une solution claire, structurée et prête à être utilisée pour piloter efficacement votre activité bâtiment.
               </p>
-              <p className="text-gray-300 mb-6">Passez à l'action — demandez une démonstration ou démarrez votre projet dès maintenant.</p>
+              <p style={{ color: '#CBD5E1' }} className="mb-6">Passez à l'action — demandez une démonstration ou démarrez votre projet dès maintenant.</p>
               <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base">
                 <a href="#contact">
                   Demander une démonstration
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <p className="mt-4 text-gray-500 text-sm">Réponse sous 24h · Suisse · France · Espagne · Italie</p>
+              <p style={{ color: '#6B7280' }} className="mt-4 text-sm">Réponse sous 24h · Suisse · France · Espagne · Italie</p>
             </div>
           </div>
         </div>
