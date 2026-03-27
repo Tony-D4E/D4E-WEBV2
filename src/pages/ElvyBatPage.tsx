@@ -213,11 +213,11 @@ export default function ElvyBatPage() {
       {/* ══════════════════════════════════════════
           2. STATS
       ══════════════════════════════════════════ */}
-      <section className="py-16 bg-white border-b border-gray-100">
+      <section className="py-16 bg-[#F0FDF9] border-b border-[#CCFBF1]">
         <div ref={statsRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${statsVisible ? 'is-visible' : ''}`}>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((s, i) => (
-              <div key={i} className="text-center">
+              <div key={i} className="text-center bg-white rounded-2xl py-8 px-4 border border-[#CCFBF1] shadow-sm">
                 <s.icon className="h-8 w-8 text-[#00D4C8] mx-auto mb-3" />
                 <p className="text-3xl font-black text-[#0F1D3A] mb-1">{s.valeur}</p>
                 <p className="text-sm text-gray-500 font-medium">{s.label}</p>
