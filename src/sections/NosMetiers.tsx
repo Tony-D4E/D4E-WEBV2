@@ -24,11 +24,11 @@ export function NosMetiers() {
   const { ref: editorRef,     isVisible: editorVisible     } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
 
   return (
-    <section className="py-24 bg-[#F8FAFC]">
+    <section className="py-12 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div ref={headerRef} className={`text-center max-w-3xl mx-auto mb-16 animate-on-scroll ${headerVisible ? 'is-visible' : ''}`}>
+        <div ref={headerRef} className={`text-center max-w-3xl mx-auto mb-8 animate-on-scroll ${headerVisible ? 'is-visible' : ''}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#00D4C8]/40 rounded-full bg-[#00D4C8]/5 mb-6">
             <Star className="h-4 w-4 text-[#00D4C8]" />
             <span className="text-sm font-bold text-[#00D4C8]">Nos expertises</span>
