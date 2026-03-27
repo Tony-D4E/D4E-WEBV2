@@ -92,6 +92,9 @@ const equipe = [
 // ─── COMPOSANT ────────────────────────────────────────────────────────────
 
 export default function ElvyBatPage() {
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
   const { ref: heroRef,    isVisible: heroVisible    } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
   const { ref: statsRef,   isVisible: statsVisible   } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
   const { ref: packRef,    isVisible: packVisible    } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
@@ -157,14 +160,12 @@ export default function ElvyBatPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-8 rounded-xl text-base">
-                  <a href="#contact">
-                    Demander une démonstration
+                <Button size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-8 rounded-xl text-base" onClick={() => scrollTo('contact')}>
+                  Demander une démonstration
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
                 </Button>
-                <Button asChild size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl text-base">
-                  <a href="#pack">Voir le pack de mise en place</a>
+                <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl text-base" onClick={() => scrollTo('pack')}>
+                  Voir le pack de mise en place
                 </Button>
               </div>
 
@@ -346,12 +347,10 @@ export default function ElvyBatPage() {
                 Une solution claire, structurée et prête à être utilisée pour piloter efficacement votre activité bâtiment.
               </p>
               <p style={{ color: '#CBD5E1' }} className="mb-6">Passez à l'action : demandez une démonstration ou démarrez votre projet dès maintenant.</p>
-              <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base">
-                <a href="#contact">
+              <Button size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base" onClick={() => scrollTo('contact')}>
                   Demander une démonstration
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
+                </Button>
               <p style={{ color: '#6B7280' }} className="mt-4 text-sm">Réponse sous 24h · Suisse · France · Espagne · Italie</p>
             </div>
           </div>
@@ -395,11 +394,9 @@ export default function ElvyBatPage() {
           </div>
 
           <div className="mt-10 text-center">
-            <Button asChild size="lg" className="bg-[#0F1D3A] hover:bg-[#1a2d4a] font-bold px-8 rounded-xl" style={{ color: '#FFFFFF' }}>
-              <a href="#contact" style={{ color: '#FFFFFF' }}>
+            <Button size="lg" className="bg-[#0F1D3A] hover:bg-[#1a2d4a] font-bold px-8 rounded-xl" style={{ color: '#FFFFFF' }} onClick={() => scrollTo('contact')}>
                 Discuter de vos besoins
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
             </Button>
           </div>
         </div>
@@ -459,12 +456,10 @@ export default function ElvyBatPage() {
               ElvyService IA s'appuie sur Odoo Field Service amélioré par D4E : planning des techniciens,
               signature mobile du client, dispatch depuis le bureau et reporting en temps réel.
             </p>
-            <Button asChild size="lg" className="bg-purple-600 hover:bg-purple-700 text-white font-bold px-8 rounded-xl">
-              <a href="#contact">
-                Voir une démonstration
+            <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white font-bold px-8 rounded-xl" onClick={() => scrollTo('contact')}>
+                  Voir une démonstration
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+                </Button>
           </div>
         </div>
       </section>
@@ -505,12 +500,10 @@ export default function ElvyBatPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base">
-              <a href="#contact">
-                Parler à un expert ElvyBat
+            <Button size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base" onClick={() => scrollTo('contact')}>
+                  Parler à un expert ElvyBat
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+                </Button>
           </div>
         </div>
       </section>
@@ -578,12 +571,10 @@ export default function ElvyBatPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Button asChild size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base">
-              <a href="#contact">
-                <ArrowRight className="mr-2 h-5 w-5" />
+            <Button size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base" onClick={() => scrollTo('contact')}>
+                  <ArrowRight className="mr-2 h-5 w-5" />
                 Prendre contact maintenant
-              </a>
-            </Button>
+                </Button>
             <p className="mt-3 text-gray-500 text-sm">Réponse garantie sous 24h</p>
           </div>
         </div>
