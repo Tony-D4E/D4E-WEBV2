@@ -14,15 +14,15 @@ export function Services() {
   const { ref: imageRef,  isVisible: imageVisible  } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
 
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={headerRef} className={`text-center max-w-3xl mx-auto mb-16 animate-on-scroll ${headerVisible ? 'is-visible' : ''}`}>
+        <div ref={headerRef} className={`text-center max-w-3xl mx-auto mb-8 animate-on-scroll ${headerVisible ? 'is-visible' : ''}`}>
           <h2 className="text-4xl sm:text-5xl font-black text-[#0F1D3A] mb-6 tracking-tight">
             Nos <span className="text-[#00D4C8]">Services</span>
           </h2>
           <p className="text-lg text-gray-500">Une offre complète pour votre transformation digitale.</p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div ref={cardsRef} className={`grid sm:grid-cols-2 gap-5 stagger-children ${cardsVisible ? 'is-visible' : ''}`}>
             {services.map((s, i) => (
               <div key={i} className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
