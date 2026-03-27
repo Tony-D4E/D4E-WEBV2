@@ -10,12 +10,12 @@ const integrateurServices = [
 ];
 
 const elvySectors = [
-  { name: 'ElvyBat',       tag: 'BTP',     desc: 'Construction & chantiers', link: '/elvybat', active: true },
-  { name: 'ElvyPrint',     tag: 'Bientôt', desc: 'Imprimerie & machines',    link: '#',        active: false },
-  { name: 'ElvyLaw',       tag: 'Bientôt', desc: 'Juridique & notaires',     link: '#',        active: false },
-  { name: 'ElvyImmo',      tag: 'Bientôt', desc: 'Immobilier & location',    link: '#',        active: false },
-  { name: 'ElvyAssurance', tag: 'Bientôt', desc: 'Assurance & courtage',     link: '#',        active: false },
-  { name: 'ElvyEduca',     tag: 'Bientôt', desc: 'Éducation & formation',    link: '#',        active: false },
+  { name: 'ElvyBat',       tag: 'BTP',     desc: 'Construction & chantiers', link: '/#/elvybat', active: true },
+  { name: 'ElvyPrint',     tag: 'Bientôt', desc: 'Imprimerie & machines',    link: '#',          active: false },
+  { name: 'ElvyLaw',       tag: 'Bientôt', desc: 'Juridique & notaires',     link: '#',          active: false },
+  { name: 'ElvyImmo',      tag: 'Bientôt', desc: 'Immobilier & location',    link: '#',          active: false },
+  { name: 'ElvyAssurance', tag: 'Bientôt', desc: 'Assurance & courtage',     link: '#',          active: false },
+  { name: 'ElvyEduca',     tag: 'Bientôt', desc: 'Éducation & formation',    link: '#',          active: false },
 ];
 
 export function NosMetiers() {
@@ -27,6 +27,7 @@ export function NosMetiers() {
     <section className="py-24 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* Header */}
         <div ref={headerRef} className={`text-center max-w-3xl mx-auto mb-16 animate-on-scroll ${headerVisible ? 'is-visible' : ''}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#00D4C8]/40 rounded-full bg-[#00D4C8]/5 mb-6">
             <Star className="h-4 w-4 text-[#00D4C8]" />
@@ -75,7 +76,10 @@ export function NosMetiers() {
             </div>
             <div className="mt-6 pt-6 border-t border-gray-100">
               <Button asChild className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold rounded-xl">
-                <a href="/#contact-form">Discuter de mon projet Odoo <ArrowRight className="ml-2 h-4 w-4" /></a>
+                <a href="/#contact-form">
+                  Discuter de mon projet Odoo
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </Button>
             </div>
           </div>
@@ -85,6 +89,8 @@ export function NosMetiers() {
         <div ref={editorRef} className={`animate-on-scroll delay-2 ${editorVisible ? 'is-visible' : ''}`}>
           <div className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
             <div className="flex flex-col lg:flex-row gap-8">
+
+              {/* Gauche */}
               <div className="lg:w-1/3">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 rounded-2xl bg-[#F0FDF9] flex items-center justify-center flex-shrink-0">
@@ -100,17 +106,26 @@ export function NosMetiers() {
                   Chaque module est conçu pour répondre aux besoins spécifiques d'un secteur
                   d'activité, avec un déploiement rapide et un coût maîtrisé.
                 </p>
-                <Button asChild variant="outline" className="w-full border-gray-200 text-[#0F1D3A] hover:bg-gray-50 rounded-xl">
-                  <a href="/#/elvy">Découvrir la gamme Elvy <ArrowRight className="ml-2 h-4 w-4" /></a>
-                </Button>
+                {/* Bouton corrigé : fond teal, texte blanc, bien visible */}
+                <a
+                  href="/#/elvy"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold rounded-xl transition-colors"
+                >
+                  Découvrir la gamme Elvy
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
+
+              {/* Droite — grille solutions */}
               <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {elvySectors.map((s, i) => (
-                  <a key={i} href={s.link}
+                  <a
+                    key={i}
+                    href={s.link}
                     className={`flex items-center justify-between p-4 rounded-xl border transition-all ${
                       s.active
-                        ? 'bg-[#F0FDF9] border-[#CCFBF1] hover:border-[#00D4C8]'
-                        : 'bg-gray-50 border-gray-100 hover:border-gray-200'
+                        ? 'bg-[#F0FDF9] border-[#CCFBF1] hover:border-[#00D4C8] hover:shadow-md'
+                        : 'bg-gray-50 border-gray-100 hover:border-gray-200 cursor-default'
                     }`}
                   >
                     <div className="flex items-center gap-3">
@@ -128,14 +143,11 @@ export function NosMetiers() {
                   </a>
                 ))}
               </div>
+
             </div>
           </div>
         </div>
 
-      </div>
-      <div className="sr-only">
-        <h2>Intégrateur Odoo et Éditeur de Solutions ERP en Suisse</h2>
-        <p>Digital4Efficiency combine deux expertises : l'intégration Odoo Gold et les solutions Elvy pour le BTP, l'imprimerie, le juridique, l'immobilier, l'assurance et l'éducation.</p>
       </div>
     </section>
   );
