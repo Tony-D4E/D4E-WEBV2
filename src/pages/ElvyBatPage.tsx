@@ -195,8 +195,8 @@ export default function ElvyBatPage() {
                 <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex gap-4 items-start">
                   <div className="w-1 rounded-full bg-[#00D4C8] flex-shrink-0 mt-1" style={{ minHeight: '40px' }} />
                   <div>
-                    <p className="text-white font-bold text-base leading-snug mb-1">{item.titre}</p>
-                    <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                    <p style={{ color: '#FFFFFF' }} className="font-bold text-base leading-snug mb-1">{item.titre}</p>
+                    <p style={{ color: '#CBD5E1' }} className="text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
