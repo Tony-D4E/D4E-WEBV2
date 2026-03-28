@@ -34,11 +34,11 @@ const CSS = `
   .op .lk{background:#f8fafc!important} .op .lk2{background:#fff!important}
   .op .lk h1,.op .lk h2,.op .lk h3,.op .lk h4{color:#1e293b!important}
   .op .lk p,.op .lk2 p{color:#334155!important}
-  .op section{padding:96px 48px;position:relative;overflow:hidden}
+  .op section{padding:96px 64px;position:relative;overflow:hidden;width:100%}
   .op *{box-sizing:border-box}
   .op .tg{background:linear-gradient(to right,#00E5CC,#00D4C8,#06B6D4)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
   .op .tgg{background:linear-gradient(to right,#F59E0B,#FBBF24,#FCD34D)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
-  .op .con{max-width:1100px;margin:0 auto}
+  .op .con{width:100%}
   .op .sh2{font-size:clamp(36px,4.5vw,60px);font-weight:800;line-height:1.06;margin-bottom:18px}
   .op .card{border:1px solid;border-radius:1rem;transition:all .3s}
   .op .card-dk{background:rgba(17,24,39,.9);border-color:rgba(255,255,255,.12)}
@@ -195,8 +195,8 @@ export default function OdooPage() {
 
       {/* ② VISION LIGHT */}
       <section className="lk2" id="vision">
-        <div className="con">
-          <div style={{maxWidth:760,margin:'0 auto'}}>
+        <div style={{width:"100%"}}>
+          <div style={{maxWidth:'100%'}}>
             <div style={{fontSize:11,textTransform:'uppercase',letterSpacing:2,color:'#00B4A6',fontWeight:700,borderBottom:'2px solid rgba(0,212,200,.2)',paddingBottom:8,display:'inline-block',marginBottom:40}} className="aos">Notre conviction</div>
             <h2 className="aos d1" style={{fontSize:'clamp(32px,4vw,56px)',fontWeight:800,lineHeight:1.12,marginBottom:28,color:'#1e293b'}}>
               Fini le ballet des logiciels<br/>qui <span className="tg">ne se parlent pas.</span>
@@ -204,7 +204,7 @@ export default function OdooPage() {
             {['On a tous vécu ce cauchemar : un CRM d\'un côté, une compta de l\'autre, un Excel de stock quelque part sur le réseau, et une réunion hebdomadaire pour réconcilier tout ça à la main. C\'est du temps humain gaspillé.',
               'Odoo, c\'est 40+ applications qui naissent déjà connectées. Votre commercial crée un devis : la comptabilité le voit. Le stock se met à jour : l\'atelier est prévenu. Une facture est payée : le rapport de trésorerie bouge en temps réel.',
               "Ce qu'on aime chez Odoo, c'est que le logiciel respecte l'intelligence de vos équipes. Il automatise ce qui est répétitif et libère du temps pour ce qui demande du jugement, de la relation, de l'expertise."
-            ].map((p,i) => <p key={i} className={`aos d${i+2}`} style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:20}}>{p}</p>)}
+            ].map((p,i) => <p key={i} className={`aos d${i+2}`} style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:20,maxWidth:'100%'}}>{p}</p>)}
             <div className="aos d4" style={{display:'flex',alignItems:'center',gap:20,marginTop:40,paddingTop:28,borderTop:'1px solid #e2e8f0'}}>
               <img src="/team-laetitia.jpg" alt="Laëtitia André" style={{width:80,height:80,borderRadius:'50%',objectFit:'cover',objectPosition:'top',border:'3px solid #00D4C8',flexShrink:0,boxShadow:'0 0 20px rgba(0,212,200,.2)'}}/>
               <div>
@@ -223,7 +223,7 @@ export default function OdooPage() {
       {/* ③ APPS DARK */}
       <section className="dk2" id="apps">
         <div className="blob" style={{width:400,height:400,background:'#7C3AED',left:-60,top:'50%',transform:'translateY(-50%)',opacity:.08}}/>
-        <div className="con" style={{position:'relative',zIndex:2}}>
+        <div style={{width:'100%',position:'relative',zIndex:2}}>
           <div className="stag-dk aos"><span className="sdot"/>&nbsp;Ce qu'Odoo fait vraiment</div>
           <h2 className="sh2 aos d1" style={{color:'#fff'}}>Les modules qu'on déploie<br/>le plus. Et pourquoi.</h2>
           <p className="aos d2" style={{fontSize:17,color:'#D1D5DB',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Pas une liste exhaustive. Juste les six apps qui ont changé concrètement la vie des entreprises qu'on accompagne.</p>
@@ -249,7 +249,7 @@ export default function OdooPage() {
 
       {/* ④ INTEGRATION LIGHT */}
       <section className="lk" id="integration">
-        <div className="con">
+        <div style={{width:"100%"}}>
           <div className="int-cols" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:64,alignItems:'start'}}>
             <div>
               <div className="stag-lk aos"><span className="sdot"/>&nbsp;Intégrations &amp; API</div>
@@ -284,7 +284,7 @@ export default function OdooPage() {
 
       {/* ⑤ INDUSTRIES DARK */}
       <section className="dk" id="industries">
-        <div className="con">
+        <div style={{width:"100%"}}>
           <div className="stag-dk aos"><span className="sdot"/>&nbsp;Par secteur</div>
           <h2 className="sh2 aos d1" style={{color:'#fff'}}>Odoo parle votre langue.<br/>On vous le prouve.</h2>
           <p className="aos d2" style={{fontSize:17,color:'#D1D5DB',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Chaque métier a ses angles morts. Voilà ce qu'on a appris en déployant Odoo dans les vôtres.</p>
@@ -329,7 +329,7 @@ export default function OdooPage() {
 
       {/* ⑥ REASONS LIGHT */}
       <section className="lk" id="raisons">
-        <div className="con">
+        <div style={{width:"100%"}}>
           <div className="stag-lk aos"><span className="sdot"/>&nbsp;Ce qu'on a vraiment appris</div>
           <h2 className="sh2 aos d1" style={{color:'#1e293b'}}>6 raisons. Pas dans les slides.</h2>
           <p className="aos d2" style={{fontSize:17,color:'#334155',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Après 4 ans à déployer Odoo sur des dizaines de projets très différents, voilà ce qui nous convainc encore chaque matin.</p>
@@ -354,13 +354,13 @@ export default function OdooPage() {
       {/* ⑦ PROMISE DARK */}
       <section className="dk2" id="promise" style={{textAlign:'center'}}>
         <div className="blob" style={{width:700,height:350,background:'#00D4C8',bottom:0,left:'50%',transform:'translateX(-50%)',opacity:.07}}/>
-        <div className="con" style={{position:'relative',zIndex:2}}>
-          <div style={{maxWidth:700,margin:'0 auto'}}>
+        <div style={{width:'100%',position:'relative',zIndex:2}}>
+          <div style={{width:'100%'}}>
             <div className="stag-dk aos" style={{display:'inline-flex'}}><span className="sdot"/>&nbsp;La promesse D4E</div>
             <h2 className="aos d1" style={{fontSize:'clamp(44px,6vw,76px)',fontWeight:800,lineHeight:1.05,marginBottom:20,color:'#fff'}}>
               On ne livre pas un logiciel.<br/>On livre <span className="tg">votre système.</span>
             </h2>
-            <p className="aos d2" style={{fontSize:20,color:'#D1D5DB',lineHeight:1.75,marginBottom:48,maxWidth:580,marginLeft:'auto',marginRight:'auto'}}>
+            <p className="aos d2" style={{fontSize:20,color:'#D1D5DB',lineHeight:1.75,marginBottom:48,maxWidth:'100%'}}>
               Configurer Odoo, n'importe qui peut l'apprendre. Comprendre votre métier, vos contraintes, vos angles morts et traduire tout ça en un système qui tient dans le temps — c'est ce qu'on fait chaque jour depuis 4 ans.
             </p>
             <div className="p3g sg aos" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:14,marginBottom:48,textAlign:'left'}}>
