@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const navLinks = [
   { to: '/',        label: 'Accueil',  exact: true },
+  { to: '/odoo',    label: 'Odoo' },
   { to: '/elvy',    label: 'Elvy' },
   { to: '/elvybat', label: 'ElvyBat' },
   { to: '/tarifs',  label: 'Tarifs' },
@@ -22,13 +23,11 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Ferme le menu mobile à chaque changement de page
   useEffect(() => { setMobileMenu(false); }, [location.pathname]);
 
   const isActive = (to: string, exact = false) =>
     exact ? location.pathname === to : location.pathname.startsWith(to);
 
-  /** Navigation vers une ancre, avec gestion cross-page */
   const goAnchor = (anchor: string) => {
     setMobileMenu(false);
     if (location.pathname !== '/') {
