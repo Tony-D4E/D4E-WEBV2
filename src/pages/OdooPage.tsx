@@ -7,7 +7,7 @@ const CSS = `
   .op .tg { background: linear-gradient(to right,#00E5CC,#00D4C8,#06B6D4); -webkit-background-clip:text; background-clip:text; color:transparent; }
   .op .tgg { background: linear-gradient(to right,#F59E0B,#FBBF24,#FCD34D); -webkit-background-clip:text; background-clip:text; color:transparent; }
   .op .cg { background:rgba(17,24,39,.8); backdrop-filter:blur(24px); border:1px solid rgba(255,255,255,.1); box-shadow:0 4px 24px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05); }
-  .op .cgh:hover { border-color:rgba(0,212,200,.5)!important; box-shadow:0 0 30px rgba(0,212,200,.12); background:rgba(0,212,200,0.12)!important; }
+  .op .cgh:hover { border-color:rgba(0,212,200,.5)!important; box-shadow:0 0 40px rgba(0,212,200,.15); }
   .op .bg-t { transition:all .3s cubic-bezier(.4,0,.2,1); }
   .op .bg-t:hover { transform:translateY(-2px); box-shadow:0 10px 40px -10px rgba(0,212,200,.5); }
   .op .blob { position:absolute; border-radius:9999px; pointer-events:none; filter:blur(120px); }
@@ -80,7 +80,7 @@ const CSS = `
     .op .p3g{grid-template-columns:1fr!important}
     .op .ind-cols{grid-template-columns:1fr!important}
     .op .int-cols{grid-template-columns:1fr!important}
-    .op .hero-h1{font-size:clamp(52px,13vw,80px)!important;white-space:normal!important}
+    .op .hero-h1{font-size:clamp(40px,10vw,60px)!important;white-space:normal!important}
   }
 `;
 
@@ -156,7 +156,7 @@ export default function OdooPage() {
         <div className="blob" style={{width:400,height:400,background:'#F59E0B',bottom:0,left:-100,opacity:.04}}/>
         <div style={{width:'100%',position:'relative',zIndex:2}}>
           <div className="stag-dk aos"><span className="sdot"/>&nbsp;Partenaire Odoo Gold — Suisse, France, Espagne</div>
-          <h1 className="hero-h1 aos d1" style={{fontSize:'clamp(72px,13.5vw,220px)',fontWeight:800,lineHeight:.88,marginBottom:40,color:'#fff',letterSpacing:-5,whiteSpace:'nowrap'}}>
+          <h1 className="hero-h1 aos d1" style={{fontSize:'clamp(52px,8vw,130px)',fontWeight:800,lineHeight:.95,marginBottom:36,color:'#fff',letterSpacing:-3,whiteSpace:'nowrap'}}>
             On ne vend<br/>pas Odoo.<br/><span className="tg">On y croit<br/>vraiment.</span>
           </h1>
           <p className="aos d2" style={{fontSize:20,color:'#D1D5DB',lineHeight:1.75,maxWidth:640,marginBottom:40}}>
@@ -236,7 +236,7 @@ export default function OdooPage() {
               {ico:'employees',bg:'rgba(245,158,11,.1)',title:'Ressources Humaines',body:'Recrutement, paie, congés, évaluations. Portail self-service collaborateur. Une RH qui pilote.',result:null,rc:''},
               {ico:'ecommerce',bg:'rgba(0,212,200,.1)',title:'E-commerce',body:'Boutique native, catalogue synchronisé avec le stock physique. Un produit épuisé disparait automatiquement du site.',result:'x2 ventes online en 6 mois',rc:'rt'},
             ].map((a,i) => (
-              <div key={i} className={`ac cgh${i===0?' w':''}`} style={{cursor:'default',background:'rgba(0,212,200,0.07)',border:'1px solid rgba(0,212,200,0.18)',borderRadius:'1rem',transition:'all .3s'}}>
+              <div key={i} className={`ac card card-dk cgh${i===0?' w':''}`} style={{cursor:'default'}}>
                 <div className="aico" style={{background:a.bg}} dangerouslySetInnerHTML={{__html:SVGS[a.ico as keyof typeof SVGS]}}/>
                 <div style={{fontSize:19,fontWeight:700,marginBottom:10,color:'#fff'}}>{a.title}</div>
                 <p style={{fontSize:15,color:'#9CA3AF',lineHeight:1.7,marginBottom:16,flex:1}}>{a.body}</p>
@@ -290,22 +290,22 @@ export default function OdooPage() {
           <p className="aos d2" style={{fontSize:17,color:'#D1D5DB',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Chaque métier a ses angles morts. Voilà ce qu'on a appris en déployant Odoo dans les vôtres.</p>
           <div className="aos d3" style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:44}}>
             {([['fi','🏛 Finance'],['sv','🧩 Services'],['bt','🏗 Construction',true],['in','⚙️ Industrie'],['co','🛒 Commerce'],['lo','🚛 Logistique'],['sa','🩺 Santé'],['ed','📚 Education']] as [IndId,string,boolean?][]).map(([id,label,elvy]) => (
-              <button key={id} className={`itab${elvy?' elvy':''}${ind===id?' on':''}`} onClick={() => setInd(id)}>
+              <button key={id} className={`itab${elvy?' elvy':''}${ind===id?' on':''}`} style={{fontSize:15,padding:'10px 22px'}} onClick={() => setInd(id)}>
                 {label}{elvy && <span className="eb">Elvy</span>}
               </button>
             ))}
           </div>
-          <div className="ind-cols" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:52,alignItems:'start'}}>
+          <div className="ind-cols" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:72,alignItems:'start'}}>
             <div>
-              <div style={{fontSize:44,lineHeight:1,marginBottom:18}}>{cur.emo}</div>
-              <h3 style={{fontSize:32,fontWeight:800,lineHeight:1.1,marginBottom:6,color:'#fff'}}>{cur.title}</h3>
-              <div style={{fontSize:12,textTransform:'uppercase',letterSpacing:1,fontWeight:700,color:cur.gold?'#F59E0B':'#00D4C8',marginBottom:18}}>{cur.sub}</div>
-              <p style={{fontSize:17,color:'#D1D5DB',lineHeight:1.8,marginBottom:24}} dangerouslySetInnerHTML={{__html:cur.body}}/>
+              <div style={{fontSize:64,lineHeight:1,marginBottom:24}}>{cur.emo}</div>
+              <h3 style={{fontSize:48,fontWeight:800,lineHeight:1.1,marginBottom:10,color:'#fff'}}>{cur.title}</h3>
+              <div style={{fontSize:14,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:cur.gold?'#F59E0B':'#00D4C8',marginBottom:22}}>{cur.sub}</div>
+              <p style={{fontSize:20,color:'#D1D5DB',lineHeight:1.8,marginBottom:32}} dangerouslySetInnerHTML={{__html:cur.body}}/>
               <div style={{display:'flex',flexDirection:'column',gap:10}}>
                 {cur.checks.map((c,i) => (
-                  <div key={i} style={{display:'flex',alignItems:'flex-start',gap:10,fontSize:14,color:'#D1D5DB'}}>
-                    <div style={{width:20,height:20,minWidth:20,borderRadius:'50%',background:chkBg,display:'flex',alignItems:'center',justifyContent:'center',marginTop:1}}>
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,3" stroke={chkColor} strokeWidth="1.5" strokeLinecap="round"/></svg>
+                  <div key={i} style={{display:'flex',alignItems:'flex-start',gap:12,fontSize:17,color:'#D1D5DB'}}>
+                    <div style={{width:26,height:26,minWidth:26,borderRadius:'50%',background:chkBg,display:'flex',alignItems:'center',justifyContent:'center',marginTop:2}}>
+                      <svg width="12" height="12" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,3" stroke={chkColor} strokeWidth="1.5" strokeLinecap="round"/></svg>
                     </div>
                     {c}
                   </div>
@@ -314,12 +314,12 @@ export default function OdooPage() {
             </div>
             <div style={{display:'flex',flexDirection:'column',gap:10}}>
               {cur.mods.map((m,i) => (
-                <div key={i} className={cur.gold?'imod-g':'imod'}>
+                <div key={i} className={cur.gold?'imod-g':'imod'} style={{padding:'22px 24px'}}>
                   <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:4}}>
-                    <span style={{fontSize:14,fontWeight:600,color:'#fff'}}>{m.n}</span>
-                    <span className={cur.gold?'mtg':'mtt'}>{m.t}</span>
+                    <span style={{fontSize:17,fontWeight:700,color:'#fff'}}>{m.n}</span>
+                    <span className={cur.gold?'mtg':'mtt'} style={{fontSize:13,padding:'4px 12px'}}>{m.t}</span>
                   </div>
-                  <div style={{fontSize:13,color:'#9CA3AF'}}>{m.d}</div>
+                  <div style={{fontSize:15,color:'#9CA3AF',marginTop:6}}>{m.d}</div>
                 </div>
               ))}
             </div>
