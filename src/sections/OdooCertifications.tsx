@@ -1,57 +1,37 @@
 export function OdooCertifications() {
   return (
-    <section style={{ backgroundColor: '#F8FAFC', padding: '56px 0' }}>
+    <section style={{ backgroundColor: '#FFFFFF', padding: '64px 0' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div style={{
-          backgroundColor: '#0F1D3A',
-          borderRadius: '24px',
-          padding: '56px 48px',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '32px',
+          gap: '36px',
           textAlign: 'center',
-          position: 'relative',
-          overflow: 'hidden',
         }}>
-
-          <div style={{
-            position: 'absolute', width: '500px', height: '500px',
-            borderRadius: '50%', top: '-150px', right: '-150px',
-            opacity: 0.07, pointerEvents: 'none',
-            background: 'radial-gradient(circle, #00D4C8, transparent)',
-          }} />
 
           <div>
             <p style={{
-              fontSize: '11px',
-              fontWeight: 700,
-              color: '#00D4C8',
+              fontSize: '13px',
+              fontWeight: 800,
+              color: '#0F1D3A',
               letterSpacing: '3px',
               textTransform: 'uppercase',
-              marginBottom: '12px',
+              marginBottom: '14px',
               marginTop: 0,
             }}>
               EXPERTISE ODOO CERTIFIEE
             </p>
             <h3 style={{
-              fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)',
+              fontSize: 'clamp(1.6rem, 2.8vw, 2.5rem)',
               fontWeight: 900,
-              color: '#FFFFFF',
-              margin: '0 0 12px 0',
+              color: '#F59E0B',
+              margin: 0,
               letterSpacing: '-0.5px',
-              lineHeight: 1.15,
+              lineHeight: 1.1,
             }}>
               Partenaire Gold Odoo certifie depuis la v13
             </h3>
-            <p style={{
-              fontSize: 'clamp(0.9rem, 1.2vw, 1.05rem)',
-              color: '#94A3B8',
-              margin: 0,
-              lineHeight: 1.65,
-            }}>
-              7 versions consecutives — l'une des expertises les plus longues en Suisse
-            </p>
           </div>
 
           <img
@@ -59,10 +39,9 @@ export function OdooCertifications() {
             alt="Certifications Odoo v13 a v19"
             style={{
               width: '100%',
-              maxWidth: '560px',
+              maxWidth: '580px',
               height: 'auto',
               objectFit: 'contain',
-              borderRadius: '12px',
             }}
           />
 
