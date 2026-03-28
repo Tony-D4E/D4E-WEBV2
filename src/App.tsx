@@ -13,18 +13,16 @@ import { NotFound } from './pages/NotFound';
 function App() {
   return (
     <HashRouter>
-      {/* ThÃ¨me clair Kimi : fond blanc cassÃ© */}
       <div className="min-h-screen bg-[#f8fafc]">
         <Navigation />
         <Routes>
-          <Route path="/"         element={<Home />
-          <Route path="/odoo" element={<OdooPage />} />} />
-          <Route path="/elvy"     element={<Elvy />} />
-          <Route path="/elvybat"  element={<ElvyBatPage />} />
-          <Route path="/tarifs"   element={<TarifsPage />} />
-          <Route path="/support"  element={<Support />} />
-          {/* 404 */}
-          <Route path="*"         element={<NotFound />} />
+          <Route path="/"        element={<Home />} />
+          <Route path="/odoo"    element={<OdooPage />} />
+          <Route path="/elvy"    element={<Elvy />} />
+          <Route path="/elvybat" element={<ElvyBatPage />} />
+          <Route path="/tarifs"  element={<TarifsPage />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="*"        element={<NotFound />} />
         </Routes>
         <WhatsAppWidget
           phoneNumber="41764344595"
