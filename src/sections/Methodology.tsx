@@ -46,7 +46,7 @@ export function Methodology() {
           <div ref={imageRef} className={`flex justify-center animate-scale ${imageVisible ? 'is-visible' : ''}`}>
             <div className="w-full rounded-3xl overflow-hidden h-72 flex items-center justify-center"
               style={{ background: 'linear-gradient(135deg, #818cf8 0%, #00D4C8 100%)' }}>
-              <img src="/methodology-illustration.png" alt="Méthodologie D4E"
+              <img src="/team-working.jpg" alt="Méthodologie D4E"
                 className="w-full h-full object-cover mix-blend-overlay opacity-80" />
               <div className="absolute text-center text-white/90">
                 <div className="text-5xl font-black">6</div>
