@@ -1,5 +1,5 @@
 const clients = [
-  { logo: '/logo-alc.svg',             name: 'ALC Tolerie',       sector: 'Tolerie industrielle'    },
+  { logo: '/logo-alc.png',             name: 'ALC Tolerie',       sector: 'Tolerie industrielle'    },
   { logo: '/logo-cave.svg',            name: 'La Cave de Geneve', sector: 'Cooperative viticole'    },
   { logo: '/logo-mbg.png',             name: 'MBG SA',            sector: 'Metiers techniques BTP'  },
   { logo: '/logo-ingeni.jpg',          name: 'Ingeni SA',         sector: 'Ingenierie structurale'  },
