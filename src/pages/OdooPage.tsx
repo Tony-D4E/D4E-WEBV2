@@ -27,9 +27,17 @@ const CSS = `
   .op .stag-dk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.1);border:1px solid rgba(0,212,200,.2);border-radius:40px;padding:4px 14px;font-size:11px;color:#00D4C8;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
   .op .stag-lk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.08);border:1px solid rgba(0,212,200,.2);border-radius:40px;padding:4px 14px;font-size:11px;color:#00B4A6;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
   .op .sdot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:opPulse 2s infinite}
-  .op .dk{background:#0B0F19;color:#fff} .op .dk2{background:#0F172A;color:#fff}
-  .op .lk{background:#f8fafc} .op .lk2{background:#fff}
+  .op .dk{background:#0B0F19!important;color:#fff!important} 
+  .op .dk2{background:#0F172A!important;color:#fff!important}
+  .op .dk h1,.op .dk h2,.op .dk h3,.op .dk h4,.op .dk2 h1,.op .dk2 h2,.op .dk2 h3,.op .dk2 h4{color:#fff!important}
+  .op .dk p,.op .dk2 p{color:#D1D5DB!important}
+  .op .lk{background:#f8fafc!important} .op .lk2{background:#fff!important}
+  .op .lk h1,.op .lk h2,.op .lk h3,.op .lk h4{color:#1e293b!important}
+  .op .lk p,.op .lk2 p{color:#334155!important}
   .op section{padding:96px 48px;position:relative;overflow:hidden}
+  .op *{box-sizing:border-box}
+  .op .tg{background:linear-gradient(to right,#00E5CC,#00D4C8,#06B6D4)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+  .op .tgg{background:linear-gradient(to right,#F59E0B,#FBBF24,#FCD34D)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
   .op .con{max-width:1100px;margin:0 auto}
   .op .sh2{font-size:clamp(36px,4.5vw,60px);font-weight:800;line-height:1.06;margin-bottom:18px}
   .op .card{border:1px solid;border-radius:1rem;transition:all .3s}
