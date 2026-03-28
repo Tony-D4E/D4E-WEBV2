@@ -156,8 +156,8 @@ export default function OdooPage() {
         <div className="blob" style={{width:400,height:400,background:'#F59E0B',bottom:0,left:-100,opacity:.04}}/>
         <div style={{width:'100%',position:'relative',zIndex:2}}>
           <div className="stag-dk aos"><span className="sdot"/>&nbsp;Partenaire Odoo Gold — Suisse, France, Espagne</div>
-          <h1 className="hero-h1 aos d1" style={{fontSize:'clamp(64px,11.5vw,180px)',fontWeight:800,lineHeight:.92,marginBottom:36,color:'#fff',letterSpacing:-4,whiteSpace:'nowrap'}}>
-            On ne vend<br/>pas Odoo.<br/><span className="tg">On y croit<br/>vraiment.</span>
+          <h1 className="hero-h1 aos d1" style={{fontSize:'clamp(72px,14vw,210px)',fontWeight:800,lineHeight:.9,marginBottom:36,color:'#fff',letterSpacing:-5,whiteSpace:'nowrap'}}>
+            On ne vend pas<br/>Odoo. <span className="tg">On y croit<br/>vraiment.</span>
           </h1>
           <p className="aos d2" style={{fontSize:20,color:'#D1D5DB',lineHeight:1.75,maxWidth:640,marginBottom:40}}>
             Chez D4E, on a choisi Odoo <strong style={{color:'#fff'}}>avant que ce soit tendance.</strong> On l'a déployé sur des chantiers, dans des ateliers, des cabinets. Et on le redéploierait demain sans hésiter.
