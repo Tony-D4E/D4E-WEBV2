@@ -9,88 +9,77 @@ const clients = [
 
 export function References() {
   return (
-    <section style={{ backgroundColor: '#F0FDF9', padding: '64px 0' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <style>{\`
+        .refs-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+        .ref-card {
+          background: #FFFFFF;
+          border-radius: 16px;
+          padding: 32px 24px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 16px;
+          border: 1px solid #E2E8F0;
+          text-decoration: none;
+          transition: box-shadow 0.2s, transform 0.2s;
+          min-height: 160px;
+        }
+        .ref-card:hover {
+          box-shadow: 0 8px 32px rgba(0,212,200,0.15);
+          transform: translateY(-2px);
+        }
+        .ref-card img {
+          max-height: 64px;
+          max-width: 180px;
+          object-fit: contain;
+          filter: grayscale(100%);
+          opacity: 0.7;
+          transition: filter 0.3s, opacity 0.3s;
+        }
+        .ref-card:hover img {
+          filter: grayscale(0%);
+          opacity: 1;
+        }
+        @media (max-width: 768px) {
+          .refs-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+          .refs-grid { grid-template-columns: 1fr; }
+        }
+      \`}</style>
 
-        <div style={{ textAlign: 'center', marginBottom: '52px' }}>
-          <p style={{ fontSize: '13px', fontWeight: 700, color: '#00D4C8', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '12px' }}>
-            ILS NOUS FONT CONFIANCE
-          </p>
-          <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 900, color: '#0F1D3A', letterSpacing: '-1px', marginTop: 0 }}>
-            Nos références clients
-          </h2>
+      <section style={{ backgroundColor: '#F0FDF9', padding: '80px 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+            <p style={{ fontSize: '12px', fontWeight: 700, color: '#00D4C8', letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: '12px', marginTop: 0 }}>
+              ILS NOUS FONT CONFIANCE
+            </p>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 900, color: '#0F1D3A', letterSpacing: '-1px', marginTop: 0 }}>
+              Nos références clients
+            </h2>
+          </div>
+
+          <div className="refs-grid">
+            {clients.map((c) => (
+              <a key={c.name} href={c.url} className="ref-card">
+                <img src={c.logo} alt={c.name} />
+                <div style={{ textAlign: 'center' }}>
+                  <p style={{ fontSize: '0.95rem', fontWeight: 700, color: '#0F1D3A', margin: '0 0 4px' }}>{c.name}</p>
+                  <p style={{ fontSize: '0.8rem', color: '#94A3B8', margin: 0 }}>{c.sector}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+
         </div>
-
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '24px',
-        }}>
-          {clients.map((c) => (
-            <a
-              key={c.name}
-              href={c.url}
-              style={{
-                backgroundColor: '#FFFFFF',
-                borderRadius: '16px',
-                padding: '32px 24px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '16px',
-                border: '1px solid #E2E8F0',
-                textDecoration: 'none',
-                transition: 'box-shadow 0.2s, transform 0.2s',
-                minHeight: '160px',
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 32px rgba(0,212,200,0.15)';
-                (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.boxShadow = 'none';
-                (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
-              }}
-            >
-              <img
-                src={c.logo}
-                alt={c.name}
-                style={{
-                  maxHeight: '64px',
-                  maxWidth: '180px',
-                  objectFit: 'contain',
-                  filter: 'grayscale(100%)',
-                  opacity: 0.7,
-                  transition: 'filter 0.3s, opacity 0.3s',
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(0%)';
-                  (e.currentTarget as HTMLImageElement).style.opacity = '1';
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(100%)';
-                  (e.currentTarget as HTMLImageElement).style.opacity = '0.7';
-                }}
-              />
-              <div style={{ textAlign: 'center' }}>
-                <p style={{ fontSize: '0.95rem', fontWeight: 700, color: '#0F1D3A', margin: '0 0 4px' }}>{c.name}</p>
-                <p style={{ fontSize: '0.8rem', color: '#94A3B8', margin: 0 }}>{c.sector}</p>
-              </div>
-            </a>
-          ))}
-        </div>
-
-        <style>{\`
-          @media (max-width: 768px) {
-            .refs-grid { grid-template-columns: repeat(2, 1fr) !important; }
-          }
-          @media (max-width: 480px) {
-            .refs-grid { grid-template-columns: 1fr !important; }
-          }
-        \`}</style>
-
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
