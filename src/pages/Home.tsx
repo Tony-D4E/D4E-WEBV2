@@ -1,3 +1,4 @@
+import { OdooCertifications } from '../sections/OdooCertifications';
 import { HeroIntegrateur } from '../sections/HeroIntegrateur';
 import { Probleme } from '../sections/Probleme';
 import { NosMetiers } from '../sections/NosMetiers';
@@ -14,6 +15,7 @@ export function Home() {
   return (
     <main>
       <HeroIntegrateur />
+      <OdooCertifications />
       <Probleme />
       <NosMetiers />
       <Services />
