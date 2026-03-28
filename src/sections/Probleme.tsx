@@ -26,11 +26,10 @@ export function Probleme() {
     <section style={{ backgroundColor: '#F8FAFC', padding: '64px 0' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px', boxSizing: 'border-box' }}>
 
-        {/* Bloc sombre */}
         <div style={{
           backgroundColor: '#0F1D3A',
           borderRadius: '28px',
-          padding: 'clamp(36px, 5vw, 72px) clamp(24px, 5vw, 64px)',
+          padding: 'clamp(40px, 5vw, 72px) clamp(28px, 5vw, 64px)',
           position: 'relative',
           overflow: 'hidden',
         }}>
@@ -42,15 +41,9 @@ export function Probleme() {
             opacity: 0.07, pointerEvents: 'none',
             background: 'radial-gradient(circle, #00D4C8, transparent)',
           }} />
-          <div style={{
-            position: 'absolute', width: '400px', height: '400px',
-            borderRadius: '50%', bottom: '-100px', left: '-100px',
-            opacity: 0.05, pointerEvents: 'none',
-            background: 'radial-gradient(circle, #00D4C8, transparent)',
-          }} />
 
           {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: '56px', position: 'relative' }}>
+          <div style={{ textAlign: 'center', marginBottom: '52px', position: 'relative' }}>
             <div style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               padding: '7px 20px',
@@ -76,9 +69,9 @@ export function Probleme() {
             </h2>
 
             <p style={{
-              fontSize: 'clamp(1rem, 1.5vw, 1.2rem)',
+              fontSize: 'clamp(1rem, 1.4vw, 1.2rem)',
               color: '#94A3B8',
-              maxWidth: '560px',
+              maxWidth: '540px',
               margin: '0 auto',
               lineHeight: 1.7,
             }}>
@@ -88,13 +81,13 @@ export function Probleme() {
             </p>
           </div>
 
-          {/* Cards grid — responsive */}
+          {/* Grille 2×2 stricte — 1 colonne sur mobile */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
+            gridTemplateColumns: 'repeat(2, 1fr)',
             gap: '20px',
             position: 'relative',
-            marginBottom: '56px',
+            marginBottom: '52px',
           }}>
             {douleurs.map((d, i) => (
               <div key={i} style={{
@@ -105,9 +98,7 @@ export function Probleme() {
                 display: 'flex',
                 gap: '20px',
                 alignItems: 'flex-start',
-                transition: 'background 0.2s',
               }}>
-                {/* Icône */}
                 <div style={{
                   width: '56px', height: '56px', flexShrink: 0,
                   backgroundColor: 'rgba(0,212,200,0.12)',
@@ -118,7 +109,6 @@ export function Probleme() {
                 }}>
                   {d.emoji}
                 </div>
-                {/* Texte */}
                 <div>
                   <p style={{
                     color: '#FFFFFF',
@@ -153,25 +143,29 @@ export function Probleme() {
             }}>
               Il existe une solution — déployée en quelques jours, pas en plusieurs mois.
             </p>
-            <a
-              href="/#contact-form"
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: '8px',
-                padding: '15px 36px',
-                backgroundColor: '#00D4C8',
-                color: '#FFFFFF', fontWeight: 800,
-                borderRadius: '14px',
-                fontSize: 'clamp(0.95rem, 1.2vw, 1.1rem)',
-                textDecoration: 'none',
-                boxShadow: '0 6px 24px rgba(0,212,200,0.35)',
-              }}
-            >
+            <a href="/#contact-form" style={{
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              padding: '15px 36px',
+              backgroundColor: '#00D4C8',
+              color: '#FFFFFF', fontWeight: 800,
+              borderRadius: '14px',
+              fontSize: 'clamp(0.95rem, 1.2vw, 1.1rem)',
+              textDecoration: 'none',
+              boxShadow: '0 6px 24px rgba(0,212,200,0.35)',
+            }}>
               Voir la solution →
             </a>
           </div>
 
         </div>
       </div>
+
+      {/* Responsive mobile */}
+      <style>{`
+        @media (max-width: 640px) {
+          .probleme-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </section>
   );
 }
