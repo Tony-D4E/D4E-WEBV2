@@ -7,7 +7,7 @@ const CSS = `
   .op .tg { background: linear-gradient(to right,#00E5CC,#00D4C8,#06B6D4); -webkit-background-clip:text; background-clip:text; color:transparent; }
   .op .tgg { background: linear-gradient(to right,#F59E0B,#FBBF24,#FCD34D); -webkit-background-clip:text; background-clip:text; color:transparent; }
   .op .cg { background:rgba(17,24,39,.8); backdrop-filter:blur(24px); border:1px solid rgba(255,255,255,.1); box-shadow:0 4px 24px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05); }
-  .op .cgh:hover { border-color:rgba(0,212,200,.5)!important; box-shadow:0 0 40px rgba(0,212,200,.15); }
+  .op .cgh:hover { border-color:rgba(0,212,200,.5)!important; box-shadow:0 0 30px rgba(0,212,200,.12); background:rgba(0,212,200,0.12)!important; }
   .op .bg-t { transition:all .3s cubic-bezier(.4,0,.2,1); }
   .op .bg-t:hover { transform:translateY(-2px); box-shadow:0 10px 40px -10px rgba(0,212,200,.5); }
   .op .blob { position:absolute; border-radius:9999px; pointer-events:none; filter:blur(120px); }
@@ -236,7 +236,7 @@ export default function OdooPage() {
               {ico:'employees',bg:'rgba(245,158,11,.1)',title:'Ressources Humaines',body:'Recrutement, paie, congés, évaluations. Portail self-service collaborateur. Une RH qui pilote.',result:null,rc:''},
               {ico:'ecommerce',bg:'rgba(0,212,200,.1)',title:'E-commerce',body:'Boutique native, catalogue synchronisé avec le stock physique. Un produit épuisé disparait automatiquement du site.',result:'x2 ventes online en 6 mois',rc:'rt'},
             ].map((a,i) => (
-              <div key={i} className={`ac card card-dk cgh${i===0?' w':''}`} style={{cursor:'default'}}>
+              <div key={i} className={`ac cgh${i===0?' w':''}`} style={{cursor:'default',background:'rgba(0,212,200,0.07)',border:'1px solid rgba(0,212,200,0.18)',borderRadius:'1rem',transition:'all .3s'}}>
                 <div className="aico" style={{background:a.bg}} dangerouslySetInnerHTML={{__html:SVGS[a.ico as keyof typeof SVGS]}}/>
                 <div style={{fontSize:19,fontWeight:700,marginBottom:10,color:'#fff'}}>{a.title}</div>
                 <p style={{fontSize:15,color:'#9CA3AF',lineHeight:1.7,marginBottom:16,flex:1}}>{a.body}</p>
