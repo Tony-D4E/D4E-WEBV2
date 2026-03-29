@@ -22,7 +22,7 @@ const members = [
   },
   {
     name: 'Laetitia Andre',
-    role: 'Chef de projet ElvyBat',
+    role: 'Ambassadrice Odoo - D4EBat',
     bio: 'Specialiste deploiement BTP - Suisse & France',
     phone: '+41 (0)76 482 21 39',
     phoneTel: 'tel:+41764822139',
