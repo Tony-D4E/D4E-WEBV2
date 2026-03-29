@@ -7,6 +7,7 @@ import { Elvy } from './pages/Elvy';
 import OdooPage from './pages/OdooPage';
 import ElvyBatPage from './pages/ElvyBatPage';
 import ElvyPrintPage from './pages/ElvyPrintPage';
+import ElvyInsurancePage from './pages/ElvyInsurancePage';
 import { TarifsPage } from './pages/TarifsPage';
 import { Support } from './pages/Support';
 import { NotFound } from './pages/NotFound';
@@ -20,7 +21,6 @@ function ScrollToTop() {
   return null;
 }
 
-
 function App() {
   return (
     <HashRouter>
@@ -28,14 +28,15 @@ function App() {
       <div className="min-h-screen bg-[#f8fafc]">
         <Navigation />
         <Routes>
-          <Route path="/"          element={<Home />} />
-          <Route path="/odoo"      element={<OdooPage />} />
-          <Route path="/elvy"      element={<Elvy />} />
-          <Route path="/elvybat"   element={<ElvyBatPage />} />
-          <Route path="/elvyprint" element={<ElvyPrintPage />} />
-          <Route path="/tarifs"    element={<TarifsPage />} />
-          <Route path="/support"   element={<Support />} />
-          <Route path="*"          element={<NotFound />} />
+          <Route path="/"              element={<Home />} />
+          <Route path="/odoo"          element={<OdooPage />} />
+          <Route path="/elvy"          element={<Elvy />} />
+          <Route path="/elvybat"       element={<ElvyBatPage />} />
+          <Route path="/elvyprint"     element={<ElvyPrintPage />} />
+          <Route path="/elvyinsurance" element={<ElvyInsurancePage />} />
+          <Route path="/tarifs"        element={<TarifsPage />} />
+          <Route path="/support"       element={<Support />} />
+          <Route path="*"              element={<NotFound />} />
         </Routes>
         <WhatsAppWidget
           phoneNumber="41764344595"
