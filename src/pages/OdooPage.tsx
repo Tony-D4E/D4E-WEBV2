@@ -25,8 +25,8 @@ const CSS = `
   .op .sg.on>*:nth-child(6){animation:opFiu .5s .6s forwards}
   @keyframes opPulse{0%,100%{opacity:1}50%{opacity:.3}}
   .op .pulse{animation:opPulse 2s infinite}
-  .op .stag-dk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.12);border:1px solid rgba(0,212,200,.35);border-radius:999px;padding:7px 18px;font-size:13px;color:#00D4C8;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
-  .op .stag-lk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.08);border:1px solid rgba(0,212,200,.25);border-radius:999px;padding:7px 18px;font-size:13px;color:#00B4A6;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+  .op .stag-dk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.12);border:1px solid rgba(0,212,200,.35);border-radius:999px;padding:7px 18px;font-size:16px;color:#00D4C8;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
+  .op .stag-lk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.08);border:1px solid rgba(0,212,200,.25);border-radius:999px;padding:7px 18px;font-size:16px;color:#00B4A6;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
   .op .sdot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:opPulse 2s infinite}
   .op .dk{background:#0B0F19!important;color:#fff!important} 
   .op .dk2{background:#0F172A!important;color:#fff!important}
@@ -288,7 +288,7 @@ export default function OdooPage() {
       <section className="lk2" id="vision">
         <div style={{width:"100%"}}>
           <div style={{maxWidth:'100%'}}>
-            <div style={{fontSize:14,textTransform:'uppercase',letterSpacing:2,color:'#00B4A6',fontWeight:700,borderBottom:'2px solid rgba(0,212,200,.4)',paddingBottom:10,display:'inline-block',marginBottom:44}} className="aos">Notre conviction</div>
+            <div style={{fontSize:17,textTransform:'uppercase',letterSpacing:2,color:'#00B4A6',fontWeight:700,borderBottom:'2px solid rgba(0,212,200,.4)',paddingBottom:10,display:'inline-block',marginBottom:44}} className="aos">Notre conviction</div>
             <h2 className="aos d1" style={{fontSize:'clamp(32px,4vw,56px)',fontWeight:800,lineHeight:1.12,marginBottom:28,color:'#1e293b'}}>
               Fini le ballet des logiciels<br/>qui <span className="tg">ne se parlent pas.</span>
             </h2>
@@ -348,7 +348,7 @@ export default function OdooPage() {
               <p className="aos d2" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:22}}>C'est la question qu'on entend souvent : <em style={{color:'#1e293b'}}>"On a déjà notre site e-commerce, notre EDI, notre ERP de prod — est-ce qu'Odoo va tout casser ?"</em> La réponse courte : non.</p>
               <p className="aos d3" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:28}}>L'API REST d'Odoo est <strong style={{color:'#1e293b'}}>ouverte, documentée et battle-tested.</strong> On a connecté des boutiques Shopify, des systèmes EDI industriels, des logiciels de paie locaux. À chaque fois, Odoo joue le rôle de <strong style={{color:'#1e293b'}}>cerveau central</strong> sans forcer la main.</p>
               <div className="aos d4" style={{background:'#fff',border:'1px solid #e2e8f0',borderLeft:'3px solid #00D4C8',borderRadius:'0 1rem 1rem 0',padding:'20px 22px',marginBottom:16}}>
-                <div style={{fontSize:14,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:'#00B4A6',marginBottom:14}}>Ce qu'on connecte couramment</div>
+                <div style={{fontSize:17,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:'#00B4A6',marginBottom:16}}>Ce qu'on connecte couramment</div>
                 <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
                   {['Shopify','WooCommerce','Magento','EDI EDIFACT','Amazon','Stripe','PayPal','Twint','DHL / UPS','Salesforce','SAP','Sage','API bancaires','Webhooks'].map(t => <span key={t} className="tag">{t}</span>)}
                 </div>
