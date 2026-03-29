@@ -26,7 +26,7 @@ const members = [
 export function Team() {
   return (
     <section style={{ backgroundColor: '#F8FAFC', padding: '80px 0' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div style={{ textAlign: 'center', marginBottom: '56px' }}>
           <p style={{ fontSize: '12px', fontWeight: 700, color: '#00D4C8', letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: '12px', marginTop: 0 }}>
@@ -41,55 +41,54 @@ export function Team() {
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
           gap: '32px',
-          maxWidth: '900px',
-          margin: '0 auto 48px',
+          marginBottom: '48px',
         }}>
           {members.map((m) => (
             <div key={m.name} style={{
               backgroundColor: '#FFFFFF',
-              borderRadius: '24px',
-              padding: '36px 28px',
+              borderRadius: '28px',
+              padding: '52px 40px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
               textAlign: 'center',
               border: '1px solid #E2E8F0',
-              boxShadow: '0 2px 16px rgba(0,0,0,0.05)',
+              boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
             }}>
               <div style={{
-                width: '100px', height: '100px',
+                width: '140px', height: '140px',
                 borderRadius: '50%',
-                border: '3px solid ' + m.color,
+                border: '4px solid ' + m.color,
                 overflow: 'hidden',
-                marginBottom: '20px',
+                marginBottom: '28px',
                 flexShrink: 0,
               }}>
                 <img src={m.photo} alt={m.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
-              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0F1D3A', margin: '0 0 4px' }}>{m.name}</h3>
-              <p style={{ fontSize: '0.9rem', fontWeight: 700, color: m.color, margin: '0 0 6px' }}>{m.role}</p>
-              <p style={{ fontSize: '0.82rem', color: '#94A3B8', margin: '0 0 24px' }}>{m.bio}</p>
-              <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F1D3A', margin: '0 0 6px' }}>{m.name}</h3>
+              <p style={{ fontSize: '1rem', fontWeight: 700, color: m.color, margin: '0 0 8px' }}>{m.role}</p>
+              <p style={{ fontSize: '0.9rem', color: '#94A3B8', margin: '0 0 32px' }}>{m.bio}</p>
+              <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <a href={m.phoneTel} style={{
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
-                  padding: '12px 20px',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
+                  padding: '15px 24px',
                   backgroundColor: m.color,
                   color: '#FFFFFF', fontWeight: 700,
-                  borderRadius: '12px', textDecoration: 'none',
-                  fontSize: '0.95rem',
+                  borderRadius: '14px', textDecoration: 'none',
+                  fontSize: '1.05rem',
                 }}>
-                  <Phone style={{ width: '16px', height: '16px' }} />
+                  <Phone style={{ width: '18px', height: '18px' }} />
                   {m.phone}
                 </a>
                 <a href={'mailto:' + m.email} style={{
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
-                  padding: '12px 20px',
-                  border: '1px solid #E2E8F0',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
+                  padding: '15px 24px',
+                  border: '1.5px solid #E2E8F0',
                   color: '#0F1D3A', fontWeight: 600,
-                  borderRadius: '12px', textDecoration: 'none',
-                  fontSize: '0.95rem',
+                  borderRadius: '14px', textDecoration: 'none',
+                  fontSize: '1.05rem',
                 }}>
-                  <Mail style={{ width: '16px', height: '16px' }} />
+                  <Mail style={{ width: '18px', height: '18px' }} />
                   {m.email}
                 </a>
               </div>
@@ -103,11 +102,11 @@ export function Team() {
             href="#"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
-              padding: '14px 36px',
+              padding: '16px 40px',
               backgroundColor: '#00D4C8',
               color: '#FFFFFF', fontWeight: 800,
               borderRadius: '14px', textDecoration: 'none',
-              fontSize: '1rem',
+              fontSize: '1.05rem',
               boxShadow: '0 6px 24px rgba(0,212,200,0.35)',
             }}
           >
