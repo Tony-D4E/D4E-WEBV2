@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 /* ── Data ── */
@@ -212,8 +212,8 @@ export function Navigation() {
             aria-label="Menu"
           >
             {isMobileOpen
-              ? <span style={{ display: 'flex', flexDirection: 'column', gap: '5px', width: '24px', height: '24px', justifyContent: 'center', alignItems: 'center' }}><span style={{ width: '20px', height: '2px', backgroundColor: '#000000', transform: 'rotate(45deg) translateY(5px)', transition: 'all 0.2s' }} /><span style={{ width: '20px', height: '2px', backgroundColor: '#000000', transform: 'rotate(-45deg) translateY(-5px)', transition: 'all 0.2s' }} /></span>
-              : <span style={{ display: 'flex', flexDirection: 'column', gap: '5px', width: '24px', height: '24px', justifyContent: 'center' }}><span style={{ width: '20px', height: '2px', backgroundColor: '#000000' }} /><span style={{ width: '20px', height: '2px', backgroundColor: '#000000' }} /><span style={{ width: '20px', height: '2px', backgroundColor: '#000000' }} /></span>
+              ? <span style={{ display: 'flex', flexDirection: 'column' as const, gap: '0px', width: '24px', height: '24px', justifyContent: 'center', alignItems: 'center' }}><span style={{ width: '18px', height: '2.5px', backgroundColor: '#000000', borderRadius: '2px', transform: 'rotate(45deg) translateY(3.5px)' }} /><span style={{ width: '18px', height: '2.5px', backgroundColor: '#000000', borderRadius: '2px', transform: 'rotate(-45deg) translateY(-3.5px)' }} /></span>
+              : <span style={{ display: 'flex', flexDirection: 'column' as const, gap: '4px', width: '24px', height: '24px', justifyContent: 'center' }}><span style={{ width: '18px', height: '2.5px', backgroundColor: '#000000', borderRadius: '2px' }} /><span style={{ width: '18px', height: '2.5px', backgroundColor: '#000000', borderRadius: '2px' }} /><span style={{ width: '18px', height: '2.5px', backgroundColor: '#000000', borderRadius: '2px' }} /></span>
             }
           </button>
         </div>
