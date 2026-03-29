@@ -159,9 +159,6 @@ export function Navigation() {
                       to="/elvy"
                       className="text-xs font-semibold text-[#00B4A6] hover:text-[#009688] transition-colors"
                     >
-                      Voir toutes les solutions \u2192
-                    </Link>
-                  </div>
                 </div>
               )}
             </div>
@@ -223,8 +220,8 @@ export function Navigation() {
             aria-label="Menu"
           >
             {isMobileOpen
-              ? <X    className="h-6 w-6 text-slate-700" />
-              : <Menu className="h-6 w-6 text-slate-700" />
+              ? <X    className="h-6 w-6 text-black" />
+              : <Menu className="h-6 w-6 text-black" />
             }
           </button>
         </div>
