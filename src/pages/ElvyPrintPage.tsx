@@ -8,7 +8,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ DONNEES ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ DONNEES ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */
 
 const stats = [
   { valeur: "20'000+",       label: 'Machines suivies',         icon: Printer },
@@ -86,7 +86,7 @@ const pourQui = [
     icon: Settings,
     titre: 'Prestataires MPS',
     desc: 'Vous gerez des flottes d\'impression pour vos clients. ElvyPrint automatise le suivi des compteurs, la facturation au volume et le reporting.',
-    exemples: ['Managed Print Services', 'InfogÃÂÃÂ©rance impression', 'Audit de parc', 'Optimisation des couts'],
+    exemples: ['Managed Print Services', 'InfogÃÂÃÂÃÂÃÂ©rance impression', 'Audit de parc', 'Optimisation des couts'],
     couleur: '#00D4C8',
   },
 ];
@@ -114,7 +114,7 @@ const equipe = [
   },
 ];
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ COMPOSANT ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ COMPOSANT ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */
 
 export default function ElvyPrintPage() {
   const scrollTo = (id: string) => {
@@ -130,7 +130,7 @@ export default function ElvyPrintPage() {
   return (
     <div className="min-h-screen bg-white pt-20">
 
-      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 1. HERO ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 1. HERO ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
       <section className="relative overflow-hidden bg-[#0B0F19] min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F19] via-[#1a1400] to-[#0B0F19]" />
         <div className="absolute inset-0 pointer-events-none">
@@ -222,7 +222,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 2. STATS ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 2. STATS ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
       <section className="py-16 bg-[#FFFBEB] border-b border-[#FDE68A]">
         <div ref={statsRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${statsVisible ? 'is-visible' : ''}`}>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -237,7 +237,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 3. FONCTIONNALITES ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 3. FONCTIONNALITES ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
       <section id="fonctionnalites" className="py-24 bg-white">
         <div ref={featRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${featVisible ? 'is-visible' : ''}`}>
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -276,7 +276,42 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 4. INTEGRATIONS ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 4. INTEGRATIONS ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
+      {/* -- 5. POUR QUI -- */}
+      <section className="py-24 bg-white">
+        <div ref={pourQuiRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${pourQuiVisible ? 'is-visible' : ''}`}>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">Concu pour les professionnels de l'impression</h2>
+            <p className="text-lg text-gray-500">
+              Que vous soyez revendeur, distributeur ou prestataire MPS,
+              ElvyPrint s'adapte a votre modele economique.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {pourQui.map((p, i) => (
+              <div key={i} className="rounded-3xl p-8 border-2 hover:shadow-lg transition-all"
+                style={{ borderColor: p.couleur + '40', backgroundColor: p.couleur + '08' }}>
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: p.couleur + '20' }}>
+                  <p.icon className="h-7 w-7" style={{ color: p.couleur }} />
+                </div>
+                <h3 className="text-2xl font-black text-[#0F1D3A] mb-3">{p.titre}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{p.desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {p.exemples.map((ex, j) => (
+                    <span key={j} className="px-3 py-1 rounded-full text-sm font-semibold"
+                      style={{ backgroundColor: p.couleur + '20', color: p.couleur }}>
+                      {ex}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-[#0F1D3A] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute w-[600px] h-[600px] rounded-full -bottom-40 -left-40 opacity-10"
@@ -316,7 +351,7 @@ export default function ElvyPrintPage() {
             <p className="text-[#F59E0B] font-semibold mb-2">Votre outil n'est pas dans la liste ?</p>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               ElvyPrint repose sur Odoo : tout systeme disposant d'une API ou d'un export
-              structurÃÂÃÂ© peut etre connecte. Parlons-en.
+              structurÃÂÃÂÃÂÃÂ© peut etre connecte. Parlons-en.
             </p>
             <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl" onClick={() => scrollTo('contact')}>
               Discuter de mon integration
@@ -326,7 +361,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 5. POUR QUI ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 5. POUR QUI ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
       {/* -- 6. EQUIPE -- */}
       <section className="py-24 bg-[#f8fafc]">
         <div ref={equipeRef} className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${equipeVisible ? 'is-visible' : ''}`}>
@@ -366,7 +401,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 6. EQUIPE ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 6. EQUIPE ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
       <section className="py-24 bg-[#0F1D3A]">
         <div ref={equipeRef} className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${equipeVisible ? 'is-visible' : ''}`}>
           <div className="text-center mb-16">
@@ -403,7 +438,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 7. CONTACT ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 7. CONTACT ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
       <section id="contact" className="py-24 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
