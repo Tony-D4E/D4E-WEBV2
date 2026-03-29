@@ -1,490 +1,365 @@
-import { Footer } from '../sections/Footer';
-import { ArrowRight, Layers, CheckCircle, BarChart3, HardHat, Printer, Scale, Home, Shield, GraduationCap } from 'lucide-react';
+import {
+  ArrowRight, Phone, Mail,
+  ChevronRight, Printer, Shield,
+  GraduationCap, HardHat, Grape, Building,
+  Users, Database, Heart, Rocket
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
-const products = [
+/* -- DONNEES -- */
+
+const solutionsReady = [
   {
-    name: 'ElvyBat',
-    tagline: 'BTP & Construction',
-    description: 'Gestion de chantiers, facturation par situation, planning.',
-    features: ['Facturation situation', 'Suivi temps réel', 'Planning', 'Bons régie IA', 'Rapports vocaux'],
-    available: true,
-    anchor: 'elvybat',
+    to: '/elvybat',
+    label: 'ElvyBat',
+    secteur: 'Construction & BTP',
+    accroche: 'Pilotez vos chantiers, ma\u00eetrisez vos marges.',
     icon: HardHat,
+    accent: '#00D4C8',
   },
   {
-    name: 'ElvyPrint',
-    tagline: 'Imprimerie',
-    description: 'Parc machines, contrats maintenance, consommables.',
-    features: ['Parc machines', 'Maintenance', 'Consommables', 'Facturation', 'Comptage'],
-    available: true,
-    anchor: 'elvyprint',
+    to: '/elvyprint',
+    label: 'ElvyPrint',
+    secteur: "Syst\u00e8mes d'impression",
+    accroche: 'Contrats, compteurs et interventions automatis\u00e9s.',
     icon: Printer,
+    accent: '#F59E0B',
   },
   {
-    name: 'ElvyLaw',
-    tagline: 'Juridique',
-    description: 'Dossiers, facturation temps, trust accounting.',
-    features: ['Dossiers', 'Temps passé', 'Trust accounting', 'LPP/LPal', 'Échéances'],
-    comingSoon: true,
-    anchor: 'elvylaw',
-    icon: Scale,
-  },
-  {
-    name: 'ElvyImmo',
-    tagline: 'Immobilier',
-    description: 'Gestion locative, états des lieux, charges.',
-    features: ['Locatif', 'États lieux', 'Loyers', 'Copropriété', 'Charges'],
-    comingSoon: true,
-    anchor: 'elvyimmo',
-    icon: Home,
-  },
-  {
-    name: 'ElvyAssurance',
-    tagline: 'Assurance',
-    description: 'Polices, échéances, commissions, comparateurs.',
-    features: ['Polices', 'Échéances', 'Commissions', 'Comparateurs', 'Clients'],
-    comingSoon: true,
-    anchor: 'elvyassurance',
-    icon: Shield,
-  },
-  {
-    name: 'ElvyEduca',
-    tagline: 'Éducation',
-    description: 'Élèves, inscriptions, planning, e-learning.',
-    features: ['Élèves', 'Inscriptions', 'Planning', 'Facturation', 'E-learning'],
-    comingSoon: true,
-    anchor: 'elvyeduca',
+    to: '/elvyeduca',
+    label: 'ElvyEduca',
+    secteur: '\u00c9ducation & Formation',
+    accroche: 'Admissions, scolarit\u00e9 et facturation unifi\u00e9es.',
     icon: GraduationCap,
+    accent: '#8B5CF6',
+  },
+  {
+    to: '/elvyinsurance',
+    label: 'ElvyInsurance',
+    secteur: 'Courtage en assurance',
+    accroche: 'Polices, commissions et comptabilit\u00e9 en un outil.',
+    icon: Shield,
+    accent: '#3B82F6',
   },
 ];
 
-// Offre détaillée ElvyBat
-const elvyBatOffer = {
-  setup: [
-    'Ouverture de la base de données',
-    'Paramétrage et installation des composants ElvyBat',
-    'Création des utilisateurs',
-    'Mise en place du logo',
-    'Gestion des rabais',
-    "Création d'un modèle d'article / modèle d'ouvrage",
-    'Mise en page du logo sur les modèles standard',
-  ],
-  modules: [
-    { name: 'Comptabilité ElvyBat', desc: 'Liaison bancaire, plan comptable Odoo, TVA' },
-    { name: 'Rentabilité Chantier', desc: 'Comptabilité analytique incluse' },
-  ],
-  odooApps: 'CRM, Abonnements, Achats, Location, Dépenses, Marketing, Projets, Service sur Site, et tous les autres modules standard Odoo',
-  support: '8 heures d\'accompagnement par un chef de projet — suffisant pour une mise en place standard',
-  travel: '1 déplacement inclus',
-};
+const solutionsEnCours = [
+  {
+    label: 'ElvyVino',
+    secteur: 'Viticulture & N\u00e9goce',
+    desc: "Gestion des parcelles, vinification, tra\u00e7abilit\u00e9, vente et facturation pour les vignerons et n\u00e9gociants.",
+    icon: Grape,
+    accent: '#DC2626',
+  },
+  {
+    label: 'ElvyImmo',
+    secteur: 'Immobilier & G\u00e9rance',
+    desc: "Gestion des biens, mandats, locations, copropri\u00e9t\u00e9s et comptabilit\u00e9 immobili\u00e8re int\u00e9gr\u00e9e.",
+    icon: Building,
+    accent: '#059669',
+  },
+];
 
-// Offre détaillée ElvyPrint
-const elvyPrintOffer = {
-  setup: [
-    'Ouverture de la base de données',
-    'Paramétrage et installation des composants ElvyPrint',
-    'Création des utilisateurs',
-    'Mise en place du logo et charte graphique',
-    'Configuration du parc machines',
-    'Création des modèles de contrats maintenance',
-    'Mise en page des modèles de documents',
-  ],
-  modules: [
-    { name: 'Parc Machines', desc: 'Inventaire, suivi, maintenance préventive' },
-    { name: 'Contrats Maintenance', desc: 'Gestion des contrats, échéances, renouvellements' },
-    { name: 'Consommables', desc: 'Stocks, commandes automatiques, alertes' },
-    { name: 'Comptage', desc: 'Relevés compteurs, facturation à la consommation' },
-  ],
-  odooApps: 'CRM, Ventes, Achats, Stock, Facturation, Comptabilité, et tous les autres modules standard Odoo',
-  support: '8 heures d\'accompagnement par un chef de projet',
-  travel: '1 déplacement inclus',
-};
+const modele = [
+  {
+    icon: Users,
+    titre: 'Co-construit avec le terrain',
+    desc: "Chaque solution Elvy est n\u00e9e d'un vrai besoin, avec un vrai entrepreneur. Votre expertise m\u00e9tier guide le d\u00e9veloppement, pas l'inverse.",
+    accent: '#00D4C8',
+  },
+  {
+    icon: Database,
+    titre: 'Vos donn\u00e9es vous appartiennent',
+    desc: "Elvy tourne sur Odoo. Si vous partez, votre Odoo reste, vos donn\u00e9es restent. Vous perdez les fonctionnalit\u00e9s Elvy, pas votre activit\u00e9.",
+    accent: '#F59E0B',
+  },
+  {
+    icon: Heart,
+    titre: 'Votre savoir-faire r\u00e9compens\u00e9',
+    desc: "Les co-constructeurs b\u00e9n\u00e9ficient d'un tarif pionnier. Votre contribution m\u00e9tier a de la valeur, et elle est reconnue.",
+    accent: '#8B5CF6',
+  },
+];
+
+const chiffres = [
+  { valeur: '3 sem.', label: 'D\u00e9ploiement moyen' },
+  { valeur: 'Prix fixe', label: 'Pack tout compris' },
+  { valeur: '150+', label: 'Projets Odoo D4E' },
+  { valeur: '100%', label: 'Natif Odoo' },
+];
+
+/* -- COMPOSANT -- */
 
 export function Elvy() {
-  const location = useLocation();
-
-  useEffect(() => {
-    // Scroll vers l'ancre si présente dans l'URL
-    const hash = location.hash.replace('#', '');
-    if (hash) {
-      const element = document.getElementById(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  }, [location]);
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
+  const { ref: modRef, isVisible: modVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
+  const { ref: solRef, isVisible: solVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
+  const { ref: coRef, isVisible: coVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
+  const { ref: whyRef, isVisible: whyVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
 
   return (
-    <main className="min-h-screen bg-[#0B0F19] pt-20">
-      {/* Hero Section */}
-      <section className="py-24 lg:py-32 bg-[#0F172A] relative overflow-hidden">
-        <div className="blob-glow w-[600px] h-[600px] bg-[#00D4C8]/20 -top-40 -left-40" />
-        <div className="blob-glow w-[400px] h-[400px] bg-[#7C3AED]/20 bottom-20 right-20" />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <img src="/logo-elvy.png" alt="Elvy" className="h-16 w-auto" />
-              <h1 className="text-5xl sm:text-6xl font-black text-white tracking-tight">
-                La gamme <span className="text-gradient">Elvy</span>
-              </h1>
-            </div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/10 rounded-full border border-[#00D4C8]/30 mb-6">
-              <Layers className="h-5 w-5 text-[#00D4C8]" />
-              <span className="text-sm font-bold text-[#00D4C8]">
-                Solutions Odoo packagées par métier
-              </span>
-            </div>
-            <p className="text-xl text-gray-400">
-              Des solutions prêtes à l'emploi pour votre secteur d'activité. 
-              Cliquez sur un produit pour découvrir son offre complète.
+    <div className="min-h-screen bg-white pt-20">
+
+      {/* -- 1. HERO MANIFESTE -- */}
+      <section className="relative overflow-x-hidden bg-[#0B0F19] flex items-center" style={{ minHeight: '90vh' }}>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F19] via-[#0f1a2e] to-[#0B0F19]" />
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute w-[800px] h-[800px] rounded-full -top-40 -right-40 opacity-8"
+            style={{ background: 'radial-gradient(circle, #00D4C8, transparent)' }} />
+          <div className="absolute w-[600px] h-[600px] rounded-full -bottom-40 -left-40 opacity-5"
+            style={{ background: 'radial-gradient(circle, #F59E0B, transparent)' }} />
+        </div>
+
+        {/* Badge Odoo */}
+        <div style={{ position: 'absolute', top: 0, right: '2rem', zIndex: 20, background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(8px)', borderRadius: '0 0 16px 16px', padding: '16px 28px', boxShadow: '0 4px 24px rgba(0,0,0,0.15)' }}>
+          <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{ height: 60, maxWidth: 280, objectFit: 'contain', display: 'block' }} />
+        </div>
+
+        <div ref={heroRef}
+          className={`relative w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center animate-on-scroll ${heroVisible ? 'is-visible' : ''}`}>
+
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00D4C8]/20 border border-[#00D4C8]/40 rounded-full mb-8">
+            <Rocket className="h-4 w-4 text-[#00D4C8]" />
+            <span className="text-sm font-semibold text-[#00D4C8]">Solutions Elvy par D4E</span>
+          </div>
+
+          <h1 className="text-5xl lg:text-7xl font-black leading-[1.05] mb-8">
+            <span style={{ color: '#FFFFFF' }}>{`Votre m\u00e9tier m\u00e9rite mieux`}</span><br />
+            <span style={{ color: '#00D4C8' }}>{`qu'un logiciel g\u00e9n\u00e9rique.`}</span>
+          </h1>
+
+          <p style={{ color: '#CBD5E1' }} className="text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
+            {`Marre de payer trop cher pour un ERP qui ne comprend pas votre r\u00e9alit\u00e9 ? Marre d'\u00eatre prisonnier d'un \u00e9diteur ? Chaque solution Elvy est co-construite avec des entrepreneurs comme vous. Votre savoir-faire m\u00e9tier + notre expertise Odoo = une solution qui vous ressemble.`}
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Button size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-8 rounded-xl text-base" onClick={() => scrollTo('solutions')}>
+              {`D\u00e9couvrir les solutions`}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl text-base" onClick={() => scrollTo('co-construction')}>
+              Devenir co-constructeur
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* -- 2. LE MODELE ELVY -- */}
+      <section className="py-24 bg-white">
+        <div ref={modRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${modVisible ? 'is-visible' : ''}`}>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">{`Le mod\u00e8le Elvy`}</h2>
+            <p className="text-lg text-gray-500">
+              {`Pas un logiciel sur \u00e9tag\u00e8re. Pas un projet custom \u00e0 rallonge. Un mod\u00e8le diff\u00e9rent.`}
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Products Grid - Navigation */}
-      <section className="py-24 bg-[#0B0F19]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product, index) => (
-              <a
-                key={index}
-                href={`#${product.anchor}`}
-                className={`group relative p-6 rounded-2xl border transition-all duration-300 cursor-pointer ${
-                  product.available
-                    ? 'bg-gradient-to-br from-[#00B4A6]/10 to-[#06B6D4]/5 border-[#00D4C8]/40 glow-cyan-sm hover:border-[#00D4C8]/70'
-                    : 'bg-[#111827] border-white/10 hover:border-white/20'
-                }`}
-              >
-                {product.comingSoon && (
-                  <div className="absolute top-4 right-4 px-3 py-1 text-xs font-bold bg-[#1F2937] text-gray-400 rounded-full border border-gray-700">
-                    Bientôt
-                  </div>
-                )}
-                
-                {product.available && (
-                  <div className="absolute top-4 right-4 px-3 py-1 text-xs font-bold bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] text-white rounded-full">
-                    Disponible
-                  </div>
-                )}
-
-                <div className="w-12 h-12 rounded-xl bg-[#00D4C8]/10 flex items-center justify-center mb-4">
-                  <product.icon className="h-6 w-6 text-[#00D4C8]" />
+          <div className="grid md:grid-cols-3 gap-8">
+            {modele.map((m, i) => (
+              <div key={i} className="rounded-3xl p-8 border-2 hover:shadow-lg transition-all"
+                style={{ borderColor: m.accent + '40', backgroundColor: m.accent + '08' }}>
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: m.accent + '20' }}>
+                  <m.icon className="h-7 w-7" style={{ color: m.accent }} />
                 </div>
-
-                <h3 className="text-2xl font-bold text-white mb-1">{product.name}</h3>
-                <p className="text-sm text-[#00D4C8] font-semibold mb-3">{product.tagline}</p>
-                <p className="text-gray-400 mb-5">{product.description}</p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {product.features.map((feature, idx) => (
-                    <span key={idx} className="px-2 py-1 text-xs bg-white/5 text-gray-400 rounded border border-white/10">
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-
-                {product.available ? (
-                  <div className="flex items-center justify-center gap-2 text-[#00D4C8] font-semibold text-sm group-hover:underline">
-                    Voir l'offre complète
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                ) : (
-                  <div className="text-center text-gray-500 text-sm">
-                    Bientôt disponible
-                  </div>
-                )}
-              </a>
+                <h3 className="text-xl font-black text-[#0F1D3A] mb-3">{m.titre}</h3>
+                <p className="text-gray-600 leading-relaxed">{m.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section Offre ElvyBat */}
-      <section id="elvybat" className="py-24 bg-[#0F172A] scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left - Description */}
-            <div>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#00B4A6] to-[#06B6D4] flex items-center justify-center glow-cyan-sm">
-                  <HardHat className="h-8 w-8 text-white" />
-                </div>
-                <div>
-                  <h2 className="text-4xl font-black text-white">ElvyBat</h2>
-                  <p className="text-[#00D4C8] font-semibold">BTP & Construction</p>
-                </div>
-              </div>
-              
-              <p className="text-lg text-gray-400 mb-8">
-                Logiciel de gestion de chantier complet pour le BTP. Facturation par situation, 
-                planning, suivi de rentabilité en temps réel. Solution packagée pour artisans 
-                et entreprises du bâtiment.
-              </p>
-
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="text-center p-4 bg-[#111827] rounded-xl border border-white/10">
-                  <div className="text-2xl font-black text-[#00D4C8]">500+</div>
-                  <div className="text-xs text-gray-500">Clients</div>
-                </div>
-                <div className="text-center p-4 bg-[#111827] rounded-xl border border-white/10">
-                  <div className="text-2xl font-black text-[#00D4C8]">30%</div>
-                  <div className="text-xs text-gray-500">Temps gagné</div>
-                </div>
-                <div className="text-center p-4 bg-[#111827] rounded-xl border border-white/10">
-                  <div className="text-2xl font-black text-[#00D4C8]">2-4s</div>
-                  <div className="text-xs text-gray-500">Déploiement</div>
-                </div>
-              </div>
-
-              <Button asChild className="bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] hover:opacity-90 text-white font-bold rounded-xl">
-                <a href="/#contact-form">
-                  Demander une démo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-            </div>
-
-            {/* Right - Offre détaillée */}
-            <div className="p-8 bg-[#111827] rounded-3xl border border-white/10">
-              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-[#00D4C8]" />
-                Pack de mise en place
-              </h3>
-
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-sm font-bold text-white mb-3">Service de mise en place</h4>
-                  <ul className="space-y-2">
-                    {elvyBatOffer.setup.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
-                        <span className="text-[#00D4C8] mt-0.5">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-sm font-bold text-white mb-3">Modules inclus</h4>
-                  <div className="space-y-2">
-                    {elvyBatOffer.modules.map((mod, i) => (
-                      <div key={i} className="p-3 bg-[#0B0F19] rounded-lg">
-                        <div className="font-semibold text-white text-sm">{mod.name}</div>
-                        <div className="text-xs text-gray-500">{mod.desc}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-sm font-bold text-white mb-3">Applications Odoo standard</h4>
-                  <p className="text-sm text-gray-400">{elvyBatOffer.odooApps}</p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                  <div>
-                    <h4 className="text-sm font-bold text-white mb-1">Accompagnement</h4>
-                    <p className="text-xs text-gray-400">{elvyBatOffer.support}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-white mb-1">Déplacements</h4>
-                    <p className="text-xs text-gray-400">{elvyBatOffer.travel}</p>
-                  </div>
-                </div>
-              </div>
-
-              <Button asChild variant="outline" className="w-full mt-6 border-white/20 text-white hover:bg-white/10 rounded-xl">
-                <a href="/tarifs">
-                  Voir les tarifs
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-            </div>
+      {/* -- 3. SOLUTIONS OPERATIONNELLES -- */}
+      <section id="solutions" className="py-24 bg-[#0B0F19]">
+        <div ref={solRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${solVisible ? 'is-visible' : ''}`}>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-black text-white mb-4">{`Solutions op\u00e9rationnelles`}</h2>
+            <p className="text-gray-400 text-lg">
+              {`D\u00e9ploy\u00e9es, \u00e9prouv\u00e9es, pr\u00eates \u00e0 l'emploi. Chaque solution Elvy est un pack Odoo vertical, d\u00e9ployable en quelques semaines.`}
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* Section Offre ElvyPrint */}
-      <section id="elvyprint" className="py-24 bg-[#0B0F19] scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left - Offre détaillée */}
-            <div className="order-2 lg:order-1 p-8 bg-[#111827] rounded-3xl border border-white/10">
-              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-[#00D4C8]" />
-                Pack de mise en place
-              </h3>
-
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-sm font-bold text-white mb-3">Service de mise en place</h4>
-                  <ul className="space-y-2">
-                    {elvyPrintOffer.setup.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
-                        <span className="text-[#00D4C8] mt-0.5">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-sm font-bold text-white mb-3">Modules inclus</h4>
-                  <div className="space-y-2">
-                    {elvyPrintOffer.modules.map((mod, i) => (
-                      <div key={i} className="p-3 bg-[#0B0F19] rounded-lg">
-                        <div className="font-semibold text-white text-sm">{mod.name}</div>
-                        <div className="text-xs text-gray-500">{mod.desc}</div>
-                      </div>
-                    ))}
+          <div className="grid md:grid-cols-2 gap-6">
+            {solutionsReady.map((sol) => (
+              <Link key={sol.to} to={sol.to}
+                className="bg-[#0F1D3A] rounded-2xl p-8 border border-white/10 hover:border-white/20 hover:bg-[#132240] transition-all group cursor-pointer relative overflow-hidden">
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '3px', backgroundColor: sol.accent }} />
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: sol.accent + '20' }}>
+                    <sol.icon className="h-7 w-7" style={{ color: sol.accent }} />
                   </div>
-                </div>
-
-                <div>
-                  <h4 className="text-sm font-bold text-white mb-3">Applications Odoo standard</h4>
-                  <p className="text-sm text-gray-400">{elvyPrintOffer.odooApps}</p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                  <div>
-                    <h4 className="text-sm font-bold text-white mb-1">Accompagnement</h4>
-                    <p className="text-xs text-gray-400">{elvyPrintOffer.support}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-white mb-1">Déplacements</h4>
-                    <p className="text-xs text-gray-400">{elvyPrintOffer.travel}</p>
-                  </div>
-                </div>
-              </div>
-
-              <Button asChild variant="outline" className="w-full mt-6 border-white/20 text-white hover:bg-white/10 rounded-xl">
-                <a href="/tarifs">
-                  Voir les tarifs
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-            </div>
-
-            {/* Right - Description */}
-            <div className="order-1 lg:order-2">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-[#A855F7] flex items-center justify-center">
-                  <Printer className="h-8 w-8 text-white" />
-                </div>
-                <div>
-                  <h2 className="text-4xl font-black text-white">ElvyPrint</h2>
-                  <p className="text-[#A855F7] font-semibold">Imprimerie & Vendeurs de machines</p>
-                </div>
-              </div>
-              
-              <p className="text-lg text-gray-400 mb-8">
-                Solution complète pour les vendeurs d'imprimantes et copieurs. Gestion du parc machines, 
-                contrats de maintenance, consommables et facturation à la consommation. Idéal pour 
-                optimiser la gestion de votre activité.
-              </p>
-
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="text-center p-4 bg-[#111827] rounded-xl border border-white/10">
-                  <div className="text-2xl font-black text-[#A855F7]">100%</div>
-                  <div className="text-xs text-gray-500">Parc suivi</div>
-                </div>
-                <div className="text-center p-4 bg-[#111827] rounded-xl border border-white/10">
-                  <div className="text-2xl font-black text-[#A855F7]">Auto</div>
-                  <div className="text-xs text-gray-500">Commandes</div>
-                </div>
-                <div className="text-center p-4 bg-[#111827] rounded-xl border border-white/10">
-                  <div className="text-2xl font-black text-[#A855F7]">2-4s</div>
-                  <div className="text-xs text-gray-500">Déploiement</div>
-                </div>
-              </div>
-
-              <Button asChild className="bg-gradient-to-r from-[#7C3AED] to-[#A855F7] hover:opacity-90 text-white font-bold rounded-xl">
-                <a href="/#contact-form">
-                  Demander une démo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Interconnection Banner */}
-      <section className="py-16 bg-[#0F172A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-8 bg-gradient-to-br from-[#111827] to-[#1F2937] rounded-2xl border border-white/10 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#00D4C8]/10 rounded-full blur-3xl" />
-            
-            <div className="relative flex flex-col lg:flex-row items-center gap-8">
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <Layers className="h-6 w-6 text-[#00D4C8]" />
-                  <h3 className="text-xl font-bold text-white">Modules interconnectés</h3>
-                </div>
-                <p className="text-gray-400 mb-4">
-                  Tous les modules Elvy partagent une base commune. Démarrez avec un module, 
-                  ajoutez-en d'autres au fil de votre croissance.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  {['Interface unique', 'Données partagées', 'Mises à jour centralisées'].map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-[#00D4C8]" />
-                      {item}
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-1">
+                      <h3 className="text-2xl font-black text-white">{sol.label}</h3>
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full"
+                        style={{ backgroundColor: sol.accent + '20', color: sol.accent }}>
+                        {sol.secteur}
+                      </span>
                     </div>
-                  ))}
+                    <p className="text-gray-400 leading-relaxed mb-4">{sol.accroche}</p>
+                    <span className="text-sm font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1"
+                      style={{ color: sol.accent }}>
+                      {`D\u00e9couvrir`} <ChevronRight className="h-4 w-4" />
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#00B4A6]/20 to-[#06B6D4]/20 flex items-center justify-center border border-[#00D4C8]/20">
-                <img src="/logo-elvy.png" alt="Elvy" className="h-12 w-auto" />
-              </div>
-            </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 bg-[#0B0F19]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-3 gap-6">
-            {[
-              { icon: Layers, value: '6', label: 'Secteurs couverts' },
-              { icon: HardHat, value: '500+', label: 'Entreprises' },
-              { icon: BarChart3, value: '100%', label: 'Odoo Enterprise' },
-            ].map((stat, i) => (
-              <div key={i} className="text-center p-6 bg-[#111827] rounded-xl border border-white/10">
-                <stat.icon className="h-6 w-6 text-[#00D4C8] mx-auto mb-2" />
-                <div className="text-3xl font-black text-white">{stat.value}</div>
-                <div className="text-sm text-gray-500">{stat.label}</div>
+      {/* -- 4. EN CO-CONSTRUCTION -- */}
+      <section id="co-construction" className="py-24 bg-white">
+        <div ref={coRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${coVisible ? 'is-visible' : ''}`}>
+          <div className="text-center max-w-3xl mx-auto mb-6">
+            <div className="inline-flex items-center gap-2 px-5 py-2 bg-[#F59E0B]/10 border border-[#F59E0B]/30 rounded-full mb-4">
+              <Rocket className="h-5 w-5 text-[#F59E0B]" />
+              <span className="text-base font-bold text-[#F59E0B]">En co-construction</span>
+            </div>
+            <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">{`Participez au d\u00e9veloppement`}</h2>
+            <p className="text-lg text-gray-500">
+              {`Ces solutions sont en cours de construction avec des professionnels du secteur. Rejoignez l'aventure : votre expertise m\u00e9tier acc\u00e9l\u00e8re le d\u00e9veloppement, et votre tarif refl\u00e8te votre contribution.`}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {solutionsEnCours.map((sol, i) => (
+              <div key={i} className="rounded-3xl p-8 border-2 border-dashed hover:shadow-lg transition-all relative"
+                style={{ borderColor: sol.accent + '50', backgroundColor: sol.accent + '05' }}>
+                <div className="absolute top-4 right-4">
+                  <span className="text-xs font-bold px-3 py-1 rounded-full"
+                    style={{ backgroundColor: sol.accent + '15', color: sol.accent }}>
+                    Co-construction
+                  </span>
+                </div>
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ backgroundColor: sol.accent + '15' }}>
+                  <sol.icon className="h-7 w-7" style={{ color: sol.accent }} />
+                </div>
+                <h3 className="text-2xl font-black text-[#0F1D3A] mb-1">{sol.label}</h3>
+                <p className="text-sm font-semibold mb-3" style={{ color: sol.accent }}>{sol.secteur}</p>
+                <p className="text-gray-600 leading-relaxed mb-6">{sol.desc}</p>
+                <button
+                  onClick={() => scrollTo('contact')}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white transition-all"
+                  style={{ backgroundColor: sol.accent }}>
+                  Devenir co-constructeur <ArrowRight className="h-4 w-4" />
+                </button>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-[#0F1D3A] rounded-3xl p-8 text-center">
+            <p style={{ color: '#F59E0B' }} className="font-bold text-lg mb-2">{`Votre secteur n'est pas encore couvert ?`}</p>
+            <p style={{ color: '#CBD5E1' }} className="max-w-2xl mx-auto mb-6">
+              {`Si votre m\u00e9tier a des besoins sp\u00e9cifiques qu'aucun ERP ne couvre correctement, parlons-en. La prochaine solution Elvy est peut-\u00eatre la v\u00f4tre.`}
+            </p>
+            <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl" onClick={() => scrollTo('contact')}>
+              {`Proposer un nouveau m\u00e9tier`}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* -- 5. POURQUOI ELVY -- */}
+      <section className="py-20 bg-[#f8fafc]">
+        <div ref={whyRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${whyVisible ? 'is-visible' : ''}`}>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black text-[#0F1D3A] mb-3">{`Pourquoi Elvy, pas un projet sur mesure ?`}</h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {chiffres.map((c, i) => (
+              <div key={i} className="text-center bg-white rounded-2xl py-8 px-4 border border-gray-200 shadow-sm">
+                <p className="text-3xl font-black text-[#00D4C8] mb-1">{c.valeur}</p>
+                <p className="text-sm text-gray-500 font-medium">{c.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 bg-[#0F172A]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-black text-white mb-6">
-            Intéressé par une solution Elvy ?
-          </h2>
-          <p className="text-lg text-gray-400 mb-8">
-            Discutons de vos besoins et voyons comment Elvy peut transformer votre gestion.
-          </p>
-          <Button asChild size="lg" className="bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] hover:opacity-90 text-white font-bold px-8 rounded-xl glow-cyan text-lg">
-            <a href="/#contact-form">
-              Prendre rendez-vous
-              <ArrowRight className="ml-2 h-5 w-5" />
+      {/* -- 6. CONTACT ANTONIO SEUL -- */}
+      <section id="contact" className="py-24 bg-white">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <img src="/team-antonio.jpg" alt="Antonio Spedicato"
+              className="w-24 h-24 rounded-full object-cover mx-auto mb-4 shadow-lg"
+              style={{ border: '4px solid #00D4C8' }} />
+            <h2 className="text-3xl font-black text-[#0F1D3A] mb-2">{`Discutons de votre m\u00e9tier`}</h2>
+            <p className="text-gray-500">
+              {`Antonio Spedicato \u00b7 Fondateur D4E \u00b7 15 ans d'exp\u00e9rience ERP`}
+            </p>
+            <p className="text-gray-400 text-sm mt-2">
+              {`Que vous cherchiez une solution existante ou que vous vouliez co-construire la prochaine, c'est ici que \u00e7a commence.`}
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+            <a href="tel:+41764344595"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-[#00D4C8] text-white font-bold rounded-xl">
+              <Phone className="h-4 w-4" /> +41 (0)76 434 45 95
             </a>
-          </Button>
+            <a href="https://wa.me/41764344595" target="_blank" rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-[#25D366] text-white font-bold rounded-xl">
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" /><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.319 0-4.46-.768-6.184-2.064l-.432-.324-2.663.893.893-2.663-.324-.432A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" /></svg>
+              WhatsApp
+            </a>
+            <a href="mailto:antonio@d4e.cool"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 text-gray-700 font-semibold rounded-xl border border-gray-200">
+              <Mail className="h-4 w-4" /> antonio@d4e.cool
+            </a>
+          </div>
+
+          <form
+            action="https://formspree.io/f/xdawrgoz"
+            method="POST"
+            className="bg-[#0F1D3A] rounded-3xl p-8 space-y-4"
+          >
+            <div className="grid grid-cols-2 gap-4">
+              <input type="text" name="prenom" placeholder={`Pr\u00e9nom *`} required
+                className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors" />
+              <input type="text" name="nom" placeholder="Nom *" required
+                className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors" />
+            </div>
+            <input type="email" name="email" placeholder="Email *" required
+              className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors" />
+            <input type="text" name="entreprise" placeholder="Entreprise"
+              className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors" />
+            <input type="tel" name="telephone" placeholder={`T\u00e9l\u00e9phone`}
+              className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors" />
+            <select name="interet" required className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white w-full focus:outline-none focus:border-[#00D4C8] transition-colors">
+              <option value="">{`Ce qui m'int\u00e9resse *`}</option>
+              <option>ElvyBat - Construction</option>
+              <option>ElvyPrint - Impression</option>
+              <option>{`ElvyEduca - \u00c9ducation`}</option>
+              <option>ElvyInsurance - Assurance</option>
+              <option>ElvyVino - Co-construction</option>
+              <option>ElvyImmo - Co-construction</option>
+              <option>{`Proposer un nouveau m\u00e9tier`}</option>
+            </select>
+            <textarea name="message" placeholder={`D\u00e9crivez votre m\u00e9tier et vos besoins *`} rows={4} required
+              className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#00D4C8] transition-colors resize-none" />
+            <input type="hidden" name="_subject" value="Nouveau lead Elvy Hub" />
+            <button type="submit" className="w-full bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2 text-base">
+              Envoyer ma demande
+              <ChevronRight className="h-5 w-5" />
+            </button>
+            <p className="text-center text-xs text-gray-600">
+              {`Vos donn\u00e9es ne seront jamais partag\u00e9es avec des tiers.`}
+            </p>
+          </form>
         </div>
       </section>
 
-      <Footer />
-    </main>
+    </div>
   );
 }
