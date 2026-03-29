@@ -42,9 +42,14 @@ const CSS = `
   .op .con{width:100%}
   .op .sh2{font-size:clamp(36px,4.5vw,60px);font-weight:800;line-height:1.06;margin-bottom:18px;margin-top:0}
   .op .card{border:1px solid;border-radius:1rem;transition:all .3s}
-  .op .card-dk{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);border-radius:16px}
+  .op .card-dk{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.1);border-radius:16px;border-left-width:4px}
   .op .card-lk{background:#fff;border-color:#e2e8f0;box-shadow:0 2px 16px rgba(0,0,0,.06);border-radius:16px}
   .op .card-lk:hover{border-color:rgba(0,212,200,.4)!important;box-shadow:0 8px 32px rgba(0,212,200,0.12)}
+  .op .card-teal{border-left:4px solid #00D4C8!important;background:rgba(255,255,255,0.07)!important}
+  .op .card-gold{border-left:4px solid #F59E0B!important;background:rgba(255,255,255,0.07)!important}
+  .op .card-teal:hover,.op .card-gold:hover{background:rgba(255,255,255,0.1)!important}
+  .op .imod{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px 18px;transition:all .2s}
+  .op .imod:hover{border-color:rgba(0,212,200,.3);background:rgba(255,255,255,0.09)}
   .op .imod{background:rgba(11,15,25,.6);border:1px solid rgba(255,255,255,.1);border-radius:1rem;padding:16px 18px;transition:border-color .2s}
   .op .imod:hover{border-color:rgba(0,212,200,.3)}
   .op .imod-g{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:1rem;padding:16px 18px}
@@ -56,7 +61,10 @@ const CSS = `
   .op .itab.elvy.on{background:rgba(245,158,11,.1);border-color:#F59E0B;color:#F59E0B}
   .op .eb{background:#00D4C8;color:#0B0F19;font-size:9px;font-weight:800;padding:2px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px}
   .op .rg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e2e8f0;border:1px solid #e2e8f0;border-radius:1rem;overflow:hidden}
-  .op .rsn{background:#fff;padding:36px 28px;transition:background .2s} .op .rsn:hover{background:#f8fafc}
+  .op .rsn{background:#fff;padding:36px 28px;transition:all .2s;border-top:3px solid transparent}
+  .op .rsn:hover{background:#F8FAFC}
+  .op .card-teal-lk{border-top:3px solid #00D4C8!important}
+  .op .card-gold-lk{border-top:3px solid #F59E0B!important}
   .op .rn{font-family:'Space Grotesk',sans-serif;font-size:52px;font-weight:800;color:rgba(0,180,166,.15);line-height:1;margin-bottom:14px}
   .op .rh{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px;color:#1e293b}
   .op .rp{font-size:16px;color:#475569;line-height:1.75} .op .rp strong{color:#00B4A6;font-weight:600}
@@ -344,7 +352,7 @@ export default function OdooPage() {
               ['05','Mobile first','Application <strong>refaite de zéro en v18.</strong> Votre équipe travaille depuis le terrain.'],
               ['06','Il grandit avec vous','Du TPE au multinational. <strong>Odoo ne plafonne pas.</strong>'],
             ].map(([n,h,p]) => (
-              <div key={n} className="rsn">
+              <div key={n} className="rsn card-teal-lk">
                 <div className="rn">{n}</div>
                 <div className="rh">{h}</div>
                 <p className="rp" dangerouslySetInnerHTML={{__html:p as string}}/>
