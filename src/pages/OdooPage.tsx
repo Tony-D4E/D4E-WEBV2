@@ -71,8 +71,8 @@ const CSS = `
   .op .rsn:hover{background:#F8FAFC}
   .op .card-teal-lk{border-top:3px solid #00D4C8!important}
   .op .card-gold-lk{border-top:3px solid #F59E0B!important}
-  .op .rn{font-family:'Space Grotesk',sans-serif;font-size:52px;font-weight:800;color:rgba(0,180,166,.15);line-height:1;margin-bottom:14px}
-  .op .rh{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px;color:#1e293b}
+  .op .rn{font-family:'Space Grotesk',sans-serif;font-size:64px;font-weight:900;color:rgba(0,180,166,0.2);line-height:1;margin-bottom:16px;letter-spacing:-2px}
+  .op .rh{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:800;margin-bottom:10px;color:#0F1D3A;letter-spacing:-0.3px}
   .op .rp{font-size:16px;color:#475569;line-height:1.75} .op .rp strong{color:#00B4A6;font-weight:600}
   .op .ag{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
   .op .ac{padding:32px;display:flex;flex-direction:column;gap:0} .op .ac.w{grid-column:span 2}
@@ -90,6 +90,56 @@ const CSS = `
   .op .btn-s:hover{border-color:rgba(0,212,200,.3);color:#00D4C8}
   .op .btn-sl{border:1px solid #e2e8f0;color:#334155;padding:13px 28px;border-radius:10px;font-weight:500;font-size:15px;text-decoration:none;display:inline-block;transition:all .2s}
   .op .btn-sl:hover{border-color:#00D4C8;color:#00B4A6}
+  
+  @keyframes rsnIn {
+    0%   { opacity:0; transform:translateY(48px) scale(0.96); }
+    60%  { opacity:1; transform:translateY(-6px) scale(1.01); }
+    100% { opacity:1; transform:translateY(0) scale(1); }
+  }
+  @keyframes numReveal {
+    0%   { opacity:0; transform:scale(0.5) rotate(-8deg); color:rgba(0,180,166,0); }
+    70%  { opacity:1; transform:scale(1.15) rotate(2deg); }
+    100% { opacity:1; transform:scale(1) rotate(0deg); }
+  }
+  @keyframes shimmer {
+    0%   { background-position:-200% 0; }
+    100% { background-position:200% 0; }
+  }
+  @keyframes borderPulse {
+    0%,100% { border-top-color:rgba(0,212,200,0.3); }
+    50%      { border-top-color:rgba(0,212,200,1); }
+  }
+  .op .rsn-animated {
+    opacity:0;
+    transform:translateY(48px) scale(0.96);
+  }
+  .op .sg.on .rsn-animated:nth-child(1) { animation:rsnIn 0.7s 0.05s cubic-bezier(0.16,1,0.3,1) forwards; }
+  .op .sg.on .rsn-animated:nth-child(2) { animation:rsnIn 0.7s 0.15s cubic-bezier(0.16,1,0.3,1) forwards; }
+  .op .sg.on .rsn-animated:nth-child(3) { animation:rsnIn 0.7s 0.25s cubic-bezier(0.16,1,0.3,1) forwards; }
+  .op .sg.on .rsn-animated:nth-child(4) { animation:rsnIn 0.7s 0.35s cubic-bezier(0.16,1,0.3,1) forwards; }
+  .op .sg.on .rsn-animated:nth-child(5) { animation:rsnIn 0.7s 0.45s cubic-bezier(0.16,1,0.3,1) forwards; }
+  .op .sg.on .rsn-animated:nth-child(6) { animation:rsnIn 0.7s 0.55s cubic-bezier(0.16,1,0.3,1) forwards; }
+  .op .sg.on .rsn-animated .rn-anim { animation:numReveal 0.8s 0.2s cubic-bezier(0.16,1,0.3,1) both; }
+  .op .rsn-animated { transition:border-top-color 0.3s, box-shadow 0.3s, transform 0.3s; }
+  .op .rsn-animated:hover {
+    transform:translateY(-6px) !important;
+    border-top-color:rgba(0,212,200,0.9) !important;
+    box-shadow:0 12px 40px rgba(0,212,200,0.12), 0 2px 8px rgba(0,0,0,0.08) !important;
+  }
+  .op .rsn-animated:hover .rn-anim {
+    color:rgba(0,212,200,0.35) !important;
+    transition:color 0.3s;
+  }
+  .op .rg-grid { background:transparent; border:none; border-radius:0; overflow:visible; gap:20px; }
+  .op .rsn-animated {
+    border-radius:16px !important;
+    border:1px solid #e2e8f0 !important;
+    border-top:3px solid rgba(0,212,200,0.3) !important;
+    background:#FFFFFF !important;
+    padding:36px 32px !important;
+    box-shadow:0 2px 12px rgba(0,0,0,0.05) !important;
+  }
+  
   @media(max-width:900px){
     .op section{padding:64px 20px}
     .op .ag{grid-template-columns:1fr} .op .ac.w{grid-column:span 1}
@@ -358,8 +408,8 @@ export default function OdooPage() {
               ['05','Mobile first','Application <strong>refaite de zéro en v18.</strong> Votre équipe travaille depuis le terrain.'],
               ['06','Il grandit avec vous','Du TPE au multinational. <strong>Odoo ne plafonne pas.</strong>'],
             ].map(([n,h,p]) => (
-              <div key={n} className="rsn card-teal-lk">
-                <div className="rn">{n}</div>
+              <div key={n} className="rsn rsn-animated">
+                <div className="rn rn-anim">{n}</div>
                 <div className="rh">{h}</div>
                 <p className="rp" dangerouslySetInnerHTML={{__html:p as string}}/>
               </div>
