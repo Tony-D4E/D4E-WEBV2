@@ -10,12 +10,12 @@ const integrateurServices = [
 ];
 
 const elvySectors = [
-  { name: 'ElvyBat',       tag: 'BTP',     desc: 'Construction & chantiers', link: '/#/elvybat', active: true },
-  { name: 'ElvyPrint',     tag: 'Disponible', desc: 'Imprimerie & machines',    link: '#',          active: true  },
-  { name: 'ElvyLaw',       tag: 'Bientôt', desc: 'Juridique & notaires',     link: '#',          active: false },
-  { name: 'ElvyImmo',      tag: 'Bientôt', desc: 'Immobilier & location',    link: '#',          active: false },
-  { name: 'ElvyAssurance', tag: 'Disponible', desc: 'Assurance & courtage',     link: '#',          active: true  },
-  { name: 'ElvyEduca',     tag: 'Disponible', desc: 'Éducation & formation',    link: '#',          active: true  },
+  { name: 'ElvyBat',       tag: 'BTP',        tagColor: 'bg-[#00D4C8] text-white',      desc: 'Construction & chantiers', link: '/#/elvybat', active: true  },
+  { name: 'ElvyPrint',     tag: 'Disponible', tagColor: 'bg-[#00D4C8] text-white',      desc: 'Imprimerie & machines',    link: '#',          active: true  },
+  { name: 'ElvyLaw',       tag: 'Bientôt',    tagColor: 'bg-gray-200 text-gray-500',    desc: 'Juridique & notaires',     link: '#',          active: false },
+  { name: 'ElvyImmo',      tag: 'Bientôt',    tagColor: 'bg-gray-200 text-gray-500',    desc: 'Immobilier & location',    link: '#',          active: false },
+  { name: 'ElvyAssurance', tag: 'Disponible', tagColor: 'bg-[#00D4C8] text-white',      desc: 'Assurance & courtage',     link: '#',          active: true  },
+  { name: 'ElvyEduca',     tag: 'Disponible', tagColor: 'bg-[#00D4C8] text-white',      desc: 'Éducation & formation',    link: '#',          active: true  },
 ];
 
 export function NosMetiers() {
@@ -52,8 +52,8 @@ export function NosMetiers() {
                     <Award className="h-7 w-7 text-[#F59E0B]" />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#0F1D3A]">Intégrateur Odoo</h3>
-                    <p className="text-[#F59E0B] font-semibold text-sm">Partenaire Gold</p>
+                    <h3 className="text-2xl font-bold text-[#0F1D3A]">Intégrateur Odoo</h3>
+                    <p className="text-[#F59E0B] font-semibold text-base">Partenaire Gold</p>
                   </div>
                 </div>
                 <p className="text-gray-500 text-sm leading-relaxed">
@@ -87,26 +87,25 @@ export function NosMetiers() {
 
         {/* Éditeur Elvy */}
         <div ref={editorRef} className={`animate-on-scroll delay-2 ${editorVisible ? 'is-visible' : ''}`}>
-          <div className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
+          <div className="p-6 sm:p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
             <div className="flex flex-col lg:flex-row gap-8">
 
               {/* Gauche */}
               <div className="lg:w-1/3">
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 rounded-2xl bg-[#F0FDF9] flex items-center justify-center flex-shrink-0">
                     <Layers className="h-7 w-7 text-[#00D4C8]" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-[#0F1D3A]">Éditeur de solutions</h3>
-                    <p className="text-[#00D4C8] font-semibold">Gamme Elvy</p>
+                    <p className="text-[#00D4C8] font-semibold text-base">Gamme Elvy</p>
                   </div>
                 </div>
-                <p className="text-gray-500 mb-6 leading-relaxed">
+                <p className="text-gray-500 text-sm leading-relaxed mb-6">
                   Nous développons des solutions métiers packagées basées sur Odoo.
                   Chaque module est conçu pour répondre aux besoins spécifiques d'un secteur
                   d'activité, avec un déploiement rapide et un coût maîtrisé.
                 </p>
-                {/* Bouton corrigé : fond teal, texte blanc, bien visible */}
                 <a
                   href="/#/elvy"
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold rounded-xl transition-colors"
@@ -137,9 +136,7 @@ export function NosMetiers() {
                         <p className="text-xs text-gray-400">{s.desc}</p>
                       </div>
                     </div>
-                    <span className={`px-2 py-1 rounded-full text-xs font-semibold flex-shrink-0 ml-2 ${
-                      s.active ? 'bg-[#00D4C8] text-white' : 'bg-gray-200 text-gray-400'
-                    }`}>{s.tag}</span>
+                    <span className={`px-2 py-1 rounded-full text-xs font-semibold flex-shrink-0 ml-2 ${s.tagColor}`}>{s.tag}</span>
                   </a>
                 ))}
               </div>
