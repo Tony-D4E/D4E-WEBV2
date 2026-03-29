@@ -75,10 +75,13 @@ export function NosMetiers() {
               </div>
             </div>
             <div className="mt-6 pt-6 border-t border-gray-100">
-              <a href="/#contact-form" className="inline-flex items-center gap-2 px-6 py-3 bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold rounded-xl transition-colors text-base">
-                  Discuter de mon projet Odoo
-                  <ArrowRight className="h-4 w-4" />
-                </a>
+              <a
+                href="/#contact-form"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold rounded-xl transition-colors text-base"
+              >
+                Discuter de mon projet Odoo
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
