@@ -341,33 +341,47 @@ export default function OdooPage() {
       {/* ④ INTEGRATION LIGHT */}
       <section className="lk" id="integration">
         <div style={{width:"100%"}}>
-          <div className="int-cols" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:64,alignItems:'start'}}>
+          <div className="int-cols" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:64,alignItems:'start',marginBottom:40}}>
             <div>
               <div className="stag-lk aos"><span className="sdot"/>&nbsp;Intégrations &amp; API</div>
               <h2 className="sh2 aos d1" style={{color:'#1e293b'}}>Vous avez déjà<br/>quelque chose en place ?<br/><span className="tg">Pas de problème.</span></h2>
               <p className="aos d2" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:22}}>C'est la question qu'on entend souvent : <em style={{color:'#1e293b'}}>"On a déjà notre site e-commerce, notre EDI, notre ERP de prod — est-ce qu'Odoo va tout casser ?"</em> La réponse courte : non.</p>
-              <p className="aos d3" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:28}}>L'API REST d'Odoo est <strong style={{color:'#1e293b'}}>ouverte, documentée et battle-tested.</strong> On a connecté des boutiques Shopify, des systèmes EDI industriels, des logiciels de paie locaux. À chaque fois, Odoo joue le rôle de <strong style={{color:'#1e293b'}}>cerveau central</strong> sans forcer la main.</p>
-              <div className="aos d4" style={{background:'#fff',border:'1px solid #e2e8f0',borderLeft:'3px solid #00D4C8',borderRadius:'0 1rem 1rem 0',padding:'20px 22px',marginBottom:16}}>
-                <div style={{fontSize:17,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:'#00B4A6',marginBottom:16}}>Ce qu'on connecte couramment</div>
-                <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
-                  {['Shopify','WooCommerce','Magento','EDI EDIFACT','Amazon','Stripe','PayPal','Twint','DHL / UPS','Salesforce','SAP','Sage','API bancaires','Webhooks'].map(t => <span key={t} className="tag">{t}</span>)}
-                </div>
-              </div>
-              <div className="aos d4" style={{background:'rgba(0,212,200,.06)',border:'1px solid rgba(0,212,200,.2)',borderRadius:'1rem',padding:'18px 22px'}}>
-                <div style={{fontSize:13,color:'#00B4A6',fontWeight:700,marginBottom:6}}>Notre principe sur le terrain</div>
-                <div style={{fontSize:14,color:'#334155',lineHeight:1.65}}>On ne remplace pas ce qui fonctionne bien. On connecte Odoo à votre existant, on construit des ponts, et on migre progressivement quand ça a du sens.</div>
-              </div>
+              <p className="aos d3" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:0}}>L'API REST d'Odoo est <strong style={{color:'#1e293b'}}>ouverte, documentée et battle-tested.</strong> On a connecté des boutiques Shopify, des systèmes EDI industriels, des logiciels de paie locaux. À chaque fois, Odoo joue le rôle de <strong style={{color:'#1e293b'}}>cerveau central</strong> sans forcer la main.</p>
             </div>
             <div>
               <div className="sg aos d2" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:10,marginBottom:14}}>
-                {[{ico:'🛍️',n:'E-commerce',d:'Shopify, WooCommerce, Amazon'},{ico:'🔄',n:'EDI',d:'EDIFACT, X12, commandes auto'},{ico:'🏭',n:'MRP / ERP',d:'SAP, Sage, logiciels métier'},{ico:'💳',n:'Paiement',d:'Stripe, PayPal, Twint'},{ico:'🚚',n:'Logistique',d:'DHL, UPS, FedEx, La Poste'},{ico:'🔗',n:'API custom',d:'REST, webhooks, tout'}].map((c,i) => (
-                  <div key={i} className="int-conn">
-                    <div style={{fontSize:24,marginBottom:8}}>{c.ico}</div>
-                    <div style={{fontSize:13,fontWeight:700,marginBottom:3,color:'#1e293b'}}>{c.n}</div>
-                    <div style={{fontSize:11,color:'#64748b'}}>{c.d}</div>
+                {[
+                  {Icon:Store,      n:'E-commerce', d:'Shopify, WooCommerce, Amazon', color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
+                  {Icon:RefreshCw,  n:'EDI',         d:'EDIFACT, X12, commandes auto', color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
+                  {Icon:Cpu,        n:'MRP / ERP',   d:'SAP, Sage, logiciels métier',  color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
+                  {Icon:CreditCard, n:'Paiement',    d:'Stripe, PayPal, Twint',         color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
+                  {Icon:Package,    n:'Logistique',  d:'DHL, UPS, FedEx, La Poste',    color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
+                  {Icon:Webhook,    n:'API custom',  d:'REST, webhooks, tout',          color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
+                ].map((item,i) => (
+                  <div key={i} className="int-conn" style={{display:'flex',flexDirection:'column',alignItems:'center',gap:10,padding:'20px 12px'}}>
+                    <div style={{width:48,height:48,borderRadius:12,background:item.bg,border:'1px solid '+item.color+'40',display:'flex',alignItems:'center',justifyContent:'center'}}>
+                      <item.Icon style={{width:22,height:22,color:item.color}}/>
+                    </div>
+                    <div style={{fontSize:13,fontWeight:700,color:'#1e293b',textAlign:'center'}}>{item.n}</div>
+                    <div style={{fontSize:11,color:'#64748b',textAlign:'center',lineHeight:1.4}}>{item.d}</div>
                   </div>
                 ))}
               </div>
+              <div className="aos d3" style={{background:'#fff',border:'1px solid #e2e8f0',borderLeft:'3px solid #00D4C8',borderRadius:'0 12px 12px 0',padding:'14px 18px'}}>
+                <div style={{fontSize:12,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:'#00B4A6',marginBottom:10}}>Ce qu'on connecte couramment</div>
+                <div style={{display:'flex',flexWrap:'wrap',gap:6}}>
+                  {['Shopify','WooCommerce','Magento','EDI EDIFACT','Amazon','Stripe','PayPal','Twint','DHL / UPS','Salesforce','SAP','Sage','API bancaires','Webhooks'].map(t => <span key={t} className="tag">{t}</span>)}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="aos d4" style={{background:'rgba(0,212,200,.06)',border:'1px solid rgba(0,212,200,.25)',borderLeft:'4px solid #00D4C8',borderRadius:'0 16px 16px 0',padding:'28px 36px',display:'flex',gap:24,alignItems:'center'}}>
+            <div style={{flexShrink:0,width:48,height:48,borderRadius:12,background:'rgba(0,212,200,0.12)',border:'1px solid rgba(0,212,200,0.3)',display:'flex',alignItems:'center',justifyContent:'center'}}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00D4C8" strokeWidth="2" strokeLinecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div style={{fontSize:14,color:'#00B4A6',fontWeight:800,marginBottom:6,textTransform:'uppercase',letterSpacing:1.5}}>Notre principe sur le terrain</div>
+              <div style={{fontSize:17,color:'#334155',lineHeight:1.75}}>On ne remplace pas ce qui fonctionne bien. On connecte Odoo à votre existant, on construit des ponts, et on migre progressivement quand ça a du sens.</div>
             </div>
           </div>
         </div>
