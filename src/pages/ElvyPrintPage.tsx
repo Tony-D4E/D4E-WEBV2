@@ -132,6 +132,10 @@ export default function ElvyPrintPage() {
 
  {/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 1. HERO ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */}
  <section className="relative overflow-hidden bg-[#0B0F19] min-h-screen flex items-center">
+        {/* Odoo Gold Partner badge - top right */}
+        <div style={{position:'absolute',top:'1rem',right:'2rem',zIndex:20,background:'rgba(255,255,255,0.92)',backdropFilter:'blur(8px)',borderRadius:'0 0 16px 16px',padding:'16px 28px',boxShadow:'0 4px 24px rgba(0,0,0,0.15)'}}>
+          <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{height:60,maxWidth:280,objectFit:'contain',display:'block'}}/>
+        </div>
  <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F19] via-[#1a1400] to-[#0B0F19]" />
  <div className="absolute inset-0 pointer-events-none">
  <div className="absolute w-[800px] h-[800px] rounded-full -top-60 -right-60 opacity-8"
@@ -209,21 +213,7 @@ export default function ElvyPrintPage() {
  ].map((item, i) => (
  <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex gap-4 items-start">
  <div className="w-1 rounded-full bg-[#F59E0B] flex-shrink-0 mt-1" style={{ minHeight: '40px' }} />
- <div>
- <p style={{ color: '#FFFFFF' }} className="font-bold text-base leading-snug mb-1">{item.titre}</p>
- <p style={{ color: '#CBD5E1' }} className="text-sm leading-relaxed">{item.desc}</p>
- </div>
- </div>
- ))}
- </div>
-
- </div>
- </div>
  
-        {/* Odoo Gold Partner badge - bottom right, flush with border */}
-        <div style={{position:'absolute',bottom:'-1px',right:'2rem',zIndex:20,background:'rgba(255,255,255,0.92)',backdropFilter:'blur(8px)',borderRadius:'16px 16px 0 0',padding:'16px 28px',boxShadow:'0 -4px 24px rgba(0,0,0,0.15)'}}>
-          <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{height:60,maxWidth:280,objectFit:'contain',display:'block'}}/>
-        </div>
       </section>
 
  {/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 2. STATS ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */}
