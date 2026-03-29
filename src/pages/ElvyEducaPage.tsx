@@ -103,7 +103,7 @@ const equipe = [
   },
   {
     nom: 'La\u00ebtitia Andr\u00e9',
-    role: 'Chef de projet Elvy',
+    role: 'Ambassadrice Odoo - D4E',
     desc: 'Sp\u00e9cialiste d\u00e9ploiement \u00b7 Suisse & France',
     tel: '+41764822139',
     telDisplay: '+41 (0)76 482 21 39',
