@@ -1,112 +1,123 @@
-import { Mail, Phone, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { Phone, Mail } from 'lucide-react';
 
-const team = [
+const members = [
   {
     name: 'Antonio Spedicato',
     role: 'Consultant Odoo & Fondateur',
-    desc: '15 ans d\'expérience · Expert ERP BTP',
-    tel: '+41 (0)76 434 45 95',
-    telDisplay: '+41 (0)76 434 45 95',
+    bio: '15 ans d'experience · Expert ERP BTP',
+    phone: '+41 (0)76 434 45 95',
+    phoneTel: 'tel:+41764344595',
     email: 'antonio@d4e.cool',
     photo: '/team-antonio.jpg',
-    couleur: '#00D4C8',
+    color: '#00D4C8',
   },
   {
-    name: 'Laëtitia André',
+    name: 'Laetitia Andre',
     role: 'Chef de projet ElvyBat',
-    desc: 'Spécialiste déploiement BTP · Suisse & France',
-    tel: '+41 (0)76 482 21 39',
-    telDisplay: '+41 (0)76 482 21 39',
+    bio: 'Specialiste deploiement BTP · Suisse & France',
+    phone: '+41 (0)76 482 21 39',
+    phoneTel: 'tel:+41764822139',
     email: 'laetita@d4e.cool',
     photo: '/team-laetitia.jpg',
-    couleur: '#F59E0B',
+    color: '#F59E0B',
   },
 ];
 
 export function Team() {
-  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
-  const { ref: cardsRef,  isVisible: cardsVisible  } = useScrollAnimation<HTMLDivElement>({ threshold: 0.1 });
-
   return (
-    <section id="equipe" className="py-12 bg-[#F8FAFC]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section style={{ backgroundColor: '#F8FAFC', padding: '80px 0' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Header */}
-        <div
-          ref={headerRef}
-          className={`text-center mb-10 animate-on-scroll ${headerVisible ? 'is-visible' : ''}`}
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#00D4C8]/40 rounded-full bg-[#00D4C8]/5 mb-4">
-            <span className="text-sm font-bold text-[#00D4C8]">Votre équipe dédiée</span>
-          </div>
-          <h2 className="text-4xl font-black text-[#0F1D3A] mb-3">
-            Des experts à votre écoute
-          </h2>
-          <p className="text-gray-400 text-lg">
-            Une équipe à taille humaine, basée à Genève, Sion et Barcelone
+        <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+          <p style={{ fontSize: '12px', fontWeight: 700, color: '#00D4C8', letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: '12px', marginTop: 0 }}>
+            NOTRE EQUIPE
           </p>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 900, color: '#0F1D3A', letterSpacing: '-1px', marginTop: 0 }}>
+            Des experts a votre service
+          </h2>
         </div>
 
-        {/* Cards */}
-        <div
-          ref={cardsRef}
-          className={`grid md:grid-cols-2 gap-8 animate-on-scroll delay-1 ${cardsVisible ? 'is-visible' : ''}`}
-        >
-          {team.map((p, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition-shadow"
-            >
-              {/* Photo */}
-              <img
-                src={p.photo}
-                alt={p.name}
-                className="w-32 h-32 rounded-full object-cover mb-6 shadow-lg"
-                style={{ border: `4px solid ${p.couleur}` }}
-              />
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '32px',
+          maxWidth: '900px',
+          margin: '0 auto 48px',
+        }}>
+          {members.map((m) => (
+            <div key={m.name} style={{
+              backgroundColor: '#FFFFFF',
+              borderRadius: '24px',
+              padding: '36px 28px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
+              border: '1px solid #E2E8F0',
+              boxShadow: '0 2px 16px rgba(0,0,0,0.05)',
+            }}>
+              <div style={{
+                width: '100px', height: '100px',
+                borderRadius: '50%',
+                border: '3px solid ' + m.color,
+                overflow: 'hidden',
+                marginBottom: '20px',
+                flexShrink: 0,
+              }}>
+                <img src={m.photo} alt={m.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
 
-              {/* Infos */}
-              <h3 className="text-2xl font-black text-[#0F1D3A] mb-1">{p.name}</h3>
-              <p className="font-semibold mb-1 text-base" style={{ color: p.couleur }}>{p.role}</p>
-              <p className="text-gray-400 text-sm mb-6">{p.desc}</p>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0F1D3A', margin: '0 0 4px' }}>{m.name}</h3>
+              <p style={{ fontSize: '0.9rem', fontWeight: 700, color: m.color, margin: '0 0 6px' }}>{m.role}</p>
+              <p style={{ fontSize: '0.82rem', color: '#94A3B8', margin: '0 0 24px' }}>{m.bio}</p>
 
-              {/* Boutons */}
-              <div className="flex flex-col gap-3 w-full">
-                <a
-                  href={`tel:${p.tel}`}
-                  className="flex items-center justify-center gap-2 px-5 py-3 text-white font-bold rounded-xl transition-opacity hover:opacity-90"
-                  style={{ backgroundColor: p.couleur }}
-                >
-                  <Phone className="h-4 w-4" />
-                  {p.telDisplay}
+              <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <a href={m.phoneTel} style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
+                  padding: '12px 20px',
+                  backgroundColor: m.color,
+                  color: '#FFFFFF', fontWeight: 700,
+                  borderRadius: '12px', textDecoration: 'none',
+                  fontSize: '0.95rem',
+                }}>
+                  <Phone style={{ width: '16px', height: '16px' }} />
+                  {m.phone}
                 </a>
-                <a
-                  href={`mailto:${p.email}`}
-                  className="flex items-center justify-center gap-2 px-5 py-3 bg-white border border-gray-200 text-[#0F1D3A] font-semibold rounded-xl hover:bg-gray-50 transition-colors"
-                >
-                  <Mail className="h-4 w-4 text-gray-400" />
-                  {p.email}
+                <a href={'mailto:' + m.email} style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
+                  padding: '12px 20px',
+                  border: '1px solid #E2E8F0',
+                  color: '#0F1D3A', fontWeight: 600,
+                  borderRadius: '12px', textDecoration: 'none',
+                  fontSize: '0.95rem',
+                }}>
+                  <Mail style={{ width: '16px', height: '16px' }} />
+                  {m.email}
                 </a>
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA bas */}
-        <div className="mt-10 text-center">
-          <Button
-            asChild
-            size="lg"
-            className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base"
+        <div style={{ textAlign: 'center' }}>
+          <a
+            onClick={(e) => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }); }}
+            href="#"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              padding: '14px 36px',
+              backgroundColor: '#00D4C8',
+              color: '#FFFFFF', fontWeight: 800,
+              borderRadius: '14px', textDecoration: 'none',
+              fontSize: '1rem',
+              boxShadow: '0 6px 24px rgba(0,212,200,0.35)',
+            }}
           >
-            <a onClick={(e) => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }); }} ); }} href="#">
-              <ArrowRight className="mr-2 h-5 w-5" />
-              Prendre contact maintenant
-            </a>
-          </Button>
-          <p className="mt-3 text-gray-400 text-sm">Réponse garantie sous 24h</p>
+            Prendre contact maintenant
+          </a>
+          <p style={{ color: '#94A3B8', fontSize: '0.9rem', marginTop: '12px' }}>
+            Reponse garantie sous 24h
+          </p>
         </div>
 
       </div>
