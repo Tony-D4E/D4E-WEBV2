@@ -131,17 +131,15 @@ export default function ElvyPrintPage() {
 
   return (
     <div className="min-h-screen bg-white pt-20">
-      {/* Badge Odoo Gold Partner - fixed sous nav */}
-      <div style={{ position: 'fixed', top: '4.5rem', right: '2rem', zIndex: 40, background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(8px)', borderRadius: '0 0 12px 12px', padding: '12px 24px', boxShadow: '0 4px 20px rgba(0,0,0,0.12)' }}>
-        <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{ height: 50, maxWidth: 240, objectFit: 'contain', display: 'block' }} />
-      </div>
 
 
       {/* 1. HERO */}
-      <section className="relative overflow-hidden bg-[#0B0F19] min-h-screen flex items-center">
-        <div style={{position:'absolute',top:'1rem',right:'2rem',zIndex:20,background:'rgba(255,255,255,0.92)',backdropFilter:'blur(8px)',borderRadius:'0 0 16px 16px',padding:'16px 28px',boxShadow:'0 4px 24px rgba(0,0,0,0.15)'}}>
-          <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{height:60,maxWidth:280,objectFit:'contain',display:'block'}} />
+      <section className="relative overflow-x-hidden bg-[#0B0F19] min-h-screen flex items-center">
+        {/* Badge Odoo Gold Partner */}
+        <div style={{ position: 'absolute', top: 0, right: '2rem', zIndex: 20, background: 'rgba(255,255,255,0.95)', borderRadius: '0 0 12px 12px', padding: '14px 24px', boxShadow: '0 4px 20px rgba(0,0,0,0.12)' }}>
+          <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{ height: 50, maxWidth: 240, objectFit: 'contain', display: 'block' }} />
         </div>
+        <div style={{position:'absolute',top:'1rem',right:'2rem',zIndex:20,background:'rgba(255,255,255,0.92)',backdropFilter:'blur(8px)',borderRadius:'0 0 16px 16px',padding:'16px 28px',boxShadow:'0 4px 24px rgba(0,0,0,0.15)'}}>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F19] via-[#1a1400] to-[#0B0F19]" />
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute w-[800px] h-[800px] rounded-full -top-60 -right-60 opacity-[0.08]" style={{ background: 'radial-gradient(circle, #F59E0B, transparent)' }} />
