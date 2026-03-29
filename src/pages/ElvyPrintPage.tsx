@@ -436,14 +436,14 @@ export default function ElvyPrintPage() {
               className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#F59E0B] transition-colors" />
             <input type="tel" name="telephone" placeholder={`T\u00e9l\u00e9phone`}
               className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 w-full focus:outline-none focus:border-[#F59E0B] transition-colors" />
-            <select name="pays" required className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-gray-400 w-full focus:outline-none focus:border-[#F59E0B] transition-colors">
+            <select name="pays" required className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white w-full focus:outline-none focus:border-[#F59E0B] transition-colors">
               <option value="">Pays *</option>
               <option>Suisse</option>
               <option>France</option>
               <option>Espagne</option>
               <option>Autre</option>
             </select>
-            <select name="besoin" className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-gray-400 w-full focus:outline-none focus:border-[#F59E0B] transition-colors">
+            <select name="besoin" className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white w-full focus:outline-none focus:border-[#F59E0B] transition-colors">
               <option value="">Votre besoin principal</option>
               <option>Gestion des contrats d'impression</option>
               <option>Facturation automatique des compteurs</option>
