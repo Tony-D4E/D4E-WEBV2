@@ -351,16 +351,16 @@ export default function OdooPage() {
             <div>
               <div className="sg aos d2" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:10,marginBottom:14}}>
                 {[
-                  {Icon:Store,      n:'E-commerce', d:'Shopify, WooCommerce, Amazon', color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
-                  {Icon:RefreshCw,  n:'EDI',         d:'EDIFACT, X12, commandes auto', color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
-                  {Icon:Cpu,        n:'MRP / ERP',   d:'SAP, Sage, logiciels métier',  color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
-                  {Icon:CreditCard, n:'Paiement',    d:'Stripe, PayPal, Twint',         color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
-                  {Icon:Package,    n:'Logistique',  d:'DHL, UPS, FedEx, La Poste',    color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
-                  {Icon:Webhook,    n:'API custom',  d:'REST, webhooks, tout',          color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
+                  {Icon:Store,      n:'E-commerce', d:'Shopify, WooCommerce, Amazon', color:'#F59E0B', bg:'rgba(245,158,11,0.12)'},
+                  {Icon:RefreshCw,  n:'EDI',         d:'EDIFACT, X12, commandes auto', color:'#00D4C8', bg:'rgba(0,212,200,0.12)'},
+                  {Icon:Cpu,        n:'MRP / ERP',   d:'SAP, Sage, logiciels métier',  color:'#F59E0B', bg:'rgba(245,158,11,0.12)'},
+                  {Icon:CreditCard, n:'Paiement',    d:'Stripe, PayPal, Twint',         color:'#00D4C8', bg:'rgba(0,212,200,0.12)'},
+                  {Icon:Package,    n:'Logistique',  d:'DHL, UPS, FedEx, La Poste',    color:'#F59E0B', bg:'rgba(245,158,11,0.12)'},
+                  {Icon:Webhook,    n:'API custom',  d:'REST, webhooks, tout',          color:'#00D4C8', bg:'rgba(0,212,200,0.12)'},
                 ].map((item,i) => (
                   <div key={i} className="int-conn" style={{display:'flex',flexDirection:'column',alignItems:'center',gap:10,padding:'20px 12px'}}>
-                    <div style={{width:48,height:48,borderRadius:12,background:item.bg,border:'1px solid '+item.color+'40',display:'flex',alignItems:'center',justifyContent:'center'}}>
-                      <item.Icon style={{width:22,height:22,color:item.color}}/>
+                    <div style={{width:52,height:52,borderRadius:14,background:item.bg,border:'1px solid '+item.color+'60',display:'flex',alignItems:'center',justifyContent:'center'}}>
+                      <item.Icon style={{width:24,height:24,color:item.color}}/>
                     </div>
                     <div style={{fontSize:13,fontWeight:700,color:'#1e293b',textAlign:'center'}}>{item.n}</div>
                     <div style={{fontSize:11,color:'#64748b',textAlign:'center',lineHeight:1.4}}>{item.d}</div>
