@@ -377,7 +377,7 @@ export default function OdooPage() {
       <section className="dk" id="industries">
         <div style={{width:"100%"}}>
           <div className="stag-dk aos"><span className="sdot"/>&nbsp;Par secteur</div>
-          <h2 className="sh2 aos d1" style={{color:'#fff'}}>Odoo parle votre langue.<br/>On vous le prouve.</h2>
+          <h2 className="sh2 aos d1" style={{color:'#fff'}}>Odoo parle votre langue.<br/><span className="tg">On vous le prouve.</span></h2>
           <p className="aos d2" style={{fontSize:17,color:'#E2E8F0',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Chaque métier a ses angles morts. Voilà ce qu'on a appris en déployant Odoo dans les vôtres.</p>
           <div className="aos d3" style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:44}}>
             {([['fi','Finance','BarChart3'],['sv','Services','Wrench'],['bt','Construction','HardHat',true],['in','Industrie','Factory'],['co','Commerce','ShoppingCart'],['lo','Logistique','Truck'],['sa','Santé','Heart'],['ed','Education','GraduationCap']] as [IndId,string,string,boolean?][]).map(([id,label,_icon,elvy]) => (
