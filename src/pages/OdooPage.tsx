@@ -30,16 +30,16 @@ const CSS = `
   .op .dk{background:#0B0F19!important;color:#fff!important} 
   .op .dk2{background:#0F172A!important;color:#fff!important}
   .op .dk h1,.op .dk h2,.op .dk h3,.op .dk h4,.op .dk2 h1,.op .dk2 h2,.op .dk2 h3,.op .dk2 h4{color:#fff!important}
-  .op .dk p,.op .dk2 p{color:#D1D5DB!important}
+  .op .dk p,.op .dk2 p{color:#E2E8F0!important}
   .op .lk{background:#f8fafc!important} .op .lk2{background:#fff!important}
   .op .lk h1,.op .lk h2,.op .lk h3,.op .lk h4{color:#1e293b!important}
   .op .lk p,.op .lk2 p{color:#334155!important}
-  .op section{padding:96px 64px;position:relative;overflow:hidden;width:100%}
+  .op section{padding:112px 64px;position:relative;overflow:hidden;width:100%}
   .op *{box-sizing:border-box}
   .op .tg{background:linear-gradient(to right,#00E5CC,#00D4C8,#06B6D4)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
   .op .tgg{background:linear-gradient(to right,#F59E0B,#FBBF24,#FCD34D)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
   .op .con{width:100%}
-  .op .sh2{font-size:clamp(36px,4.5vw,60px);font-weight:800;line-height:1.06;margin-bottom:18px}
+  .op .sh2{font-size:clamp(36px,4.5vw,60px);font-weight:800;line-height:1.06;margin-bottom:18px;margin-top:0}
   .op .card{border:1px solid;border-radius:1rem;transition:all .3s}
   .op .card-dk{background:rgba(17,24,39,.9);border-color:rgba(255,255,255,.12)}
   .op .card-lk{background:#fff;border-color:#e2e8f0;box-shadow:0 1px 8px rgba(0,0,0,.06)}
@@ -58,7 +58,7 @@ const CSS = `
   .op .rsn{background:#fff;padding:36px 28px;transition:background .2s} .op .rsn:hover{background:#f8fafc}
   .op .rn{font-family:'Space Grotesk',sans-serif;font-size:52px;font-weight:800;color:rgba(0,180,166,.15);line-height:1;margin-bottom:14px}
   .op .rh{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px;color:#1e293b}
-  .op .rp{font-size:15px;color:#64748b;line-height:1.65} .op .rp strong{color:#00B4A6;font-weight:600}
+  .op .rp{font-size:16px;color:#475569;line-height:1.75} .op .rp strong{color:#00B4A6;font-weight:600}
   .op .ag{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
   .op .ac{padding:26px;display:flex;flex-direction:column} .op .ac.w{grid-column:span 2}
   .op .aico{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;padding:10px}
@@ -67,9 +67,11 @@ const CSS = `
   .op .tag{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:5px 12px;font-size:13px;color:#334155;display:inline-block}
   .op .p3{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:1rem;padding:26px;transition:border-color .2s}
   .op .p3:hover{border-color:rgba(0,212,200,.3)}
+  .op .sec-p{font-size:16px;line-height:1.75;color:#94A3B8;max-width:640px}
+  .op .sec-p strong{color:#fff}
   .op .btn-p{background:linear-gradient(to right,#00B4A6,#00D4C8);color:#fff;padding:15px 32px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;font-family:'Space Grotesk',sans-serif;display:inline-block;transition:all .2s}
   .op .btn-p:hover{transform:translateY(-2px);box-shadow:0 10px 40px -10px rgba(0,212,200,.5)}
-  .op .btn-s{border:1px solid rgba(255,255,255,.2);color:#D1D5DB;padding:15px 32px;border-radius:10px;font-weight:500;font-size:16px;text-decoration:none;display:inline-block;transition:all .2s}
+  .op .btn-s{border:1px solid rgba(255,255,255,.2);color:#E2E8F0;padding:15px 32px;border-radius:10px;font-weight:500;font-size:16px;text-decoration:none;display:inline-block;transition:all .2s}
   .op .btn-s:hover{border-color:rgba(0,212,200,.3);color:#00D4C8}
   .op .btn-sl{border:1px solid #e2e8f0;color:#334155;padding:13px 28px;border-radius:10px;font-weight:500;font-size:15px;text-decoration:none;display:inline-block;transition:all .2s}
   .op .btn-sl:hover{border-color:#00D4C8;color:#00B4A6}
@@ -159,7 +161,7 @@ export default function OdooPage() {
           <h1 className="hero-h1 aos d1" style={{fontSize:'clamp(72px,14vw,210px)',fontWeight:800,lineHeight:.9,marginBottom:36,color:'#fff',letterSpacing:-5,whiteSpace:'nowrap'}}>
             On ne vend pas<br/>Odoo. <span className="tg">On y croit<br/>vraiment.</span>
           </h1>
-          <p className="aos d2" style={{fontSize:20,color:'#D1D5DB',lineHeight:1.75,maxWidth:640,marginBottom:40}}>
+          <p className="aos d2" style={{fontSize:20,color:'#E2E8F0',lineHeight:1.75,maxWidth:640,marginBottom:40}}>
             Chez D4E, on a choisi Odoo <strong style={{color:'#fff'}}>avant que ce soit tendance.</strong> On l'a déployé sur des chantiers, dans des ateliers, des cabinets. Et on le redéploierait demain sans hésiter.
           </p>
           <div className="aos d2" style={{display:'flex',alignItems:'center',gap:20,marginBottom:36}}>
@@ -185,7 +187,7 @@ export default function OdooPage() {
               <div key={i} className="card" style={{background:st.gold?'rgba(245,158,11,.08)':'rgba(17,24,39,.9)',borderColor:st.gold?'rgba(245,158,11,.3)':'rgba(255,255,255,.12)',padding:'22px 28px',flex:1,minWidth:180}}>
                 {st.gold && <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:6}}><div className="pulse" style={{width:9,height:9,borderRadius:'50%',background:'#F59E0B',flexShrink:0}}/><div className="tgg" style={{fontSize:28,fontWeight:900,lineHeight:1,fontFamily:'Space Grotesk,sans-serif'}}>{st.n}</div></div>}
                 {!st.gold && <div className="tg" style={{fontSize:48,fontWeight:900,lineHeight:1,fontFamily:'Space Grotesk,sans-serif'}}>{st.n}</div>}
-                <div style={{fontSize:15,color:st.gold?'#FBBF24':'#D1D5DB',marginTop:6,fontWeight:st.gold?600:500}}>{st.l}</div>
+                <div style={{fontSize:15,color:st.gold?'#FBBF24':'#E2E8F0',marginTop:6,fontWeight:st.gold?600:500}}>{st.l}</div>
                 <div style={{fontSize:12,color:'#9CA3AF',marginTop:3}}>{st.s}</div>
               </div>
             ))}
@@ -226,7 +228,7 @@ export default function OdooPage() {
         <div style={{width:'100%',position:'relative',zIndex:2}}>
           <div className="stag-dk aos"><span className="sdot"/>&nbsp;Ce qu'Odoo fait vraiment</div>
           <h2 className="sh2 aos d1" style={{color:'#fff'}}>Les modules qu'on déploie<br/>le plus. Et pourquoi.</h2>
-          <p className="aos d2" style={{fontSize:17,color:'#D1D5DB',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Pas une liste exhaustive. Juste les six apps qui ont changé concrètement la vie des entreprises qu'on accompagne.</p>
+          <p className="aos d2" style={{fontSize:17,color:'#E2E8F0',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Pas une liste exhaustive. Juste les six apps qui ont changé concrètement la vie des entreprises qu'on accompagne.</p>
           <div className="ag sg aos">
             {[
               {ico:'crm',bg:'rgba(0,212,200,.1)',title:'CRM et Ventes',body:'Pipeline Kanban temps réel, lead scoring IA, devis en un clic. Devis → Commande → Facture sans copier-coller. Multi-canal dans la même vue.',result:'+30% de ventes',rc:'rt'},
@@ -287,7 +289,7 @@ export default function OdooPage() {
         <div style={{width:"100%"}}>
           <div className="stag-dk aos"><span className="sdot"/>&nbsp;Par secteur</div>
           <h2 className="sh2 aos d1" style={{color:'#fff'}}>Odoo parle votre langue.<br/>On vous le prouve.</h2>
-          <p className="aos d2" style={{fontSize:17,color:'#D1D5DB',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Chaque métier a ses angles morts. Voilà ce qu'on a appris en déployant Odoo dans les vôtres.</p>
+          <p className="aos d2" style={{fontSize:17,color:'#E2E8F0',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Chaque métier a ses angles morts. Voilà ce qu'on a appris en déployant Odoo dans les vôtres.</p>
           <div className="aos d3" style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:44}}>
             {([['fi','🏛 Finance'],['sv','🧩 Services'],['bt','🏗 Construction',true],['in','⚙️ Industrie'],['co','🛒 Commerce'],['lo','🚛 Logistique'],['sa','🩺 Santé'],['ed','📚 Education']] as [IndId,string,boolean?][]).map(([id,label,elvy]) => (
               <button key={id} className={`itab${elvy?' elvy':''}${ind===id?' on':''}`} style={{fontSize:15,padding:'10px 22px'}} onClick={() => setInd(id)}>
@@ -300,10 +302,10 @@ export default function OdooPage() {
               <div style={{fontSize:64,lineHeight:1,marginBottom:24}}>{cur.emo}</div>
               <h3 style={{fontSize:48,fontWeight:800,lineHeight:1.1,marginBottom:10,color:'#fff'}}>{cur.title}</h3>
               <div style={{fontSize:14,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:cur.gold?'#F59E0B':'#00D4C8',marginBottom:22}}>{cur.sub}</div>
-              <p style={{fontSize:20,color:'#D1D5DB',lineHeight:1.8,marginBottom:32}} dangerouslySetInnerHTML={{__html:cur.body}}/>
+              <p style={{fontSize:20,color:'#E2E8F0',lineHeight:1.8,marginBottom:32}} dangerouslySetInnerHTML={{__html:cur.body}}/>
               <div style={{display:'flex',flexDirection:'column',gap:10}}>
                 {cur.checks.map((c,i) => (
-                  <div key={i} style={{display:'flex',alignItems:'flex-start',gap:12,fontSize:17,color:'#D1D5DB'}}>
+                  <div key={i} style={{display:'flex',alignItems:'flex-start',gap:12,fontSize:17,color:'#E2E8F0'}}>
                     <div style={{width:26,height:26,minWidth:26,borderRadius:'50%',background:chkBg,display:'flex',alignItems:'center',justifyContent:'center',marginTop:2}}>
                       <svg width="12" height="12" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4.5,7.5 8,3" stroke={chkColor} strokeWidth="1.5" strokeLinecap="round"/></svg>
                     </div>
@@ -360,7 +362,7 @@ export default function OdooPage() {
             <h2 className="aos d1" style={{fontSize:'clamp(44px,6vw,76px)',fontWeight:800,lineHeight:1.05,marginBottom:20,color:'#fff'}}>
               On ne livre pas un logiciel.<br/>On livre <span className="tg">votre système.</span>
             </h2>
-            <p className="aos d2" style={{fontSize:20,color:'#D1D5DB',lineHeight:1.75,marginBottom:48,maxWidth:'100%'}}>
+            <p className="aos d2" style={{fontSize:20,color:'#E2E8F0',lineHeight:1.75,marginBottom:48,maxWidth:'100%'}}>
               Configurer Odoo, n'importe qui peut l'apprendre. Comprendre votre métier, vos contraintes, vos angles morts et traduire tout ça en un système qui tient dans le temps — c'est ce qu'on fait chaque jour depuis 4 ans.
             </p>
             <div className="p3g sg aos" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:14,marginBottom:48,textAlign:'left'}}>
