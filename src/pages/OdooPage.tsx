@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { BarChart3, Wrench, HardHat, Factory, ShoppingCart, Truck, Heart, GraduationCap } from 'lucide-react';
 
 const CSS = `
   .op * { box-sizing: border-box; }
@@ -199,35 +200,35 @@ export default function OdooPage() {
   }, [ind]);
 
   const INDS = {
-    fi: { emo:'🏛', title:'Finance', sub:'Reporting, conformité, clôtures rapides', gold:false,
+    fi: { emo:'🏛', icon:'BarChart3', title:'Finance', sub:'Reporting, conformité, clôtures rapides', gold:false,
       body:'Les directions financières passent encore trop de temps sur des tâches que la machine peut faire. <strong style={{color:\'#fff\'}}>Odoo coupe dans tout ça.</strong> Réconciliation bancaire automatique, clôtures en quelques heures, chaque chiffre remonte en temps réel.',
       checks:['Réconciliation bancaire automatique par IA','Multi-devises, multi-sociétés, multi-taxes','KPIs financiers en temps réel, sans export','Packages de localisation fiscale par pays'],
       mods:[{n:'Comptabilité',t:'Core',d:'Facturation, taxes, clôtures, audit trail'},{n:'Analytique BI',t:'Reporting',d:'Centres de profit, reporting multidimensionnel'},{n:'Trésorerie',t:'Finance',d:'Prévisions cash-flow, paiements'},{n:'Notes de frais',t:'RH',d:'Validation mobile, remboursements auto'}]},
-    sv: { emo:'🧩', title:'Services', sub:'Projets, temps, facturation sans fuite', gold:false,
+    sv: { emo:'🧩', icon:'Wrench', title:'Services', sub:'Projets, temps, facturation sans fuite', gold:false,
       body:'Les ESN, cabinets et agences ont un ennemi commun : <strong style={{color:\'#fff\'}}>les heures qui s\'évaporent sans être facturées.</strong> Odoo Project relie tout dans une seule boucle.',
       checks:['Timesheets liés directement à la facturation','Vue Gantt, Kanban, liste sur chaque mission','Portail client pour validation des livrables','Rentabilité par projet, consultant, client'],
       mods:[{n:'Project',t:'Core',d:'Tâches, jalons, dépendances, vues multiples'},{n:'Timesheets',t:'Temps',d:'Saisie, validation, lien facturation'},{n:'Helpdesk',t:'Support',d:'Tickets, SLA, satisfaction client'},{n:'Field Service',t:'Terrain',d:'Interventions, planning mobile'}]},
-    bt: { emo:'🏗', title:'Construction BTP', sub:'ElvyBat, notre solution maison sur Odoo', gold:true,
+    bt: { emo:'🏗', icon:'HardHat', title:'Construction BTP', sub:'ElvyBat, notre solution maison sur Odoo', gold:true,
       body:'Le BTP c\'est notre terrain de jeu depuis le début. On a construit ElvyBat parce qu\'on n\'a pas trouvé une solution qui comprenait vraiment les enjeux d\'un chef de chantier. <strong style={{color:\'#fff\'}}>1 400+ chantiers gérés. Ce n\'est pas de la théorie.</strong>',
       checks:['Rentabilité chantier visible en temps réel','Pointage terrain mobile, même hors ligne','IA vocale multilingue pour bons de régie','Chiffrage intégré, devis en quelques clics'],
       mods:[{n:'ElvyBat',t:'Coeur',d:'Gestion de chantiers, marges, plannings'},{n:'ElvyCalc',t:'Chiffrage',d:'Métrés, estimations, devis automatisés'},{n:'ElvyTime',t:'Pointage',d:'Suivi des équipes, heures chantier'},{n:'ElvyService IA',t:'IA',d:'Rapports vocaux, bons de régie, facturation'}]},
-    in: { emo:'⚙️', title:'Industrie', sub:'Production, supply chain, traçabilité', gold:false,
+    in: { emo:'⚙️', icon:'Factory', title:'Industrie', sub:'Production, supply chain, traçabilité', gold:false,
       body:'Odoo Manufacturing connecte nomenclature, ordres de fab et contrôle qualité dans un flux unique. <strong style={{color:\'#fff\'}}>La traçabilité devient un avantage, pas une contrainte.</strong>',
       checks:['MRP et ordonnancement intelligent des ateliers','Nomenclatures multicouches, suivi composants','Contrôle qualité et traçabilité lot/série','Maintenance préventive et prédictive'],
       mods:[{n:'Manufacturing',t:'Core',d:'Ordres de fabrication, BOM, suivi atelier'},{n:'Maintenance',t:'GMAO',d:'Interventions préventives, équipements'},{n:'Qualité',t:'Conformité',d:'Points de contrôle, non-conformités'},{n:'PLM',t:'Produit',d:'Cycle de vie produit, versions, ECO'}]},
-    co: { emo:'🛒', title:'Commerce', sub:'Multi-canal, stocks, relation client', gold:true,
+    co: { emo:'🛒', icon:'ShoppingCart', title:'Commerce', sub:'Multi-canal, stocks, relation client', gold:true,
       body:'Caisse, e-commerce, marketplace : un seul back-office. <strong style={{color:\'#fff\'}}>Quand un produit est épuisé en boutique, il disparait automatiquement du site.</strong>',
       checks:['Caisse, site web, marketplace unifiés','Programme de fidélité multicanal intégré','Gestion des retours et SAV automatisée','Rapports de ventes temps réel par canal'],
       mods:[{n:'Point of Sale',t:'Retail',d:'Caisse tactile, paiements, remises'},{n:'eCommerce',t:'Digital',d:'Boutique native, SEO, passerelles paiement'},{n:'CRM',t:'Fidélité',d:'Segmentation, campagnes, historique'},{n:'Inventory',t:'Stock',d:'Stock temps réel, réapprovisionnement auto'}]},
-    lo: { emo:'🚛', title:'Logistique', sub:'Flux, entrepôts, expéditions sans friction', gold:false,
+    lo: { emo:'🚛', icon:'Truck', title:'Logistique', sub:'Flux, entrepôts, expéditions sans friction', gold:false,
       body:'La logistique, c\'est la guerre contre le temps perdu. <strong style={{color:\'#fff\'}}>On a vu des équipes gagner 2 heures par jour</strong> rien qu\'avec l\'optimisation du picking dans Odoo.',
       checks:['Picking optimisé par route dans l\'entrepôt','Multi-entrepôts, cross-docking, dropshipping','Intégration transporteurs, étiquettes auto','Traçabilité par lot, série, date péremption'],
       mods:[{n:'Inventory',t:'Core',d:'Gestion de stock, mouvements, valorisation'},{n:'Barcode',t:'Scan',d:'Picking par scan, réception, inventaires'},{n:'Delivery',t:'Transport',d:'FedEx, UPS, DHL, La Poste nativement'},{n:'Purchase',t:'Achats',d:'Commandes fournisseurs, réceptions'}]},
-    sa: { emo:'🩺', title:'Santé', sub:'Normes, traçabilité, conformité sans effort', gold:false,
+    sa: { emo:'🩺', icon:'Heart', title:'Santé', sub:'Normes, traçabilité, conformité sans effort', gold:false,
       body:'Dans le secteur de la santé, l\'erreur n\'est pas une option. <strong style={{color:\'#fff\'}}>La conformité réglementaire devient automatique</strong> plutôt qu\'un audit de 3 jours.',
       checks:['Traçabilité complète par lot et numéro de série','Alertes automatiques sur dates de péremption','Gestion des recalls produit en quelques clics','Conformité réglementaire documentée'],
       mods:[{n:'Inventory + Lots',t:'Traça',d:'FEFO, numéros de série, rappels auto'},{n:'Qualité',t:'Conformité',d:'Points de contrôle, non-conformités'},{n:'Facturation',t:'Admin',d:'Tiers payant, devis médicaux'},{n:'Portail client',t:'Digital',d:'Documents partagés, historique'}]},
-    ed: { emo:'📚', title:'Education', sub:'Inscriptions, plannings, suivi apprenants', gold:false,
+    ed: { emo:'📚', icon:'GraduationCap', title:'Education', sub:'Inscriptions, plannings, suivi apprenants', gold:false,
       body:'Odoo unifie inscriptions, plannings, suivi et facturation dans un portail unique. <strong style={{color:\'#fff\'}}>Les relances de paiement deviennent automatiques.</strong>',
       checks:['Inscriptions en ligne et suivi des paiements','Plannings de cours, salles, formateurs','Portail apprenant, supports de cours, quiz','Tableaux de bord progression et assiduité'],
       mods:[{n:'eLearning',t:'Core',d:'Cours, quiz, certifications, progression'},{n:'Events',t:'Planif.',d:'Sessions, inscriptions, rappels'},{n:'Facturation',t:'Admin',d:'Inscriptions payantes, relances, OPCO'},{n:'Employés',t:'RH',d:'Gestion formateurs, contrats, planning RH'}]},
@@ -379,7 +380,7 @@ export default function OdooPage() {
           <h2 className="sh2 aos d1" style={{color:'#fff'}}>Odoo parle votre langue.<br/>On vous le prouve.</h2>
           <p className="aos d2" style={{fontSize:17,color:'#E2E8F0',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Chaque métier a ses angles morts. Voilà ce qu'on a appris en déployant Odoo dans les vôtres.</p>
           <div className="aos d3" style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:44}}>
-            {([['fi','🏛 Finance'],['sv','🧩 Services'],['bt','🏗 Construction',true],['in','⚙️ Industrie'],['co','🛒 Commerce'],['lo','🚛 Logistique'],['sa','🩺 Santé'],['ed','📚 Education']] as [IndId,string,boolean?][]).map(([id,label,elvy]) => (
+            {([['fi','Finance','BarChart3'],['sv','Services','Wrench'],['bt','Construction','HardHat',true],['in','Industrie','Factory'],['co','Commerce','ShoppingCart'],['lo','Logistique','Truck'],['sa','Santé','Heart'],['ed','Education','GraduationCap']] as [IndId,string,string,boolean?][]).map(([id,label,_icon,elvy]) => (
               <button key={id} className={`itab${elvy?' elvy':''}${ind===id?' on':''}`} style={{fontSize:15,padding:'10px 22px'}} onClick={() => setInd(id)}>
                 {label}{elvy && <span className="eb">Elvy</span>}
               </button>
@@ -387,7 +388,9 @@ export default function OdooPage() {
           </div>
           <div className="ind-cols" style={{display:'grid',gridTemplateColumns:'1.2fr 0.8fr',gap:48,alignItems:'start'}}>
             <div>
-              <div style={{fontSize:64,lineHeight:1,marginBottom:24}}>{cur.emo}</div>
+              <div style={{width:80,height:80,borderRadius:20,background:cur.gold?'rgba(245,158,11,0.15)':'rgba(0,212,200,0.15)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:24,border:cur.gold?'1px solid rgba(245,158,11,0.3)':'1px solid rgba(0,212,200,0.3)'}}>
+                {cur.icon && (() => { const IconComp = {BarChart3,Wrench,HardHat,Factory,ShoppingCart,Truck,Heart,GraduationCap}[cur.icon]; return IconComp ? <IconComp style={{width:40,height:40,color:cur.gold?'#F59E0B':'#00D4C8'}}/> : null; })()}
+              </div>
               <h3 style={{fontSize:48,fontWeight:800,lineHeight:1.1,marginBottom:10,color:'#fff'}}>{cur.title}</h3>
               <div style={{fontSize:14,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:cur.gold?'#F59E0B':'#00D4C8',marginBottom:22}}>{cur.sub}</div>
               <p style={{fontSize:20,color:'#E2E8F0',lineHeight:1.8,marginBottom:32}} dangerouslySetInnerHTML={{__html:cur.body}}/>
