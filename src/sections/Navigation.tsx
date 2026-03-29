@@ -1,35 +1,65 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-const navLinks = [
-  { to: '/',        label: 'Accueil',  exact: true },
-  { to: '/odoo',    label: 'Odoo' },
-  { to: '/elvy',    label: 'Elvy' },
-  { to: '/elvybat', label: 'ElvyBat' },
-  { to: '/tarifs',  label: 'Tarifs' },
-  { to: '/support', label: 'Support' },
+/* ── Data ── */
+const solutions = [
+  { to: '/elvybat',       label: 'ElvyBat',       desc: 'Construction & chantiers', accent: '#00D4C8' },
+  { to: '/elvyprint',     label: 'ElvyPrint',     desc: 'Impression & production',  accent: '#F59E0B' },
+  { to: '/elvyeduca',     label: 'ElvyEduca',     desc: 'Education & formation',    accent: '#8B5CF6' },
+  { to: '/elvyinsurance', label: 'ElvyInsurance', desc: 'Assurance & courtage',     accent: '#3B82F6' },
 ];
 
+/* ── Component ── */
 export function Navigation() {
   const [isScrolled, setIsScrolled]       = useState(false);
-  const [isMobileMenuOpen, setMobileMenu] = useState(false);
-  const location  = useLocation();
-  const navigate  = useNavigate();
+  const [isMobileOpen, setMobileOpen]     = useState(false);
+  const [solOpen, setSolOpen]             = useState(false);
+  const [d4eOpen, setD4eOpen]             = useState(false);
+  const [mobileSolOpen, setMobileSolOpen] = useState(false);
+  const [mobileD4eOpen, setMobileD4eOpen] = useState(false);
 
+  const solRef = useRef<HTMLDivElement>(null);
+  const d4eRef = useRef<HTMLDivElement>(null);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  /* Scroll listener */
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => { setMobileMenu(false); }, [location.pathname]);
+  /* Close everything on route change */
+  useEffect(() => {
+    setMobileOpen(false);
+    setSolOpen(false);
+    setD4eOpen(false);
+    setMobileSolOpen(false);
+    setMobileD4eOpen(false);
+  }, [location.pathname]);
 
-  const isActive = (to: string, exact = false) =>
-    exact ? location.pathname === to : location.pathname.startsWith(to);
+  /* Click outside to close dropdowns */
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (solRef.current && !solRef.current.contains(e.target as Node)) setSolOpen(false);
+      if (d4eRef.current && !d4eRef.current.contains(e.target as Node)) setD4eOpen(false);
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, []);
+
+  /* Helpers */
+  const isActive = (path: string) => location.pathname === path;
+  const isSolutionActive = solutions.some(s => location.pathname === s.to) || location.pathname === '/elvy';
+  const isD4eActive = location.pathname === '/tarifs';
 
   const goAnchor = (anchor: string) => {
-    setMobileMenu(false);
+    setMobileOpen(false);
+    setSolOpen(false);
+    setD4eOpen(false);
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
@@ -44,12 +74,16 @@ export function Navigation() {
     ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm'
     : 'bg-white/80 backdrop-blur-md border-b border-slate-100';
 
+  const linkBase = 'relative px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200';
+  const linkActive = 'text-[#00B4A6] bg-[#00B4A6]/8';
+  const linkIdle = 'text-slate-600 hover:text-slate-900 hover:bg-slate-100';
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
 
-          {/* Logo */}
+          {/* ── Logo ── */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
               src="/picto-d4e.png"
@@ -61,35 +95,104 @@ export function Navigation() {
             </span>
           </Link>
 
-          {/* Desktop nav */}
+          {/* ── Desktop nav ── */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map(link => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`relative px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 ${
-                  isActive(link.to, link.exact)
-                    ? 'text-[#00B4A6] bg-[#00B4A6]/8'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                }`}
+
+            {/* Odoo */}
+            <Link
+              to="/odoo"
+              className={`${linkBase} ${isActive('/odoo') ? linkActive : linkIdle}`}
+            >
+              Odoo
+              {isActive('/odoo') && (
+                <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] rounded-full" />
+              )}
+            </Link>
+
+            {/* Solutions dropdown */}
+            <div ref={solRef} className="relative">
+              <button
+                onClick={() => { setSolOpen(!solOpen); setD4eOpen(false); }}
+                className={`${linkBase} flex items-center gap-1 ${isSolutionActive ? linkActive : linkIdle}`}
               >
-                {link.label}
-                {isActive(link.to, link.exact) && (
+                Solutions
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${solOpen ? 'rotate-180' : ''}`} />
+                {isSolutionActive && (
                   <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] rounded-full" />
                 )}
-              </Link>
-            ))}
+              </button>
 
-            {/* Lien ancre équipe */}
-            <button
-              onClick={() => goAnchor('equipe')}
-              className="px-4 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-all duration-200"
+              {solOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white rounded-2xl border border-slate-200 shadow-xl py-2 z-50">
+                  {solutions.map(sol => (
+                    <Link
+                      key={sol.to}
+                      to={sol.to}
+                      className={`flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors ${isActive(sol.to) ? 'bg-slate-50' : ''}`}
+                    >
+                      <span
+                        className="w-1 h-8 rounded-full flex-shrink-0"
+                        style={{ backgroundColor: sol.accent }}
+                      />
+                      <div>
+                        <div className="text-sm font-semibold text-slate-800">{sol.label}</div>
+                        <div className="text-xs text-slate-500">{sol.desc}</div>
+                      </div>
+                    </Link>
+                  ))}
+                  <div className="border-t border-slate-100 mt-1 pt-1 px-4 py-2">
+                    <Link
+                      to="/elvy"
+                      className="text-xs font-semibold text-[#00B4A6] hover:text-[#009688] transition-colors"
+                    >
+                      Voir toutes les solutions \u2192
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* D4E dropdown */}
+            <div ref={d4eRef} className="relative">
+              <button
+                onClick={() => { setD4eOpen(!d4eOpen); setSolOpen(false); }}
+                className={`${linkBase} flex items-center gap-1 ${isD4eActive ? linkActive : linkIdle}`}
+              >
+                D4E
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${d4eOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {d4eOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white rounded-2xl border border-slate-200 shadow-xl py-2 z-50">
+                  <button
+                    onClick={() => goAnchor('equipe')}
+                    className="w-full text-left px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                  >
+                    Equipe
+                  </button>
+                  <Link
+                    to="/tarifs"
+                    className={`block px-4 py-2.5 text-sm font-semibold transition-colors ${isActive('/tarifs') ? 'text-[#00B4A6] bg-slate-50' : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'}`}
+                  >
+                    Tarifs
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Support */}
+            <Link
+              to="/support"
+              className={`${linkBase} ${isActive('/support') ? linkActive : linkIdle}`}
             >
-              Équipe
-            </button>
+              Support
+              {isActive('/support') && (
+                <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] rounded-full" />
+              )}
+            </Link>
           </nav>
 
-          {/* CTA desktop */}
+          {/* ── CTA desktop ── */}
           <div className="hidden lg:block">
             <button
               onClick={() => goAnchor('contact-form')}
@@ -99,45 +202,109 @@ export function Navigation() {
             </button>
           </div>
 
-          {/* Burger mobile */}
+          {/* ── Burger mobile ── */}
           <button
             className="lg:hidden p-2 rounded-xl hover:bg-slate-100 transition-colors"
-            onClick={() => setMobileMenu(!isMobileMenuOpen)}
+            onClick={() => setMobileOpen(!isMobileOpen)}
             aria-label="Menu"
           >
-            {isMobileMenuOpen
+            {isMobileOpen
               ? <X    className="h-6 w-6 text-slate-700" />
               : <Menu className="h-6 w-6 text-slate-700" />
             }
           </button>
         </div>
 
-        {/* Mobile menu */}
+        {/* ── Mobile menu ── */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+            isMobileOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
           <nav className="flex flex-col py-3 bg-white rounded-2xl mb-4 border border-slate-200 shadow-lg overflow-hidden">
-            {navLinks.map(link => (
+
+            {/* Odoo */}
+            <Link
+              to="/odoo"
+              className={`px-5 py-3 text-sm font-semibold transition-colors ${
+                isActive('/odoo') ? 'text-[#00B4A6] bg-[#00B4A6]/5' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+              }`}
+            >
+              Odoo
+            </Link>
+
+            {/* Solutions accordion */}
+            <button
+              onClick={() => setMobileSolOpen(!mobileSolOpen)}
+              className={`flex items-center justify-between px-5 py-3 text-sm font-semibold transition-colors ${
+                isSolutionActive ? 'text-[#00B4A6] bg-[#00B4A6]/5' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+              }`}
+            >
+              Solutions
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileSolOpen ? 'rotate-180' : ''}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-200 ${mobileSolOpen ? 'max-h-[300px]' : 'max-h-0'}`}>
+              {solutions.map(sol => (
+                <Link
+                  key={sol.to}
+                  to={sol.to}
+                  className={`flex items-center gap-3 pl-8 pr-5 py-2.5 transition-colors ${
+                    isActive(sol.to) ? 'bg-slate-50' : 'hover:bg-slate-50'
+                  }`}
+                >
+                  <span className="w-1 h-5 rounded-full flex-shrink-0" style={{ backgroundColor: sol.accent }} />
+                  <div>
+                    <span className={`text-sm font-medium ${isActive(sol.to) ? 'text-[#00B4A6]' : 'text-slate-700'}`}>{sol.label}</span>
+                    <span className="text-xs text-slate-400 ml-2">{sol.desc}</span>
+                  </div>
+                </Link>
+              ))}
               <Link
-                key={link.to}
-                to={link.to}
-                className={`px-5 py-3 text-sm font-semibold transition-colors ${
-                  isActive(link.to, link.exact)
-                    ? 'text-[#00B4A6] bg-[#00B4A6]/5'
-                    : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+                to="/elvy"
+                className="pl-8 pr-5 py-2 text-xs font-semibold text-[#00B4A6] hover:text-[#009688]"
+              >
+                Voir toutes les solutions \u2192
+              </Link>
+            </div>
+
+            {/* D4E accordion */}
+            <button
+              onClick={() => setMobileD4eOpen(!mobileD4eOpen)}
+              className={`flex items-center justify-between px-5 py-3 text-sm font-semibold transition-colors ${
+                isD4eActive ? 'text-[#00B4A6] bg-[#00B4A6]/5' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+              }`}
+            >
+              D4E
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileD4eOpen ? 'rotate-180' : ''}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-200 ${mobileD4eOpen ? 'max-h-[120px]' : 'max-h-0'}`}>
+              <button
+                onClick={() => goAnchor('equipe')}
+                className="w-full text-left pl-8 pr-5 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
+              >
+                Equipe
+              </button>
+              <Link
+                to="/tarifs"
+                className={`block pl-8 pr-5 py-2.5 text-sm font-medium transition-colors ${
+                  isActive('/tarifs') ? 'text-[#00B4A6]' : 'text-slate-700 hover:bg-slate-50'
                 }`}
               >
-                {link.label}
+                Tarifs
               </Link>
-            ))}
-            <button
-              onClick={() => goAnchor('equipe')}
-              className="px-5 py-3 text-left text-sm font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-colors"
+            </div>
+
+            {/* Support */}
+            <Link
+              to="/support"
+              className={`px-5 py-3 text-sm font-semibold transition-colors ${
+                isActive('/support') ? 'text-[#00B4A6] bg-[#00B4A6]/5' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+              }`}
             >
-              Équipe
-            </button>
+              Support
+            </Link>
+
+            {/* CTA mobile */}
             <div className="mx-4 mt-3 pt-3 border-t border-slate-100">
               <button
                 onClick={() => goAnchor('contact-form')}
