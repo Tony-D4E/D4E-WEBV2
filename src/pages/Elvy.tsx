@@ -106,7 +106,7 @@ export function Elvy() {
     <div className="min-h-screen bg-white pt-20">
 
       {/* -- 1. HERO MANIFESTE -- */}
-      <section className="relative overflow-x-hidden flex items-center" style={{ backgroundColor: '#0B0F19', minHeight: '100vh' }} >
+      <section className="relative overflow-x-hidden flex items-center" style={{ backgroundColor: '#0B0F19', minHeight: '70vh' }} >
         <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0B0F19 0%, #0f1a2e 50%, #0B0F19 100%)' }} />
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute w-[800px] h-[800px] rounded-full -top-40 -right-40 opacity-8"
@@ -121,7 +121,7 @@ export function Elvy() {
         </div>
 
         <div ref={heroRef}
-          className={`relative w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center animate-on-scroll ${heroVisible ? 'is-visible' : ''}`}>
+          className={`relative w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center animate-on-scroll ${heroVisible ? 'is-visible' : ''}`}>
 
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00D4C8]/20 border border-[#00D4C8]/40 rounded-full mb-8">
             <Rocket className="h-4 w-4 text-[#00D4C8]" />
@@ -137,7 +137,7 @@ export function Elvy() {
             {`Marre de payer trop cher pour un ERP qui ne comprend pas votre r\u00e9alit\u00e9 ? Marre d'\u00eatre prisonnier d'un \u00e9diteur ? Chaque solution Elvy est co-construite avec des entrepreneurs comme vous. Votre savoir-faire m\u00e9tier + notre expertise Odoo = une solution qui vous ressemble.`}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Button size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-8 rounded-xl text-base" onClick={() => scrollTo('solutions')}>
               {`D\u00e9couvrir les solutions`}
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -150,7 +150,7 @@ export function Elvy() {
       </section>
 
       {/* -- 2. LE MODELE ELVY -- */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div ref={modRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${modVisible ? 'is-visible' : ''}`}>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">{`Le mod\u00e8le Elvy`}</h2>
@@ -230,7 +230,7 @@ export function Elvy() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-6">
             {solutionsEnCours.map((sol, i) => (
               <div key={i} className="rounded-3xl p-8 border-2 border-dashed hover:shadow-lg transition-all relative"
                 style={{ borderColor: sol.accent + '50', backgroundColor: sol.accent + '05' }}>
@@ -273,7 +273,7 @@ export function Elvy() {
       {/* -- 5. POURQUOI ELVY -- */}
       <section className="py-20 bg-[#f8fafc]">
         <div ref={whyRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${whyVisible ? 'is-visible' : ''}`}>
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <h2 className="text-3xl font-black text-[#0F1D3A] mb-3">{`Pourquoi Elvy, pas un projet sur mesure ?`}</h2>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
