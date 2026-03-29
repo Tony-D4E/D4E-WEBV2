@@ -4,7 +4,7 @@ const members = [
   {
     name: 'Antonio Spedicato',
     role: 'Consultant Odoo & Fondateur',
-    bio: '15 ans d'experience · Expert ERP BTP',
+    bio: '15 ans experience - Expert ERP BTP',
     phone: '+41 (0)76 434 45 95',
     phoneTel: 'tel:+41764344595',
     email: 'antonio@d4e.cool',
@@ -14,7 +14,7 @@ const members = [
   {
     name: 'Laetitia Andre',
     role: 'Chef de projet ElvyBat',
-    bio: 'Specialiste deploiement BTP · Suisse & France',
+    bio: 'Specialiste deploiement BTP - Suisse & France',
     phone: '+41 (0)76 482 21 39',
     phoneTel: 'tel:+41764822139',
     email: 'laetita@d4e.cool',
@@ -66,11 +66,9 @@ export function Team() {
               }}>
                 <img src={m.photo} alt={m.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
-
               <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0F1D3A', margin: '0 0 4px' }}>{m.name}</h3>
               <p style={{ fontSize: '0.9rem', fontWeight: 700, color: m.color, margin: '0 0 6px' }}>{m.role}</p>
               <p style={{ fontSize: '0.82rem', color: '#94A3B8', margin: '0 0 24px' }}>{m.bio}</p>
-
               <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <a href={m.phoneTel} style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
