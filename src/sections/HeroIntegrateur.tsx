@@ -259,7 +259,7 @@ export function HeroIntegrateur() {
 
             {/* CTAs */}
             <div key={`ctas-${current}`} className="hero-ctas" style={{ animation: 'fadeUp 0.65s 0.18s ease both' }}>
-              <a onClick={(e) => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }); }} className="hero-cta-primary">
+              <a onClick={(e) => { e.preventDefault(); document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' }); }} className="hero-cta-primary">
                 Discuter de mon projet <ArrowRight style={{ width: '18px', height: '18px' }} />
               </a>
               <a href="/#elvy" className="hero-cta-secondary">
