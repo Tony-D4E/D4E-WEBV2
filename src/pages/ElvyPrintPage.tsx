@@ -131,6 +131,11 @@ export default function ElvyPrintPage() {
 
   return (
     <div className="min-h-screen bg-white pt-20">
+      {/* Badge Odoo Gold Partner - fixed sous nav */}
+      <div style={{ position: 'fixed', top: '4.5rem', right: '2rem', zIndex: 40, background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(8px)', borderRadius: '0 0 12px 12px', padding: '12px 24px', boxShadow: '0 4px 20px rgba(0,0,0,0.12)' }}>
+        <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{ height: 50, maxWidth: 240, objectFit: 'contain', display: 'block' }} />
+      </div>
+
 
       {/* 1. HERO */}
       <section className="relative overflow-hidden bg-[#0B0F19] min-h-screen flex items-center">
