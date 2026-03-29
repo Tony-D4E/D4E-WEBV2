@@ -31,33 +31,6 @@ export function Probleme() {
   return (
     <section style={{ backgroundColor: '#F8FAFC', padding: '64px 0' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div style={{
-          backgroundColor: '#0F1D3A',
-          borderRadius: '24px',
-          padding: '64px 48px',
-          position: 'relative',
-          overflow: 'hidden',
-        }}>
-
-          <div style={{
-            position: 'absolute', width: '500px', height: '500px',
-            borderRadius: '50%', top: '-120px', right: '-120px',
-            opacity: 0.08, pointerEvents: 'none',
-            background: 'radial-gradient(circle, #00D4C8, transparent)',
-          }} />
-
-          <div style={{ textAlign: 'center', marginBottom: '52px', position: 'relative' }}>
-            <div style={{
-              display: 'inline-flex', alignItems: 'center', gap: '8px',
-              padding: '6px 18px',
-              border: '1px solid rgba(0,212,200,0.3)',
-              borderRadius: '999px',
-              backgroundColor: 'rgba(0,212,200,0.1)',
-              marginBottom: '22px',
-            }}>
-              <span style={{ fontSize: '13px', fontWeight: 700, color: '#00D4C8' }}>Le probleme</span>
-            </div>
-
             <h2 style={{
               fontSize: 'clamp(2rem, 4vw, 3.5rem)',
               fontWeight: 900,
