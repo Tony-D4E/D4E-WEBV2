@@ -197,13 +197,13 @@ export function Elvy() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-1">
-                      <h3 className="text-2xl font-black text-white">{sol.label}</h3>
+                      <h3 className="text-2xl font-black" style={{ color: '#FFFFFF' }}>{sol.label}</h3>
                       <span className="text-xs font-bold px-2 py-0.5 rounded-full"
                         style={{ backgroundColor: sol.accent + '20', color: sol.accent }}>
                         {sol.secteur}
                       </span>
                     </div>
-                    <p className="text-gray-400 leading-relaxed mb-4">{sol.accroche}</p>
+                    <p className="leading-relaxed mb-4" style={{ color: '#CBD5E1' }}>{sol.accroche}</p>
                     <span className="text-sm font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1"
                       style={{ color: sol.accent }}>
                       {`D\u00e9couvrir`} <ChevronRight className="h-4 w-4" />
