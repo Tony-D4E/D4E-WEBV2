@@ -128,10 +128,7 @@ export function Navigation() {
                     to="/elvy"
                     className={`flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors ${isActive('/elvy') ? 'bg-slate-50' : ''}`}
                   >
-                    <span
-                      className="w-1 h-8 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: '#00D4C8' }}
-                    />
+                    <span className="w-1 h-8 rounded-full flex-shrink-0" style={{ backgroundColor: '#00D4C8' }} />
                     <div>
                       <div className="text-sm font-bold text-[#00D4C8]">La gamme Elvy</div>
                       <div className="text-xs text-slate-500">Toutes nos solutions</div>
@@ -154,11 +151,6 @@ export function Navigation() {
                       </div>
                     </Link>
                   ))}
-                  <div className="border-t border-slate-100 mt-1 pt-1 px-4 py-2">
-                    <Link
-                      to="/elvy"
-                      className="text-xs font-semibold text-[#00B4A6] hover:text-[#009688] transition-colors"
-                    >
                 </div>
               )}
             </div>
@@ -254,18 +246,20 @@ export function Navigation() {
               Solutions
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileSolOpen ? 'rotate-180' : ''}`} />
             </button>
-            <div className={`overflow-hidden transition-all duration-200 ${mobileSolOpen ? 'max-h-[300px]' : 'max-h-0'}`}>
+            <div className={`overflow-hidden transition-all duration-200 ${mobileSolOpen ? 'max-h-[400px]' : 'max-h-0'}`}>
               <Link
-                  to="/elvy"
-                  className={`flex items-center gap-3 pl-8 pr-5 py-2.5 transition-colors ${isActive('/elvy') ? 'bg-slate-50' : 'hover:bg-slate-50'}`}
-                >
-                  <span className="w-1 h-5 rounded-full flex-shrink-0" style={{ backgroundColor: '#00D4C8' }} />
-                  <div>
-                    <span className={`text-sm font-bold ${isActive('/elvy') ? 'text-[#00B4A6]' : 'text-[#00D4C8]'}`}>La gamme Elvy</span>
-                    <span className="text-xs text-slate-400 ml-2">Toutes nos solutions</span>
-                  </div>
-                </Link>
-                <div className="border-b border-slate-100 mx-6 my-1" />
+                to="/elvy"
+                className={`flex items-center gap-3 pl-8 pr-5 py-2.5 transition-colors ${
+                  isActive('/elvy') ? 'bg-slate-50' : 'hover:bg-slate-50'
+                }`}
+              >
+                <span className="w-1 h-5 rounded-full flex-shrink-0" style={{ backgroundColor: '#00D4C8' }} />
+                <div>
+                  <span className={`text-sm font-bold ${isActive('/elvy') ? 'text-[#00B4A6]' : 'text-[#00D4C8]'}`}>La gamme Elvy</span>
+                  <span className="text-xs text-slate-400 ml-2">Toutes nos solutions</span>
+                </div>
+              </Link>
+              <div className="border-b border-slate-100 mx-6 my-1" />
               {solutions.map(sol => (
                 <Link
                   key={sol.to}
@@ -281,7 +275,6 @@ export function Navigation() {
                   </div>
                 </Link>
               ))}
-              
             </div>
 
             {/* D4E accordion */}
