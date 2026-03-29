@@ -8,6 +8,7 @@ import OdooPage from './pages/OdooPage';
 import ElvyBatPage from './pages/ElvyBatPage';
 import ElvyPrintPage from './pages/ElvyPrintPage';
 import ElvyInsurancePage from './pages/ElvyInsurancePage';
+import ElvyEducaPage from './pages/ElvyEducaPage';
 import { TarifsPage } from './pages/TarifsPage';
 import { Support } from './pages/Support';
 import { NotFound } from './pages/NotFound';
@@ -34,6 +35,7 @@ function App() {
           <Route path="/elvybat"       element={<ElvyBatPage />} />
           <Route path="/elvyprint"     element={<ElvyPrintPage />} />
           <Route path="/elvyinsurance" element={<ElvyInsurancePage />} />
+          <Route path="/elvyeduca"     element={<ElvyEducaPage />} />
           <Route path="/tarifs"        element={<TarifsPage />} />
           <Route path="/support"       element={<Support />} />
           <Route path="*"              element={<NotFound />} />
