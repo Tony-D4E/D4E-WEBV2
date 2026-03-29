@@ -10,9 +10,20 @@ import { TarifsPage } from './pages/TarifsPage';
 import { Support } from './pages/Support';
 import { NotFound } from './pages/NotFound';
 
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
+
+
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <div className="min-h-screen bg-[#f8fafc]">
         <Navigation />
         <Routes>
