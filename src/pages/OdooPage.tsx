@@ -52,17 +52,19 @@ const CSS = `
   .op .ac .mtt,.op .ac .mtg{font-size:12px!important;padding:4px 12px!important;border-radius:6px!important}
   
   .op .card-teal:hover,.op .card-gold:hover{background:rgba(255,255,255,0.1)!important}
-  .op .imod{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px 18px;transition:all .2s}
-  .op .imod:hover{border-color:rgba(0,212,200,.3);background:rgba(255,255,255,0.09)}
-  .op .imod{background:rgba(11,15,25,.6);border:1px solid rgba(255,255,255,.1);border-radius:1rem;padding:16px 18px;transition:border-color .2s}
-  .op .imod:hover{border-color:rgba(0,212,200,.3)}
-  .op .imod-g{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:1rem;padding:16px 18px}
-  .op .mtt{background:rgba(0,212,200,.1);color:#00D4C8;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:600}
-  .op .mtg{background:rgba(245,158,11,.1);color:#F59E0B;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:600}
+  .op .imod{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,.12);border-left:4px solid #00D4C8;border-radius:14px;padding:18px 20px;transition:all .2s;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .op .imod:hover{border-color:rgba(0,212,200,.5);border-left-color:#00D4C8;background:rgba(255,255,255,0.11);transform:translateX(3px)}
+  .op .imod{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,.12);border-left:4px solid #00D4C8;border-radius:14px;padding:18px 20px;transition:all .2s;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .op .imod:hover{border-color:rgba(0,212,200,.5);border-left-color:#00D4C8;background:rgba(255,255,255,0.11);transform:translateX(3px)}
+  .op .imod-g{background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,.25);border-left:4px solid #F59E0B;border-radius:14px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;transition:all .2s}
+  .op .mtt{background:rgba(0,212,200,.15);color:#00D4C8;font-size:12px;padding:4px 10px;border-radius:6px;font-weight:700;white-space:nowrap;flex-shrink:0}
+  .op .mtg{background:rgba(245,158,11,.15);color:#F59E0B;font-size:12px;padding:4px 10px;border-radius:6px;font-weight:700;white-space:nowrap;flex-shrink:0}
   .op .itab{background:transparent;border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:8px 18px;font-size:13px;font-weight:500;color:#9CA3AF;cursor:pointer;transition:all .2s;font-family:inherit;display:inline-flex;align-items:center;gap:8px}
   .op .itab:hover{color:#fff;border-color:rgba(255,255,255,.2)}
   .op .itab.on{background:rgba(0,212,200,.1);border-color:#00D4C8;color:#00D4C8;font-weight:600}
   .op .itab.elvy.on{background:rgba(245,158,11,.1);border-color:#F59E0B;color:#F59E0B}
+  .op .imod h4,.op .imod-g h4{font-size:1rem!important;font-weight:700!important;color:#FFFFFF!important;margin:0 0 4px!important}
+  .op .imod p,.op .imod-g p{font-size:0.85rem!important;color:#94A3B8!important;margin:0!important;line-height:1.5!important}
   .op .eb{background:#00D4C8;color:#0B0F19;font-size:9px;font-weight:800;padding:2px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px}
   .op .rg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e2e8f0;border:1px solid #e2e8f0;border-radius:1rem;overflow:hidden}
   .op .rsn{background:#fff;padding:36px 28px;transition:all .2s;border-top:3px solid transparent}
