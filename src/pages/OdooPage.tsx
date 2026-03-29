@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BarChart3, Wrench, HardHat, Factory, ShoppingCart, Truck, Heart, GraduationCap, Store, RefreshCw, Cpu, CreditCard, Package, Webhook } from 'lucide-react';
+import { BarChart3, Wrench, HardHat, Factory, ShoppingCart, Truck, Heart, GraduationCap } from 'lucide-react';
 
 const CSS = `
   .op * { box-sizing: border-box; }
@@ -79,7 +79,7 @@ const CSS = `
   .op .ac{padding:32px;display:flex;flex-direction:column;gap:0} .op .ac.w{grid-column:span 2}
   .op .aico{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;padding:12px;flex-shrink:0}
   .op .imod-col{max-width:580px;width:100%}
-  .op .int-conn{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:20px 16px;text-align:center;transition:all .3s}
+  .op .int-conn{background:#fff;border:1px solid #e2e8f0;border-radius:1rem;padding:20px;text-align:center;transition:all .3s}
   .op .int-conn:hover{border-color:rgba(0,212,200,.4);transform:translateY(-3px);box-shadow:0 4px 20px rgba(0,212,200,.08)}
   .op .tag{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:5px 12px;font-size:13px;color:#334155;display:inline-block}
   .op .p3{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:1rem;padding:26px;transition:border-color .2s}
@@ -341,67 +341,35 @@ export default function OdooPage() {
       {/* ④ INTEGRATION LIGHT */}
       <section className="lk" id="integration">
         <div style={{width:"100%"}}>
-
-          {/* Header + grille 2 colonnes : texte gauche, icones droite */}
-          <div className="int-cols" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:64,alignItems:'start',marginBottom:48}}>
+          <div className="int-cols" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:64,alignItems:'start'}}>
             <div>
               <div className="stag-lk aos"><span className="sdot"/>&nbsp;Intégrations &amp; API</div>
               <h2 className="sh2 aos d1" style={{color:'#1e293b'}}>Vous avez déjà<br/>quelque chose en place ?<br/><span className="tg">Pas de problème.</span></h2>
               <p className="aos d2" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:22}}>C'est la question qu'on entend souvent : <em style={{color:'#1e293b'}}>"On a déjà notre site e-commerce, notre EDI, notre ERP de prod — est-ce qu'Odoo va tout casser ?"</em> La réponse courte : non.</p>
-              <p className="aos d3" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:0}}>L'API REST d'Odoo est <strong style={{color:'#1e293b'}}>ouverte, documentée et battle-tested.</strong> On a connecté des boutiques Shopify, des systèmes EDI industriels, des logiciels de paie locaux. À chaque fois, Odoo joue le rôle de <strong style={{color:'#1e293b'}}>cerveau central</strong> sans forcer la main.</p>
-            </div>
-            <div>
-              {/* Icones intégrations */}
-              <div className="sg aos d2" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:10,marginBottom:14}}>
-                {[
-                  {Icon:Store,      n:'E-commerce', d:'Shopify, WooCommerce, Amazon', color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
-                  {Icon:RefreshCw,  n:'EDI',         d:'EDIFACT, X12, commandes auto', color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
-                  {Icon:Cpu,        n:'MRP / ERP',   d:'SAP, Sage, logiciels métier',  color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
-                  {Icon:CreditCard, n:'Paiement',    d:'Stripe, PayPal, Twint',         color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
-                  {Icon:Package,    n:'Logistique',  d:'DHL, UPS, FedEx, La Poste',    color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
-                  {Icon:Webhook,    n:'API custom',  d:'REST, webhooks, tout',          color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
-                ].map((item,i) => (
-                  <div key={i} className="int-conn" style={{display:'flex',flexDirection:'column',alignItems:'center',gap:12,padding:'24px 16px'}}>
-                    <div style={{width:52,height:52,borderRadius:14,background:item.bg,border:'1px solid '+item.color+'40',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
-                      <item.Icon style={{width:24,height:24,color:item.color}}/>
-                    </div>
-                    <div>
-                      <div style={{fontSize:14,fontWeight:700,marginBottom:4,color:'#1e293b',textAlign:'center'}}>{item.n}</div>
-                      <div style={{fontSize:12,color:'#64748b',textAlign:'center',lineHeight:1.4}}>{item.d}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {/* Tags sous les icones */}
-              <div className="aos d3" style={{background:'#fff',border:'1px solid #e2e8f0',borderLeft:'3px solid #00D4C8',borderRadius:'0 12px 12px 0',padding:'16px 20px'}}>
-                <div style={{fontSize:13,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:'#00B4A6',marginBottom:12}}>Ce qu'on connecte couramment</div>
-                <div style={{display:'flex',flexWrap:'wrap',gap:6}}>
+              <p className="aos d3" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:28}}>L'API REST d'Odoo est <strong style={{color:'#1e293b'}}>ouverte, documentée et battle-tested.</strong> On a connecté des boutiques Shopify, des systèmes EDI industriels, des logiciels de paie locaux. À chaque fois, Odoo joue le rôle de <strong style={{color:'#1e293b'}}>cerveau central</strong> sans forcer la main.</p>
+              <div className="aos d4" style={{background:'#fff',border:'1px solid #e2e8f0',borderLeft:'3px solid #00D4C8',borderRadius:'0 1rem 1rem 0',padding:'20px 22px',marginBottom:16}}>
+                <div style={{fontSize:17,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:'#00B4A6',marginBottom:16}}>Ce qu'on connecte couramment</div>
+                <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
                   {['Shopify','WooCommerce','Magento','EDI EDIFACT','Amazon','Stripe','PayPal','Twint','DHL / UPS','Salesforce','SAP','Sage','API bancaires','Webhooks'].map(t => <span key={t} className="tag">{t}</span>)}
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Notre principe — pleine largeur, plus grand */}
-          <div className="aos d4" style={{
-            background:'rgba(0,212,200,.06)',
-            border:'1px solid rgba(0,212,200,.25)',
-            borderLeft:'4px solid #00D4C8',
-            borderRadius:'0 16px 16px 0',
-            padding:'32px 40px',
-            display:'flex',
-            gap:32,
-            alignItems:'center',
-          }}>
-            <div style={{flexShrink:0,width:52,height:52,borderRadius:14,background:'rgba(0,212,200,0.15)',border:'1px solid rgba(0,212,200,0.3)',display:'flex',alignItems:'center',justifyContent:'center'}}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4C8" strokeWidth="2" strokeLinecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <div className="aos d4" style={{background:'rgba(0,212,200,.06)',border:'1px solid rgba(0,212,200,.2)',borderRadius:'1rem',padding:'18px 22px'}}>
+                <div style={{fontSize:13,color:'#00B4A6',fontWeight:700,marginBottom:6}}>Notre principe sur le terrain</div>
+                <div style={{fontSize:14,color:'#334155',lineHeight:1.65}}>On ne remplace pas ce qui fonctionne bien. On connecte Odoo à votre existant, on construit des ponts, et on migre progressivement quand ça a du sens.</div>
+              </div>
             </div>
             <div>
-              <div style={{fontSize:16,color:'#00B4A6',fontWeight:800,marginBottom:8,textTransform:'uppercase',letterSpacing:1.5}}>Notre principe sur le terrain</div>
-              <div style={{fontSize:18,color:'#334155',lineHeight:1.75,fontWeight:500}}>On ne remplace pas ce qui fonctionne bien. On connecte Odoo à votre existant, on construit des ponts, et on migre progressivement quand ca a du sens.</div>
+              <div className="sg aos d2" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:10,marginBottom:14}}>
+                {[{ico:'🛍️',n:'E-commerce',d:'Shopify, WooCommerce, Amazon'},{ico:'🔄',n:'EDI',d:'EDIFACT, X12, commandes auto'},{ico:'🏭',n:'MRP / ERP',d:'SAP, Sage, logiciels métier'},{ico:'💳',n:'Paiement',d:'Stripe, PayPal, Twint'},{ico:'🚚',n:'Logistique',d:'DHL, UPS, FedEx, La Poste'},{ico:'🔗',n:'API custom',d:'REST, webhooks, tout'}].map((c,i) => (
+                  <div key={i} className="int-conn">
+                    <div style={{fontSize:24,marginBottom:8}}>{c.ico}</div>
+                    <div style={{fontSize:13,fontWeight:700,marginBottom:3,color:'#1e293b'}}>{c.n}</div>
+                    <div style={{fontSize:11,color:'#64748b'}}>{c.d}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -476,7 +444,6 @@ export default function OdooPage() {
         </div>
       </section>
 
-            {/* ⑦ PROMISE DARK */}
       {/* ⑦ PROMISE DARK */}
       <section className="dk2" id="promesse">
         <div style={{width:"100%"}}>
@@ -484,12 +451,12 @@ export default function OdooPage() {
             <div>
               <div className="stag-dk aos" style={{display:'inline-flex'}}><span className="sdot"/>&nbsp;La promesse D4E</div>
               <h2 className="sh2 aos d1" style={{color:'#fff'}}>On ne livre pas un logiciel.<br/>On livre <span className="tg">votre systeme.</span></h2>
-              <p className="aos d2" style={{fontSize:19,color:'#94A3B8',lineHeight:1.8,marginBottom:40,maxWidth:560}}>Configurer Odoo, n'importe qui peut l'apprendre. Comprendre votre metier, vos contraintes, vos angles morts et traduire tout ca en un systeme qui tient dans le temps — c'est ce qu'on fait chaque jour depuis 4 ans.</p>
+              <p className="aos d2" style={{fontSize:19,color:'#94A3B8',lineHeight:1.8,marginBottom:40,maxWidth:560}}>Configurer Odoo, n importe qui peut l apprendre. Comprendre votre metier, vos contraintes et traduire tout ca en un systeme qui tient dans le temps — c est ce qu on fait chaque jour depuis 4 ans.</p>
               <div className="sg aos d3" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:14,marginBottom:44}}>
                 {[
-                  {ico:'⚡',t:'Operationnel en semaines',d:'Nos packs cle en main sont calibres pour que votre equipe soit autonome rapidement.'},
-                  {ico:'🎯',t:'Prix fixe, sans surprise',d:'Un engagement clair. Un perimetre defini. Pas de ticket surprise a chaque modification.'},
-                  {ico:'🤝',t:'Un chef de projet dedie',d:'Une vraie personne, pas un ticket support. Quelqu'un qui connait votre activite.'},
+                  {ico:'⚡',t:'Operationnel en semaines',d:'Nos packs cle en main calibres pour votre autonomie rapide.'},
+                  {ico:'🎯',t:'Prix fixe, sans surprise',d:'Un engagement clair. Un perimetre defini. Pas de ticket surprise.'},
+                  {ico:'🤝',t:'Un chef de projet dedie',d:'Une vraie personne qui connait votre activite.'},
                 ].map((p,i) => (
                   <div key={i} className="p3">
                     <div style={{fontSize:28,marginBottom:12}}>{p.ico}</div>
@@ -513,10 +480,7 @@ export default function OdooPage() {
                 <div style={{fontSize:'0.8rem',color:'#64748B'}}>Repond sous 2h en semaine</div>
               </div>
               <div style={{width:'100%',display:'flex',flexDirection:'column',gap:10}}>
-                <a href="https://wa.me/41764344595" target="_blank" rel="noopener noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',backgroundColor:'#25D366',color:'#FFFFFF',fontWeight:700,borderRadius:12,textDecoration:'none',fontSize:'0.95rem'}}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.526 5.858L.057 23.571l5.885-1.544A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.574-.5-5.065-1.373l-.364-.216-3.767.988 1.006-3.672-.237-.378A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-                  WhatsApp
-                </a>
+                <a href="https://wa.me/41764344595" target="_blank" rel="noopener noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',backgroundColor:'#25D366',color:'#FFFFFF',fontWeight:700,borderRadius:12,textDecoration:'none',fontSize:'0.95rem'}}>WhatsApp</a>
                 <a href="tel:+41764344595" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',backgroundColor:'#00D4C8',color:'#FFFFFF',fontWeight:700,borderRadius:12,textDecoration:'none',fontSize:'0.95rem'}}>+41 (0)76 434 45 95</a>
                 <a href="mailto:antonio@d4e.cool" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',border:'1.5px solid rgba(255,255,255,0.15)',color:'#E2E8F0',fontWeight:600,borderRadius:12,textDecoration:'none',fontSize:'0.88rem'}}>antonio@d4e.cool</a>
               </div>
@@ -525,8 +489,6 @@ export default function OdooPage() {
           </div>
         </div>
       </section>
-
-      
 
     </div>
   );
