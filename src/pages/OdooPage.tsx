@@ -385,13 +385,13 @@ export default function OdooPage() {
               </button>
             ))}
           </div>
-          <div className="ind-cols" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:72,alignItems:'start'}}>
+          <div className="ind-cols" style={{display:'grid',gridTemplateColumns:'1.2fr 0.8fr',gap:48,alignItems:'start'}}>
             <div>
               <div style={{fontSize:64,lineHeight:1,marginBottom:24}}>{cur.emo}</div>
               <h3 style={{fontSize:48,fontWeight:800,lineHeight:1.1,marginBottom:10,color:'#fff'}}>{cur.title}</h3>
               <div style={{fontSize:14,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:cur.gold?'#F59E0B':'#00D4C8',marginBottom:22}}>{cur.sub}</div>
               <p style={{fontSize:20,color:'#E2E8F0',lineHeight:1.8,marginBottom:32}} dangerouslySetInnerHTML={{__html:cur.body}}/>
-              <div style={{display:'flex',flexDirection:'column',gap:10}}>
+              <div style={{display:'flex',flexDirection:'column',gap:10,maxWidth:'460px',width:'100%'}}>
                 {cur.checks.map((c,i) => (
                   <div key={i} style={{display:'flex',alignItems:'flex-start',gap:12,fontSize:17,color:'#E2E8F0'}}>
                     <div style={{width:26,height:26,minWidth:26,borderRadius:'50%',background:chkBg,display:'flex',alignItems:'center',justifyContent:'center',marginTop:2}}>
@@ -404,12 +404,12 @@ export default function OdooPage() {
             </div>
             <div style={{display:'flex',flexDirection:'column',gap:10}}>
               {cur.mods.map((m,i) => (
-                <div key={i} className={cur.gold?'imod-g':'imod'} style={{padding:'22px 24px'}}>
+                <div key={i} className={cur.gold?'imod-g':'imod'} style={{padding:'14px 18px'}}>
                   <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:4}}>
-                    <span style={{fontSize:17,fontWeight:700,color:'#fff'}}>{m.n}</span>
+                    <span style={{fontSize:15,fontWeight:700,color:'#fff'}}>{m.n}</span>
                     <span className={cur.gold?'mtg':'mtt'} style={{fontSize:13,padding:'4px 12px'}}>{m.t}</span>
                   </div>
-                  <div style={{fontSize:15,color:'#9CA3AF',marginTop:6}}>{m.d}</div>
+                  <div style={{fontSize:13,color:'#94A3B8',marginTop:4}}>{m.d}</div>
                 </div>
               ))}
             </div>
