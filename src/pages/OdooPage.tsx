@@ -140,6 +140,27 @@ const CSS = `
     box-shadow:0 2px 12px rgba(0,0,0,0.05) !important;
   }
   
+  /* RANIM_START */
+  @keyframes rF{0%{opacity:0;transform:perspective(500px) rotateX(-35deg) translateY(36px)}65%{opacity:1;transform:perspective(500px) rotateX(3deg) translateY(-3px)}100%{opacity:1;transform:perspective(500px) rotateX(0) translateY(0)}}
+  @keyframes rP{0%{transform:scale(0) rotate(-12deg);opacity:0}70%{transform:scale(1.18) rotate(2deg);opacity:1}100%{transform:scale(1) rotate(0);opacity:1}}
+  .op .rsn{background:#fff!important;border:1px solid #e2e8f0!important;border-top:4px solid #00D4C8!important;border-radius:16px!important;padding:36px 32px!important;box-shadow:0 2px 16px rgba(0,0,0,.06)!important;opacity:0;transform:perspective(500px) rotateX(-35deg) translateY(36px);transition:transform .3s,box-shadow .3s!important}
+  .op .rsn:hover{transform:translateY(-8px)!important;box-shadow:0 16px 48px rgba(0,212,200,.18)!important}
+  .op .sg.on .rsn:nth-child(1){animation:rF .65s .05s cubic-bezier(.23,1,.32,1) forwards}
+  .op .sg.on .rsn:nth-child(2){animation:rF .65s .17s cubic-bezier(.23,1,.32,1) forwards}
+  .op .sg.on .rsn:nth-child(3){animation:rF .65s .29s cubic-bezier(.23,1,.32,1) forwards}
+  .op .sg.on .rsn:nth-child(4){animation:rF .65s .41s cubic-bezier(.23,1,.32,1) forwards}
+  .op .sg.on .rsn:nth-child(5){animation:rF .65s .53s cubic-bezier(.23,1,.32,1) forwards}
+  .op .sg.on .rsn:nth-child(6){animation:rF .65s .65s cubic-bezier(.23,1,.32,1) forwards}
+  .op .sg.on .rsn:nth-child(1) .rn{animation:rP .45s .5s cubic-bezier(.23,1,.32,1) both}
+  .op .sg.on .rsn:nth-child(2) .rn{animation:rP .45s .62s cubic-bezier(.23,1,.32,1) both}
+  .op .sg.on .rsn:nth-child(3) .rn{animation:rP .45s .74s cubic-bezier(.23,1,.32,1) both}
+  .op .sg.on .rsn:nth-child(4) .rn{animation:rP .45s .86s cubic-bezier(.23,1,.32,1) both}
+  .op .sg.on .rsn:nth-child(5) .rn{animation:rP .45s .98s cubic-bezier(.23,1,.32,1) both}
+  .op .sg.on .rsn:nth-child(6) .rn{animation:rP .45s 1.1s cubic-bezier(.23,1,.32,1) both}
+  .op .rn{font-size:64px!important;font-weight:900!important;color:rgba(0,180,166,.18)!important;letter-spacing:-2px!important}
+  .op .rh{font-size:20px!important;font-weight:800!important;color:#0F1D3A!important}
+  .op .rg-grid{background:transparent!important;border:none!important;gap:20px!important;overflow:visible!important}
+/* RANIM_END */
   @media(max-width:900px){
     .op section{padding:64px 20px}
     .op .ag{grid-template-columns:1fr} .op .ac.w{grid-column:span 1}
