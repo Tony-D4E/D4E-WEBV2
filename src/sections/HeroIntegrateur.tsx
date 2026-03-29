@@ -291,14 +291,8 @@ export function HeroIntegrateur() {
         </div>
 
         {/* Odoo badge */}
-        <div className="hero-badge-odoo">
-          <div style={{
-            width: '32px', height: '32px', backgroundColor: '#F59E0B',
-            borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
-          }}>
-            <Award style={{ width: '16px', height: '16px', color: '#FFFFFF' }} />
-          </div>
-          <div style={{position:"absolute",top:0,right:0,zIndex:10}}><img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{height:90,maxWidth:380,objectFit:"contain",display:"block",filter:"drop-shadow(0 4px 16px rgba(245,158,11,0.25))"}}/></div>
+        <div className="hero-badge-odoo" style={{padding:0,background:"transparent",border:"none",boxShadow:"none"}}>
+          <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{height:80,maxWidth:340,objectFit:"contain",display:"block",filter:"drop-shadow(0 4px 20px rgba(245,158,11,0.4))"}}/>
         </div>
 
       </section>
