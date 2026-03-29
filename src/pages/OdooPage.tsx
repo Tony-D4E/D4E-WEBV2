@@ -140,6 +140,104 @@ const CSS = `
     box-shadow:0 2px 12px rgba(0,0,0,0.05) !important;
   }
   
+  
+  .op .rg-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    background:transparent;
+    border:none;
+    border-radius:0;
+    overflow:visible;
+  }
+  .op .flip-wrap {
+    perspective:1000px;
+    height:100%;
+    min-height:220px;
+  }
+  .op .flip-inner {
+    position:relative;
+    width:100%;
+    height:100%;
+    min-height:220px;
+    transform-style:preserve-3d;
+    transform:rotateY(180deg);
+    transition:none;
+    border-radius:16px;
+  }
+  .op .flip-inner.flipped {
+    animation:cardFlip 0.7s cubic-bezier(0.23,1,0.32,1) forwards;
+  }
+  @keyframes cardFlip {
+    0%   { transform:rotateY(180deg); }
+    100% { transform:rotateY(0deg); }
+  }
+  .op .flip-front {
+    position:absolute;
+    inset:0;
+    backface-visibility:hidden;
+    background:#FFFFFF;
+    border:1px solid #E2E8F0;
+    border-top:3px solid #00D4C8;
+    border-radius:16px;
+    padding:36px 32px;
+    box-shadow:0 2px 16px rgba(0,0,0,0.06);
+    display:flex;
+    flex-direction:column;
+    transition:transform 0.3s, box-shadow 0.3s;
+  }
+  .op .flip-front:hover {
+    transform:translateY(-6px);
+    box-shadow:0 12px 40px rgba(0,212,200,0.15);
+    border-top-color:#00D4C8;
+  }
+  .op .flip-back {
+    position:absolute;
+    inset:0;
+    backface-visibility:hidden;
+    transform:rotateY(180deg);
+    background:linear-gradient(135deg,#0F1D3A,#0B0F19);
+    border:1px solid rgba(0,212,200,0.3);
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .op .flip-back-icon {
+    font-size:48px;
+    opacity:0.6;
+  }
+  .op .rn-big {
+    font-family:'Space Grotesk',sans-serif;
+    font-size:64px;
+    font-weight:900;
+    color:rgba(0,180,166,0.15);
+    line-height:1;
+    margin-bottom:16px;
+    letter-spacing:-2px;
+  }
+  .op .rh-type {
+    font-size:20px;
+    font-weight:800;
+    color:#0F1D3A;
+    margin-bottom:10px;
+    min-height:28px;
+    letter-spacing:-0.3px;
+  }
+  .op .rh-cursor::after {
+    content:'|';
+    color:#00D4C8;
+    animation:blink 0.7s infinite;
+  }
+  @keyframes blink {
+    0%,100% { opacity:1; }
+    50%      { opacity:0; }
+  }
+  @media(max-width:900px){
+    .op .rg-grid { grid-template-columns:1fr !important; }
+    .op .flip-wrap,.op .flip-inner { min-height:180px; }
+  }
+  
   @media(max-width:900px){
     .op section{padding:64px 20px}
     .op .ag{grid-template-columns:1fr} .op .ac.w{grid-column:span 1}
@@ -174,6 +272,45 @@ export default function OdooPage() {
     els.forEach(el => io.observe(el));
     return () => io.disconnect();
   }, [ind]);
+
+  
+  useEffect(() => {
+    const cards = document.querySelectorAll('.op .flip-inner');
+    const titles = document.querySelectorAll('.op .rh-type');
+    const titleTexts: string[] = [];
+    titles.forEach(t => { titleTexts.push(t.textContent || ''); t.textContent = ''; });
+
+    const io = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        cards.forEach((card, i) => {
+          setTimeout(() => {
+            card.classList.add('flipped');
+            // Typewriter after flip
+            setTimeout(() => {
+              const title = titles[i] as HTMLElement;
+              if (!title) return;
+              const text = titleTexts[i];
+              title.classList.add('rh-cursor');
+              let idx = 0;
+              const interval = setInterval(() => {
+                title.textContent = text.slice(0, idx + 1);
+                idx++;
+                if (idx >= text.length) {
+                  clearInterval(interval);
+                  title.classList.remove('rh-cursor');
+                }
+              }, 40);
+            }, 500);
+          }, i * 120);
+        });
+        io.disconnect();
+      }
+    }, { threshold: 0.2 });
+
+    const grid = document.querySelector('.op .rg-grid');
+    if (grid) io.observe(grid);
+    return () => io.disconnect();
+  }, []);
 
   const INDS = {
     fi: { emo:'🏛', title:'Finance', sub:'Reporting, conformité, clôtures rapides', gold:false,
@@ -408,9 +545,9 @@ export default function OdooPage() {
               ['05','Mobile first','Application <strong>refaite de zéro en v18.</strong> Votre équipe travaille depuis le terrain.'],
               ['06','Il grandit avec vous','Du TPE au multinational. <strong>Odoo ne plafonne pas.</strong>'],
             ].map(([n,h,p]) => (
-              <div key={n} className="rsn rsn-animated">
+              <div key={n} className="rsn">
                 <div className="rn rn-anim">{n}</div>
-                <div className="rh">{h}</div>
+                <div className="rh rh-type rh-cursor">{h}</div>
                 <p className="rp" dangerouslySetInnerHTML={{__html:p as string}}/>
               </div>
             ))}
