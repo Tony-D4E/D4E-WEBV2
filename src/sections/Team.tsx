@@ -10,7 +10,7 @@ const members = [
     email: 'antonio@d4e.cool',
     photo: '/team-antonio.jpg',
     color: '#00D4C8',
-    glow: 'rgba(0,212,200,0.5)',
+    glowColor: 'rgba(0,212,200,0.5)',
     delay: '0s',
   },
   {
@@ -22,7 +22,7 @@ const members = [
     email: 'laetita@d4e.cool',
     photo: '/team-laetitia.jpg',
     color: '#F59E0B',
-    glow: 'rgba(245,158,11,0.5)',
+    glowColor: 'rgba(245,158,11,0.5)',
     delay: '0.4s',
   },
 ];
@@ -35,8 +35,13 @@ export function Team() {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-10px); }
         }
-        @keyframes pulse-ring {
-          0% { box-shadow: 0 0 0 0 var(--glow); }
+        @keyframes pulse-teal {
+          0% { box-shadow: 0 0 0 0 rgba(0,212,200,0.5); }
+          70% { box-shadow: 0 0 0 16px transparent; }
+          100% { box-shadow: 0 0 0 0 transparent; }
+        }
+        @keyframes pulse-gold {
+          0% { box-shadow: 0 0 0 0 rgba(245,158,11,0.5); }
           70% { box-shadow: 0 0 0 16px transparent; }
           100% { box-shadow: 0 0 0 0 transparent; }
         }
@@ -44,18 +49,11 @@ export function Team() {
           from { opacity: 0; transform: translateY(32px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        .team-card {
-          animation: card-enter 0.6s ease both;
-        }
-        .team-photo {
-          animation: float 4s ease-in-out infinite;
-        }
-        .team-photo-ring {
-          animation: pulse-ring 2.5s ease-out infinite;
-        }
-        .team-card:hover .team-photo {
-          animation-play-state: paused;
-        }
+        .team-card { animation: card-enter 0.6s ease both; }
+        .team-photo { animation: float 4s ease-in-out infinite; }
+        .pulse-teal { animation: pulse-teal 2.5s ease-out infinite; }
+        .pulse-gold { animation: pulse-gold 2.5s ease-out 0.4s infinite; }
+        .team-card:hover .team-photo { animation-play-state: paused; }
       `}</style>
 
       <section style={{ backgroundColor: '#F8FAFC', padding: '80px 0' }}>
@@ -76,7 +74,7 @@ export function Team() {
             gap: '32px',
             marginBottom: '48px',
           }}>
-            {members.map((m) => (
+            {members.map((m, i) => (
               <div
                 key={m.name}
                 className="team-card"
@@ -94,7 +92,7 @@ export function Team() {
                 }}
               >
                 <div
-                  className="team-photo-ring"
+                  className={i === 0 ? 'pulse-teal' : 'pulse-gold'}
                   style={{
                     width: '148px', height: '148px',
                     borderRadius: '50%',
@@ -102,8 +100,6 @@ export function Team() {
                     overflow: 'hidden',
                     marginBottom: '28px',
                     flexShrink: 0,
-                    animationDelay: m.delay,
-                    '--glow': m.glow,
                   }}
                 >
                   <div className="team-photo" style={{ width: '100%', height: '100%', animationDelay: m.delay }}>
@@ -116,22 +112,18 @@ export function Team() {
                 <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   <a href={m.phoneTel} style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
-                    padding: '15px 24px',
-                    backgroundColor: m.color,
+                    padding: '15px 24px', backgroundColor: m.color,
                     color: '#FFFFFF', fontWeight: 700,
-                    borderRadius: '14px', textDecoration: 'none',
-                    fontSize: '1.05rem',
+                    borderRadius: '14px', textDecoration: 'none', fontSize: '1.05rem',
                   }}>
                     <Phone style={{ width: '18px', height: '18px' }} />
                     {m.phone}
                   </a>
                   <a href={'mailto:' + m.email} style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
-                    padding: '15px 24px',
-                    border: '1.5px solid #E2E8F0',
+                    padding: '15px 24px', border: '1.5px solid #E2E8F0',
                     color: '#0F1D3A', fontWeight: 600,
-                    borderRadius: '14px', textDecoration: 'none',
-                    fontSize: '1.05rem',
+                    borderRadius: '14px', textDecoration: 'none', fontSize: '1.05rem',
                   }}>
                     <Mail style={{ width: '18px', height: '18px' }} />
                     {m.email}
@@ -147,11 +139,9 @@ export function Team() {
               href="#"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
-                padding: '16px 40px',
-                backgroundColor: '#00D4C8',
+                padding: '16px 40px', backgroundColor: '#00D4C8',
                 color: '#FFFFFF', fontWeight: 800,
-                borderRadius: '14px', textDecoration: 'none',
-                fontSize: '1.05rem',
+                borderRadius: '14px', textDecoration: 'none', fontSize: '1.05rem',
                 boxShadow: '0 6px 24px rgba(0,212,200,0.35)',
               }}
             >
