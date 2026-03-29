@@ -262,7 +262,7 @@ export default function OdooPage() {
         <div className="blob" style={{width:700,height:700,background:'#00D4C8',top:-100,right:-200,opacity:.06}}/>
         <div className="blob" style={{width:400,height:400,background:'#F59E0B',bottom:0,left:-100,opacity:.04}}/>
         <div style={{width:'100%',position:'relative',zIndex:2}}>
-          <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" className="aos" style={{height:56,maxWidth:260,objectFit:"contain",marginBottom:28,display:"block"}}/>
+          <div className="aos" style={{position:"absolute",top:0,right:0,zIndex:3}}><img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{height:90,maxWidth:380,objectFit:"contain",display:"block",filter:"drop-shadow(0 4px 16px rgba(245,158,11,0.25))"}}/></div>
           <h1 className="hero-h1 aos d1" style={{fontSize:'clamp(72px,14vw,210px)',fontWeight:800,lineHeight:.9,marginBottom:36,color:'#fff',letterSpacing:-5,whiteSpace:'nowrap'}}>
             On ne vend pas<br/>Odoo. <span className="tg">On y croit<br/>vraiment.</span>
           </h1>
