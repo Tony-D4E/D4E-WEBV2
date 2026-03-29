@@ -252,16 +252,22 @@ export default function ElvyPrintPage() {
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-0 rounded-3xl overflow-hidden border border-gray-200">
             {fonctionnalites.map((f, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all flex gap-6 items-start">
+              <div key={i} className={`p-8 flex gap-6 items-start transition-all ${i % 2 === 0 ? 'bg-[#0F1D3A]' : 'bg-white border-t border-b border-gray-100'}`}>
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
-                  style={{ backgroundColor: f.couleur + '20' }}>
+                  style={{ backgroundColor: i % 2 === 0 ? f.couleur + '30' : f.couleur + '15' }}>
                   <f.icon className="h-7 w-7" style={{ color: f.couleur }} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-black text-[#0F1D3A] mb-2">{f.titre}</h3>
-                  <p className="text-gray-500 leading-relaxed">{f.desc}</p>
+                  <h3 className={`text-xl font-black mb-2 ${i % 2 === 0 ? '' : 'text-[#0F1D3A]'}`}
+                    style={i % 2 === 0 ? { color: '#FFFFFF' } : {}}>
+                    {f.titre}
+                  </h3>
+                  <p style={i % 2 === 0 ? { color: '#CBD5E1' } : {}}
+                    className={`leading-relaxed ${i % 2 === 0 ? '' : 'text-gray-500'}`}>
+                    {f.desc}
+                  </p>
                 </div>
               </div>
             ))}
