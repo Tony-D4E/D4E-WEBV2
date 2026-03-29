@@ -42,11 +42,15 @@ const CSS = `
   .op .con{width:100%}
   .op .sh2{font-size:clamp(36px,4.5vw,60px);font-weight:800;line-height:1.06;margin-bottom:18px;margin-top:0}
   .op .card{border:1px solid;border-radius:1rem;transition:all .3s}
-  .op .card-dk{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.1);border-radius:16px;border-left-width:4px}
+  .op .card-dk{background:rgba(255,255,255,0.09);border-color:rgba(255,255,255,0.1);border-radius:16px;border-left-width:4px}
   .op .card-lk{background:#fff;border-color:#e2e8f0;box-shadow:0 2px 16px rgba(0,0,0,.06);border-radius:16px}
   .op .card-lk:hover{border-color:rgba(0,212,200,.4)!important;box-shadow:0 8px 32px rgba(0,212,200,0.12)}
   .op .card-teal{border-left:4px solid #00D4C8!important;background:rgba(255,255,255,0.07)!important}
   .op .card-gold{border-left:4px solid #F59E0B!important;background:rgba(255,255,255,0.07)!important}
+  .op .ac h3,.op .ac h4{font-size:1.25rem!important;font-weight:800!important;color:#FFFFFF!important;margin:0 0 12px!important;letter-spacing:-0.3px}
+  .op .ac p{font-size:0.95rem!important;color:#CBD5E1!important;line-height:1.7!important;margin:0 0 16px!important}
+  .op .ac .mtt,.op .ac .mtg{font-size:12px!important;padding:4px 12px!important;border-radius:6px!important}
+  
   .op .card-teal:hover,.op .card-gold:hover{background:rgba(255,255,255,0.1)!important}
   .op .imod{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px 18px;transition:all .2s}
   .op .imod:hover{border-color:rgba(0,212,200,.3);background:rgba(255,255,255,0.09)}
@@ -69,8 +73,8 @@ const CSS = `
   .op .rh{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px;color:#1e293b}
   .op .rp{font-size:16px;color:#475569;line-height:1.75} .op .rp strong{color:#00B4A6;font-weight:600}
   .op .ag{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .op .ac{padding:26px;display:flex;flex-direction:column} .op .ac.w{grid-column:span 2}
-  .op .aico{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;padding:10px}
+  .op .ac{padding:32px;display:flex;flex-direction:column;gap:0} .op .ac.w{grid-column:span 2}
+  .op .aico{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;padding:12px;flex-shrink:0}
   .op .int-conn{background:#fff;border:1px solid #e2e8f0;border-radius:1rem;padding:20px;text-align:center;transition:all .3s}
   .op .int-conn:hover{border-color:rgba(0,212,200,.4);transform:translateY(-3px);box-shadow:0 4px 20px rgba(0,212,200,.08)}
   .op .tag{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:5px 12px;font-size:13px;color:#334155;display:inline-block}
