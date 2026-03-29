@@ -24,8 +24,8 @@ const CSS = `
   .op .sg.on>*:nth-child(6){animation:opFiu .5s .6s forwards}
   @keyframes opPulse{0%,100%{opacity:1}50%{opacity:.3}}
   .op .pulse{animation:opPulse 2s infinite}
-  .op .stag-dk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.12);border:1px solid rgba(0,212,200,.35);border-radius:999px;padding:7px 18px;font-size:12px;color:#00D4C8;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
-  .op .stag-lk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.08);border:1px solid rgba(0,212,200,.25);border-radius:999px;padding:7px 18px;font-size:12px;color:#00B4A6;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+  .op .stag-dk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.12);border:1px solid rgba(0,212,200,.35);border-radius:999px;padding:7px 18px;font-size:13px;color:#00D4C8;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+  .op .stag-lk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.08);border:1px solid rgba(0,212,200,.25);border-radius:999px;padding:7px 18px;font-size:13px;color:#00B4A6;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
   .op .sdot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:opPulse 2s infinite}
   .op .dk{background:#0B0F19!important;color:#fff!important} 
   .op .dk2{background:#0F172A!important;color:#fff!important}
@@ -40,7 +40,7 @@ const CSS = `
   .op .tg{background:linear-gradient(to right,#00E5CC,#00D4C8,#06B6D4)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
   .op .tgg{background:linear-gradient(to right,#F59E0B,#FBBF24,#FCD34D)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
   .op .con{width:100%}
-  .op .sh2{font-size:clamp(36px,4.5vw,60px);font-weight:800;line-height:1.06;margin-bottom:18px;margin-top:0}
+  .op .sh2{font-size:clamp(2.2rem,5vw,4rem);font-weight:900;line-height:1.05;margin-bottom:20px;margin-top:0;letter-spacing:-1.5px}
   .op .card{border:1px solid;border-radius:1rem;transition:all .3s}
   .op .card-dk{background:rgba(255,255,255,0.09);border-color:rgba(255,255,255,0.1);border-radius:16px;border-left-width:4px}
   .op .card-lk{background:#fff;border-color:#e2e8f0;box-shadow:0 2px 16px rgba(0,0,0,.06);border-radius:16px}
@@ -80,7 +80,7 @@ const CSS = `
   .op .tag{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:5px 12px;font-size:13px;color:#334155;display:inline-block}
   .op .p3{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:1rem;padding:26px;transition:border-color .2s}
   .op .p3:hover{border-color:rgba(0,212,200,.3)}
-  .op .sec-p{font-size:16px;line-height:1.75;color:#94A3B8;max-width:640px}
+  .op .sec-p{font-size:17px;line-height:1.8;color:#94A3B8;max-width:640px;margin-top:0}
   .op .sec-p strong{color:#fff}
   .op .btn-p{background:linear-gradient(to right,#00B4A6,#00D4C8);color:#fff;padding:18px 40px;border-radius:14px;font-weight:800;font-size:17px;text-decoration:none;font-family:'Space Grotesk',sans-serif;display:inline-block;transition:all .2s;box-shadow:0 6px 24px rgba(0,212,200,0.35)}
   .op .btn-p:hover{transform:translateY(-2px);box-shadow:0 10px 40px -10px rgba(0,212,200,.5)}
@@ -212,7 +212,7 @@ export default function OdooPage() {
       <section className="lk2" id="vision">
         <div style={{width:"100%"}}>
           <div style={{maxWidth:'100%'}}>
-            <div style={{fontSize:11,textTransform:'uppercase',letterSpacing:2,color:'#00B4A6',fontWeight:700,borderBottom:'2px solid rgba(0,212,200,.2)',paddingBottom:8,display:'inline-block',marginBottom:40}} className="aos">Notre conviction</div>
+            <div style={{fontSize:14,textTransform:'uppercase',letterSpacing:2,color:'#00B4A6',fontWeight:700,borderBottom:'2px solid rgba(0,212,200,.4)',paddingBottom:10,display:'inline-block',marginBottom:44}} className="aos">Notre conviction</div>
             <h2 className="aos d1" style={{fontSize:'clamp(32px,4vw,56px)',fontWeight:800,lineHeight:1.12,marginBottom:28,color:'#1e293b'}}>
               Fini le ballet des logiciels<br/>qui <span className="tg">ne se parlent pas.</span>
             </h2>
@@ -272,7 +272,7 @@ export default function OdooPage() {
               <p className="aos d2" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:22}}>C'est la question qu'on entend souvent : <em style={{color:'#1e293b'}}>"On a déjà notre site e-commerce, notre EDI, notre ERP de prod — est-ce qu'Odoo va tout casser ?"</em> La réponse courte : non.</p>
               <p className="aos d3" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:28}}>L'API REST d'Odoo est <strong style={{color:'#1e293b'}}>ouverte, documentée et battle-tested.</strong> On a connecté des boutiques Shopify, des systèmes EDI industriels, des logiciels de paie locaux. À chaque fois, Odoo joue le rôle de <strong style={{color:'#1e293b'}}>cerveau central</strong> sans forcer la main.</p>
               <div className="aos d4" style={{background:'#fff',border:'1px solid #e2e8f0',borderLeft:'3px solid #00D4C8',borderRadius:'0 1rem 1rem 0',padding:'20px 22px',marginBottom:16}}>
-                <div style={{fontSize:12,textTransform:'uppercase',letterSpacing:1,fontWeight:700,color:'#00B4A6',marginBottom:10}}>Ce qu'on connecte couramment</div>
+                <div style={{fontSize:14,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:'#00B4A6',marginBottom:14}}>Ce qu'on connecte couramment</div>
                 <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
                   {['Shopify','WooCommerce','Magento','EDI EDIFACT','Amazon','Stripe','PayPal','Twint','DHL / UPS','Salesforce','SAP','Sage','API bancaires','Webhooks'].map(t => <span key={t} className="tag">{t}</span>)}
                 </div>
