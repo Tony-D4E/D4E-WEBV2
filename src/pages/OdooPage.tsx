@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BarChart3, Wrench, HardHat, Factory, ShoppingCart, Truck, Heart, GraduationCap, Zap, Target, Users } from 'lucide-react';
+import { BarChart3, Wrench, HardHat, Factory, ShoppingCart, Truck, Heart, GraduationCap, Zap, Target, Users, Store, RefreshCw, Cpu, CreditCard, Package, Webhook } from 'lucide-react';
 
 const CSS = `
   .op * { box-sizing: border-box; }
