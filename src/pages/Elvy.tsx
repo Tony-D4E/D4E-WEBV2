@@ -288,7 +288,7 @@ export function Elvy() {
       </section>
 
       {/* -- 6. CONTACT ANTONIO -- */}
-      <section id="contact" className="py-24 bg-[#0B0F19]">
+      <section id="contact" className="py-24" style={{ backgroundColor: '#0B0F19' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
 
@@ -298,7 +298,7 @@ export function Elvy() {
                 className="w-full max-w-sm rounded-3xl object-cover mb-8 shadow-2xl"
                 style={{ maxHeight: '400px', border: '3px solid #00D4C8' }} />
               <h2 className="text-3xl font-black mb-4" style={{ color: '#FFFFFF' }}>{`Discutons de votre m\u00e9tier`}</h2>
-              <p style={{ color: '#CBD5E1' }} className="text-base leading-relaxed mb-6 max-w-md">
+              <p style={{ color: '#E2E8F0' }} className="text-base leading-relaxed mb-6 max-w-md">
                 {`J'ai cr\u00e9\u00e9 D4E parce qu'un bon ERP ne devrait pas co\u00fbter une fortune ni prendre des mois. Chaque solution Elvy est n\u00e9e d'une rencontre avec un entrepreneur qui en avait marre. Si c'est votre cas, appelez-moi.`}
               </p>
               <p style={{ color: '#00D4C8' }} className="font-bold text-sm mb-6">{`Antonio Spedicato \u00b7 Fondateur D4E`}</p>
@@ -314,7 +314,7 @@ export function Elvy() {
                 </a>
               </div>
               <a href="mailto:antonio@d4e.cool"
-                className="flex items-center justify-center gap-2 mt-3 text-sm text-gray-400 hover:text-white transition-colors">
+                className="flex items-center justify-center gap-2 mt-3 text-sm" style={{ color: '#94A3B8' }}">
                 <Mail className="h-4 w-4" /> antonio@d4e.cool
               </a>
             </div>
