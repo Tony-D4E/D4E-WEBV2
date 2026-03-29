@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import { ArrowRight, Layers, Star, Award, Building2, Code, GraduationCap, Headphones } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
