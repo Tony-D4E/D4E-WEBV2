@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Award, MapPin, ArrowRight } from 'lucide-react';
+import { MapPin, ArrowRight } from 'lucide-react';
 
 const slides = [
   {
