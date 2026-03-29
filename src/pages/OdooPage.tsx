@@ -163,6 +163,22 @@ const CSS = `
   .op .rh{font-size:20px!important;font-weight:800!important;color:#0F1D3A!important}
   .op .rg-grid{background:transparent!important;border:none!important;gap:20px!important;overflow:visible!important}
 /* RANIM_END */
+  
+  @keyframes antFloat {
+    0%,100% { transform:translateY(0px); }
+    50%      { transform:translateY(-8px); }
+  }
+  @keyframes antGlow {
+    0%,100% { box-shadow:0 0 0 0 rgba(0,212,200,0.5); }
+    70%     { box-shadow:0 0 0 14px rgba(0,212,200,0); }
+  }
+  .ant-card {
+    animation:antFloat 4s ease-in-out infinite;
+  }
+  .ant-photo {
+    animation:antGlow 2.5s ease-out infinite;
+  }
+  
   @media(max-width:900px){
     .op section{padding:64px 20px}
     .op .ag{grid-template-columns:1fr} .op .ac.w{grid-column:span 1}
@@ -486,14 +502,14 @@ export default function OdooPage() {
                 <a href="/#/elvybat" style={{display:'inline-flex',alignItems:'center',gap:8,padding:'18px 40px',backgroundColor:'#F59E0B',color:'#FFFFFF',fontWeight:800,fontSize:17,textDecoration:'none',borderRadius:14,boxShadow:'0 6px 24px rgba(245,158,11,0.35)',transition:'all .2s'}}>Voir ElvyBat pour le BTP</a>
               </div>
             </div>
-            <div className="aos d2" style={{background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.12)',borderTop:'4px solid #00D4C8',borderRadius:20,padding:'36px 28px',display:'flex',flexDirection:'column',alignItems:'center',gap:18,textAlign:'center',position:'sticky',top:100}}>
-              <div style={{width:120,height:120,borderRadius:'50%',border:'3px solid #00D4C8',overflow:'hidden',flexShrink:0,boxShadow:'0 0 24px rgba(0,212,200,0.3)'}}>
+            <div className="aos d2 ant-card" style={{background:'#F0FDF9',border:'1px solid rgba(0,212,200,0.25)',borderTop:'4px solid #00D4C8',borderRadius:20,padding:'36px 28px',display:'flex',flexDirection:'column',alignItems:'center',gap:18,textAlign:'center',position:'sticky',top:100}}>
+              <div className="ant-photo" style={{width:124,height:124,borderRadius:'50%',border:'3px solid #00D4C8',overflow:'hidden',flexShrink:0}}>
                 <img src="/antonio-profile.jpg" alt="Antonio Spedicato" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top'}}/>
               </div>
               <div>
-                <div style={{fontSize:'1.2rem',fontWeight:800,color:'#FFFFFF',marginBottom:4}}>Antonio Spedicato</div>
+                <div style={{fontSize:'1.2rem',fontWeight:800,color:'#0F1D3A',marginBottom:4}}>Antonio Spedicato</div>
                 <div style={{fontSize:'0.9rem',fontWeight:600,color:'#00D4C8',marginBottom:4}}>Consultant Odoo & Fondateur</div>
-                <div style={{fontSize:'0.8rem',color:'#64748B'}}>Repond sous 2h en semaine</div>
+                <div style={{fontSize:'0.8rem',color:'#94A3B8'}}>Repond sous 2h en semaine</div>
               </div>
               <div style={{width:'100%',display:'flex',flexDirection:'column',gap:10}}>
                 <a href="https://wa.me/41764344595" target="_blank" rel="noopener noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',backgroundColor:'#25D366',color:'#FFFFFF',fontWeight:700,borderRadius:12,textDecoration:'none',fontSize:'0.95rem'}}>
@@ -501,9 +517,9 @@ export default function OdooPage() {
                   WhatsApp
                 </a>
                 <a href="tel:+41764344595" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',backgroundColor:'#00D4C8',color:'#FFFFFF',fontWeight:700,borderRadius:12,textDecoration:'none',fontSize:'0.95rem'}}>+41 (0)76 434 45 95</a>
-                <a href="mailto:antonio@d4e.cool" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',border:'1.5px solid rgba(255,255,255,0.15)',color:'#E2E8F0',fontWeight:600,borderRadius:12,textDecoration:'none',fontSize:'0.88rem'}}>antonio@d4e.cool</a>
+                <a href="mailto:antonio@d4e.cool" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',border:'1.5px solid #CBD5E1',color:'#334155',fontWeight:600,borderRadius:12,textDecoration:'none',fontSize:'0.88rem'}}>antonio@d4e.cool</a>
               </div>
-              <div style={{fontSize:'0.75rem',color:'#475569',borderTop:'1px solid rgba(255,255,255,0.08)',paddingTop:14,width:'100%'}}>Geneve · Sion · Barcelone</div>
+              <div style={{fontSize:'0.75rem',color:'#64748B',borderTop:'1px solid rgba(0,212,200,0.15)',paddingTop:14,width:'100%'}}>Geneve · Sion · Barcelone</div>
             </div>
           </div>
         </div>
