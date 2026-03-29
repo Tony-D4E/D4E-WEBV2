@@ -8,7 +8,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
-/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ DONNEES ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */
+/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ DONNEES ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */
 
 const stats = [
   { valeur: "20'000+",       label: 'Machines suivies',         icon: Printer },
@@ -86,7 +86,7 @@ const pourQui = [
     icon: Settings,
     titre: 'Prestataires MPS',
     desc: 'Vous gerez des flottes d\'impression pour vos clients. ElvyPrint automatise le suivi des compteurs, la facturation au volume et le reporting.',
-    exemples: ['Managed Print Services', 'InfogÃÂÃÂÃÂÃÂ©rance impression', 'Audit de parc', 'Optimisation des couts'],
+    exemples: ['Managed Print Services', 'InfogÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©rance impression', 'Audit de parc', 'Optimisation des couts'],
     couleur: '#00D4C8',
   },
 ];
@@ -114,7 +114,7 @@ const equipe = [
   },
 ];
 
-/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ COMPOSANT ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */
+/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ COMPOSANT ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */
 
 export default function ElvyPrintPage() {
   const scrollTo = (id: string) => {
@@ -130,7 +130,7 @@ export default function ElvyPrintPage() {
   return (
     <div className="min-h-screen bg-white pt-20">
 
-      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 1. HERO ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
+      {/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 1. HERO ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */}
       <section className="relative overflow-hidden bg-[#0B0F19] min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F19] via-[#1a1400] to-[#0B0F19]" />
         <div className="absolute inset-0 pointer-events-none">
@@ -222,7 +222,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 2. STATS ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
+      {/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 2. STATS ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */}
       <section className="py-16 bg-[#FFFBEB] border-b border-[#FDE68A]">
         <div ref={statsRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${statsVisible ? 'is-visible' : ''}`}>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -237,7 +237,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 3. FONCTIONNALITES ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
+      {/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 3. FONCTIONNALITES ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */}
       <section id="fonctionnalites" className="py-24 bg-white">
         <div ref={featRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${featVisible ? 'is-visible' : ''}`}>
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -276,7 +276,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 4. INTEGRATIONS ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
+      {/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 4. INTEGRATIONS ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */}
       {/* -- 5. POUR QUI -- */}
       <section className="py-24 bg-white">
         <div ref={pourQuiRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${pourQuiVisible ? 'is-visible' : ''}`}>
@@ -351,7 +351,7 @@ export default function ElvyPrintPage() {
             <p className="text-[#F59E0B] font-semibold mb-2">Votre outil n'est pas dans la liste ?</p>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               ElvyPrint repose sur Odoo : tout systeme disposant d'une API ou d'un export
-              structurÃÂÃÂÃÂÃÂ© peut etre connecte. Parlons-en.
+              structurÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© peut etre connecte. Parlons-en.
             </p>
             <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl" onClick={() => scrollTo('contact')}>
               Discuter de mon integration
@@ -361,7 +361,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 5. POUR QUI ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
+      {/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 5. POUR QUI ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */}
       {/* -- 6. EQUIPE -- */}
       <section className="py-24 bg-[#f8fafc]">
         <div ref={equipeRef} className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${equipeVisible ? 'is-visible' : ''}`}>
@@ -401,44 +401,10 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 6. EQUIPE ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
-      <section className="py-24 bg-[#0F1D3A]">
-        <div ref={equipeRef} className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${equipeVisible ? 'is-visible' : ''}`}>
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#F59E0B]/20 border border-[#F59E0B]/40 rounded-full mb-4">
-              <span className="text-sm font-semibold text-[#F59E0B]">Votre equipe dediee</span>
-            </div>
-            <h2 className="text-4xl font-black text-white mb-3">Des experts a votre ecoute</h2>
-            <p className="text-gray-400 text-lg">Une equipe a taille humaine, basee a Geneve, Sion et Barcelone</p>
-          </div>
+      {/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 6. EQUIPE ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */}
+      
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {equipe.map((p, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center hover:bg-white/10 transition-all">
-                <img src={p.photo} alt={p.nom}
-                  className="w-32 h-32 rounded-full object-cover mb-6 shadow-xl"
-                  style={{ border: `4px solid ${p.couleur}` }} />
-                <h3 className="text-2xl font-black text-white mb-1">{p.nom}</h3>
-                <p className="font-semibold mb-1" style={{ color: p.couleur }}>{p.role}</p>
-                <p className="text-gray-400 text-sm mb-6">{p.desc}</p>
-                <div className="flex flex-col gap-3 w-full">
-                  <a href={`tel:${p.tel}`}
-                    className="flex items-center justify-center gap-2 px-5 py-3 text-white font-bold rounded-xl transition-all"
-                    style={{ backgroundColor: p.couleur }}>
-                    <Phone className="h-4 w-4" />{p.telDisplay}
-                  </a>
-                  <a href={`mailto:${p.email}`}
-                    className="flex items-center justify-center gap-2 px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all border border-white/20">
-                    <Mail className="h-4 w-4" />{p.email}
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ 7. CONTACT ÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂ */}
+      {/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 7. CONTACT ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */}
       <section id="contact" className="py-24 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
