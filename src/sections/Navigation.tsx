@@ -212,8 +212,8 @@ export function Navigation() {
             aria-label="Menu"
           >
             {isMobileOpen
-              ? <X    className="h-6 w-6 text-black" />
-              : <Menu className="h-6 w-6 text-black" />
+              ? <X    className="h-6 w-6" style={{ color: '#000000' }} />
+              : <Menu className="h-6 w-6" style={{ color: '#000000' }} />
             }
           </button>
         </div>
