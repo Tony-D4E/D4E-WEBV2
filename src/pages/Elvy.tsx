@@ -106,8 +106,8 @@ export function Elvy() {
     <div className="min-h-screen bg-white pt-20">
 
       {/* -- 1. HERO MANIFESTE -- */}
-      <section className="relative overflow-x-hidden bg-[#0B0F19] min-h-screen flex items-center" >
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F19] via-[#0f1a2e] to-[#0B0F19]" />
+      <section className="relative overflow-x-hidden flex items-center" style={{ backgroundColor: '#0B0F19', minHeight: '100vh' }} >
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0B0F19 0%, #0f1a2e 50%, #0B0F19 100%)' }} />
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute w-[800px] h-[800px] rounded-full -top-40 -right-40 opacity-8"
             style={{ background: 'radial-gradient(circle, #00D4C8, transparent)' }} />
