@@ -8,7 +8,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
-/* Ã¢ÂÂÃ¢ÂÂ DONNEES Ã¢ÂÂÃ¢ÂÂ */
+/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ DONNEES ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
 
 const stats = [
   { valeur: "20'000+",       label: 'Machines suivies',         icon: Printer },
@@ -86,7 +86,7 @@ const pourQui = [
     icon: Settings,
     titre: 'Prestataires MPS',
     desc: 'Vous gerez des flottes d\'impression pour vos clients. ElvyPrint automatise le suivi des compteurs, la facturation au volume et le reporting.',
-    exemples: ['Managed Print Services', 'InfogÃÂ©rance impression', 'Audit de parc', 'Optimisation des couts'],
+    exemples: ['Managed Print Services', 'InfogÃÂÃÂ©rance impression', 'Audit de parc', 'Optimisation des couts'],
     couleur: '#00D4C8',
   },
 ];
@@ -96,7 +96,8 @@ const equipe = [
     nom: 'Antonio Spedicato',
     role: 'Consultant Odoo & Fondateur',
     desc: '15 ans d\'experience \u00B7 Expert ERP metier',
-    tel: '0764344595', telDisplay: '0764 344 595',
+    tel: '+41764344595', telDisplay: '+41 (0)76 434 45 95',
+    whatsapp: '41764344595',
     email: 'antonio@d4e.cool',
     photo: '/team-antonio.jpg',
     couleur: '#F59E0B',
@@ -105,14 +106,15 @@ const equipe = [
     nom: 'Laetitia Andre',
     role: 'Chef de projet Elvy',
     desc: 'Specialiste deploiement \u00B7 Suisse & France',
-    tel: '0764822139', telDisplay: '0764 822 139',
+    tel: '+41764822139', telDisplay: '+41 (0)76 482 21 39',
+    whatsapp: '41764822139',
     email: 'laetita@d4e.cool',
     photo: '/team-laetitia.jpg',
     couleur: '#00D4C8',
   },
 ];
 
-/* Ã¢ÂÂÃ¢ÂÂ COMPOSANT Ã¢ÂÂÃ¢ÂÂ */
+/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ COMPOSANT ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
 
 export default function ElvyPrintPage() {
   const scrollTo = (id: string) => {
@@ -128,7 +130,7 @@ export default function ElvyPrintPage() {
   return (
     <div className="min-h-screen bg-white pt-20">
 
-      {/* Ã¢ÂÂÃ¢ÂÂ 1. HERO Ã¢ÂÂÃ¢ÂÂ */}
+      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 1. HERO ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
       <section className="relative overflow-hidden bg-[#0B0F19] min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F19] via-[#1a1400] to-[#0B0F19]" />
         <div className="absolute inset-0 pointer-events-none">
@@ -220,7 +222,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* Ã¢ÂÂÃ¢ÂÂ 2. STATS Ã¢ÂÂÃ¢ÂÂ */}
+      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 2. STATS ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
       <section className="py-16 bg-[#FFFBEB] border-b border-[#FDE68A]">
         <div ref={statsRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${statsVisible ? 'is-visible' : ''}`}>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -235,7 +237,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* Ã¢ÂÂÃ¢ÂÂ 3. FONCTIONNALITES Ã¢ÂÂÃ¢ÂÂ */}
+      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 3. FONCTIONNALITES ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
       <section id="fonctionnalites" className="py-24 bg-white">
         <div ref={featRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${featVisible ? 'is-visible' : ''}`}>
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -274,7 +276,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* Ã¢ÂÂÃ¢ÂÂ 4. INTEGRATIONS Ã¢ÂÂÃ¢ÂÂ */}
+      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 4. INTEGRATIONS ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
       <section className="py-24 bg-[#0F1D3A] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute w-[600px] h-[600px] rounded-full -bottom-40 -left-40 opacity-10"
@@ -314,7 +316,7 @@ export default function ElvyPrintPage() {
             <p className="text-[#F59E0B] font-semibold mb-2">Votre outil n'est pas dans la liste ?</p>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               ElvyPrint repose sur Odoo : tout systeme disposant d'une API ou d'un export
-              structurÃÂ© peut etre connecte. Parlons-en.
+              structurÃÂÃÂ© peut etre connecte. Parlons-en.
             </p>
             <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl" onClick={() => scrollTo('contact')}>
               Discuter de mon integration
@@ -324,34 +326,39 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* Ã¢ÂÂÃ¢ÂÂ 5. POUR QUI Ã¢ÂÂÃ¢ÂÂ */}
-      <section className="py-24 bg-white">
-        <div ref={pourQuiRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${pourQuiVisible ? 'is-visible' : ''}`}>
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">Concu pour les professionnels de l'impression</h2>
-            <p className="text-lg text-gray-500">
-              Que vous soyez revendeur, distributeur ou prestataire MPS,
-              ElvyPrint s'adapte a votre modele economique.
-            </p>
+      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 5. POUR QUI ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
+      {/* -- 6. EQUIPE -- */}
+      <section className="py-24 bg-[#f8fafc]">
+        <div ref={equipeRef} className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${equipeVisible ? 'is-visible' : ''}`}>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-[#0F1D3A] mb-3">Des experts a votre service</h2>
+            <p className="text-gray-500 text-lg">Une equipe a taille humaine, basee a Geneve, Sion et Barcelone</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {pourQui.map((p, i) => (
-              <div key={i} className="rounded-3xl p-8 border-2 hover:shadow-lg transition-all"
-                style={{ borderColor: p.couleur + '40', backgroundColor: p.couleur + '08' }}>
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-                  style={{ backgroundColor: p.couleur + '20' }}>
-                  <p.icon className="h-7 w-7" style={{ color: p.couleur }} />
-                </div>
-                <h3 className="text-2xl font-black text-[#0F1D3A] mb-3">{p.titre}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{p.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {p.exemples.map((ex, j) => (
-                    <span key={j} className="px-3 py-1 rounded-full text-sm font-semibold"
-                      style={{ backgroundColor: p.couleur + '20', color: p.couleur }}>
-                      {ex}
-                    </span>
-                  ))}
+            {equipe.map((p, i) => (
+              <div key={i} className="bg-white rounded-3xl p-8 flex flex-col items-center text-center border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-500">
+                <img src={p.photo} alt={p.nom}
+                  className="w-32 h-32 rounded-full object-cover mb-6 shadow-lg"
+                  style={{ border: `4px solid ${p.couleur}` }} />
+                <h3 className="text-2xl font-black text-[#0F1D3A] mb-1">{p.nom}</h3>
+                <p className="font-semibold mb-1" style={{ color: p.couleur }}>{p.role}</p>
+                <p className="text-gray-400 text-sm mb-6">{p.desc}</p>
+                <div className="flex flex-col gap-3 w-full">
+                  <a href={`tel:${p.tel}`}
+                    className="flex items-center justify-center gap-2 px-5 py-3 text-white font-bold rounded-xl transition-all"
+                    style={{ backgroundColor: p.couleur }}>
+                    <Phone className="h-4 w-4" />{p.telDisplay}
+                  </a>
+                  <a href={`https://wa.me/${p.whatsapp}`} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 px-5 py-3 bg-[#25D366] hover:bg-[#1fb855] text-white font-bold rounded-xl transition-all">
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.319 0-4.46-.768-6.184-2.064l-.432-.324-2.663.893.893-2.663-.324-.432A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                    WhatsApp
+                  </a>
+                  <a href={`mailto:${p.email}`}
+                    className="flex items-center justify-center gap-2 px-5 py-3 bg-white hover:bg-gray-50 text-gray-700 font-semibold rounded-xl transition-all border border-gray-200">
+                    <Mail className="h-4 w-4" />{p.email}
+                  </a>
                 </div>
               </div>
             ))}
@@ -359,7 +366,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* Ã¢ÂÂÃ¢ÂÂ 6. EQUIPE Ã¢ÂÂÃ¢ÂÂ */}
+      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 6. EQUIPE ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
       <section className="py-24 bg-[#0F1D3A]">
         <div ref={equipeRef} className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${equipeVisible ? 'is-visible' : ''}`}>
           <div className="text-center mb-16">
@@ -396,7 +403,7 @@ export default function ElvyPrintPage() {
         </div>
       </section>
 
-      {/* Ã¢ÂÂÃ¢ÂÂ 7. CONTACT Ã¢ÂÂÃ¢ÂÂ */}
+      {/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ 7. CONTACT ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */}
       <section id="contact" className="py-24 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
