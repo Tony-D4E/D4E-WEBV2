@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BarChart3, Wrench, HardHat, Factory, ShoppingCart, Truck, Heart, GraduationCap } from 'lucide-react';
+import { BarChart3, Wrench, HardHat, Factory, ShoppingCart, Truck, Heart, GraduationCap, Store, RefreshCw, Cpu, CreditCard, Package, Webhook } from 'lucide-react';
 
 const CSS = `
   .op * { box-sizing: border-box; }
@@ -79,7 +79,7 @@ const CSS = `
   .op .ac{padding:32px;display:flex;flex-direction:column;gap:0} .op .ac.w{grid-column:span 2}
   .op .aico{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;padding:12px;flex-shrink:0}
   .op .imod-col{max-width:580px;width:100%}
-  .op .int-conn{background:#fff;border:1px solid #e2e8f0;border-radius:1rem;padding:20px;text-align:center;transition:all .3s}
+  .op .int-conn{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:20px 16px;text-align:center;transition:all .3s}
   .op .int-conn:hover{border-color:rgba(0,212,200,.4);transform:translateY(-3px);box-shadow:0 4px 20px rgba(0,212,200,.08)}
   .op .tag{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:5px 12px;font-size:13px;color:#334155;display:inline-block}
   .op .p3{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:1rem;padding:26px;transition:border-color .2s}
@@ -360,11 +360,22 @@ export default function OdooPage() {
             </div>
             <div>
               <div className="sg aos d2" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:10,marginBottom:14}}>
-                {[{ico:'🛍️',n:'E-commerce',d:'Shopify, WooCommerce, Amazon'},{ico:'🔄',n:'EDI',d:'EDIFACT, X12, commandes auto'},{ico:'🏭',n:'MRP / ERP',d:'SAP, Sage, logiciels métier'},{ico:'💳',n:'Paiement',d:'Stripe, PayPal, Twint'},{ico:'🚚',n:'Logistique',d:'DHL, UPS, FedEx, La Poste'},{ico:'🔗',n:'API custom',d:'REST, webhooks, tout'}].map((c,i) => (
-                  <div key={i} className="int-conn">
-                    <div style={{fontSize:24,marginBottom:8}}>{c.ico}</div>
-                    <div style={{fontSize:13,fontWeight:700,marginBottom:3,color:'#1e293b'}}>{c.n}</div>
-                    <div style={{fontSize:11,color:'#64748b'}}>{c.d}</div>
+                {[
+                  {Icon:Store,      n:'E-commerce', d:'Shopify, WooCommerce, Amazon', color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
+                  {Icon:RefreshCw,  n:'EDI',         d:'EDIFACT, X12, commandes auto', color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
+                  {Icon:Cpu,        n:'MRP / ERP',   d:'SAP, Sage, logiciels métier',  color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
+                  {Icon:CreditCard, n:'Paiement',    d:'Stripe, PayPal, Twint',         color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
+                  {Icon:Package,    n:'Logistique',  d:'DHL, UPS, FedEx, La Poste',    color:'#00D4C8', bg:'rgba(0,212,200,0.1)'},
+                  {Icon:Webhook,    n:'API custom',  d:'REST, webhooks, tout',          color:'#F59E0B', bg:'rgba(245,158,11,0.1)'},
+                ].map((item,i) => (
+                  <div key={i} className="int-conn" style={{display:'flex',flexDirection:'column',alignItems:'center',gap:12,padding:'24px 16px'}}>
+                    <div style={{width:52,height:52,borderRadius:14,background:item.bg,border:'1px solid '+item.color+'40',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
+                      <item.Icon style={{width:24,height:24,color:item.color}}/>
+                    </div>
+                    <div>
+                      <div style={{fontSize:14,fontWeight:700,marginBottom:4,color:'#1e293b',textAlign:'center'}}>{item.n}</div>
+                      <div style={{fontSize:12,color:'#64748b',textAlign:'center',lineHeight:1.4}}>{item.d}</div>
+                    </div>
                   </div>
                 ))}
               </div>
