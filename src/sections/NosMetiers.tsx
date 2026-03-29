@@ -76,7 +76,7 @@ export function NosMetiers() {
             <div className="mt-6 pt-6 border-t border-gray-100">
               <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                 <a
-                  onClick={(e) => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }); }}
+                  onClick={(e) => { e.preventDefault(); document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' }); }}
                   href="#"
                   className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold rounded-xl transition-colors text-lg"
                 >
