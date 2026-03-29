@@ -64,7 +64,7 @@ export function Team() {
         .wa-btn:hover { background-color: #1da851 !important; }
       `}</style>
 
-      <section style={{ backgroundColor: '#F8FAFC', padding: '80px 0' }}>
+      <section id="team" style={{ backgroundColor: '#F8FAFC', padding: '80px 0' }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
