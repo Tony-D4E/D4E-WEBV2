@@ -298,10 +298,7 @@ export function HeroIntegrateur() {
           }}>
             <Award style={{ width: '16px', height: '16px', color: '#FFFFFF' }} />
           </div>
-          <div>
-            <p style={{ fontSize: '11px', fontWeight: 800, color: '#FFFFFF', margin: 0 }}>Odoo Gold Partner</p>
-            <p style={{ fontSize: '10px', color: 'rgba(255,255,255,0.55)', margin: 0 }}>Certifié Suisse</p>
-          </div>
+          <div style={{position:"absolute",top:0,right:0,zIndex:10}}><img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{height:90,maxWidth:380,objectFit:"contain",display:"block",filter:"drop-shadow(0 4px 16px rgba(245,158,11,0.25))"}}/></div>
         </div>
 
       </section>
