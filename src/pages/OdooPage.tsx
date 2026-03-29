@@ -24,14 +24,15 @@ const CSS = `
   .op .sg.on>*:nth-child(6){animation:opFiu .5s .6s forwards}
   @keyframes opPulse{0%,100%{opacity:1}50%{opacity:.3}}
   .op .pulse{animation:opPulse 2s infinite}
-  .op .stag-dk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.1);border:1px solid rgba(0,212,200,.2);border-radius:40px;padding:4px 14px;font-size:11px;color:#00D4C8;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
-  .op .stag-lk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.08);border:1px solid rgba(0,212,200,.2);border-radius:40px;padding:4px 14px;font-size:11px;color:#00B4A6;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+  .op .stag-dk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.12);border:1px solid rgba(0,212,200,.35);border-radius:999px;padding:7px 18px;font-size:12px;color:#00D4C8;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+  .op .stag-lk{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,200,.08);border:1px solid rgba(0,212,200,.25);border-radius:999px;padding:7px 18px;font-size:12px;color:#00B4A6;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
   .op .sdot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:opPulse 2s infinite}
   .op .dk{background:#0B0F19!important;color:#fff!important} 
   .op .dk2{background:#0F172A!important;color:#fff!important}
   .op .dk h1,.op .dk h2,.op .dk h3,.op .dk h4,.op .dk2 h1,.op .dk2 h2,.op .dk2 h3,.op .dk2 h4{color:#fff!important}
   .op .dk p,.op .dk2 p{color:#E2E8F0!important}
-  .op .lk{background:#f8fafc!important} .op .lk2{background:#fff!important}
+  .op .lk{background:#F8FAFC!important} .op .lk2{background:#FFFFFF!important}
+  .op .lk{box-shadow:0 -4px 24px rgba(0,0,0,0.06)!important}
   .op .lk h1,.op .lk h2,.op .lk h3,.op .lk h4{color:#1e293b!important}
   .op .lk p,.op .lk2 p{color:#334155!important}
   .op section{padding:112px 64px;position:relative;overflow:hidden;width:100%}
@@ -41,9 +42,9 @@ const CSS = `
   .op .con{width:100%}
   .op .sh2{font-size:clamp(36px,4.5vw,60px);font-weight:800;line-height:1.06;margin-bottom:18px;margin-top:0}
   .op .card{border:1px solid;border-radius:1rem;transition:all .3s}
-  .op .card-dk{background:rgba(17,24,39,.9);border-color:rgba(255,255,255,.12)}
-  .op .card-lk{background:#fff;border-color:#e2e8f0;box-shadow:0 1px 8px rgba(0,0,0,.06)}
-  .op .card-lk:hover{border-color:rgba(0,212,200,.4)!important;box-shadow:0 4px 20px rgba(0,212,200,.1)}
+  .op .card-dk{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);border-radius:16px}
+  .op .card-lk{background:#fff;border-color:#e2e8f0;box-shadow:0 2px 16px rgba(0,0,0,.06);border-radius:16px}
+  .op .card-lk:hover{border-color:rgba(0,212,200,.4)!important;box-shadow:0 8px 32px rgba(0,212,200,0.12)}
   .op .imod{background:rgba(11,15,25,.6);border:1px solid rgba(255,255,255,.1);border-radius:1rem;padding:16px 18px;transition:border-color .2s}
   .op .imod:hover{border-color:rgba(0,212,200,.3)}
   .op .imod-g{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:1rem;padding:16px 18px}
@@ -69,7 +70,7 @@ const CSS = `
   .op .p3:hover{border-color:rgba(0,212,200,.3)}
   .op .sec-p{font-size:16px;line-height:1.75;color:#94A3B8;max-width:640px}
   .op .sec-p strong{color:#fff}
-  .op .btn-p{background:linear-gradient(to right,#00B4A6,#00D4C8);color:#fff;padding:15px 32px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;font-family:'Space Grotesk',sans-serif;display:inline-block;transition:all .2s}
+  .op .btn-p{background:linear-gradient(to right,#00B4A6,#00D4C8);color:#fff;padding:18px 40px;border-radius:14px;font-weight:800;font-size:17px;text-decoration:none;font-family:'Space Grotesk',sans-serif;display:inline-block;transition:all .2s;box-shadow:0 6px 24px rgba(0,212,200,0.35)}
   .op .btn-p:hover{transform:translateY(-2px);box-shadow:0 10px 40px -10px rgba(0,212,200,.5)}
   .op .btn-s{border:1px solid rgba(255,255,255,.2);color:#E2E8F0;padding:15px 32px;border-radius:10px;font-weight:500;font-size:16px;text-decoration:none;display:inline-block;transition:all .2s}
   .op .btn-s:hover{border-color:rgba(0,212,200,.3);color:#00D4C8}
