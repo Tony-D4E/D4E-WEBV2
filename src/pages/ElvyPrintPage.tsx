@@ -133,6 +133,10 @@ export default function ElvyPrintPage() {
  {/* ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ 1. HERO ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ */}
  <section className="relative overflow-hidden bg-[#0B0F19] min-h-screen flex items-center">
  <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F19] via-[#1a1400] to-[#0B0F19]" />
+        {/* Odoo Gold Partner badge - top right */}
+        <div style={{position:'absolute',top:'6rem',right:'2rem',zIndex:10}}>
+          <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{height:70,maxWidth:280,objectFit:'contain',display:'block',filter:'drop-shadow(0 4px 20px rgba(245,158,11,0.4))'}}/>
+        </div>
  <div className="absolute inset-0 pointer-events-none">
  <div className="absolute w-[800px] h-[800px] rounded-full -top-60 -right-60 opacity-8"
  style={{ background: 'radial-gradient(circle, #F59E0B, transparent)' }} />
@@ -197,13 +201,7 @@ export default function ElvyPrintPage() {
  <p className="text-[#F59E0B] text-xs mt-0.5">{p.detail}</p>
  </div>
  </div>
- ))}
- 
-
-              {/* Odoo Gold Partner badge */}
-              <div style={{marginTop:'2rem',padding:0,background:'transparent'}}>
-                <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{height:80,maxWidth:340,objectFit:'contain',display:'block',filter:'drop-shadow(0 4px 20px rgba(245,158,11,0.4))'}}/>
-              </div></div>
+ ))}</div>
  </div>
  </div>
 
