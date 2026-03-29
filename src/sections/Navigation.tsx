@@ -212,8 +212,8 @@ export function Navigation() {
             aria-label="Menu"
           >
             {isMobileOpen
-              ? <X    className="h-6 w-6" color="#000000" stroke="#000000"/>
-              : <Menu className="h-6 w-6" color="#000000" stroke="#000000"/>
+              ? <span style={{ display: 'flex', flexDirection: 'column', gap: '5px', width: '24px', height: '24px', justifyContent: 'center', alignItems: 'center' }}><span style={{ width: '20px', height: '2px', backgroundColor: '#000000', transform: 'rotate(45deg) translateY(5px)', transition: 'all 0.2s' }} /><span style={{ width: '20px', height: '2px', backgroundColor: '#000000', transform: 'rotate(-45deg) translateY(-5px)', transition: 'all 0.2s' }} /></span>
+              : <span style={{ display: 'flex', flexDirection: 'column', gap: '5px', width: '24px', height: '24px', justifyContent: 'center' }}><span style={{ width: '20px', height: '2px', backgroundColor: '#000000' }} /><span style={{ width: '20px', height: '2px', backgroundColor: '#000000' }} /><span style={{ width: '20px', height: '2px', backgroundColor: '#000000' }} /></span>
             }
           </button>
         </div>
