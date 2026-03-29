@@ -101,7 +101,7 @@ export function Team() {
             size="lg"
             className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base"
           >
-            <a onClick={(e) => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }); }} onClick={(e) => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }); }} href="#">
+            <a onClick={(e) => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }); }} ); }} href="#">
               <ArrowRight className="mr-2 h-5 w-5" />
               Prendre contact maintenant
             </a>
