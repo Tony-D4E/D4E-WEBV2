@@ -357,7 +357,7 @@ export default function ElvyPrintPage() {
             <p className="text-[#F59E0B] font-semibold mb-2">Votre outil n'est pas dans la liste ?</p>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               ElvyPrint repose sur Odoo : tout systeme disposant d'une API ou d'un export
-              structurÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© peut etre connecte. Parlons-en.
+              structure peut etre connecte. Parlons-en.
             </p>
             <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-8 rounded-xl" onClick={() => scrollTo('contact')}>
               Discuter de mon integration
