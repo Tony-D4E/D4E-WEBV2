@@ -125,7 +125,7 @@ export function Probleme() {
               <p style={{ color: '#64748B', fontSize: '1rem', marginBottom: '20px', marginTop: 0 }}>
                 Il existe une solution deployee en quelques jours, pas en plusieurs mois.
               </p>
-              <a href="/#/elvybat" style={{
+              <a href="/#/odoo" style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
                 padding: '14px 34px', backgroundColor: '#00D4C8',
                 color: '#FFFFFF', fontWeight: 800, borderRadius: '12px',
