@@ -18,10 +18,10 @@ const stats = [
 ];
 
 const pays = [
- { flag: '\uD83C\uDDE8\uD83C\uDDED', nom: 'Suisse', detail: 'CHF - TVA CH' },
- { flag: '\uD83C\uDDEB\uD83C\uDDF7', nom: 'France', detail: 'EUR - TVA FR' },
- { flag: '\uD83C\uDDEA\uD83C\uDDF8', nom: 'Espagne', detail: 'EUR - TVA ES' },
-];
+  { flag: 'CH', nom: 'Suisse',  detail: 'CHF - TVA CH' },
+  { flag: 'FR', nom: 'France',  detail: 'EUR - TVA FR' },
+  { flag: 'ES', nom: 'Espagne', detail: 'EUR - TVA ES' },
+]
 
 const fonctionnalites = [
  {
@@ -191,9 +191,9 @@ export default function ElvyPrintPage() {
  <div className="flex flex-row flex-wrap gap-3">
  {pays.map((p, i) => (
  <div key={i} className="flex items-center gap-2 px-4 py-2 bg-[#F59E0B]/20 border border-[#F59E0B]/50 rounded-lg">
- <span className="text-lg">{p.flag}</span>
+ <span className="text-xs font-bold text-[#F59E0B] bg-[#F59E0B]/20 px-2 py-0.5 rounded">{p.flag}</span>
  <div>
- <p className="text-white font-bold text-sm leading-none">{p.nom}</p>
+ <p style={{ color: '#FFFFFF' }} className="font-bold text-sm leading-none">{p.nom}</p>
  <p className="text-[#F59E0B] text-xs mt-0.5">{p.detail}</p>
  </div>
  </div>
