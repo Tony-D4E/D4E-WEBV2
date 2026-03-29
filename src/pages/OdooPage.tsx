@@ -285,8 +285,8 @@ export default function OdooPage() {
           </div>
           <div className="aos d4" style={{display:'flex',gap:14,flexWrap:'wrap',marginBottom:40}}>
             {[
-              {n:'1 300+',l:'utilisateurs actifs',s:'Suisse, France, Espagne, Italie',gold:false},
-              {n:'8 ans',l:"d'expertise terrain BTP",s:'Genève · Sion · Barcelona',gold:false},
+              {n:'1 300+',l:'utilisateurs actifs',s:'Suisse · France · Espagne · Italie',gold:false},
+              {n:'8 ans',l:"d'expertise Odoo & BTP",s:'Certifié Gold v13 → v19',gold:false},
               {n:'Support humain',l:'garanti — pas de bot',s:'Une vraie personne qui connaît votre dossier',gold:true},
             ].map((st,i) => (
               <div key={i} className="card" style={{background:st.gold?'rgba(245,158,11,.08)':'rgba(17,24,39,.9)',borderColor:st.gold?'rgba(245,158,11,.3)':'rgba(255,255,255,.12)',padding:'22px 28px',flex:1,minWidth:180}}>
