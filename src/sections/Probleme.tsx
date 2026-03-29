@@ -123,7 +123,7 @@ export function Probleme() {
 
             <div style={{ textAlign: 'center', position: 'relative' }}>
               <p style={{ color: '#64748B', fontSize: '1rem', marginBottom: '20px', marginTop: 0 }}>
-                Il existe une solution — deployee en quelques jours, pas en plusieurs mois.
+                Il existe une solution deployee en quelques jours, pas en plusieurs mois.
               </p>
               <a href="/#/elvybat" style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
