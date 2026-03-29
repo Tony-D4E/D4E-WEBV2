@@ -106,7 +106,7 @@ export function Elvy() {
     <div className="min-h-screen bg-white pt-20">
 
       {/* -- 1. HERO MANIFESTE -- */}
-      <section className="relative overflow-x-hidden bg-[#0B0F19] flex items-center" >
+      <section className="overflow-x-hidden bg-[#0B0F19] flex items-center" style={{ position: 'sticky', top: '5rem', zIndex: 1, minHeight: '85vh' }} >
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F19] via-[#0f1a2e] to-[#0B0F19]" />
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute w-[800px] h-[800px] rounded-full -top-40 -right-40 opacity-8"
@@ -150,7 +150,7 @@ export function Elvy() {
       </section>
 
       {/* -- 2. LE MODELE ELVY -- */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white" style={{ position: 'relative', zIndex: 2 }}>
         <div ref={modRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${modVisible ? 'is-visible' : ''}`}>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">{`Le mod\u00e8le Elvy`}</h2>
@@ -176,7 +176,7 @@ export function Elvy() {
       </section>
 
       {/* -- 3. SOLUTIONS OPERATIONNELLES -- */}
-      <section id="solutions" className="py-24 bg-[#0B0F19]">
+      <section id="solutions" className="py-24" style={{ position: 'relative', zIndex: 2, backgroundColor: '#0B0F19' }}>
         <div ref={solRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${solVisible ? 'is-visible' : ''}`}>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-black text-white mb-4">{`Solutions op\u00e9rationnelles`}</h2>
@@ -217,7 +217,7 @@ export function Elvy() {
       </section>
 
       {/* -- 4. EN CO-CONSTRUCTION -- */}
-      <section id="co-construction" className="py-24 bg-white">
+      <section id="co-construction" className="py-24 bg-white" style={{ position: 'relative', zIndex: 2 }}>
         <div ref={coRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${coVisible ? 'is-visible' : ''}`}>
           <div className="text-center max-w-3xl mx-auto mb-6">
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-[#F59E0B]/10 border border-[#F59E0B]/30 rounded-full mb-4">
@@ -271,7 +271,7 @@ export function Elvy() {
       </section>
 
       {/* -- 5. POURQUOI ELVY -- */}
-      <section className="py-20 bg-[#f8fafc]">
+      <section className="py-20 bg-[#f8fafc]" style={{ position: 'relative', zIndex: 2 }}>
         <div ref={whyRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${whyVisible ? 'is-visible' : ''}`}>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black text-[#0F1D3A] mb-3">{`Pourquoi Elvy, pas un projet sur mesure ?`}</h2>
@@ -288,7 +288,7 @@ export function Elvy() {
       </section>
 
       {/* -- 6. CONTACT ANTONIO -- */}
-      <section id="contact" className="py-24 bg-[#f8fafc]">
+      <section id="contact" className="py-24 bg-[#f8fafc]" style={{ position: 'relative', zIndex: 2 }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
 
