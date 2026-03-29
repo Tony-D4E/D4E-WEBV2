@@ -198,7 +198,12 @@ export default function ElvyPrintPage() {
  </div>
  </div>
  ))}
- </div>
+ 
+
+              {/* Odoo Gold Partner badge */}
+              <div style={{marginTop:'2rem',padding:0,background:'transparent'}}>
+                <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{height:80,maxWidth:340,objectFit:'contain',display:'block',filter:'drop-shadow(0 4px 20px rgba(245,158,11,0.4))'}}/>
+              </div></div>
  </div>
  </div>
 
