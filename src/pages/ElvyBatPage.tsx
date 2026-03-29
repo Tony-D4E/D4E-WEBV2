@@ -80,7 +80,7 @@ const equipe = [
   },
   {
     nom: 'Laëtitia André',
-    role: 'Chef de projet ElvyBat',
+    role: 'Ambassadrice Odoo - D4EBat',
     desc: 'Spécialiste déploiement BTP · Suisse & France',
     tel: '0764822139', telDisplay: '0764 822 139',
     email: 'laetita@d4e.cool',
