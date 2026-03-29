@@ -447,30 +447,32 @@ export default function OdooPage() {
       {/* ⑦ PROMISE DARK */}
       <section className="dk2" id="promesse">
         <div style={{width:"100%"}}>
-          <div style={{display:'grid',gridTemplateColumns:'1fr 400px',gap:64,alignItems:'center'}}>
+          <div style={{display:'grid',gridTemplateColumns:'1fr 400px',gap:64,alignItems:'start'}}>
             <div>
               <div className="stag-dk aos" style={{display:'inline-flex'}}><span className="sdot"/>&nbsp;La promesse D4E</div>
               <h2 className="sh2 aos d1" style={{color:'#fff'}}>On ne livre pas un logiciel.<br/>On livre <span className="tg">votre systeme.</span></h2>
-              <p className="aos d2" style={{fontSize:19,color:'#94A3B8',lineHeight:1.8,marginBottom:40,maxWidth:560}}>Configurer Odoo, n importe qui peut l apprendre. Comprendre votre metier, vos contraintes et traduire tout ca en un systeme qui tient dans le temps — c est ce qu on fait chaque jour depuis 4 ans.</p>
-              <div className="sg aos d3" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:14,marginBottom:44}}>
+              <p className="aos d2" style={{fontSize:21,color:'#94A3B8',lineHeight:1.85,marginBottom:44,maxWidth:'100%'}}>Configurer Odoo, n'importe qui peut l'apprendre. Comprendre votre metier, vos contraintes, vos angles morts et traduire tout ca en un systeme qui tient dans le temps — c'est ce qu'on fait chaque jour depuis 8 ans.</p>
+              <div className="sg aos d3" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16,marginBottom:44}}>
                 {[
-                  {ico:'⚡',t:'Operationnel en semaines',d:'Nos packs cle en main calibres pour votre autonomie rapide.'},
-                  {ico:'🎯',t:'Prix fixe, sans surprise',d:'Un engagement clair. Un perimetre defini. Pas de ticket surprise.'},
-                  {ico:'🤝',t:'Un chef de projet dedie',d:'Une vraie personne qui connait votre activite.'},
+                  {Icon:Zap,      color:'#F59E0B', bg:'rgba(245,158,11,0.12)', t:'Operationnel en semaines', d:'Nos packs cle en main sont calibres pour que votre equipe soit autonome rapidement.'},
+                  {Icon:Target,   color:'#00D4C8', bg:'rgba(0,212,200,0.12)',  t:'Prix fixe, sans surprise', d:'Un engagement clair. Un perimetre defini. Pas de ticket surprise a chaque modification.'},
+                  {Icon:Users,    color:'#F59E0B', bg:'rgba(245,158,11,0.12)', t:'Un chef de projet dedie',  d:'Une vraie personne, pas un ticket support. Quelqu un qui connait votre activite.'},
                 ].map((p,i) => (
-                  <div key={i} className="p3">
-                    <div style={{fontSize:28,marginBottom:12}}>{p.ico}</div>
-                    <div style={{fontWeight:700,fontSize:15,marginBottom:6,color:'#fff'}}>{p.t}</div>
-                    <div style={{fontSize:14,color:'#94A3B8',lineHeight:1.6}}>{p.d}</div>
+                  <div key={i} className="p3" style={{display:'flex',flexDirection:'column',gap:16}}>
+                    <div style={{width:52,height:52,borderRadius:14,background:p.bg,border:'1px solid '+p.color+'40',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
+                      <p.Icon style={{width:24,height:24,color:p.color}}/>
+                    </div>
+                    <div style={{fontWeight:800,fontSize:17,color:'#fff',lineHeight:1.2}}>{p.t}</div>
+                    <div style={{fontSize:15,color:'#94A3B8',lineHeight:1.65}}>{p.d}</div>
                   </div>
                 ))}
               </div>
               <div className="aos d4" style={{display:'flex',gap:14,flexWrap:'wrap'}}>
-                <a href="#" onClick={(e)=>{e.preventDefault();document.getElementById('contact-form')?.scrollIntoView({behavior:'smooth'})}} className="btn-p">Discuter de mon projet</a>
-                <a href="/#/elvybat" className="btn-s">Voir ElvyBat pour le BTP</a>
+                <a href="/" onClick={(e)=>{e.preventDefault();window.location.href='/';setTimeout(()=>{document.getElementById('contact-form')?.scrollIntoView({behavior:'smooth'});},400);}} className="btn-p">Discuter de mon projet</a>
+                <a href="/#/elvybat" style={{display:'inline-flex',alignItems:'center',gap:8,padding:'18px 40px',backgroundColor:'#F59E0B',color:'#FFFFFF',fontWeight:800,fontSize:17,textDecoration:'none',borderRadius:14,boxShadow:'0 6px 24px rgba(245,158,11,0.35)',transition:'all .2s'}}>Voir ElvyBat pour le BTP</a>
               </div>
             </div>
-            <div className="aos d2" style={{background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.12)',borderTop:'4px solid #00D4C8',borderRadius:20,padding:'36px 28px',display:'flex',flexDirection:'column',alignItems:'center',gap:18,textAlign:'center'}}>
+            <div className="aos d2" style={{background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.12)',borderTop:'4px solid #00D4C8',borderRadius:20,padding:'36px 28px',display:'flex',flexDirection:'column',alignItems:'center',gap:18,textAlign:'center',position:'sticky',top:100}}>
               <div style={{width:120,height:120,borderRadius:'50%',border:'3px solid #00D4C8',overflow:'hidden',flexShrink:0,boxShadow:'0 0 24px rgba(0,212,200,0.3)'}}>
                 <img src="/antonio-profile.jpg" alt="Antonio Spedicato" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top'}}/>
               </div>
@@ -480,7 +482,10 @@ export default function OdooPage() {
                 <div style={{fontSize:'0.8rem',color:'#64748B'}}>Repond sous 2h en semaine</div>
               </div>
               <div style={{width:'100%',display:'flex',flexDirection:'column',gap:10}}>
-                <a href="https://wa.me/41764344595" target="_blank" rel="noopener noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',backgroundColor:'#25D366',color:'#FFFFFF',fontWeight:700,borderRadius:12,textDecoration:'none',fontSize:'0.95rem'}}>WhatsApp</a>
+                <a href="https://wa.me/41764344595" target="_blank" rel="noopener noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',backgroundColor:'#25D366',color:'#FFFFFF',fontWeight:700,borderRadius:12,textDecoration:'none',fontSize:'0.95rem'}}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.526 5.858L.057 23.571l5.885-1.544A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.574-.5-5.065-1.373l-.364-.216-3.767.988 1.006-3.672-.237-.378A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                  WhatsApp
+                </a>
                 <a href="tel:+41764344595" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',backgroundColor:'#00D4C8',color:'#FFFFFF',fontWeight:700,borderRadius:12,textDecoration:'none',fontSize:'0.95rem'}}>+41 (0)76 434 45 95</a>
                 <a href="mailto:antonio@d4e.cool" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',border:'1.5px solid rgba(255,255,255,0.15)',color:'#E2E8F0',fontWeight:600,borderRadius:12,textDecoration:'none',fontSize:'0.88rem'}}>antonio@d4e.cool</a>
               </div>
