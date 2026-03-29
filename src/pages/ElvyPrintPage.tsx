@@ -86,7 +86,7 @@ const pourQui = [
     icon: Settings,
     titre: 'Prestataires MPS',
     desc: 'Vous gerez des flottes d\'impression pour vos clients. ElvyPrint automatise le suivi des compteurs, la facturation au volume et le reporting.',
-    exemples: ['Managed Print Services', 'InfogÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©rance impression', 'Audit de parc', 'Optimisation des couts'],
+    exemples: ['Managed Print Services', 'Infogerance impression', 'Audit de parc', 'Optimisation des couts'],
     couleur: '#00D4C8',
   },
 ];
