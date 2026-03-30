@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navigation } from './sections/Navigation';
 import { WhatsAppWidget } from './components/WhatsAppWidget';
 import { CookieBanner } from './components/CookieBanner';
@@ -28,7 +28,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen bg-[#f8fafc]">
         <Navigation />
@@ -54,7 +54,7 @@ function App() {
         />
         <CookieBanner />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
