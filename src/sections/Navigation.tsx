@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-/* ── Data ── */
+/* ââ Data ââ */
 const solutions = [
   { to: '/elvybat',       label: 'ElvyBat',       desc: 'Construction & chantiers', accent: '#00D4C8' },
   { to: '/elvyprint',     label: 'ElvyPrint',     desc: 'Impression & production',  accent: '#F59E0B' },
@@ -10,7 +10,7 @@ const solutions = [
   { to: '/elvyinsurance', label: 'ElvyInsurance', desc: 'Assurance & courtage',     accent: '#3B82F6' },
 ];
 
-/* ── Component ── */
+/* ââ Component ââ */
 export function Navigation() {
   const [isScrolled, setIsScrolled]       = useState(false);
   const [isMobileOpen, setMobileOpen]     = useState(false);
@@ -54,7 +54,7 @@ export function Navigation() {
   /* Helpers */
   const isActive = (path: string) => location.pathname === path;
   const isSolutionActive = solutions.some(s => location.pathname === s.to) || location.pathname === '/elvy';
-  const isD4eActive = location.pathname === '/tarifs';
+  const isD4eActive = ['/tarifs', '/entreprise', '/jobs'].includes(location.pathname);
 
   const goAnchor = (anchor: string) => {
     setMobileOpen(false);
@@ -83,7 +83,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
 
-          {/* ── Logo ── */}
+          {/* ââ Logo ââ */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
               src="/picto-d4e.png"
@@ -95,7 +95,7 @@ export function Navigation() {
             </span>
           </Link>
 
-          {/* ── Desktop nav ── */}
+          {/* ââ Desktop nav ââ */}
           <nav className="hidden lg:flex items-center gap-1">
 
             {/* Odoo */}
@@ -167,17 +167,23 @@ export function Navigation() {
 
               {d4eOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white rounded-2xl border border-slate-200 shadow-xl py-2 z-50">
-                  <button
-                    onClick={() => goAnchor('equipe')}
-                    className="w-full text-left px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                  <Link
+                    to="/entreprise"
+                    className={`block px-4 py-2.5 text-sm font-semibold transition-colors ${isActive('/entreprise') ? 'text-[#00B4A6] bg-slate-50' : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'}`}
                   >
-                    Equipe
-                  </button>
+                    Entreprise
+                  </Link>
                   <Link
                     to="/tarifs"
                     className={`block px-4 py-2.5 text-sm font-semibold transition-colors ${isActive('/tarifs') ? 'text-[#00B4A6] bg-slate-50' : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'}`}
                   >
                     Tarifs
+                  </Link>
+                  <Link
+                    to="/jobs"
+                    className={`block px-4 py-2.5 text-sm font-semibold transition-colors ${isActive('/jobs') ? 'text-[#00B4A6] bg-slate-50' : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'}`}
+                  >
+                    Jobs
                   </Link>
                 </div>
               )}
@@ -195,7 +201,7 @@ export function Navigation() {
             </Link>
           </nav>
 
-          {/* ── CTA desktop ── */}
+          {/* ââ CTA desktop ââ */}
           <div className="hidden lg:block">
             <button
               onClick={() => goAnchor('contact-form')}
@@ -205,7 +211,7 @@ export function Navigation() {
             </button>
           </div>
 
-          {/* ── Burger mobile ── */}
+          {/* ââ Burger mobile ââ */}
           <button
             className="lg:hidden p-2 rounded-xl hover:bg-slate-100 transition-colors"
             onClick={() => setMobileOpen(!isMobileOpen)}
@@ -218,7 +224,7 @@ export function Navigation() {
           </button>
         </div>
 
-        {/* ── Mobile menu ── */}
+        {/* ââ Mobile menu ââ */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
             isMobileOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
@@ -287,13 +293,15 @@ export function Navigation() {
               D4E
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileD4eOpen ? 'rotate-180' : ''}`} />
             </button>
-            <div className={`overflow-hidden transition-all duration-200 ${mobileD4eOpen ? 'max-h-[120px]' : 'max-h-0'}`}>
-              <button
-                onClick={() => goAnchor('equipe')}
-                className="w-full text-left pl-8 pr-5 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
+            <div className={`overflow-hidden transition-all duration-200 ${mobileD4eOpen ? 'max-h-[200px]' : 'max-h-0'}`}>
+              <Link
+                to="/entreprise"
+                className={`block pl-8 pr-5 py-2.5 text-sm font-medium transition-colors ${
+                  isActive('/entreprise') ? 'text-[#00B4A6]' : 'text-slate-700 hover:bg-slate-50'
+                }`}
               >
-                Equipe
-              </button>
+                Entreprise
+              </Link>
               <Link
                 to="/tarifs"
                 className={`block pl-8 pr-5 py-2.5 text-sm font-medium transition-colors ${
@@ -301,6 +309,14 @@ export function Navigation() {
                 }`}
               >
                 Tarifs
+              </Link>
+              <Link
+                to="/jobs"
+                className={`block pl-8 pr-5 py-2.5 text-sm font-medium transition-colors ${
+                  isActive('/jobs') ? 'text-[#00B4A6]' : 'text-slate-700 hover:bg-slate-50'
+                }`}
+              >
+                Jobs
               </Link>
             </div>
 
