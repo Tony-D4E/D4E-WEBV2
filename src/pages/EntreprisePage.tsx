@@ -4,167 +4,210 @@ const EntreprisePage: React.FC = () => {
   return (
     <>
       <style>{`
-        #d4e-entreprise, #d4e-entreprise * { box-sizing: border-box !important; }
-        #d4e-entreprise { font-family: 'Inter', sans-serif !important; background-color: #F0FDF9 !important; min-height: 100vh !important; padding-bottom: 100px !important; }
-        #d4e-entreprise .ep-dark, #d4e-entreprise .ep-dark * { color: #FFFFFF !important; }
-        #d4e-entreprise .ep-title { font-family: 'Space Grotesk', sans-serif !important; font-size: clamp(36px, 5vw, 52px) !important; font-weight: 700 !important; color: #0B0F19 !important; margin: 0 0 16px !important; letter-spacing: -0.02em !important; }
-        #d4e-entreprise .ep-subtitle { font-size: 20px !important; color: #475569 !important; margin: 0 !important; line-height: 1.6 !important; max-width: 640px !important; }
-        #d4e-entreprise .ep-h2 { font-family: 'Space Grotesk', sans-serif !important; font-size: 28px !important; font-weight: 700 !important; color: #0B0F19 !important; margin: 0 0 16px !important; }
-        #d4e-entreprise .ep-h2-white { font-family: 'Space Grotesk', sans-serif !important; font-size: 28px !important; font-weight: 700 !important; color: #FFFFFF !important; margin: 0 0 16px !important; }
-        #d4e-entreprise .ep-text { font-size: 16px !important; color: #475569 !important; line-height: 1.8 !important; margin: 0 0 16px !important; }
-        #d4e-entreprise .ep-text-light { font-size: 16px !important; color: rgba(255,255,255,0.6) !important; line-height: 1.8 !important; margin: 0 0 16px !important; }
-        #d4e-entreprise .ep-card { background-color: #0F172A !important; border-radius: 24px !important; padding: 48px 44px !important; border: 1px solid rgba(255,255,255,0.06) !important; }
-        #d4e-entreprise .ep-card-white { background-color: #FFFFFF !important; border-radius: 20px !important; padding: 40px 36px !important; border: 1px solid #E2E8F0 !important; box-shadow: 0 1px 3px rgba(0,0,0,0.04) !important; }
-        #d4e-entreprise .ep-badge { display: inline-flex !important; align-items: center !important; gap: 8px !important; background-color: rgba(245,158,11,0.1) !important; border: 1px solid rgba(245,158,11,0.3) !important; border-radius: 100px !important; padding: 8px 20px !important; font-size: 14px !important; font-weight: 600 !important; color: #F59E0B !important; margin-bottom: 28px !important; }
-        #d4e-entreprise .ep-team-photo { width: 140px !important; height: 140px !important; border-radius: 20px !important; object-fit: cover !important; flex-shrink: 0 !important; }
-        #d4e-entreprise .ep-team-name { font-family: 'Space Grotesk', sans-serif !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; margin-bottom: 4px !important; }
-        #d4e-entreprise .ep-team-role { font-size: 14px !important; font-weight: 600 !important; margin-bottom: 12px !important; }
-        #d4e-entreprise .ep-team-desc { font-size: 15px !important; color: rgba(255,255,255,0.5) !important; line-height: 1.7 !important; }
-        #d4e-entreprise .ep-timeline { display: flex !important; gap: 0 !important; flex-wrap: wrap !important; }
-        #d4e-entreprise .ep-tl-item { flex: 1 1 200px !important; padding: 24px 28px !important; position: relative !important; border-left: 2px solid rgba(0,212,200,0.2) !important; }
-        #d4e-entreprise .ep-tl-year { font-family: 'Space Grotesk', sans-serif !important; font-size: 32px !important; font-weight: 700 !important; color: #00D4C8 !important; margin-bottom: 8px !important; }
-        #d4e-entreprise .ep-tl-text { font-size: 14px !important; color: rgba(255,255,255,0.5) !important; line-height: 1.6 !important; }
-        #d4e-entreprise .ep-loc { display: flex !important; align-items: center !important; gap: 12px !important; padding: 20px 0 !important; border-bottom: 1px solid #F1F5F9 !important; }
-        #d4e-entreprise .ep-loc:last-child { border-bottom: none !important; }
-        #d4e-entreprise .ep-loc-dot { width: 10px !important; height: 10px !important; border-radius: 50% !important; flex-shrink: 0 !important; }
-        #d4e-entreprise .ep-loc-city { font-family: 'Space Grotesk', sans-serif !important; font-size: 17px !important; font-weight: 700 !important; color: #0B0F19 !important; }
-        #d4e-entreprise .ep-loc-addr { font-size: 14px !important; color: #64748B !important; }
-        @media (max-width: 768px) {
-          #d4e-entreprise .ep-team-grid { flex-direction: column !important; }
-          #d4e-entreprise .ep-cols { flex-direction: column !important; }
+        #d4e-ent, #d4e-ent * { box-sizing: border-box !important; }
+        #d4e-ent { font-family: 'Inter', sans-serif !important; background-color: #F0FDF9 !important; min-height: 100vh !important; overflow-x: hidden !important; }
+        #d4e-ent .ent-dark, #d4e-ent .ent-dark * { color: #FFFFFF !important; }
+
+        /* HERO FULL WIDTH */
+        #d4e-ent .ent-hero {
+          position: relative !important; min-height: 600px !important;
+          display: flex !important; align-items: flex-end !important;
+          overflow: hidden !important;
+        }
+        #d4e-ent .ent-hero-img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: center 30% !important; }
+        #d4e-ent .ent-hero-overlay { position: absolute !important; inset: 0 !important; background: linear-gradient(to top, rgba(11,15,25,0.95) 0%, rgba(11,15,25,0.5) 50%, rgba(11,15,25,0.15) 100%) !important; }
+        #d4e-ent .ent-hero-inner { position: relative !important; z-index: 1 !important; padding: 64px 48px !important; max-width: 1280px !important; margin: 0 auto !important; width: 100% !important; }
+        #d4e-ent .ent-gold-logo { position: absolute !important; top: 100px !important; right: 48px !important; height: 80px !important; z-index: 2 !important; }
+        #d4e-ent .ent-hero-title {
+          font-family: 'Space Grotesk', sans-serif !important;
+          font-size: clamp(44px, 7vw, 76px) !important; font-weight: 700 !important;
+          line-height: 1 !important; letter-spacing: -0.03em !important; margin: 0 0 20px !important;
+        }
+        #d4e-ent .ent-gradient {
+          background: linear-gradient(90deg, #00E5CC, #00D4C8, #06B6D4) !important;
+          -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important;
+        }
+        #d4e-ent .ent-hero-sub { font-size: 22px !important; color: rgba(255,255,255,0.7) !important; margin: 0 !important; max-width: 580px !important; line-height: 1.5 !important; }
+
+        /* STATS BAR */
+        #d4e-ent .ent-stats { display: flex !important; justify-content: center !important; gap: 0 !important; flex-wrap: wrap !important; background-color: #0F172A !important; }
+        #d4e-ent .ent-stat {
+          flex: 1 1 200px !important; padding: 40px 32px !important; text-align: center !important;
+          border-right: 1px solid rgba(255,255,255,0.06) !important;
+        }
+        #d4e-ent .ent-stat:last-child { border-right: none !important; }
+        #d4e-ent .ent-stat-val { font-family: 'Space Grotesk', sans-serif !important; font-size: 40px !important; font-weight: 700 !important; color: #00D4C8 !important; margin-bottom: 4px !important; }
+        #d4e-ent .ent-stat-label { font-size: 14px !important; color: rgba(255,255,255,0.45) !important; }
+
+        /* STORY */
+        #d4e-ent .ent-story { max-width: 800px !important; margin: 0 auto !important; }
+        #d4e-ent .ent-story-title {
+          font-family: 'Space Grotesk', sans-serif !important;
+          font-size: 36px !important; font-weight: 700 !important; color: #0B0F19 !important;
+          margin: 0 0 28px !important; text-align: center !important;
+        }
+        #d4e-ent .ent-story-text { font-size: 18px !important; color: #475569 !important; line-height: 1.9 !important; margin: 0 0 20px !important; text-align: center !important; }
+
+        /* FOUNDERS */
+        #d4e-ent .ent-founder {
+          display: flex !important; align-items: center !important; gap: 40px !important;
+          padding: 48px !important; border-radius: 28px !important;
+          background-color: #0F172A !important; border: 1px solid rgba(255,255,255,0.06) !important;
+        }
+        #d4e-ent .ent-founder-photo {
+          width: 180px !important; height: 180px !important;
+          border-radius: 24px !important; object-fit: cover !important; flex-shrink: 0 !important;
+          border: 3px solid transparent !important;
+        }
+        #d4e-ent .ent-founder-name { font-family: 'Space Grotesk', sans-serif !important; font-size: 26px !important; font-weight: 700 !important; color: #FFFFFF !important; margin-bottom: 4px !important; }
+        #d4e-ent .ent-founder-role { font-size: 16px !important; font-weight: 600 !important; margin-bottom: 14px !important; }
+        #d4e-ent .ent-founder-desc { font-size: 16px !important; color: rgba(255,255,255,0.55) !important; line-height: 1.7 !important; }
+        #d4e-ent .ent-founder-contact { margin-top: 16px !important; font-size: 14px !important; }
+        #d4e-ent .ent-founder-contact a { color: rgba(255,255,255,0.4) !important; text-decoration: none !important; transition: color 0.2s !important; }
+        #d4e-ent .ent-founder-contact a:hover { color: #00D4C8 !important; }
+
+        /* TIMELINE */
+        #d4e-ent .ent-tl-item { display: flex !important; gap: 24px !important; align-items: flex-start !important; margin-bottom: 32px !important; }
+        #d4e-ent .ent-tl-year {
+          font-family: 'Space Grotesk', sans-serif !important;
+          font-size: 20px !important; font-weight: 700 !important; color: #00D4C8 !important;
+          min-width: 64px !important; flex-shrink: 0 !important; padding-top: 2px !important;
+        }
+        #d4e-ent .ent-tl-text { font-size: 16px !important; color: #475569 !important; line-height: 1.6 !important; }
+        #d4e-ent .ent-tl-dot {
+          width: 12px !important; height: 12px !important; border-radius: 50% !important;
+          background-color: #00D4C8 !important; flex-shrink: 0 !important; margin-top: 6px !important;
+          box-shadow: 0 0 10px rgba(0,212,200,0.4) !important;
+        }
+
+        /* OFFICES */
+        #d4e-ent .ent-office {
+          background-color: #FFFFFF !important; border: 1.5px solid #E2E8F0 !important;
+          border-radius: 20px !important; padding: 32px 28px !important; text-align: center !important;
+          transition: all 0.3s !important;
+        }
+        #d4e-ent .ent-office:hover { border-color: #00D4C8 !important; transform: translateY(-4px) !important; box-shadow: 0 12px 32px rgba(0,0,0,0.06) !important; }
+        #d4e-ent .ent-office-city { font-family: 'Space Grotesk', sans-serif !important; font-size: 22px !important; font-weight: 700 !important; color: #0B0F19 !important; margin-bottom: 6px !important; }
+        #d4e-ent .ent-office-addr { font-size: 14px !important; color: #64748B !important; line-height: 1.5 !important; }
+
+        @media (max-width: 860px) {
+          #d4e-ent .ent-founder { flex-direction: column !important; text-align: center !important; padding: 36px 28px !important; }
+          #d4e-ent .ent-founder-photo { width: 140px !important; height: 140px !important; }
+          #d4e-ent .ent-gold-logo { height: 56px !important; top: 80px !important; right: 24px !important; }
+          #d4e-ent .ent-hero-inner { padding: 40px 24px !important; }
+          #d4e-ent .ent-offices-grid { grid-template-columns: 1fr !important; }
+          #d4e-ent .ent-founders-grid { flex-direction: column !important; }
         }
       `}</style>
 
-      <div id="d4e-entreprise">
-        {/* HEADER */}
-        <div style={{ padding: '110px 32px 52px', maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 24, flexWrap: 'wrap' }}>
-            <div>
-              <h1 className="ep-title">Deux passionnés, une conviction</h1>
-              <p className="ep-subtitle">
-                On a découvert Odoo en l'installant pour nous-mêmes. On l'a trouvé si bon qu'on en a fait notre métier.
-              </p>
+      <div id="d4e-ent">
+        {/* HERO FULL WIDTH */}
+        <div className="ent-hero">
+          <img src="/team-odoo-event.jpg" alt="Equipe D4E à Odoo Experience" className="ent-hero-img" />
+          <div className="ent-hero-overlay" />
+          <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" className="ent-gold-logo" />
+          <div className="ent-hero-inner">
+            <div className="ent-hero-title">
+              <span style={{ color: '#FFFFFF' }}>Deux passionnés,</span><br />
+              <span className="ent-gradient">une conviction.</span>
             </div>
-            <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{ height: 72, flexShrink: 0, marginTop: 8 }} />
+            <p className="ent-hero-sub">
+              On a découvert Odoo en l'installant pour nous-mêmes. On l'a trouvé si bon qu'on en a fait notre métier.
+            </p>
           </div>
         </div>
 
-        {/* HISTOIRE */}
-        <div style={{ padding: '0 32px 60px', maxWidth: 1280, margin: '0 auto' }}>
-          <div className="ep-card ep-dark">
-            <div className="ep-h2-white" style={{ marginBottom: 28 }}>Notre histoire</div>
-            <p className="ep-text-light">
-              Avant D4E, on faisait de l'intégration entre notre solution de gestion documentaire (GED) et les logiciels de nos clients. En 2017, on installe Odoo pour nos propres besoins. Le déclic est immédiat : cet ERP est pensé pour les PME, modulaire, ouvert, puissant.
-            </p>
-            <p className="ep-text-light">
-              On fonde Digital4Efficiency avec une idée simple : apporter aux PME suisses un outil qui tourne vraiment, intégré par des gens qui l'utilisent eux-mêmes au quotidien. Pas de la théorie. Du terrain.
-            </p>
-            <p className="ep-text-light" style={{ marginBottom: 36 }}>
-              Aujourd'hui, D4E est partenaire Odoo Gold, avec des bureaux à Genève, Sion et Barcelone, et des solutions métiers (ElvyBat, ElvyDoc, ElvyPrint) que personne d'autre ne propose.
-            </p>
-
-            <div className="ep-timeline">
-              <div className="ep-tl-item">
-                <div className="ep-tl-year">2017</div>
-                <div className="ep-tl-text">Création de D4E. Premiers pas avec Odoo pour nos propres besoins.</div>
-              </div>
-              <div className="ep-tl-item">
-                <div className="ep-tl-year">2019</div>
-                <div className="ep-tl-text">Partenaire Odoo officiel. Premiers clients en Suisse romande.</div>
-              </div>
-              <div className="ep-tl-item">
-                <div className="ep-tl-year">2022</div>
-                <div className="ep-tl-text">25 collaborateurs. Lancement d'ElvyBat pour le BTP.</div>
-              </div>
-              <div className="ep-tl-item">
-                <div className="ep-tl-year">2025</div>
-                <div className="ep-tl-text">Partenaire Odoo Gold. Bureau à Barcelone. Gamme Elvy complète.</div>
-              </div>
+        {/* STATS BAR */}
+        <div className="ent-stats ent-dark">
+          {[
+            { val: '2017', label: 'Création de D4E' },
+            { val: 'Gold', label: 'Partenaire Odoo' },
+            { val: '3', label: 'Bureaux en Europe' },
+            { val: '4+', label: 'Solutions Elvy' },
+          ].map((s, i) => (
+            <div key={i} className="ent-stat">
+              <div className="ent-stat-val">{s.val}</div>
+              <div className="ent-stat-label">{s.label}</div>
             </div>
+          ))}
+        </div>
+
+        {/* STORY */}
+        <div style={{ padding: '80px 32px', maxWidth: 1280, margin: '0 auto' }}>
+          <div className="ent-story">
+            <div className="ent-story-title">Notre histoire</div>
+            <p className="ent-story-text">
+              Avant D4E, on faisait de l'intégration entre notre solution de gestion documentaire et les logiciels de nos clients. En 2017, on installe Odoo pour nos propres besoins. Le déclic est immédiat.
+            </p>
+            <p className="ent-story-text">
+              Cet ERP est pensé pour les PME : modulaire, ouvert, puissant. On fonde Digital4Efficiency avec une idée simple : apporter aux PME suisses un outil qui tourne vraiment, intégré par des gens qui l'utilisent eux-mêmes au quotidien.
+            </p>
+            <p className="ent-story-text" style={{ fontWeight: 600, color: '#0B0F19' }}>
+              Pas de la théorie. Du terrain.
+            </p>
           </div>
         </div>
 
-        {/* ÉQUIPE */}
-        <div style={{ padding: '0 32px 60px', maxWidth: 1280, margin: '0 auto' }}>
-          <div className="ep-h2" style={{ marginBottom: 28 }}>Les fondateurs</div>
-          <div className="ep-team-grid" style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
-            <div className="ep-card ep-dark" style={{ flex: '1 1 400px' }}>
-              <div style={{ display: 'flex', gap: 24, alignItems: 'flex-start', flexWrap: 'wrap' }}>
-                <img src="/team-antonio-new.jpg" alt="Antonio Spedicato" className="ep-team-photo" />
-                <div style={{ flex: '1 1 200px' }}>
-                  <div className="ep-team-name">Antonio Spedicato</div>
-                  <div className="ep-team-role" style={{ color: '#00D4C8' }}>Fondateur &amp; Commercial</div>
-                  <p className="ep-team-desc">
-                    Le contact client, la vision produit, la stratégie. Antonio pilote D4E côté business et s'assure que chaque projet répond à un vrai besoin terrain.
-                  </p>
-                  <div style={{ display: 'flex', gap: 12, marginTop: 16 }}>
-                    <a href="tel:+41764344595" style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>+41 76 434 45 95</a>
-                    <span style={{ color: 'rgba(255,255,255,0.2)' }}>·</span>
-                    <a href="mailto:antonio@d4e.cool" style={{ fontSize: 14, color: '#00D4C8', textDecoration: 'none' }}>antonio@d4e.cool</a>
-                  </div>
+        {/* FOUNDERS */}
+        <div style={{ padding: '0 32px 80px', maxWidth: 1280, margin: '0 auto' }}>
+          <div className="ent-founders-grid" style={{ display: 'flex', gap: 28, flexWrap: 'wrap' }}>
+            <div className="ent-founder ent-dark" style={{ flex: '1 1 440px' }}>
+              <img src="/team-antonio-new.jpg" alt="Antonio Spedicato" className="ent-founder-photo" style={{ borderColor: '#00D4C8' }} />
+              <div>
+                <div className="ent-founder-name">Antonio Spedicato</div>
+                <div className="ent-founder-role" style={{ color: '#00D4C8' }}>Fondateur &amp; Commercial</div>
+                <p className="ent-founder-desc">Le contact client, la vision produit, la stratégie. Antonio pilote D4E côté business et s'assure que chaque projet répond à un vrai besoin terrain.</p>
+                <div className="ent-founder-contact">
+                  <a href="tel:+41764344595">+41 76 434 45 95</a>
+                  <span style={{ color: 'rgba(255,255,255,0.2)', margin: '0 10px' }}>·</span>
+                  <a href="mailto:antonio@d4e.cool">antonio@d4e.cool</a>
                 </div>
               </div>
             </div>
 
-            <div className="ep-card ep-dark" style={{ flex: '1 1 400px' }}>
-              <div style={{ display: 'flex', gap: 24, alignItems: 'flex-start', flexWrap: 'wrap' }}>
-                <img src="/team-alexandre.jpg" alt="Alexandre" className="ep-team-photo" />
-                <div style={{ flex: '1 1 200px' }}>
-                  <div className="ep-team-name">Alexandre</div>
-                  <div className="ep-team-role" style={{ color: '#F59E0B' }}>Co-fondateur &amp; Technique</div>
-                  <p className="ep-team-desc">
-                    L'architecture, le code, les intégrations complexes. Alexandre est le pilier technique de D4E et le cerveau derrière les solutions Elvy.
-                  </p>
-                </div>
+            <div className="ent-founder ent-dark" style={{ flex: '1 1 440px' }}>
+              <img src="/team-alexandre.jpg" alt="Alexandre" className="ent-founder-photo" style={{ borderColor: '#F59E0B' }} />
+              <div>
+                <div className="ent-founder-name">Alexandre</div>
+                <div className="ent-founder-role" style={{ color: '#F59E0B' }}>Co-fondateur &amp; Technique</div>
+                <p className="ent-founder-desc">L'architecture, le code, les intégrations complexes. Alexandre est le pilier technique de D4E et le cerveau derrière les solutions Elvy.</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* BUREAUX */}
-        <div style={{ padding: '0 32px', maxWidth: 1280, margin: '0 auto' }}>
-          <div className="ep-cols" style={{ display: 'flex', gap: 28, flexWrap: 'wrap' }}>
-            <div className="ep-card-white" style={{ flex: '1 1 360px' }}>
-              <div className="ep-h2" style={{ marginBottom: 24 }}>Nos bureaux</div>
-              <div className="ep-loc">
-                <div className="ep-loc-dot" style={{ backgroundColor: '#00D4C8' }} />
-                <div>
-                  <div className="ep-loc-city">Genève</div>
-                  <div className="ep-loc-addr">Chemin du Pavillon 2, 1218 Le Grand-Saconnex</div>
-                </div>
-              </div>
-              <div className="ep-loc">
-                <div className="ep-loc-dot" style={{ backgroundColor: '#F59E0B' }} />
-                <div>
-                  <div className="ep-loc-city">Sion</div>
-                  <div className="ep-loc-addr">Place du Midi 48, 1950 Sion</div>
-                </div>
-              </div>
-              <div className="ep-loc">
-                <div className="ep-loc-dot" style={{ backgroundColor: '#8B5CF6' }} />
-                <div>
-                  <div className="ep-loc-city">Barcelone</div>
-                  <div className="ep-loc-addr">Espagne</div>
-                </div>
-              </div>
+        {/* TIMELINE */}
+        <div style={{ padding: '0 32px 80px', maxWidth: 800, margin: '0 auto' }}>
+          <div className="ent-story-title">Nos étapes clés</div>
+          {[
+            { year: '2017', text: 'Création de D4E. On installe Odoo pour nos propres besoins. Le déclic.' },
+            { year: '2019', text: 'Partenaire Odoo officiel. Premiers clients en Suisse romande.' },
+            { year: '2022', text: '25 collaborateurs. Lancement d\'ElvyBat pour le secteur BTP.' },
+            { year: '2025', text: 'Partenaire Odoo Gold. Bureau à Barcelone. Gamme Elvy complète.' },
+          ].map((t, i) => (
+            <div key={i} className="ent-tl-item">
+              <div className="ent-tl-year">{t.year}</div>
+              <div className="ent-tl-dot" />
+              <div className="ent-tl-text">{t.text}</div>
             </div>
+          ))}
+        </div>
 
-            <div className="ep-card-white" style={{ flex: '1 1 360px' }}>
-              <div className="ep-h2" style={{ marginBottom: 24 }}>En chiffres</div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
-                {[
-                  { val: '2017', label: 'Année de création' },
-                  { val: 'Gold', label: 'Partenaire Odoo' },
-                  { val: '3', label: 'Bureaux en Europe' },
-                  { val: '4+', label: 'Solutions Elvy' },
-                ].map((s, i) => (
-                  <div key={i} style={{ textAlign: 'center', padding: 20, backgroundColor: '#F0FDF9', borderRadius: 16 }}>
-                    <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 700, color: '#00D4C8' }}>{s.val}</div>
-                    <div style={{ fontSize: 13, color: '#64748B', marginTop: 4 }}>{s.label}</div>
-                  </div>
-                ))}
+        {/* OFFICES */}
+        <div style={{ padding: '0 32px 100px', maxWidth: 1280, margin: '0 auto' }}>
+          <div className="ent-story-title">Nos bureaux</div>
+          <div className="ent-offices-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+            {[
+              { city: 'Genève', addr: 'Chemin du Pavillon 2\n1218 Le Grand-Saconnex', dot: '#00D4C8' },
+              { city: 'Sion', addr: 'Place du Midi 48\n1950 Sion', dot: '#F59E0B' },
+              { city: 'Barcelone', addr: 'Espagne', dot: '#8B5CF6' },
+            ].map((o, i) => (
+              <div key={i} className="ent-office">
+                <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: o.dot, margin: '0 auto 16px', boxShadow: `0 0 12px ${o.dot}50` }} />
+                <div className="ent-office-city">{o.city}</div>
+                <div className="ent-office-addr">{o.addr.split('\n').map((l, j) => <span key={j}>{l}<br/></span>)}</div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
