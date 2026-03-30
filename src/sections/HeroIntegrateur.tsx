@@ -167,8 +167,6 @@ export function HeroIntegrateur() {
           padding: 0;
           transition: all 0.4s ease;
         }
-  @media (max-width: 768px) { .hero-badge-odoo { display: none !important; } }
-  @media (max-width: 767px) { .hero-badge-odoo { display: none !important; } }
         .hero-badge-odoo {
           position: absolute;
           top: 88px;
@@ -301,3 +299,8 @@ export function HeroIntegrateur() {
     </>
   );
 }
+  @media (max-width: 768px) {
+    .hero-badge-odoo {
+      display: none !important;
+    }
+  }
