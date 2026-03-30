@@ -38,7 +38,7 @@ const EntreprisePage: React.FC = () => {
       <div id="d4e-entreprise">
         {/* HEADER */}
         <div style={{ padding: '110px 32px 52px', maxWidth: 1280, margin: '0 auto' }}>
-          <div className="ep-badge">🏆 Partenaire Odoo Gold</div>
+          <img src="/odoo-gold-badge.png" alt="Odoo Gold Partner" style={{ height: 56, marginBottom: 28 }} />
           <h1 className="ep-title">Deux passionnés, une conviction</h1>
           <p className="ep-subtitle">
             On a découvert Odoo en l'installant pour nous-mêmes. On l'a trouvé si bon qu'on en a fait notre métier.
