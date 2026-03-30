@@ -57,8 +57,6 @@ const Footer: React.FC = () => {
         #d4e-footer .ft-bottom-right { display: flex !important; align-items: center !important; gap: 8px !important; font-size: 13px !important; color: rgba(255,255,255,0.4) !important; }
         #d4e-footer .ft-loc-dot { width: 6px !important; height: 6px !important; border-radius: 50% !important; background-color: #00D4C8 !important; display: inline-block !important; margin-right: 6px !important; }
         #d4e-footer .ft-odoo-badge { height: 20px !important; opacity: 0.5 !important; }
-        #d4e-footer .ft-bottom a { color: rgba(255,255,255,0.4) !important; text-decoration: none !important; font-size: 13px !important; }
-        #d4e-footer .ft-bottom a:hover { color: #00D4C8 !important; }
         @media (max-width: 960px) {
           #d4e-footer .ft-grid { grid-template-columns: 1fr 1fr !important; gap: 36px !important; }
           #d4e-footer { padding: 56px 32px 0 !important; }
@@ -76,7 +74,7 @@ const Footer: React.FC = () => {
               <img src="/picto-d4e.png" alt="D4E" style={{ width: 36, height: 36, borderRadius: 8 }} />
               <span className="ft-brand">Digital4Efficiency</span>
             </div>
-            <p className="ft-tagline">Partenaire Odoo Gold. Experts en transformation digitale depuis 2019.</p>
+            <p className="ft-tagline">Partenaire Odoo Gold. Intégrateur suisse depuis 2017.</p>
             <div className="ft-contact-item">
               <svg className="ft-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <a href="tel:+41582551115" className="ft-contact-link">+41 (0)58 255 11 15</a>
@@ -94,14 +92,13 @@ const Footer: React.FC = () => {
 
           <div>
             <div className="ft-heading">Services</div>
-            <a className="ft-link" href="#/odoo">Implémentation</a>
-            <a className="ft-link" href="#/odoo">Personnalisation</a>
-            <a className="ft-link" href="#/odoo">Formation</a>
+            <a className="ft-link" href="#/odoo">Odoo</a>
+            <a className="ft-link" href="#/tarifs">Nos offres</a>
             <a className="ft-link" href="#/support">Support</a>
           </div>
 
           <div>
-            <div className="ft-heading">Produits Elvy</div>
+            <div className="ft-heading">Solutions Elvy</div>
             <a className="ft-link" href="#/elvybat">ElvyBat</a>
             <a className="ft-link" href="#/elvyprint">ElvyPrint</a>
             <a className="ft-link" href="#/elvyinsurance">ElvyAssurance</a>
@@ -110,9 +107,8 @@ const Footer: React.FC = () => {
 
           <div>
             <div className="ft-heading">Entreprise</div>
-            <a className="ft-link" href="#/odoo">À propos</a>
-            <a className="ft-link" href="#/tarifs">Tarifs</a>
-            <a className="ft-link" href="#/support">Support client</a>
+            <a className="ft-link" href="#/entreprise">Qui sommes-nous</a>
+            <a className="ft-link" href="#/jobs">Jobs</a>
           </div>
 
           <div>
@@ -131,7 +127,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="ft-bottom-right">
             <span>Partenaire</span>
-            <img src="https://odoo.com/web/image/website/1/logo" alt="Odoo" className="ft-odoo-badge" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+            <img src="/odoo-gold-partner.svg" alt="Odoo Gold" className="ft-odoo-badge" />
           </div>
         </div>
       </footer>
