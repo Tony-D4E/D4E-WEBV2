@@ -98,28 +98,28 @@ const Footer: React.FC = () => {
 
           <div>
             <div className="ft-heading">Services</div>
-            <a className="ft-link" href="#/odoo">Odoo</a>
-            <a className="ft-link" href="#/tarifs">Nos offres</a>
-            <a className="ft-link" href="#/support">Support</a>
+            <a className="ft-link" href="/odoo">Odoo</a>
+            <a className="ft-link" href="/tarifs">Nos offres</a>
+            <a className="ft-link" href="/support">Support</a>
           </div>
 
           <div>
             <div className="ft-heading">Solutions Elvy</div>
-            <a className="ft-link" href="#/elvybat">ElvyBat</a>
-            <a className="ft-link" href="#/elvyprint">ElvyPrint</a>
-            <a className="ft-link" href="#/elvyinsurance">ElvyAssurance</a>
-            <a className="ft-link" href="#/elvyeduca">ElvyEduca</a>
+            <a className="ft-link" href="/elvybat">ElvyBat</a>
+            <a className="ft-link" href="/elvyprint">ElvyPrint</a>
+            <a className="ft-link" href="/elvyinsurance">ElvyAssurance</a>
+            <a className="ft-link" href="/elvyeduca">ElvyEduca</a>
           </div>
 
           <div>
             <div className="ft-heading">Entreprise</div>
-            <a className="ft-link" href="#/entreprise">Qui sommes-nous</a>
-            <a className="ft-link" href="#/jobs">Jobs</a>
+            <a className="ft-link" href="/entreprise">Qui sommes-nous</a>
+            <a className="ft-link" href="/jobs">Jobs</a>
           </div>
 
           <div>
             <div className="ft-heading">Légal</div>
-            <a className="ft-link" href="#/cgu">Conditions générales</a>
+            <a className="ft-link" href="/cgu">Conditions générales</a>
           </div>
         </div>
 
