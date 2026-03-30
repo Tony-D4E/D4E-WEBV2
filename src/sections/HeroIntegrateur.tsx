@@ -297,8 +297,6 @@ export function HeroIntegrateur() {
     </>
   );
 }
-  @media (max-width: 768px) {
     .hero-badge-odoo {
       display: none !important;
-    }
   }
