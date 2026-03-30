@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const Support: React.FC = () => {
-  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     prenom: '', nom: '', email: '', entreprise: '',
     module: '', urgence: '', description: ''
