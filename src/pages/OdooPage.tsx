@@ -222,35 +222,35 @@ export default function OdooPage() {
   }, [ind]);
 
   const INDS = {
-    fi: { emo:'🏛', icon:'BarChart3', title:'Finance', sub:'Reporting, conformite, clotures rapides', gold:false,
+    fi: { emo:'ð', icon:'BarChart3', title:'Finance', sub:'Reporting, conformite, clotures rapides', gold:false,
       body:'Les directions financieres passent encore trop de temps sur des taches que la machine peut faire. <strong style={{color:\'#fff\'}}>Odoo coupe dans tout ca.</strong> Reconciliation bancaire automatique, clotures en quelques heures, chaque chiffre remonte en temps reel.',
       checks:['Reconciliation bancaire automatique par IA','Multi-devises, multi-societes, multi-taxes','KPIs financiers en temps reel, sans export','Packages de localisation fiscale par pays'],
       mods:[{n:'Comptabilite',t:'Core',d:'Facturation, taxes, clotures, audit trail'},{n:'Analytique BI',t:'Reporting',d:'Centres de profit, reporting multidimensionnel'},{n:'Tresorerie',t:'Finance',d:'Previsions cash-flow, paiements'},{n:'Notes de frais',t:'RH',d:'Validation mobile, remboursements auto'}]},
-    sv: { emo:'🧩', icon:'Wrench', title:'Services', sub:'Projets, temps, facturation sans fuite', gold:false,
+    sv: { emo:'ð§©', icon:'Wrench', title:'Services', sub:'Projets, temps, facturation sans fuite', gold:false,
       body:'Les ESN, cabinets et agences ont un ennemi commun : <strong style={{color:\'#fff\'}}>les heures qui s\'evaporent sans etre facturees.</strong> Odoo Project relie tout dans une seule boucle.',
       checks:['Timesheets lies directement a la facturation','Vue Gantt, Kanban, liste sur chaque mission','Portail client pour validation des livrables','Rentabilite par projet, consultant, client'],
       mods:[{n:'Project',t:'Core',d:'Taches, jalons, dependances, vues multiples'},{n:'Timesheets',t:'Temps',d:'Saisie, validation, lien facturation'},{n:'Helpdesk',t:'Support',d:'Tickets, SLA, satisfaction client'},{n:'Field Service',t:'Terrain',d:'Interventions, planning mobile'}]},
-    bt: { emo:'🏗', icon:'HardHat', title:'Construction BTP', sub:'ElvyBat, notre solution maison sur Odoo', gold:true,
+    bt: { emo:'ð', icon:'HardHat', title:'Construction BTP', sub:'ElvyBat, notre solution maison sur Odoo', gold:true,
       body:'Le BTP c\'est notre terrain de jeu depuis le debut. On a construit ElvyBat parce qu\'on n\'a pas trouve une solution qui comprenait vraiment les enjeux d\'un chef de chantier. <strong style={{color:\'#fff\'}}>1 400+ chantiers geres. Ce n\'est pas de la theorie.</strong>',
       checks:['Rentabilite chantier visible en temps reel','Pointage terrain mobile, meme hors ligne','IA vocale multilingue pour bons de regie','Chiffrage integre, devis en quelques clics'],
       mods:[{n:'ElvyBat',t:'Coeur',d:'Gestion de chantiers, marges, plannings'},{n:'ElvyCalc',t:'Chiffrage',d:'Metres, estimations, devis automatises'},{n:'ElvyTime',t:'Pointage',d:'Suivi des equipes, heures chantier'},{n:'ElvyService IA',t:'IA',d:'Rapports vocaux, bons de regie, facturation'}]},
-    in: { emo:'⚙️', icon:'Factory', title:'Industrie', sub:'Production, supply chain, tracabilite', gold:false,
+    in: { emo:'âï¸', icon:'Factory', title:'Industrie', sub:'Production, supply chain, tracabilite', gold:false,
       body:'Odoo Manufacturing connecte nomenclature, ordres de fab et controle qualite dans un flux unique. <strong style={{color:\'#fff\'}}>La tracabilite devient un avantage, pas une contrainte.</strong>',
       checks:['MRP et ordonnancement intelligent des ateliers','Nomenclatures multicouches, suivi composants','Controle qualite et tracabilite lot/serie','Maintenance preventive et predictive'],
       mods:[{n:'Manufacturing',t:'Core',d:'Ordres de fabrication, BOM, suivi atelier'},{n:'Maintenance',t:'GMAO',d:'Interventions preventives, equipements'},{n:'Qualite',t:'Conformite',d:'Points de controle, non-conformites'},{n:'PLM',t:'Produit',d:'Cycle de vie produit, versions, ECO'}]},
-    co: { emo:'🛒', icon:'ShoppingCart', title:'Commerce', sub:'Multi-canal, stocks, relation client', gold:true,
+    co: { emo:'ð', icon:'ShoppingCart', title:'Commerce', sub:'Multi-canal, stocks, relation client', gold:true,
       body:'Caisse, e-commerce, marketplace : un seul back-office. <strong style={{color:\'#fff\'}}>Quand un produit est epuise en boutique, il disparait automatiquement du site.</strong>',
       checks:['Caisse, site web, marketplace unifies','Programme de fidelite multicanal integre','Gestion des retours et SAV automatisee','Rapports de ventes temps reel par canal'],
       mods:[{n:'Point of Sale',t:'Retail',d:'Caisse tactile, paiements, remises'},{n:'eCommerce',t:'Digital',d:'Boutique native, SEO, passerelles paiement'},{n:'CRM',t:'Fidelite',d:'Segmentation, campagnes, historique'},{n:'Inventory',t:'Stock',d:'Stock temps reel, reapprovisionnement auto'}]},
-    lo: { emo:'🚛', icon:'Truck', title:'Logistique', sub:'Flux, entrepots, expeditions sans friction', gold:false,
+    lo: { emo:'ð', icon:'Truck', title:'Logistique', sub:'Flux, entrepots, expeditions sans friction', gold:false,
       body:'La logistique, c\'est la guerre contre le temps perdu. <strong style={{color:\'#fff\'}}>On a vu des equipes gagner 2 heures par jour</strong> rien qu\'avec l\'optimisation du picking dans Odoo.',
       checks:['Picking optimise par route dans l\'entrepot','Multi-entrepots, cross-docking, dropshipping','Integration transporteurs, etiquettes auto','Tracabilite par lot, serie, date peremption'],
       mods:[{n:'Inventory',t:'Core',d:'Gestion de stock, mouvements, valorisation'},{n:'Barcode',t:'Scan',d:'Picking par scan, reception, inventaires'},{n:'Delivery',t:'Transport',d:'FedEx, UPS, DHL, La Poste nativement'},{n:'Purchase',t:'Achats',d:'Commandes fournisseurs, receptions'}]},
-    sa: { emo:'🩺', icon:'Heart', title:'Sante', sub:'Normes, tracabilite, conformite sans effort', gold:false,
+    sa: { emo:'ð©º', icon:'Heart', title:'Sante', sub:'Normes, tracabilite, conformite sans effort', gold:false,
       body:'Dans le secteur de la sante, l\'erreur n\'est pas une option. <strong style={{color:\'#fff\'}}>La conformite reglementaire devient automatique</strong> plutot qu\'un audit de 3 jours.',
       checks:['Tracabilite complete par lot et numero de serie','Alertes automatiques sur dates de peremption','Gestion des recalls produit en quelques clics','Conformite reglementaire documentee'],
       mods:[{n:'Inventory + Lots',t:'Traca',d:'FEFO, numeros de serie, rappels auto'},{n:'Qualite',t:'Conformite',d:'Points de controle, non-conformites'},{n:'Facturation',t:'Admin',d:'Tiers payant, devis medicaux'},{n:'Portail client',t:'Digital',d:'Documents partages, historique'}]},
-    ed: { emo:'📚', icon:'GraduationCap', title:'Education', sub:'Inscriptions, plannings, suivi apprenants', gold:false,
+    ed: { emo:'ð', icon:'GraduationCap', title:'Education', sub:'Inscriptions, plannings, suivi apprenants', gold:false,
       body:'Odoo unifie inscriptions, plannings, suivi et facturation dans un portail unique. <strong style={{color:\'#fff\'}}>Les relances de paiement deviennent automatiques.</strong>',
       checks:['Inscriptions en ligne et suivi des paiements','Plannings de cours, salles, formateurs','Portail apprenant, supports de cours, quiz','Tableaux de bord progression et assiduite'],
       mods:[{n:'eLearning',t:'Core',d:'Cours, quiz, certifications, progression'},{n:'Events',t:'Planif.',d:'Sessions, inscriptions, rappels'},{n:'Facturation',t:'Admin',d:'Inscriptions payantes, relances, OPCO'},{n:'Employes',t:'RH',d:'Gestion formateurs, contrats, planning RH'}]},
@@ -504,7 +504,7 @@ export default function OdooPage() {
               </div>
               <div className="aos d4" style={{display:'flex',gap:14,flexWrap:'wrap'}}>
                 <a href="/" onClick={(e)=>{e.preventDefault();window.location.href='/';setTimeout(()=>{document.getElementById('contact-form')?.scrollIntoView({behavior:'smooth'});},400);}} className="btn-p">Discuter de mon projet</a>
-                <a href="/#/elvybat" style={{display:'inline-flex',alignItems:'center',gap:8,padding:'18px 40px',backgroundColor:'#F59E0B',color:'#FFFFFF',fontWeight:800,fontSize:17,textDecoration:'none',borderRadius:14,boxShadow:'0 6px 24px rgba(245,158,11,0.35)',transition:'all .2s'}}>Voir ElvyBat pour le BTP</a>
+                <a href="/elvybat" style={{display:'inline-flex',alignItems:'center',gap:8,padding:'18px 40px',backgroundColor:'#F59E0B',color:'#FFFFFF',fontWeight:800,fontSize:17,textDecoration:'none',borderRadius:14,boxShadow:'0 6px 24px rgba(245,158,11,0.35)',transition:'all .2s'}}>Voir ElvyBat pour le BTP</a>
               </div>
             </div>
             <div className="aos d2 ant-card" style={{background:'#F0FDF9',border:'1px solid rgba(0,212,200,0.25)',borderTop:'4px solid #00D4C8',borderRadius:20,padding:'36px 28px',display:'flex',flexDirection:'column',alignItems:'center',gap:18,textAlign:'center',position:'sticky',top:100}}>
