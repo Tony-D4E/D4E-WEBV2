@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-/* ââ Data ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Data Ã¢ÂÂÃ¢ÂÂ */
 const solutions = [
   { to: '/elvybat',       label: 'ElvyBat',       desc: 'Construction & chantiers', accent: '#00D4C8' },
   { to: '/elvyprint',     label: 'ElvyPrint',     desc: 'Impression & production',  accent: '#F59E0B' },
@@ -10,7 +10,7 @@ const solutions = [
   { to: '/elvyinsurance', label: 'ElvyInsurance', desc: 'Assurance & courtage',     accent: '#3B82F6' },
 ];
 
-/* ââ Component ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Component Ã¢ÂÂÃ¢ÂÂ */
 export function Navigation() {
   const [isScrolled, setIsScrolled]       = useState(false);
   const [isMobileOpen, setMobileOpen]     = useState(false);
@@ -83,7 +83,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
 
-          {/* ââ Logo ââ */}
+          {/* Ã¢ÂÂÃ¢ÂÂ Logo Ã¢ÂÂÃ¢ÂÂ */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
               src="/picto-d4e.png"
@@ -95,7 +95,7 @@ export function Navigation() {
             </span>
           </Link>
 
-          {/* ââ Desktop nav ââ */}
+          {/* Ã¢ÂÂÃ¢ÂÂ Desktop nav Ã¢ÂÂÃ¢ÂÂ */}
           <nav className="hidden lg:flex items-center gap-1">
 
             {/* Odoo */}
@@ -201,7 +201,7 @@ export function Navigation() {
             </Link>
           </nav>
 
-          {/* ââ CTA desktop ââ */}
+          {/* Ã¢ÂÂÃ¢ÂÂ CTA desktop Ã¢ÂÂÃ¢ÂÂ */}
           <div className="hidden lg:block">
             <button
               onClick={() => goAnchor('contact-form')}
@@ -211,7 +211,7 @@ export function Navigation() {
             </button>
           </div>
 
-          {/* ââ Burger mobile ââ */}
+          {/* Ã¢ÂÂÃ¢ÂÂ Burger mobile Ã¢ÂÂÃ¢ÂÂ */}
           <button
             className="lg:hidden p-2 rounded-xl hover:bg-slate-100 transition-colors"
             onClick={() => setMobileOpen(!isMobileOpen)}
@@ -224,7 +224,7 @@ export function Navigation() {
           </button>
         </div>
 
-        {/* ââ Mobile menu ââ */}
+        {/* Ã¢ÂÂÃ¢ÂÂ Mobile menu Ã¢ÂÂÃ¢ÂÂ */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
             isMobileOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
