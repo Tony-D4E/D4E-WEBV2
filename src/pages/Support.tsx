@@ -180,13 +180,17 @@ const Support: React.FC = () => {
       <div id="d4e-support">
         {/* HEADER */}
         <div style={{ padding: '110px 32px 52px', maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 28 }}>
-            <span className="sp-dot" />
-            <span className="sp-status-text">Support disponible · Lun-Ven 8h-18h</span>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 24, flexWrap: 'wrap' }}>
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 28 }}>
+                <span className="sp-dot" />
+                <span className="sp-status-text">Support disponible · Lun-Ven 8h-18h</span>
+              </div>
+              <h1 className="sp-title">Support client</h1>
+              <p className="sp-subtitle">Ouvrez un ticket, suivez vos demandes ou préparez une session à distance.</p>
+            </div>
+            <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{ height: 72, flexShrink: 0, marginTop: 8 }} />
           </div>
-          <img src="/odoo-gold-badge.png" alt="Odoo Gold Partner" style={{ height: 56, marginBottom: 24 }} />
-          <h1 className="sp-title">Support client</h1>
-          <p className="sp-subtitle">Ouvrez un ticket, suivez vos demandes ou préparez une session à distance.</p>
         </div>
 
         {/* LAYOUT */}
