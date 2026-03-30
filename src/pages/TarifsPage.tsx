@@ -61,11 +61,15 @@ const TarifsPage: React.FC = () => {
       <div id="d4e-tarifs">
         {/* HEADER */}
         <div style={{ padding: '110px 32px 48px', maxWidth: 1280, margin: '0 auto' }}>
-          <img src="/odoo-gold-badge.png" alt="Odoo Gold Partner" style={{ height: 56, marginBottom: 24 }} />
-          <h1 className="tp-title">Starter Pack Odoo</h1>
-          <p className="tp-subtitle">
-            Votre gestion opérationnelle en 2 semaines. Sans complexité. Sans projet lourd.
-          </p>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 24, flexWrap: 'wrap' }}>
+            <div>
+              <h1 className="tp-title">Starter Pack Odoo</h1>
+              <p className="tp-subtitle">
+                Votre gestion opérationnelle en 2 semaines. Sans complexité. Sans projet lourd.
+              </p>
+            </div>
+            <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{ height: 72, flexShrink: 0, marginTop: 8 }} />
+          </div>
         </div>
 
         {/* HERO STARTER PACK */}
