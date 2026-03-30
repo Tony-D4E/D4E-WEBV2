@@ -5,8 +5,12 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+
   base: './',
   plugins: [inspectAttr(), react()],
+  build: {
+    target: ['es2019', 'chrome80']
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
