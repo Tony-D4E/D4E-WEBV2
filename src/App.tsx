@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Navigation } from './sections/Navigation';
 import { WhatsAppWidget } from './components/WhatsAppWidget';
 import { CookieBanner } from './components/CookieBanner';
+import Footer from './components/Footer';
 import { Home } from './pages/Home';
 import { Elvy } from './pages/Elvy';
 import OdooPage from './pages/OdooPage';
@@ -11,6 +12,7 @@ import ElvyInsurancePage from './pages/ElvyInsurancePage';
 import ElvyEducaPage from './pages/ElvyEducaPage';
 import { TarifsPage } from './pages/TarifsPage';
 import { Support } from './pages/Support';
+import CguPage from './pages/CguPage';
 import { NotFound } from './pages/NotFound';
 
 import { useEffect } from 'react';
@@ -38,8 +40,10 @@ function App() {
           <Route path="/elvyeduca"     element={<ElvyEducaPage />} />
           <Route path="/tarifs"        element={<TarifsPage />} />
           <Route path="/support"       element={<Support />} />
+          <Route path="/cgu"           element={<CguPage />} />
           <Route path="*"              element={<NotFound />} />
         </Routes>
+        <Footer />
         <WhatsAppWidget
           phoneNumber="41764344595"
           message="Bonjour Digital4Efficiency, j'ai une question concernant vos services Odoo."
