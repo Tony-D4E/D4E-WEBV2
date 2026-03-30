@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { MapPin, ArrowRight } from 'lucide-react';
+import { Award, MapPin, ArrowRight } from 'lucide-react';
 
 const slides = [
   {
@@ -197,10 +197,10 @@ export function HeroIntegrateur() {
             font-size: 0.95rem;
           }
           .hero-badge-odoo {
+            display: none !important;
             top: 72px;
             right: 16px;
             padding: 8px 12px;
-            display: none !important;
           }
         }
       `}</style>
@@ -300,8 +300,3 @@ export function HeroIntegrateur() {
     </>
   );
 }
-  @media (max-width: 768px) {
-    .hero-badge-odoo {
-      display: none !important;
-    }
-  }
