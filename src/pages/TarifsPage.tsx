@@ -61,6 +61,7 @@ const TarifsPage: React.FC = () => {
       <div id="d4e-tarifs">
         {/* HEADER */}
         <div style={{ padding: '110px 32px 48px', maxWidth: 1280, margin: '0 auto' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, backgroundColor: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.3)', borderRadius: 100, padding: '8px 20px', fontSize: 14, fontWeight: 600, color: '#F59E0B', marginBottom: 24 }}>🏆 Partenaire Odoo Gold</div>
           <h1 className="tp-title">Starter Pack Odoo</h1>
           <p className="tp-subtitle">
             Votre gestion opérationnelle en 2 semaines. Sans complexité. Sans projet lourd.
