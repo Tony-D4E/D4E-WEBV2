@@ -1,5 +1,4 @@
 import { useContent } from '../hooks/useContent';
-import { Footer } from '../sections/Footer';
 import { Button } from '@/components/ui/button';
 import { 
   Award, ArrowRight, MapPin, CheckCircle, 
@@ -75,7 +74,7 @@ export function HomeSimplified() {
         </div>
       </section>
 
-      {/* NOS MÉTIERS */}
+      {/* NOS MÃTIERS */}
       <section className="py-24 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -83,7 +82,7 @@ export function HomeSimplified() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            {/* Intégrateur */}
+            {/* IntÃ©grateur */}
             <div className="p-8 bg-[#111827] rounded-3xl border border-white/10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#F59E0B] to-[#FBBF24] flex items-center justify-center">
@@ -111,7 +110,7 @@ export function HomeSimplified() {
               </Button>
             </div>
 
-            {/* Éditeur */}
+            {/* Ãditeur */}
             <div className="p-8 bg-[#111827] rounded-3xl border border-white/10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#00B4A6] to-[#06B6D4] flex items-center justify-center">
@@ -135,7 +134,7 @@ export function HomeSimplified() {
                 ))}
               </div>
               <Button asChild variant="outline" className="w-full border-white/20 text-white hover:bg-white/10 rounded-xl">
-                <a href="/elvy">Découvrir la gamme <ArrowRight className="ml-2 h-5 w-5" /></a>
+                <a href="/elvy">DÃ©couvrir la gamme <ArrowRight className="ml-2 h-5 w-5" /></a>
               </Button>
             </div>
           </div>
@@ -194,7 +193,7 @@ export function HomeSimplified() {
         </div>
       </section>
 
-      {/* ÉQUIPE */}
+      {/* ÃQUIPE */}
       <section className="py-24 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -233,7 +232,7 @@ export function HomeSimplified() {
       <section className="py-24 bg-[#0B0F19]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-black text-white mb-4">Questions fréquentes</h2>
+            <h2 className="text-4xl font-black text-white mb-4">Questions frÃ©quentes</h2>
           </div>
 
           <div className="space-y-3">
@@ -268,8 +267,6 @@ export function HomeSimplified() {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </main>
+</main>
   );
 }
