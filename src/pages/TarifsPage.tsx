@@ -1,285 +1,111 @@
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Headphones, 
-  GraduationCap,
-  Clock,
-  MessageCircle,
-  Award
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React from 'react';
 
-const starterPackFeatures = [
-  'CRM & Pipeline commercial',
-  'Devis & Facturation',
-  'ComptabilitÃ© Suisse',
-  'Site Web inclus',
-  'Configuration initiale',
-  'Formation utilisateur',
-  'Support 30 jours',
-];
+const TarifsPage: React.FC = () => {
+  const scrollToContact = () => {
+    document.getElementById('tarif-contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-const supportPricing = [
-  { hours: '5h', price: '750', unit: 'CHF' },
-  { hours: '10h', price: '1\'400', unit: 'CHF' },
-  { hours: '20h', price: '2\'600', unit: 'CHF' },
-];
-
-const formationPricing = [
-  { duration: '1/2 journÃ©e', price: '600', unit: 'CHF' },
-  { duration: '1 journÃ©e', price: '1\'100', unit: 'CHF' },
-  { duration: 'Sur mesure', price: 'Sur devis', unit: '' },
-];
-
-export function TarifsPage() {
   return (
-    <main className="min-h-screen bg-[#0B0F19] pt-20">
-      {/* Hero Section */}
-      <section className="py-24 lg:py-32 bg-[#0F172A] relative overflow-hidden">
-        <div className="blob-glow w-[800px] h-[800px] bg-[#00D4C8]/20 top-0 left-1/4" />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00D4C8]/10 rounded-full border border-[#00D4C8]/30 mb-6">
-              <Zap className="h-5 w-5 text-[#00D4C8]" />
-              <span className="text-sm font-bold text-[#00D4C8]">Tarifs transparents</span>
-            </div>
-            
-            <h1 className="text-5xl sm:text-6xl font-black text-white mb-6 tracking-tight">
-              Nos <span className="text-gradient">tarifs</span>
-            </h1>
-            
-            <p className="text-xl text-gray-400">
-              Des offres claires et sans surprise. Choisissez ce qui correspond Ã  vos besoins.
-            </p>
-          </div>
-        </div>
-      </section>
+    <>
+      <style>{`
+        #d4e-tarifs, #d4e-tarifs * { box-sizing: border-box !important; }
+        #d4e-tarifs { font-family: 'Inter', sans-serif !important; background-color: #F0FDF9 !important; min-height: 100vh !important; padding-bottom: 100px !important; }
+        #d4e-tarifs .tp-dark, #d4e-tarifs .tp-dark * { color: #FFFFFF !important; }
+        #d4e-tarifs .tp-title { font-family: 'Space Grotesk', sans-serif !important; font-size: clamp(36px, 5vw, 52px) !important; font-weight: 700 !important; color: #0B0F19 !important; margin: 0 0 16px !important; }
+        #d4e-tarifs .tp-subtitle { font-size: 20px !important; color: #475569 !important; margin: 0 !important; line-height: 1.6 !important; max-width: 600px !important; }
+        #d4e-tarifs .tp-h2 { font-family: 'Space Grotesk', sans-serif !important; font-size: 26px !important; font-weight: 700 !important; margin: 0 0 12px !important; }
+        #d4e-tarifs .tp-card { background-color: #0F172A !important; border-radius: 24px !important; padding: 48px 44px !important; border: 1px solid rgba(255,255,255,0.06) !important; display: flex !important; flex-direction: column !important; }
+        #d4e-tarifs .tp-card-accent { border-color: rgba(0,212,200,0.3) !important; }
+        #d4e-tarifs .tp-card-gold { border-color: rgba(245,158,11,0.3) !important; }
+        #d4e-tarifs .tp-text { font-size: 16px !important; color: rgba(255,255,255,0.55) !important; line-height: 1.7 !important; margin-bottom: 28px !important; }
+        #d4e-tarifs .tp-feature { display: flex !important; align-items: flex-start !important; gap: 12px !important; margin-bottom: 16px !important; }
+        #d4e-tarifs .tp-check { width: 22px !important; height: 22px !important; border-radius: 6px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-size: 12px !important; font-weight: 700 !important; flex-shrink: 0 !important; margin-top: 2px !important; }
+        #d4e-tarifs .tp-check-teal { background-color: rgba(0,212,200,0.15) !important; color: #00D4C8 !important; }
+        #d4e-tarifs .tp-check-gold { background-color: rgba(245,158,11,0.15) !important; color: #F59E0B !important; }
+        #d4e-tarifs .tp-check-purple { background-color: rgba(139,92,246,0.15) !important; color: #8B5CF6 !important; }
+        #d4e-tarifs .tp-feat-text { font-size: 15px !important; color: rgba(255,255,255,0.7) !important; line-height: 1.5 !important; }
+        #d4e-tarifs .tp-btn {
+          display: inline-block !important; background-color: #00D4C8 !important; color: #0B0F19 !important;
+          border: none !important; border-radius: 12px !important; padding: 16px 32px !important;
+          font-size: 16px !important; font-weight: 600 !important; cursor: pointer !important;
+          font-family: 'Space Grotesk', sans-serif !important; text-decoration: none !important;
+          text-align: center !important; margin-top: auto !important; width: 100% !important;
+        }
+        #d4e-tarifs .tp-btn:hover { background-color: #00B4A6 !important; }
+        #d4e-tarifs .tp-btn-gold { background-color: #F59E0B !important; }
+        #d4e-tarifs .tp-btn-gold:hover { background-color: #D97706 !important; }
+        #d4e-tarifs .tp-badge { display: inline-block !important; font-size: 12px !important; font-weight: 600 !important; padding: 4px 12px !important; border-radius: 100px !important; margin-bottom: 16px !important; }
+        #d4e-tarifs .tp-note { background-color: #FFFFFF !important; border: 1px solid #E2E8F0 !important; border-radius: 20px !important; padding: 36px 32px !important; margin-top: 48px !important; }
+        #d4e-tarifs .tp-note-title { font-family: 'Space Grotesk', sans-serif !important; font-size: 20px !important; font-weight: 700 !important; color: #0B0F19 !important; margin-bottom: 12px !important; }
+        #d4e-tarifs .tp-note-text { font-size: 15px !important; color: #475569 !important; line-height: 1.7 !important; }
+        @media (max-width: 860px) {
+          #d4e-tarifs .tp-grid { flex-direction: column !important; }
+          #d4e-tarifs .tp-card { padding: 36px 28px !important; }
+        }
+      `}</style>
 
-      {/* Starter Pack Section */}
-      <section className="py-24 bg-[#0B0F19]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Description */}
-            <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#F59E0B]/20 to-[#FBBF24]/10 rounded-full border border-[#F59E0B]/30 mb-6">
-                <Award className="h-5 w-5 text-[#FBBF24]" />
-                <span className="text-sm font-bold text-[#FBBF24]">Offre de lancement</span>
-              </div>
-              
-              <h2 className="text-4xl font-black text-white mb-4">
-                Starter Pack
-              </h2>
-              
-              <p className="text-lg text-gray-400 mb-8">
-                DÃ©marrez avec Odoo sans vous ruiner. Tout ce qu'il faut pour professionnaliser 
-                votre gestion en 2 semaines. IdÃ©al pour les indÃ©pendants et PME.
-              </p>
-
-              <ul className="space-y-4 mb-8">
-                {starterPackFeatures.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#00D4C8] flex-shrink-0" />
-                    <span className="text-gray-300">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="p-4 bg-[#F59E0B]/10 rounded-xl border border-[#F59E0B]/30">
-                <p className="text-sm text-[#FBBF24]">
-                  <strong>Note :</strong> Licences Odoo et hÃ©bergement non inclus. 
-                  Ã prendre directement chez Odoo.
-                </p>
-              </div>
-            </div>
-
-            {/* Right - Pricing Card */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#00D4C8]/20 to-[#06B6D4]/20 rounded-3xl blur-3xl" />
-              <div className="relative p-8 bg-[#111827]/80 backdrop-blur-xl rounded-3xl border border-white/10">
-                <div className="text-center mb-8">
-                  <div className="text-sm text-gray-400 mb-2">Prestation de services</div>
-                  <div className="flex items-baseline justify-center gap-2">
-                    <span className="text-6xl font-black text-white">2'500</span>
-                    <span className="text-xl text-gray-400">CHF HT</span>
-                  </div>
-                  <div className="text-sm text-gray-500 mt-2">Hors licences et hÃ©bergement</div>
-                </div>
-
-                <Button asChild className="w-full bg-gradient-to-r from-[#F59E0B] to-[#FBBF24] hover:opacity-90 text-white font-bold py-6 rounded-xl text-lg">
-                  <a href="/#contact-form">
-                    Je veux ce pack
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-
-                <div className="mt-6 text-center">
-                  <p className="text-sm text-gray-500">
-                    DÃ©ploiement en 2 semaines garanti
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Support & Formation Section */}
-      <section className="py-24 bg-[#0F172A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 rounded-full border border-purple-500/30 mb-6">
-              <Headphones className="h-5 w-5 text-purple-400" />
-              <span className="text-sm font-bold text-purple-400">DÃ©jÃ  client Odoo ?</span>
-            </div>
-            
-            <h2 className="text-4xl font-black text-white mb-6">
-              Support & <span className="text-gradient">Formation</span>
-            </h2>
-            
-            <p className="text-lg text-gray-400">
-              Vous utilisez dÃ©jÃ  Odoo mais vous avez besoin d'aide ? 
-              On vous accompagne avec des forfaits flexibles.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Support Technique */}
-            <div className="p-8 bg-[#111827] rounded-3xl border border-white/10">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#00B4A6] to-[#06B6D4] flex items-center justify-center mb-6 glow-cyan-sm">
-                <Headphones className="h-8 w-8 text-white" />
-              </div>
-
-              <h3 className="text-2xl font-bold text-white mb-3">Support Technique</h3>
-              <p className="text-gray-400 mb-8">
-                Assistance rapide pour rÃ©soudre vos problÃ¨mes Odoo au quotidien.
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                {[
-                  'Support par tÃ©lÃ©phone et email',
-                  'RÃ©solution de bugs et incidents',
-                  'Conseils et bonnes pratiques',
-                  'Mise Ã  jour et maintenance',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#00D4C8] flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-300">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="grid grid-cols-3 gap-3 mb-8">
-                {supportPricing.map((price, i) => (
-                  <div key={i} className="p-4 bg-[#0B0F19] rounded-xl border border-white/5 text-center">
-                    <div className="text-xs text-gray-500 mb-1">Forfait {price.hours}</div>
-                    <div className="text-lg font-bold text-white">{price.price}</div>
-                    <div className="text-xs text-gray-500">{price.unit}</div>
-                  </div>
-                ))}
-              </div>
-
-              <Button asChild className="w-full bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] hover:opacity-90 text-white font-bold rounded-xl">
-                <a href="/#contact-form">
-                  Demander un devis
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-            </div>
-
-            {/* Formation */}
-            <div className="p-8 bg-[#111827] rounded-3xl border border-white/10">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mb-6">
-                <GraduationCap className="h-8 w-8 text-white" />
-              </div>
-
-              <h3 className="text-2xl font-bold text-white mb-3">Formation</h3>
-              <p className="text-gray-400 mb-8">
-                Formez vos Ã©quipes pour utiliser Odoo Ã  100% de ses capacitÃ©s.
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                {[
-                  'Formation sur mesure',
-                  'Sessions individuelles ou collectives',
-                  'Documentation personnalisÃ©e',
-                  'Suivi post-formation',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-300">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="grid grid-cols-3 gap-3 mb-8">
-                {formationPricing.map((price, i) => (
-                  <div key={i} className="p-4 bg-[#0B0F19] rounded-xl border border-white/5 text-center">
-                    <div className="text-xs text-gray-500 mb-1">{price.duration}</div>
-                    <div className="text-lg font-bold text-white">{price.price}</div>
-                    {price.unit && <div className="text-xs text-gray-500">{price.unit}</div>}
-                  </div>
-                ))}
-              </div>
-
-              <Button asChild className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:opacity-90 text-white font-bold rounded-xl">
-                <a href="/#contact-form">
-                  Planifier une formation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Banner */}
-      <section className="py-16 bg-[#0B0F19]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-8 bg-gradient-to-r from-[#00B4A6]/10 via-[#00D4C8]/5 to-[#06B6D4]/10 rounded-3xl border border-[#00D4C8]/20">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#00B4A6] to-[#06B6D4] flex items-center justify-center glow-cyan-sm">
-                  <Clock className="h-7 w-7 text-white" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-white">RÃ©ponse rapide garantie</h4>
-                  <p className="text-gray-400">Intervention sous 24-48h selon la criticitÃ©</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
-                  <MessageCircle className="h-7 w-7 text-white" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-white">Contact direct</h4>
-                  <p className="text-gray-400">Parlez directement Ã  un expert Odoo</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Final */}
-      <section className="py-24 bg-[#0F172A]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-black text-white mb-6">
-            Besoin d'un devis personnalisÃ© ?
-          </h2>
-          <p className="text-lg text-gray-400 mb-8">
-            Discutons de votre projet et trouvons la solution adaptÃ©e Ã  vos besoins.
+      <div id="d4e-tarifs">
+        <div style={{ padding: '110px 32px 52px', maxWidth: 1280, margin: '0 auto' }}>
+          <h1 className="tp-title">Comment on travaille</h1>
+          <p className="tp-subtitle">
+            Pas de grille tarifaire générique. On construit une offre adaptée à votre contexte, votre taille et vos priorités.
           </p>
-          <Button asChild size="lg" className="bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] hover:opacity-90 text-white font-bold px-8 rounded-xl glow-cyan text-lg">
-            <a href="/#contact-form">
-              Prendre rendez-vous
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
         </div>
-      </section>
-</main>
+
+        <div style={{ padding: '0 32px', maxWidth: 1280, margin: '0 auto' }}>
+          <div className="tp-grid" style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+
+            {/* STARTER */}
+            <div className="tp-card tp-card-accent tp-dark" style={{ flex: '1 1 340px' }}>
+              <div className="tp-badge" style={{ backgroundColor: 'rgba(0,212,200,0.15)', color: '#00D4C8' }}>Démarrage rapide</div>
+              <div className="tp-h2" style={{ color: '#FFFFFF' }}>Starter Pack</div>
+              <p className="tp-text">L'essentiel pour démarrer avec Odoo. Configuration, import de données, formation de vos équipes. Opérationnel en quelques semaines.</p>
+              <div style={{ marginBottom: 28 }}>
+                {['CRM + Ventes + Facturation configurés', 'Import de vos données existantes', 'Formation de vos équipes (2 sessions)', 'Support post-lancement 30 jours'].map((f, i) => (
+                  <div key={i} className="tp-feature"><div className="tp-check tp-check-teal">✓</div><span className="tp-feat-text">{f}</span></div>
+                ))}
+              </div>
+              <button className="tp-btn" onClick={scrollToContact}>Demander un devis</button>
+            </div>
+
+            {/* SUPPORT */}
+            <div className="tp-card tp-card-gold tp-dark" style={{ flex: '1 1 340px' }}>
+              <div className="tp-badge" style={{ backgroundColor: 'rgba(245,158,11,0.15)', color: '#F59E0B' }}>Continu</div>
+              <div className="tp-h2" style={{ color: '#FFFFFF' }}>Pack SOS</div>
+              <p className="tp-text">Support continu pour votre Odoo en production. Hotline, tickets, maintenance, accompagnement migrations. Votre filet de sécurité.</p>
+              <div style={{ marginBottom: 28 }}>
+                {['Support téléphone + email + portail', 'Interventions correctives', 'Accompagnement migrations', 'Prise en main à distance (AnyDesk)'].map((f, i) => (
+                  <div key={i} className="tp-feature"><div className="tp-check tp-check-gold">✓</div><span className="tp-feat-text">{f}</span></div>
+                ))}
+              </div>
+              <button className="tp-btn tp-btn-gold" onClick={scrollToContact}>Demander un devis</button>
+            </div>
+
+            {/* SUR-MESURE */}
+            <div className="tp-card tp-dark" style={{ flex: '1 1 340px' }}>
+              <div className="tp-badge" style={{ backgroundColor: 'rgba(139,92,246,0.15)', color: '#8B5CF6' }}>Sur-mesure</div>
+              <div className="tp-h2" style={{ color: '#FFFFFF' }}>Projet complet</div>
+              <p className="tp-text">Intégration complète, développements spécifiques, solutions métiers Elvy. On s'adapte à la complexité de votre activité.</p>
+              <div style={{ marginBottom: 28 }}>
+                {['Audit et cadrage de vos besoins', 'Développements sur-mesure', 'Solutions Elvy (BTP, GED, Print)', 'Chef de projet dédié'].map((f, i) => (
+                  <div key={i} className="tp-feature"><div className="tp-check tp-check-purple">✓</div><span className="tp-feat-text">{f}</span></div>
+                ))}
+              </div>
+              <a href="#/support" className="tp-btn" style={{ backgroundColor: '#8B5CF6' }}>Discuter de mon projet</a>
+            </div>
+          </div>
+
+          {/* NOTE */}
+          <div className="tp-note" id="tarif-contact">
+            <div className="tp-note-title">Chaque projet est différent</div>
+            <p className="tp-note-text">
+              On ne pratique pas le tarif au kilo. Chaque offre est construite après un échange pour comprendre votre contexte, vos priorités et votre budget. Appelez-nous au <a href="tel:+41582551115" style={{ color: '#00D4C8', textDecoration: 'none', fontWeight: 600 }}>+41 (0) 58 255 11 15</a> ou écrivez à <a href="mailto:info@d4e.cool" style={{ color: '#00D4C8', textDecoration: 'none', fontWeight: 600 }}>info@d4e.cool</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
+};
+
+export { TarifsPage };
