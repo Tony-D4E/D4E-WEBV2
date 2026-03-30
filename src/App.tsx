@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navigation } from './sections/Navigation';
 import { WhatsAppWidget } from './components/WhatsAppWidget';
-import { CookieBanner } from './components/CookieBanner';
 import Footer from './components/Footer';
 import { Home } from './pages/Home';
 import { Elvy } from './pages/Elvy';
@@ -52,8 +51,7 @@ function App() {
           phoneNumber="41764344595"
           message="Bonjour Digital4Efficiency, j'ai une question concernant vos services Odoo."
         />
-        <CookieBanner />
-      </div>
+</div>
     </BrowserRouter>
   );
 }
