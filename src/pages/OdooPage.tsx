@@ -318,15 +318,14 @@ export default function OdooPage() {
               'Odoo, c\'est 40+ applications qui naissent deja connectees. Votre commercial cree un devis : la comptabilite le voit. Le stock se met a jour : l\'atelier est prevenu. Une facture est payee : le rapport de tresorerie bouge en temps reel.',
               "Ce qu'on aime chez Odoo, c'est que le logiciel respecte l'intelligence de vos equipes. Il automatise ce qui est repetitif et libere du temps pour ce qui demande du jugement, de la relation, de l'expertise."
             ].map((p,i) => <p key={i} className={`aos d${i+2}`} style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:20,maxWidth:'100%'}}>{p}</p>)}
-            <div className="aos d4" style={{display:'flex',alignItems:'center',gap:20,marginTop:40,paddingTop:28,borderTop:'1px solid #e2e8f0'}}>
-              <img src="/team-laetitia.jpg" alt="Laetitia Andre" style={{width:80,height:80,borderRadius:'50%',objectFit:'cover',objectPosition:'top',border:'3px solid #00D4C8',flexShrink:0,boxShadow:'0 0 20px rgba(0,212,200,.2)'}}/>
+            <div className="aos d4" style={{display:'flex',alignItems:'center',gap:24,marginTop:40,paddingTop:32,borderTop:'1px solid #e2e8f0'}}>
+              <img src="/team-laetitia.jpg" alt="Laetitia Andre" style={{width:120,height:120,borderRadius:'50%',objectFit:'cover',objectPosition:'top',border:'3px solid #00D4C8',flexShrink:0,boxShadow:'0 0 40px rgba(0,212,200,.25)'}}/>
               <div>
-                <div style={{fontWeight:800,fontSize:18,color:'#1e293b',fontFamily:'Space Grotesk,sans-serif'}}>Laetitia Andre</div>
-                <div style={{display:'inline-flex',alignItems:'center',gap:7,marginTop:6,background:'rgba(0,212,200,.08)',border:'1px solid rgba(0,212,200,.25)',borderRadius:30,padding:'4px 14px'}}>
-                  <span className="pulse" style={{width:7,height:7,borderRadius:'50%',background:'#00D4C8',flexShrink:0}}/>
-                  <span style={{fontSize:13,color:'#00B4A6',fontWeight:700,letterSpacing:.3}}>Ambassadrice Odoo -- D4E</span>
+                <div style={{fontWeight:800,fontSize:22,color:'#1e293b',fontFamily:'Space Grotesk,sans-serif',marginBottom:4}}>Laetitia Andre</div>
+                <div style={{fontSize:14,color:'#00B4A6',fontWeight:600,marginBottom:12}}>Ambassadrice Odoo -- D4E</div>
+                <div style={{borderLeft:'3px solid #00D4C8',background:'rgba(0,212,200,.06)',padding:'14px 18px',borderRadius:'0 12px 12px 0'}}>
+                  <div style={{fontSize:17,color:'#334155',fontStyle:'italic',lineHeight:1.6}}>"Elle ne vend pas Odoo. Elle le vit, le deploie, et le defend chaque jour sur le terrain."</div>
                 </div>
-                <div style={{fontSize:14,color:'#64748b',marginTop:8,lineHeight:1.5}}>Elle ne vend pas Odoo. Elle le vit, le deploie, et le defend chaque jour sur le terrain.</div>
               </div>
             </div>
           </div>
