@@ -1,4 +1,3 @@
-import { Footer } from '../sections/Footer';
 import { 
   CheckCircle, 
   ArrowRight, 
@@ -14,7 +13,7 @@ import { Button } from '@/components/ui/button';
 const starterPackFeatures = [
   'CRM & Pipeline commercial',
   'Devis & Facturation',
-  'Comptabilité Suisse',
+  'ComptabilitÃ© Suisse',
   'Site Web inclus',
   'Configuration initiale',
   'Formation utilisateur',
@@ -28,8 +27,8 @@ const supportPricing = [
 ];
 
 const formationPricing = [
-  { duration: '1/2 journée', price: '600', unit: 'CHF' },
-  { duration: '1 journée', price: '1\'100', unit: 'CHF' },
+  { duration: '1/2 journÃ©e', price: '600', unit: 'CHF' },
+  { duration: '1 journÃ©e', price: '1\'100', unit: 'CHF' },
   { duration: 'Sur mesure', price: 'Sur devis', unit: '' },
 ];
 
@@ -52,7 +51,7 @@ export function TarifsPage() {
             </h1>
             
             <p className="text-xl text-gray-400">
-              Des offres claires et sans surprise. Choisissez ce qui correspond à vos besoins.
+              Des offres claires et sans surprise. Choisissez ce qui correspond Ã  vos besoins.
             </p>
           </div>
         </div>
@@ -74,8 +73,8 @@ export function TarifsPage() {
               </h2>
               
               <p className="text-lg text-gray-400 mb-8">
-                Démarrez avec Odoo sans vous ruiner. Tout ce qu'il faut pour professionnaliser 
-                votre gestion en 2 semaines. Idéal pour les indépendants et PME.
+                DÃ©marrez avec Odoo sans vous ruiner. Tout ce qu'il faut pour professionnaliser 
+                votre gestion en 2 semaines. IdÃ©al pour les indÃ©pendants et PME.
               </p>
 
               <ul className="space-y-4 mb-8">
@@ -89,8 +88,8 @@ export function TarifsPage() {
 
               <div className="p-4 bg-[#F59E0B]/10 rounded-xl border border-[#F59E0B]/30">
                 <p className="text-sm text-[#FBBF24]">
-                  <strong>Note :</strong> Licences Odoo et hébergement non inclus. 
-                  À prendre directement chez Odoo.
+                  <strong>Note :</strong> Licences Odoo et hÃ©bergement non inclus. 
+                  Ã prendre directement chez Odoo.
                 </p>
               </div>
             </div>
@@ -105,7 +104,7 @@ export function TarifsPage() {
                     <span className="text-6xl font-black text-white">2'500</span>
                     <span className="text-xl text-gray-400">CHF HT</span>
                   </div>
-                  <div className="text-sm text-gray-500 mt-2">Hors licences et hébergement</div>
+                  <div className="text-sm text-gray-500 mt-2">Hors licences et hÃ©bergement</div>
                 </div>
 
                 <Button asChild className="w-full bg-gradient-to-r from-[#F59E0B] to-[#FBBF24] hover:opacity-90 text-white font-bold py-6 rounded-xl text-lg">
@@ -117,7 +116,7 @@ export function TarifsPage() {
 
                 <div className="mt-6 text-center">
                   <p className="text-sm text-gray-500">
-                    Déploiement en 2 semaines garanti
+                    DÃ©ploiement en 2 semaines garanti
                   </p>
                 </div>
               </div>
@@ -132,7 +131,7 @@ export function TarifsPage() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 rounded-full border border-purple-500/30 mb-6">
               <Headphones className="h-5 w-5 text-purple-400" />
-              <span className="text-sm font-bold text-purple-400">Déjà client Odoo ?</span>
+              <span className="text-sm font-bold text-purple-400">DÃ©jÃ  client Odoo ?</span>
             </div>
             
             <h2 className="text-4xl font-black text-white mb-6">
@@ -140,7 +139,7 @@ export function TarifsPage() {
             </h2>
             
             <p className="text-lg text-gray-400">
-              Vous utilisez déjà Odoo mais vous avez besoin d'aide ? 
+              Vous utilisez dÃ©jÃ  Odoo mais vous avez besoin d'aide ? 
               On vous accompagne avec des forfaits flexibles.
             </p>
           </div>
@@ -154,15 +153,15 @@ export function TarifsPage() {
 
               <h3 className="text-2xl font-bold text-white mb-3">Support Technique</h3>
               <p className="text-gray-400 mb-8">
-                Assistance rapide pour résoudre vos problèmes Odoo au quotidien.
+                Assistance rapide pour rÃ©soudre vos problÃ¨mes Odoo au quotidien.
               </p>
 
               <ul className="space-y-3 mb-8">
                 {[
-                  'Support par téléphone et email',
-                  'Résolution de bugs et incidents',
+                  'Support par tÃ©lÃ©phone et email',
+                  'RÃ©solution de bugs et incidents',
                   'Conseils et bonnes pratiques',
-                  'Mise à jour et maintenance',
+                  'Mise Ã  jour et maintenance',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#00D4C8] flex-shrink-0 mt-0.5" />
@@ -197,14 +196,14 @@ export function TarifsPage() {
 
               <h3 className="text-2xl font-bold text-white mb-3">Formation</h3>
               <p className="text-gray-400 mb-8">
-                Formez vos équipes pour utiliser Odoo à 100% de ses capacités.
+                Formez vos Ã©quipes pour utiliser Odoo Ã  100% de ses capacitÃ©s.
               </p>
 
               <ul className="space-y-3 mb-8">
                 {[
                   'Formation sur mesure',
                   'Sessions individuelles ou collectives',
-                  'Documentation personnalisée',
+                  'Documentation personnalisÃ©e',
                   'Suivi post-formation',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -245,8 +244,8 @@ export function TarifsPage() {
                   <Clock className="h-7 w-7 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white">Réponse rapide garantie</h4>
-                  <p className="text-gray-400">Intervention sous 24-48h selon la criticité</p>
+                  <h4 className="text-xl font-bold text-white">RÃ©ponse rapide garantie</h4>
+                  <p className="text-gray-400">Intervention sous 24-48h selon la criticitÃ©</p>
                 </div>
               </div>
               
@@ -256,7 +255,7 @@ export function TarifsPage() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-white">Contact direct</h4>
-                  <p className="text-gray-400">Parlez directement à un expert Odoo</p>
+                  <p className="text-gray-400">Parlez directement Ã  un expert Odoo</p>
                 </div>
               </div>
             </div>
@@ -268,10 +267,10 @@ export function TarifsPage() {
       <section className="py-24 bg-[#0F172A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-black text-white mb-6">
-            Besoin d'un devis personnalisé ?
+            Besoin d'un devis personnalisÃ© ?
           </h2>
           <p className="text-lg text-gray-400 mb-8">
-            Discutons de votre projet et trouvons la solution adaptée à vos besoins.
+            Discutons de votre projet et trouvons la solution adaptÃ©e Ã  vos besoins.
           </p>
           <Button asChild size="lg" className="bg-gradient-to-r from-[#00B4A6] to-[#06B6D4] hover:opacity-90 text-white font-bold px-8 rounded-xl glow-cyan text-lg">
             <a href="/#contact-form">
@@ -281,8 +280,6 @@ export function TarifsPage() {
           </Button>
         </div>
       </section>
-
-      <Footer />
-    </main>
+</main>
   );
 }
