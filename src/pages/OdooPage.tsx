@@ -460,7 +460,7 @@ export default function OdooPage() {
         <div style={{width:"100%"}}>
           <div className="stag-lk aos"><span className="sdot"/>&nbsp;Ce qu'on a vraiment appris</div>
           <h2 className="sh2 aos d1" style={{color:'#1e293b'}}>6 raisons. Pas dans les slides.</h2>
-          <p className="aos d2" style={{fontSize:17,color:'#334155',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Apres 4 ans a deployer Odoo sur des dizaines de projets tres differents, voila ce qui nous convainc encore chaque matin.</p>
+          <p className="aos d2" style={{fontSize:17,color:'#334155',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Apres 8 ans a deployer Odoo sur des dizaines de projets tres differents, voila ce qui nous convainc encore chaque matin.</p>
           <div className="rg-grid sg aos">
             {[['01','Modulaire par nature','Commencez avec une app. Ajoutez-en 40+ quand vous voulez. <strong>Aucun contrat bloquant.</strong>'],
               ['02','Open source','Personnalisation illimitee. <strong>Zero vendor lock-in.</strong> Le code vous appartient.'],
