@@ -1,60 +1,28 @@
-# ══════════════════════════════════════════════════════
-# REDIRECTIONS D4E - digital4efficiency.ch
-# Anciennes URLs → Nouvelles pages
-# ══════════════════════════════════════════════════════
-
-# --- Pages principales ---
+# Redirections 301 (ancien site)
 /odoo-erp                     /odoo          301
-/ecommerce                    /odoo          301
 /batiment                     /elvybat       301
 /contactez-nous               /support       301
 /references                   /entreprise    301
 /offre-service                /tarifs        301
-
-# --- Modules Odoo (toutes vers /odoo) ---
 /odoo/achats                  /odoo          301
 /odoo/crm                     /odoo          301
 /odoo/comptabilite            /odoo          301
 /odoo/marketing               /odoo          301
 /odoo/rh                      /odoo          301
 /odoo/ventes                  /odoo          301
-
-# --- Références sectorielles (vers /entreprise) ---
-/references/automobile              /entreprise    301
-/references/commerce-de-boissons    /entreprise    301
-/references/services                /entreprise    301
-/references/construction            /entreprise    301
-/references/*                       /entreprise    301
-
-# --- Blog (pas de blog sur le nouveau site) ---
-/blog/actualites-digitales-1        /              301
-/blog/webinaires-9                  /              301
-/blog/*                             /              301
-
-# --- Fonctionnalités Odoo ---
+/references/*                 /entreprise    301
+/blog/*                       /              301
 /helpdesk                     /support       301
 /shop                         /              301
 /events                       /              301
 /groups                       /              301
 /slides                       /              301
-
-# --- Produits spécifiques ---
 /LYA-app                      /elvy          301
 /document-capture-store        /elvy          301
 /module-eshop-odoo             /odoo          301
 /eDoc                          /elvy          301
 /dim                           /elvy          301
+/politique-de-cookie           /cgu           301
 
-# ══════════════════════════════════════════════════════
-# REDIRECTIONS elvybat.ch (si domaine pointé ici)
-# ══════════════════════════════════════════════════════
-/helpdesk/support-d4e-2              /support       301
-/helpdesk/suivi-de-projets-d4e-9     /support       301
-/helpdesk/service-clientele-d4e-1    /support       301
-/groups/newsletter-bati-odoo-48      /elvybat       301
-/politique-de-cookie                 /cgu           301
-
-# ══════════════════════════════════════════════════════
-# SPA FALLBACK (doit rester en dernier)
-# ══════════════════════════════════════════════════════
+# SPA Fallback (DOIT rester en dernier)
 /*    /index.html   200
