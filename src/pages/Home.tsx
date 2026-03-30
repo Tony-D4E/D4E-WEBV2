@@ -9,7 +9,6 @@ import { References } from '../sections/References';
 import { Methodology } from '../sections/Methodology';
 import { Team } from '../sections/Team';
 import { ContactForm } from '../sections/ContactForm';
-import { Footer } from '../sections/Footer';
 
 export function Home() {
   return (
@@ -25,7 +24,6 @@ export function Home() {
       <Methodology />
       <Team />
       <ContactForm />
-      <Footer />
     </main>
   );
 }
