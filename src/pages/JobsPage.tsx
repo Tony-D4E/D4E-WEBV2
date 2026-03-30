@@ -168,7 +168,7 @@ const JobsPage: React.FC = () => {
           <img src="/team-jobs-2.jpg" alt="Equipe D4E" className="jb-hero-img" />
           <div className="jb-hero-overlay" />
           <div className="jb-hero-content">
-            <div className="jb-hero-badge">🏆 Partenaire Odoo Gold</div>
+            <img src="/odoo-gold-badge.png" alt="Odoo Gold Partner" style={{ height: 52, marginBottom: 24 }} />
             <h1 className="jb-hero-title">
               Rejoignez<br />l'aventure D4E
             </h1>
