@@ -197,9 +197,7 @@ export function HeroIntegrateur() {
             font-size: 0.95rem;
           }
           .hero-badge-odoo {
-            top: 72px;
-            right: 16px;
-            padding: 8px 12px;
+            display: none !important;
           }
         }
       `}</style>
