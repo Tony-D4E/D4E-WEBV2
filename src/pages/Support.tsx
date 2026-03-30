@@ -184,6 +184,7 @@ const Support: React.FC = () => {
             <span className="sp-dot" />
             <span className="sp-status-text">Support disponible · Lun-Ven 8h-18h</span>
           </div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, backgroundColor: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.3)', borderRadius: 100, padding: '8px 20px', fontSize: 14, fontWeight: 600, color: '#F59E0B', marginBottom: 24 }}>🏆 Partenaire Odoo Gold</div>
           <h1 className="sp-title">Support client</h1>
           <p className="sp-subtitle">Ouvrez un ticket, suivez vos demandes ou préparez une session à distance.</p>
         </div>
