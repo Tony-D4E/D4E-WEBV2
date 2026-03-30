@@ -195,7 +195,7 @@ const TarifsPage: React.FC = () => {
                   <div key={i} className="of-card-feat"><div className="of-card-dot" style={{ backgroundColor: '#F59E0B' }} />{f}</div>
                 ))}
               </div>
-              <a href="#/support" className="of-card-btn">Accéder au support</a>
+              <a href="/support" className="of-card-btn">Accéder au support</a>
             </div>
           </div>
         </div>
