@@ -244,11 +244,11 @@ const Support: React.FC = () => {
             <div style={{ flex: '0 1 400px', display: 'flex', flexDirection: 'column', gap: 18 }}>
               <a href="https://odoo.d4e.app/" target="_blank" rel="noopener noreferrer" className="sp-card sp-card-teal sp-dark">
                 <div className="sp-icon sp-icon-teal">LIST</div>
-                <div><div className="sp-card-title">Suivre mes tickets</div><div className="sp-teal" style={{ fontSize: 14, fontWeight: 500 }}>Portail client -></div></div>
+                <div><div className="sp-card-title">Suivre mes tickets</div><div className="sp-teal" style={{ fontSize: 14, fontWeight: 500 }}>Portail client</div></div>
               </a>
               <a href="https://anydesk.com/fr/downloads" target="_blank" rel="noopener noreferrer" className="sp-card sp-card-gold sp-dark">
                 <div className="sp-icon sp-icon-gold">PC</div>
-                <div><div className="sp-card-title">Telecharger AnyDesk</div><div className="sp-gold" style={{ fontSize: 14, fontWeight: 500 }}>Session a distance -></div></div>
+                <div><div className="sp-card-title">Telecharger AnyDesk</div><div className="sp-gold" style={{ fontSize: 14, fontWeight: 500 }}>Session a distance</div></div>
               </a>
               <a href="tel:+41582551115" className="sp-card sp-card-purple sp-dark">
                 <div className="sp-icon sp-icon-purple">TEL</div>
