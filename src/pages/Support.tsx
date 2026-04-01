@@ -57,7 +57,7 @@ const Support: React.FC = () => {
         }
         #d4e-support .sp-status-text { font-size: 15px !important; color: #64748B !important; font-weight: 500 !important; }
 
-        /* âââ DARK BOXES : form + cards âââ */
+        /* === DARK BOXES : form + cards === */
         #d4e-support .sp-dark,
         #d4e-support .sp-dark * {
           color: #FFFFFF !important;
@@ -129,7 +129,7 @@ const Support: React.FC = () => {
           font-size: 26px !important; font-weight: 700 !important; color: #00D4C8 !important; margin-bottom: 10px !important;
         }
 
-        /* âââ SIDEBAR CARDS âââ */
+        /* === SIDEBAR CARDS === */
         #d4e-support .sp-card {
           background-color: #0F172A !important;
           border-radius: 18px !important; padding: 28px 26px !important;
@@ -175,13 +175,9 @@ const Support: React.FC = () => {
           #d4e-support .sp-grid-2 { grid-template-columns: 1fr !important; }
           #d4e-support .sp-form-box { padding: 36px 28px !important; }
         }
-      
-        @media (max-width: 768px) {
-          #d4e-support .sp-layout > div:first-child { flex: 1 1 100% !important; min-width: 0 !important; max-width: 100% !important; }
-          #d4e-support .sp-layout > div:last-child { flex: 1 1 100% !important; }
-          #d4e-support .sp-layout { padding: 0 !important; }
+              @media (max-width: 768px) {
+          #d4e-support .sp-layout { flex-direction: column !important; }
           #d4e-support .sp-form { padding: 28px 20px !important; }
-          #d4e-support .sp-grid-2 { grid-template-columns: 1fr !important; }
         }
       `}</style>
 
@@ -192,10 +188,10 @@ const Support: React.FC = () => {
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 28 }}>
                 <span className="sp-dot" />
-                <span className="sp-status-text">Support disponible Â· Lun-Ven 8h-18h</span>
+                <span className="sp-status-text">Support disponible - Lun-Ven 8h-18h</span>
               </div>
               <h1 className="sp-title">Support client</h1>
-              <p className="sp-subtitle">Ouvrez un ticket, suivez vos demandes ou prÃ©parez une session Ã  distance.</p>
+              <p className="sp-subtitle">Ouvrez un ticket, suivez vos demandes ou preparez une session a distance.</p>
             </div>
             <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" style={{ height: 72, flexShrink: 0, marginTop: 8 }} />
           </div>
@@ -209,21 +205,21 @@ const Support: React.FC = () => {
             <div style={{ flex: '1 1 300px', minWidth: 0 }}>
               <div className="sp-form-box sp-dark">
                 <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 40 }}>
-                  <span className="sp-icon-ticket">ð«</span>
+                  <span className="sp-icon-ticket">TICKET</span>
                   <span className="sp-h2">Ouvrir un ticket</span>
                 </div>
 
                 {submitted ? (
                   <div style={{ textAlign: 'center', padding: '60px 20px' }}>
-                    <div className="sp-success-icon">â</div>
-                    <div className="sp-success-title">Ticket envoyÃ©</div>
-                    <p className="sp-dim" style={{ fontSize: 17, marginBottom: 32 }}>Nous revenons vers vous dans les plus brefs dÃ©lais.</p>
+                    <div className="sp-success-icon">OK</div>
+                    <div className="sp-success-title">Ticket envoye</div>
+                    <p className="sp-dim" style={{ fontSize: 17, marginBottom: 32 }}>Nous revenons vers vous dans les plus brefs delais.</p>
                     <button className="sp-btn-reset" onClick={() => { setSubmitted(false); setFormData({ prenom: '', nom: '', email: '', entreprise: '', module: '', urgence: '', description: '' }); }}>Ouvrir un autre ticket</button>
                   </div>
                 ) : (
                   <div>
                     <div className="sp-grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 22, marginBottom: 22 }}>
-                      <div><span className="sp-label">PrÃ©nom</span><input className="sp-input" name="prenom" type="text" value={formData.prenom} onChange={handleChange} required /></div>
+                      <div><span className="sp-label">Prenom</span><input className="sp-input" name="prenom" type="text" value={formData.prenom} onChange={handleChange} required /></div>
                       <div><span className="sp-label">Nom</span><input className="sp-input" name="nom" type="text" value={formData.nom} onChange={handleChange} required /></div>
                     </div>
                     <div className="sp-grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 22, marginBottom: 22 }}>
@@ -231,12 +227,12 @@ const Support: React.FC = () => {
                       <div><span className="sp-label">Entreprise</span><input className="sp-input" name="entreprise" type="text" value={formData.entreprise} onChange={handleChange} /></div>
                     </div>
                     <div className="sp-grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 22, marginBottom: 22 }}>
-                      <div><span className="sp-label">Module Odoo concernÃ©</span><select className="sp-input" name="module" value={formData.module} onChange={handleChange}><option value="">SÃ©lectionner...</option><option value="CRM">CRM</option><option value="Ventes">Ventes</option><option value="Achats">Achats</option><option value="ComptabilitÃ©">ComptabilitÃ©</option><option value="Stock">Stock / Inventaire</option><option value="Fabrication">Fabrication</option><option value="Projet">Projet</option><option value="RH">RH / CongÃ©s</option><option value="Site Web">Site Web / eCommerce</option><option value="ElvyBat">ElvyBat</option><option value="ElvyDoc">ElvyDoc (GED)</option><option value="ElvyPrint">ElvyPrint</option><option value="Autre">Autre</option></select></div>
-                      <div><span className="sp-label">Urgence</span><select className="sp-input" name="urgence" value={formData.urgence} onChange={handleChange}><option value="">SÃ©lectionner...</option><option value="Bloquant">Bloquant</option><option value="GÃªnant">GÃªnant</option><option value="AmÃ©lioration">AmÃ©lioration</option></select></div>
+                      <div><span className="sp-label">Module Odoo concerne</span><select className="sp-input" name="module" value={formData.module} onChange={handleChange}><option value="">Selectionner...</option><option value="CRM">CRM</option><option value="Ventes">Ventes</option><option value="Achats">Achats</option><option value="Comptabilite">Comptabilite</option><option value="Stock">Stock / Inventaire</option><option value="Fabrication">Fabrication</option><option value="Projet">Projet</option><option value="RH">RH / Conges</option><option value="Site Web">Site Web / eCommerce</option><option value="ElvyBat">ElvyBat</option><option value="ElvyDoc">ElvyDoc (GED)</option><option value="ElvyPrint">ElvyPrint</option><option value="Autre">Autre</option></select></div>
+                      <div><span className="sp-label">Urgence</span><select className="sp-input" name="urgence" value={formData.urgence} onChange={handleChange}><option value="">Selectionner...</option><option value="Bloquant">Bloquant</option><option value="Genant">Genant</option><option value="Amelioration">Amelioration</option></select></div>
                     </div>
                     <div style={{ marginBottom: 32 }}>
-                      <span className="sp-label">Description du problÃ¨me</span>
-                      <textarea className="sp-input" name="description" value={formData.description} onChange={handleChange} rows={7} required style={{ resize: 'vertical' }} placeholder="DÃ©crivez le problÃ¨me, les Ã©tapes pour le reproduire, et joignez des captures d'Ã©cran par email si besoin." />
+                      <span className="sp-label">Description du probleme</span>
+                      <textarea className="sp-input" name="description" value={formData.description} onChange={handleChange} rows={7} required style={{ resize: 'vertical' }} placeholder="Decrivez le probleme, les etapes pour le reproduire, et joignez des captures d'ecran par email si besoin." />
                     </div>
                     <button className="sp-btn" onClick={handleSubmit} disabled={sending}>{sending ? 'Envoi en cours...' : 'Envoyer le ticket'}</button>
                   </div>
@@ -247,24 +243,24 @@ const Support: React.FC = () => {
             {/* SIDEBAR */}
             <div style={{ flex: '0 1 400px', display: 'flex', flexDirection: 'column', gap: 18 }}>
               <a href="https://odoo.d4e.app/" target="_blank" rel="noopener noreferrer" className="sp-card sp-card-teal sp-dark">
-                <div className="sp-icon sp-icon-teal">ð</div>
-                <div><div className="sp-card-title">Suivre mes tickets</div><div className="sp-teal" style={{ fontSize: 14, fontWeight: 500 }}>Portail client â</div></div>
+                <div className="sp-icon sp-icon-teal">LIST</div>
+                <div><div className="sp-card-title">Suivre mes tickets</div><div className="sp-teal" style={{ fontSize: 14, fontWeight: 500 }}>Portail client -></div></div>
               </a>
               <a href="https://anydesk.com/fr/downloads" target="_blank" rel="noopener noreferrer" className="sp-card sp-card-gold sp-dark">
-                <div className="sp-icon sp-icon-gold">ð¥ï¸</div>
-                <div><div className="sp-card-title">TÃ©lÃ©charger AnyDesk</div><div className="sp-gold" style={{ fontSize: 14, fontWeight: 500 }}>Session Ã  distance â</div></div>
+                <div className="sp-icon sp-icon-gold">PC</div>
+                <div><div className="sp-card-title">Telecharger AnyDesk</div><div className="sp-gold" style={{ fontSize: 14, fontWeight: 500 }}>Session a distance -></div></div>
               </a>
               <a href="tel:+41582551115" className="sp-card sp-card-purple sp-dark">
-                <div className="sp-icon sp-icon-purple">ð</div>
-                <div><div className="sp-card-title">+41 (0) 58 255 11 15</div><div className="sp-purple" style={{ fontSize: 14, fontWeight: 500 }}>Lun-Ven Â· 8h-18h</div></div>
+                <div className="sp-icon sp-icon-purple">TEL</div>
+                <div><div className="sp-card-title">+41 (0) 58 255 11 15</div><div className="sp-purple" style={{ fontSize: 14, fontWeight: 500 }}>Lun-Ven - 8h-18h</div></div>
               </a>
               <a href="mailto:support@digital4efficiency.ch" className="sp-card sp-card-default sp-dark">
-                <div className="sp-icon sp-icon-default">âï¸</div>
+                <div className="sp-icon sp-icon-default">MAIL</div>
                 <div><div className="sp-card-title">Email support</div><div className="sp-dim" style={{ fontSize: 14, fontWeight: 500 }}>support@digital4efficiency.ch</div></div>
               </a>
               <div className="sp-tipbox sp-dark">
                 <div className="sp-tip-label">Astuce</div>
-                <p className="sp-tip-text" style={{ margin: 0 }}>Pour un traitement plus rapide, joignez une capture d'Ã©cran et prÃ©cisez les Ã©tapes pour reproduire le problÃ¨me.</p>
+                <p className="sp-tip-text" style={{ margin: 0 }}>Pour un traitement plus rapide, joignez une capture d'ecran et precisez les etapes pour reproduire le probleme.</p>
               </div>
             </div>
           </div>
