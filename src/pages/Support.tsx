@@ -171,13 +171,10 @@ const Support: React.FC = () => {
         #d4e-support .sp-tip-text { color: rgba(255,255,255,0.5) !important; font-size: 14px !important; line-height: 1.7 !important; }
 
         @media (max-width: 860px) {
-          #d4e-support .sp-layout { flex-direction: column !important; }
+          #d4e-support .sp-layout { flex-direction: column !important; gap: 20px !important; }
+          #d4e-support .sp-layout > div { flex: 1 1 100% !important; width: 100% !important; max-width: 100% !important; }
           #d4e-support .sp-grid-2 { grid-template-columns: 1fr !important; }
-          #d4e-support .sp-form-box { padding: 36px 28px !important; }
-        }
-              @media (max-width: 768px) {
-          #d4e-support .sp-layout { flex-direction: column !important; }
-          #d4e-support .sp-form { padding: 28px 20px !important; }
+          #d4e-support .sp-form-box { padding: 32px 24px !important; }
         }
       `}</style>
 
