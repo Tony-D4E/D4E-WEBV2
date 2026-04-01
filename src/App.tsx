@@ -11,7 +11,7 @@ import ElvyInsurancePage from './pages/ElvyInsurancePage';
 import ElvyEducaPage from './pages/ElvyEducaPage';
 import { TarifsPage } from './pages/TarifsPage';
 import { Support } from './pages/Support';
-import CguPage from './pages/CguPage';
+import ConditionsPage from './pages/ConditionsPage';
 import EntreprisePage from './pages/EntreprisePage';
 import JobsPage from './pages/JobsPage';
 import { NotFound } from './pages/NotFound';
@@ -41,7 +41,7 @@ function App() {
           <Route path="/elvyeduca"     element={<ElvyEducaPage />} />
           <Route path="/tarifs"        element={<TarifsPage />} />
           <Route path="/support"       element={<Support />} />
-          <Route path="/cgu"           element={<CguPage />} />
+          <Route path="/conditions-generales"           element={<ConditionsPage />} />
           <Route path="/entreprise"    element={<EntreprisePage />} />
           <Route path="/jobs"          element={<JobsPage />} />
           <Route path="*"              element={<NotFound />} />
