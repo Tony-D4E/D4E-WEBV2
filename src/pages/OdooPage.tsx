@@ -222,35 +222,35 @@ export default function OdooPage() {
   }, [ind]);
 
   const INDS = {
-    fi: { emo:'ð', icon:'BarChart3', title:'Finance', sub:'Reporting, conformite, clotures rapides', gold:false,
-      body:'Les directions financieres passent encore trop de temps sur des taches que la machine peut faire. <strong style={{color:\'#fff\'}}>Odoo coupe dans tout ca.</strong> Reconciliation bancaire automatique, clotures en quelques heures, chaque chiffre remonte en temps reel.',
-      checks:['Reconciliation bancaire automatique par IA','Multi-devises, multi-societes, multi-taxes','KPIs financiers en temps reel, sans export','Packages de localisation fiscale par pays'],
-      mods:[{n:'Comptabilite',t:'Core',d:'Facturation, taxes, clotures, audit trail'},{n:'Analytique BI',t:'Reporting',d:'Centres de profit, reporting multidimensionnel'},{n:'Tresorerie',t:'Finance',d:'Previsions cash-flow, paiements'},{n:'Notes de frais',t:'RH',d:'Validation mobile, remboursements auto'}]},
-    sv: { emo:'ð§©', icon:'Wrench', title:'Services', sub:'Projets, temps, facturation sans fuite', gold:false,
-      body:'Les ESN, cabinets et agences ont un ennemi commun : <strong style={{color:\'#fff\'}}>les heures qui s\'evaporent sans etre facturees.</strong> Odoo Project relie tout dans une seule boucle.',
-      checks:['Timesheets lies directement a la facturation','Vue Gantt, Kanban, liste sur chaque mission','Portail client pour validation des livrables','Rentabilite par projet, consultant, client'],
-      mods:[{n:'Project',t:'Core',d:'Taches, jalons, dependances, vues multiples'},{n:'Timesheets',t:'Temps',d:'Saisie, validation, lien facturation'},{n:'Helpdesk',t:'Support',d:'Tickets, SLA, satisfaction client'},{n:'Field Service',t:'Terrain',d:'Interventions, planning mobile'}]},
-    bt: { emo:'ð', icon:'HardHat', title:'Construction BTP', sub:'ElvyBat, notre solution maison sur Odoo', gold:true,
-      body:'Le BTP c\'est notre terrain de jeu depuis le debut. On a construit ElvyBat parce qu\'on n\'a pas trouve une solution qui comprenait vraiment les enjeux d\'un chef de chantier. <strong style={{color:\'#fff\'}}>1 400+ chantiers geres. Ce n\'est pas de la theorie.</strong>',
-      checks:['Rentabilite chantier visible en temps reel','Pointage terrain mobile, meme hors ligne','IA vocale multilingue pour bons de regie','Chiffrage integre, devis en quelques clics'],
-      mods:[{n:'ElvyBat',t:'Coeur',d:'Gestion de chantiers, marges, plannings'},{n:'ElvyCalc',t:'Chiffrage',d:'Metres, estimations, devis automatises'},{n:'ElvyTime',t:'Pointage',d:'Suivi des equipes, heures chantier'},{n:'ElvyService IA',t:'IA',d:'Rapports vocaux, bons de regie, facturation'}]},
-    in: { emo:'âï¸', icon:'Factory', title:'Industrie', sub:'Production, supply chain, tracabilite', gold:false,
-      body:'Odoo Manufacturing connecte nomenclature, ordres de fab et controle qualite dans un flux unique. <strong style={{color:\'#fff\'}}>La tracabilite devient un avantage, pas une contrainte.</strong>',
-      checks:['MRP et ordonnancement intelligent des ateliers','Nomenclatures multicouches, suivi composants','Controle qualite et tracabilite lot/serie','Maintenance preventive et predictive'],
-      mods:[{n:'Manufacturing',t:'Core',d:'Ordres de fabrication, BOM, suivi atelier'},{n:'Maintenance',t:'GMAO',d:'Interventions preventives, equipements'},{n:'Qualite',t:'Conformite',d:'Points de controle, non-conformites'},{n:'PLM',t:'Produit',d:'Cycle de vie produit, versions, ECO'}]},
-    co: { emo:'ð', icon:'ShoppingCart', title:'Commerce', sub:'Multi-canal, stocks, relation client', gold:true,
-      body:'Caisse, e-commerce, marketplace : un seul back-office. <strong style={{color:\'#fff\'}}>Quand un produit est epuise en boutique, il disparait automatiquement du site.</strong>',
-      checks:['Caisse, site web, marketplace unifies','Programme de fidelite multicanal integre','Gestion des retours et SAV automatisee','Rapports de ventes temps reel par canal'],
-      mods:[{n:'Point of Sale',t:'Retail',d:'Caisse tactile, paiements, remises'},{n:'eCommerce',t:'Digital',d:'Boutique native, SEO, passerelles paiement'},{n:'CRM',t:'Fidelite',d:'Segmentation, campagnes, historique'},{n:'Inventory',t:'Stock',d:'Stock temps reel, reapprovisionnement auto'}]},
-    lo: { emo:'ð', icon:'Truck', title:'Logistique', sub:'Flux, entrepots, expeditions sans friction', gold:false,
-      body:'La logistique, c\'est la guerre contre le temps perdu. <strong style={{color:\'#fff\'}}>On a vu des equipes gagner 2 heures par jour</strong> rien qu\'avec l\'optimisation du picking dans Odoo.',
-      checks:['Picking optimise par route dans l\'entrepot','Multi-entrepots, cross-docking, dropshipping','Integration transporteurs, etiquettes auto','Tracabilite par lot, serie, date peremption'],
+    fi: { emo:'Ã°ÂÂÂ', icon:'BarChart3', title:'Finance', sub:'Reporting, conformité, clôtures rapides', gold:false,
+      body:'Les directions financières passent encore trop de temps sur des tâches que la machine peut faire. <strong style={{color:\'#fff\'}}>Odoo coupe dans tout ca.</strong> Réconciliation bancaire automatique, clôtures en quelques heures, chaque chiffre remonte en temps réel.',
+      checks:['Réconciliation bancaire automatique par IA','Multi-devises, multi-societes, multi-taxes','KPIs financiers en temps réel, sans export','Packages de localisation fiscale par pays'],
+      mods:[{n:'Comptabilite',t:'Core',d:'Facturation, taxes, clôtures, audit trail'},{n:'Analytique BI',t:'Reporting',d:'Centres de profit, reporting multidimensionnel'},{n:'Trésorerie',t:'Finance',d:'Prévisions cash-flow, paiements'},{n:'Notes de frais',t:'RH',d:'Validation mobile, remboursements auto'}]},
+    sv: { emo:'Ã°ÂÂ§Â©', icon:'Wrench', title:'Services', sub:'Projets, temps, facturation sans fuite', gold:false,
+      body:'Les ESN, cabinets et agences ont un ennemi commun : <strong style={{color:\'#fff\'}}>les heures qui s\'evaporent sans etre facturées.</strong> Odoo Project relie tout dans une seule boucle.',
+      checks:['Timesheets liés directement a la facturation','Vue Gantt, Kanban, liste sur chaque mission','Portail client pour validation des livrables','Rentabilité par projet, consultant, client'],
+      mods:[{n:'Project',t:'Core',d:'Taches, jalons, dépendances, vues multiples'},{n:'Timesheets',t:'Temps',d:'Saisie, validation, lien facturation'},{n:'Helpdesk',t:'Support',d:'Tickets, SLA, satisfaction client'},{n:'Field Service',t:'Terrain',d:'Interventions, planning mobile'}]},
+    bt: { emo:'Ã°ÂÂÂ', icon:'HardHat', title:'Construction BTP', sub:'ElvyBat, notre solution maison sur Odoo', gold:true,
+      body:'Le BTP c\'est notre terrain de jeu depuis le debut. On a construit ElvyBat parce qu\'on n\'a pas trouvé une solution qui comprenait vraiment les enjeux d\'un chef de chantier. <strong style={{color:\'#fff\'}}>1 400+ chantiers gérés. Ce n\'est pas de la théorie.</strong>',
+      checks:['Rentabilité chantier visible en temps réel','Pointage terrain mobile, meme hors ligne','IA vocale multilingue pour bons de regie','Chiffrage intégré, devis en quelques clics'],
+      mods:[{n:'ElvyBat',t:'Coeur',d:'Gestion de chantiers, marges, plannings'},{n:'ElvyCalc',t:'Chiffrage',d:'Metres, estimations, devis automatisés'},{n:'ElvyTime',t:'Pointage',d:'Suivi des équipes, heures chantier'},{n:'ElvyService IA',t:'IA',d:'Rapports vocaux, bons de regie, facturation'}]},
+    in: { emo:'Ã¢ÂÂÃ¯Â¸Â', icon:'Factory', title:'Industrie', sub:'Production, supply chain, traçabilité', gold:false,
+      body:'Odoo Manufacturing connecté nomenclature, ordres de fab et controle qualite dans un flux unique. <strong style={{color:\'#fff\'}}>La traçabilité devient un avantage, pas une contrainte.</strong>',
+      checks:['MRP et ordonnancement intelligent des ateliers','Nomenclatures multicouches, suivi composants','Controle qualite et traçabilité lot/serie','Maintenance préventive et prédictive'],
+      mods:[{n:'Manufacturing',t:'Core',d:'Ordres de fabrication, BOM, suivi atelier'},{n:'Maintenance',t:'GMAO',d:'Interventions préventives, equipements'},{n:'Qualite',t:'Conformité',d:'Points de controle, non-conformités'},{n:'PLM',t:'Produit',d:'Cycle de vie produit, versions, ECO'}]},
+    co: { emo:'Ã°ÂÂÂ', icon:'ShoppingCart', title:'Commerce', sub:'Multi-canal, stocks, relation client', gold:true,
+      body:'Caisse, e-commerce, marketplace : un seul back-office. <strong style={{color:\'#fff\'}}>Quand un produit est épuisé en boutique, il disparait automatiquement du site.</strong>',
+      checks:['Caisse, site web, marketplace unifies','Programme de fidélité multicanal intégré','Gestion des retours et SAV automatisee','Rapports de ventes temps réel par canal'],
+      mods:[{n:'Point of Sale',t:'Retail',d:'Caisse tactile, paiements, remises'},{n:'eCommerce',t:'Digital',d:'Boutique native, SEO, passerelles paiement'},{n:'CRM',t:'Fidelite',d:'Segmentation, campagnes, historique'},{n:'Inventory',t:'Stock',d:'Stock temps réel, réapprovisionnement auto'}]},
+    lo: { emo:'Ã°ÂÂÂ', icon:'Truck', title:'Logistique', sub:'Flux, entrepôts, expeditions sans friction', gold:false,
+      body:'La logistique, c\'est la guerre contre le temps perdu. <strong style={{color:\'#fff\'}}>On a vu des équipes gagner 2 heures par jour</strong> rien qu\'avec l\'optimisation du picking dans Odoo.',
+      checks:['Picking optimise par route dans l\'entrepot','Multi-entrepôts, cross-docking, dropshipping','Integration transporteurs, étiquettes auto','Tracabilite par lot, serie, date péremption'],
       mods:[{n:'Inventory',t:'Core',d:'Gestion de stock, mouvements, valorisation'},{n:'Barcode',t:'Scan',d:'Picking par scan, reception, inventaires'},{n:'Delivery',t:'Transport',d:'FedEx, UPS, DHL, La Poste nativement'},{n:'Purchase',t:'Achats',d:'Commandes fournisseurs, receptions'}]},
-    sa: { emo:'ð©º', icon:'Heart', title:'Sante', sub:'Normes, tracabilite, conformite sans effort', gold:false,
-      body:'Dans le secteur de la sante, l\'erreur n\'est pas une option. <strong style={{color:\'#fff\'}}>La conformite reglementaire devient automatique</strong> plutot qu\'un audit de 3 jours.',
-      checks:['Tracabilite complete par lot et numero de serie','Alertes automatiques sur dates de peremption','Gestion des recalls produit en quelques clics','Conformite reglementaire documentee'],
-      mods:[{n:'Inventory + Lots',t:'Traca',d:'FEFO, numeros de serie, rappels auto'},{n:'Qualite',t:'Conformite',d:'Points de controle, non-conformites'},{n:'Facturation',t:'Admin',d:'Tiers payant, devis medicaux'},{n:'Portail client',t:'Digital',d:'Documents partages, historique'}]},
-    ed: { emo:'ð', icon:'GraduationCap', title:'Education', sub:'Inscriptions, plannings, suivi apprenants', gold:false,
+    sa: { emo:'Ã°ÂÂ©Âº', icon:'Heart', title:'Santé', sub:'Normes, traçabilité, conformité sans effort', gold:false,
+      body:'Dans le secteur de la santé, l\'erreur n\'est pas une option. <strong style={{color:\'#fff\'}}>La conformité réglementaire devient automatique</strong> plutot qu\'un audit de 3 jours.',
+      checks:['Tracabilite complete par lot et numero de serie','Alertes automatiques sur dates de péremption','Gestion des recalls produit en quelques clics','Conformité réglementaire documentée'],
+      mods:[{n:'Inventory + Lots',t:'Traca',d:'FEFO, numeros de serie, rappels auto'},{n:'Qualite',t:'Conformité',d:'Points de controle, non-conformités'},{n:'Facturation',t:'Admin',d:'Tiers payant, devis medicaux'},{n:'Portail client',t:'Digital',d:'Documents partages, historique'}]},
+    ed: { emo:'Ã°ÂÂÂ', icon:'GraduationCap', title:'Education', sub:'Inscriptions, plannings, suivi apprenants', gold:false,
       body:'Odoo unifie inscriptions, plannings, suivi et facturation dans un portail unique. <strong style={{color:\'#fff\'}}>Les relances de paiement deviennent automatiques.</strong>',
       checks:['Inscriptions en ligne et suivi des paiements','Plannings de cours, salles, formateurs','Portail apprenant, supports de cours, quiz','Tableaux de bord progression et assiduite'],
       mods:[{n:'eLearning',t:'Core',d:'Cours, quiz, certifications, progression'},{n:'Events',t:'Planif.',d:'Sessions, inscriptions, rappels'},{n:'Facturation',t:'Admin',d:'Inscriptions payantes, relances, OPCO'},{n:'Employes',t:'RH',d:'Gestion formateurs, contrats, planning RH'}]},
@@ -273,7 +273,7 @@ export default function OdooPage() {
             On ne vend pas<br/>Odoo. <span className="tg">On y croit<br/>vraiment.</span>
           </h1>
           <p className="aos d2" style={{fontSize:20,color:'#E2E8F0',lineHeight:1.75,maxWidth:640,marginBottom:40}}>
-            Chez D4E, on a choisi Odoo <strong style={{color:'#fff'}}>avant que ce soit tendance.</strong> On l'a deploye sur des chantiers, dans des ateliers, des cabinets. Et on le redeploierait demain sans hesiter.
+            Chez D4E, on a choisi Odoo <strong style={{color:'#fff'}}>avant que ce soit tendance.</strong> On l'a déployé sur des chantiers, dans des ateliers, des cabinets. Et on le redéploierait demain sans hésiter.
           </p>
           <div className="aos d2" style={{display:'flex',alignItems:'center',gap:20,marginBottom:36}}>
             <img src="/antonio-ski.jpg" alt="Antonio Spedicato" style={{width:120,height:120,borderRadius:'50%',objectFit:'cover',objectPosition:'top',border:'3px solid #00D4C8',flexShrink:0,boxShadow:'0 0 40px rgba(0,212,200,.35)'}}/>
@@ -292,7 +292,7 @@ export default function OdooPage() {
           <div className="aos d4 hero-stats" style={{display:'flex',gap:14,flexWrap:'wrap',marginBottom:40}}>
             {[
               {n:'1 300+',l:'utilisateurs actifs',s:'Suisse - France - Espagne - Italie',gold:false},
-              {n:'8 ans',l:"d'expertise Odoo & BTP",s:'Certifie Gold v13 -> v19',gold:false},
+              {n:'8 ans',l:"d'expertise Odoo & BTP",s:'Certifié Gold v13 -> v19',gold:false},
               {n:'Support humain',l:'garanti -- pas de bot',s:'Une vraie personne qui connait votre dossier',gold:true},
             ].map((st,i) => (
               <div key={i} className="card" style={{background:st.gold?'rgba(245,158,11,.08)':'rgba(17,24,39,.9)',borderColor:st.gold?'rgba(245,158,11,.3)':'rgba(255,255,255,.12)',padding:'22px 28px',flex:1,minWidth:180}}>
@@ -314,9 +314,9 @@ export default function OdooPage() {
             <h2 className="aos d1" style={{fontSize:'clamp(32px,4vw,56px)',fontWeight:800,lineHeight:1.12,marginBottom:28,color:'#1e293b'}}>
               Fini le ballet des logiciels<br/>qui <span className="tg">ne se parlent pas.</span>
             </h2>
-            {['On a tous vecu ce cauchemar : un CRM d\'un cote, une compta de l\'autre, un Excel de stock quelque part sur le reseau, et une reunion hebdomadaire pour reconcilier tout ca a la main. C\'est du temps humain gaspille.',
-              'Odoo, c\'est 40+ applications qui naissent deja connectees. Votre commercial cree un devis : la comptabilite le voit. Le stock se met a jour : l\'atelier est prevenu. Une facture est payee : le rapport de tresorerie bouge en temps reel.',
-              "Ce qu'on aime chez Odoo, c'est que le logiciel respecte l'intelligence de vos equipes. Il automatise ce qui est repetitif et libere du temps pour ce qui demande du jugement, de la relation, de l'expertise."
+            {['On a tous vécu ce cauchemar : un CRM d\'un cote, une compta de l\'autre, un Excel de stock quelque part sur le réseau, et une reunion hebdomadaire pour réconcilier tout ca a la main. C\'est du temps humain gaspillé.',
+              'Odoo, c\'est 40+ applications qui naissent déjà connectées. Votre commercial crée un devis : la comptabilite le voit. Le stock se met a jour : l\'atelier est prévenu. Une facture est payée : le rapport de tresorerie bouge en temps réel.',
+              "Ce qu'on aime chez Odoo, c'est que le logiciel respecte l'intelligence de vos équipes. Il automatise ce qui est répétitif et libère du temps pour ce qui demande du jugement, de la relation, de l'expertise."
             ].map((p,i) => <p key={i} className={`aos d${i+2}`} style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:20,maxWidth:'100%'}}>{p}</p>)}
             <div className="aos d4" style={{display:'flex',alignItems:'center',gap:24,marginTop:40,paddingTop:32,borderTop:'1px solid #e2e8f0'}}>
               <img src="/team-laetitia.jpg" alt="Laetitia Andre" style={{width:120,height:120,borderRadius:'50%',objectFit:'cover',objectPosition:'top',border:'3px solid #00D4C8',flexShrink:0,boxShadow:'0 0 40px rgba(0,212,200,.25)'}}/>
@@ -338,15 +338,15 @@ export default function OdooPage() {
         <div style={{width:'100%',position:'relative',zIndex:2}}>
           <div className="stag-dk aos"><span className="sdot"/>&nbsp;Ce qu'Odoo fait vraiment</div>
           <h2 className="sh2 aos d1" style={{color:'#fff'}}>Les modules qu'on deploie<br/>le plus. Et pourquoi.</h2>
-          <p className="aos d2" style={{fontSize:17,color:'#E2E8F0',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Pas une liste exhaustive. Juste les six apps qui ont change concretement la vie des entreprises qu'on accompagne.</p>
+          <p className="aos d2" style={{fontSize:17,color:'#E2E8F0',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Pas une liste exhaustive. Juste les six apps qui ont change concrètement la vie des entreprises qu'on accompagne.</p>
           <div className="ag sg aos">
             {[
-              {ico:'crm',bg:'rgba(0,212,200,.1)',title:'CRM et Ventes',body:'Pipeline Kanban temps reel, lead scoring IA, devis en un clic. Devis -> Commande -> Facture sans copier-coller. Multi-canal dans la meme vue.',result:'+30% de ventes',rc:'rt'},
-              {ico:'inventaire',bg:'rgba(245,158,11,.1)',title:'Inventaire',body:'Stock temps reel, FIFO/FEFO, multi-entrepots. Une commande declenche le reapprovisionnement automatiquement.',result:'-40% de ruptures',rc:'rg'},
-              {ico:'compta',bg:'rgba(0,212,200,.1)',title:'Comptabilite',body:'Reconciliation bancaire IA, facturation auto, multi-devises. La cloture mensuelle de 3 jours passe a quelques heures.',result:'15h/semaine recuperees',rc:'rt'},
-              {ico:'manufacturing',bg:'rgba(124,58,237,.1)',title:'Fabrication (MRP)',body:'Nomenclatures, ordres de fab, controle qualite, maintenance predictive. La production arrete de subir.',result:null,rc:''},
+              {ico:'crm',bg:'rgba(0,212,200,.1)',title:'CRM et Ventes',body:'Pipeline Kanban temps réel, lead scoring IA, devis en un clic. Devis -> Commande -> Facture sans copier-coller. Multi-canal dans la meme vue.',result:'+30% de ventes',rc:'rt'},
+              {ico:'inventaire',bg:'rgba(245,158,11,.1)',title:'Inventaire',body:'Stock temps réel, FIFO/FEFO, multi-entrepôts. Une commande declenche le réapprovisionnement automatiquement.',result:'-40% de ruptures',rc:'rg'},
+              {ico:'compta',bg:'rgba(0,212,200,.1)',title:'Comptabilite',body:'Réconciliation bancaire IA, facturation auto, multi-devises. La clôture mensuelle de 3 jours passe a quelques heures.',result:'15h/semaine récupérées',rc:'rt'},
+              {ico:'manufacturing',bg:'rgba(124,58,237,.1)',title:'Fabrication (MRP)',body:'Nomenclatures, ordres de fab, controle qualite, maintenance prédictive. La production arrete de subir.',result:null,rc:''},
               {ico:'employees',bg:'rgba(245,158,11,.1)',title:'Ressources Humaines',body:'Recrutement, paie, conges, evaluations. Portail self-service collaborateur. Une RH qui pilote.',result:null,rc:''},
-              {ico:'ecommerce',bg:'rgba(0,212,200,.1)',title:'E-commerce',body:'Boutique native, catalogue synchronise avec le stock physique. Un produit epuise disparait automatiquement du site.',result:'x2 ventes online en 6 mois',rc:'rt'},
+              {ico:'ecommerce',bg:'rgba(0,212,200,.1)',title:'E-commerce',body:'Boutique native, catalogue synchronise avec le stock physique. Un produit épuisé disparait automatiquement du site.',result:'x2 ventes online en 6 mois',rc:'rt'},
             ].map((a,i) => (
               <div key={i} className={`ac card card-dk cgh${i===0?' w':''}`} style={{cursor:'default'}}>
                 <div className="aico" style={{background:a.bg}} dangerouslySetInnerHTML={{__html:SVGS[a.ico as keyof typeof SVGS]}}/>
@@ -364,17 +364,17 @@ export default function OdooPage() {
         <div style={{width:"100%"}}>
           <div className="int-cols" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:64,alignItems:'start',marginBottom:40}}>
             <div>
-              <div className="stag-lk aos"><span className="sdot"/>&nbsp;Integrations &amp; API</div>
+              <div className="stag-lk aos"><span className="sdot"/>&nbsp;Intégrations &amp; API</div>
               <h2 className="sh2 aos d1" style={{color:'#1e293b'}}>Vous avez deja<br/>quelque chose en place ?<br/><span className="tg">Pas de probleme.</span></h2>
-              <p className="aos d2" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:22}}>C'est la question qu'on entend souvent : <em style={{color:'#1e293b'}}>"On a deja notre site e-commerce, notre EDI, notre ERP de prod -- est-ce qu'Odoo va tout casser ?"</em> La reponse courte : non.</p>
-              <p className="aos d3" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:0}}>L'API REST d'Odoo est <strong style={{color:'#1e293b'}}>ouverte, documentee et battle-tested.</strong> On a connecte des boutiques Shopify, des systemes EDI industriels, des logiciels de paie locaux. A chaque fois, Odoo joue le role de <strong style={{color:'#1e293b'}}>cerveau central</strong> sans forcer la main.</p>
+              <p className="aos d2" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:22}}>C'est la question qu'on entend souvent : <em style={{color:'#1e293b'}}>"On a déjà notre site e-commerce, notre EDI, notre ERP de prod -- est-ce qu'Odoo va tout casser ?"</em> La réponse courte : non.</p>
+              <p className="aos d3" style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:0}}>L'API REST d'Odoo est <strong style={{color:'#1e293b'}}>ouverte, documentée et battle-tested.</strong> On a connecté des boutiques Shopify, des systemes EDI industriels, des logiciels de paie locaux. A chaque fois, Odoo joue le role de <strong style={{color:'#1e293b'}}>cerveau central</strong> sans forcer la main.</p>
             </div>
             <div>
               <div className="sg aos d2" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:10,marginBottom:14}}>
                 {[
                   {Icon:Store,      n:'E-commerce', d:'Shopify, WooCommerce, Amazon', color:'#F59E0B', bg:'rgba(245,158,11,0.12)'},
                   {Icon:RefreshCw,  n:'EDI',         d:'EDIFACT, X12, commandes auto', color:'#00D4C8', bg:'rgba(0,212,200,0.12)'},
-                  {Icon:Cpu,        n:'MRP / ERP',   d:'SAP, Sage, logiciels metier',  color:'#F59E0B', bg:'rgba(245,158,11,0.12)'},
+                  {Icon:Cpu,        n:'MRP / ERP',   d:'SAP, Sage, logiciels métier',  color:'#F59E0B', bg:'rgba(245,158,11,0.12)'},
                   {Icon:CreditCard, n:'Paiement',    d:'Stripe, PayPal, Twint',         color:'#00D4C8', bg:'rgba(0,212,200,0.12)'},
                   {Icon:Package,    n:'Logistique',  d:'DHL, UPS, FedEx, La Poste',    color:'#F59E0B', bg:'rgba(245,158,11,0.12)'},
                   {Icon:Webhook,    n:'API custom',  d:'REST, webhooks, tout',          color:'#00D4C8', bg:'rgba(0,212,200,0.12)'},
@@ -389,7 +389,7 @@ export default function OdooPage() {
                 ))}
               </div>
               <div className="aos d3" style={{background:'#fff',border:'1px solid #e2e8f0',borderLeft:'3px solid #00D4C8',borderRadius:'0 12px 12px 0',padding:'14px 18px'}}>
-                <div style={{fontSize:12,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:'#00B4A6',marginBottom:10}}>Ce qu'on connecte couramment</div>
+                <div style={{fontSize:12,textTransform:'uppercase',letterSpacing:1.5,fontWeight:700,color:'#00B4A6',marginBottom:10}}>Ce qu'on connecté couramment</div>
                 <div style={{display:'flex',flexWrap:'wrap',gap:6}}>
                   {['Shopify','WooCommerce','Magento','EDI EDIFACT','Amazon','Stripe','PayPal','Twint','DHL / UPS','Salesforce','SAP','Sage','API bancaires','Webhooks'].map(t => <span key={t} className="tag">{t}</span>)}
                 </div>
@@ -402,7 +402,7 @@ export default function OdooPage() {
             </div>
             <div>
               <div style={{fontSize:14,color:'#00B4A6',fontWeight:800,marginBottom:6,textTransform:'uppercase',letterSpacing:1.5}}>Notre principe sur le terrain</div>
-              <div style={{fontSize:17,color:'#334155',lineHeight:1.75}}>On ne remplace pas ce qui fonctionne bien. On connecte Odoo a votre existant, on construit des ponts, et on migre progressivement quand ca a du sens.</div>
+              <div style={{fontSize:17,color:'#334155',lineHeight:1.75}}>On ne remplace pas ce qui fonctionne bien. On connecté Odoo a votre existant, on construit des ponts, et on migre progressivement quand ca a du sens.</div>
             </div>
           </div>
         </div>
@@ -413,9 +413,9 @@ export default function OdooPage() {
         <div style={{width:"100%"}}>
           <div className="stag-dk aos"><span className="sdot"/>&nbsp;Par secteur</div>
           <h2 className="sh2 aos d1" style={{color:'#fff'}}>Odoo parle votre langue.<br/><span className="tg">On vous le prouve.</span></h2>
-          <p className="aos d2" style={{fontSize:17,color:'#E2E8F0',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Chaque metier a ses angles morts. Voila ce qu'on a appris en deployant Odoo dans les votres.</p>
+          <p className="aos d2" style={{fontSize:17,color:'#E2E8F0',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Chaque métier a ses angles morts. Voila ce qu'on a appris en déployant Odoo dans les votres.</p>
           <div className="aos d3" style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:44}}>
-            {([['fi','Finance','BarChart3'],['sv','Services','Wrench'],['bt','Construction','HardHat',true],['in','Industrie','Factory'],['co','Commerce','ShoppingCart'],['lo','Logistique','Truck'],['sa','Sante','Heart'],['ed','Education','GraduationCap']] as [IndId,string,string,boolean?][]).map(([id,label,_icon,elvy]) => (
+            {([['fi','Finance','BarChart3'],['sv','Services','Wrench'],['bt','Construction','HardHat',true],['in','Industrie','Factory'],['co','Commerce','ShoppingCart'],['lo','Logistique','Truck'],['sa','Santé','Heart'],['ed','Education','GraduationCap']] as [IndId,string,string,boolean?][]).map(([id,label,_icon,elvy]) => (
               <button key={id} className={`itab${elvy?' elvy':''}${ind===id?' on':''}`} style={{fontSize:15,padding:'10px 22px'}} onClick={() => setInd(id)}>
                 {label}{elvy && <span className="eb">Elvy</span>}
               </button>
@@ -460,13 +460,13 @@ export default function OdooPage() {
         <div style={{width:"100%"}}>
           <div className="stag-lk aos"><span className="sdot"/>&nbsp;Ce qu'on a vraiment appris</div>
           <h2 className="sh2 aos d1" style={{color:'#1e293b'}}>6 raisons. Pas dans les slides.</h2>
-          <p className="aos d2" style={{fontSize:17,color:'#334155',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Apres 8 ans a deployer Odoo sur des dizaines de projets tres differents, voila ce qui nous convainc encore chaque matin.</p>
+          <p className="aos d2" style={{fontSize:17,color:'#334155',maxWidth:580,lineHeight:1.7,marginBottom:52}}>Apres 8 ans a déployer Odoo sur des dizaines de projets tres differents, voila ce qui nous convainc encore chaque matin.</p>
           <div className="rg-grid sg aos">
             {[['01','Modulaire par nature','Commencez avec une app. Ajoutez-en 40+ quand vous voulez. <strong>Aucun contrat bloquant.</strong>'],
-              ['02','Open source','Personnalisation illimitee. <strong>Zero vendor lock-in.</strong> Le code vous appartient.'],
-              ['03','Tout parle a tout','CRM, Compta, Stock, Production. <strong>Zero connecteur. Zero synchro manuelle.</strong>'],
-              ['04','Cout maitrise','Jusqu\'a <strong>-35% de couts operationnels</strong> vs des solutions fragmentees.'],
-              ['05','Mobile first','Application <strong>refaite de zero en v18.</strong> Votre equipe travaille depuis le terrain.'],
+              ['02','Open source','Personnalisation illimitée. <strong>Zéro vendor lock-in.</strong> Le code vous appartient.'],
+              ['03','Tout parle a tout','CRM, Compta, Stock, Production. <strong>Zéro connecteur. Zéro synchro manuelle.</strong>'],
+              ['04','Cout maitrise','Jusqu\'a <strong>-35% de couts opérationnels</strong> vs des solutions fragmentées.'],
+              ['05','Mobile first','Application <strong>refaite de zéro en v18.</strong> Votre équipe travaille depuis le terrain.'],
               ['06','Il grandit avec vous','Du TPE au multinational. <strong>Odoo ne plafonne pas.</strong>'],
             ].map(([n,h,p]) => (
               <div key={n} className="rsn rsn-animated">
@@ -486,12 +486,12 @@ export default function OdooPage() {
             <div>
               <div className="stag-dk aos" style={{display:'inline-flex'}}><span className="sdot"/>&nbsp;La promesse D4E</div>
               <h2 className="sh2 aos d1" style={{color:'#fff'}}>On ne livre pas un logiciel.<br/>On livre <span className="tg">votre systeme.</span></h2>
-              <p className="aos d2" style={{fontSize:21,color:'#94A3B8',lineHeight:1.85,marginBottom:44,maxWidth:'100%'}}>Configurer Odoo, n'importe qui peut l'apprendre. Comprendre votre metier, vos contraintes, vos angles morts et traduire tout ca en un systeme qui tient dans le temps -- c'est ce qu'on fait chaque jour depuis 8 ans.</p>
+              <p className="aos d2" style={{fontSize:21,color:'#94A3B8',lineHeight:1.85,marginBottom:44,maxWidth:'100%'}}>Configurer Odoo, n'importe qui peut l'apprendre. Comprendre votre métier, vos contraintes, vos angles morts et traduire tout ca en un systeme qui tient dans le temps -- c'est ce qu'on fait chaque jour depuis 8 ans.</p>
               <div className="sg aos d3 p3g" style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16,marginBottom:44}}>
                 {[
-                  {Icon:Zap,      color:'#F59E0B', bg:'rgba(245,158,11,0.12)', t:'Operationnel en semaines', d:'Nos packs cle en main sont calibres pour que votre equipe soit autonome rapidement.'},
-                  {Icon:Target,   color:'#00D4C8', bg:'rgba(0,212,200,0.12)',  t:'Prix fixe, sans surprise', d:'Un engagement clair. Un perimetre defini. Pas de ticket surprise a chaque modification.'},
-                  {Icon:Users,    color:'#F59E0B', bg:'rgba(245,158,11,0.12)', t:'Un chef de projet dedie',  d:'Une vraie personne, pas un ticket support. Quelqu un qui connait votre activite.'},
+                  {Icon:Zap,      color:'#F59E0B', bg:'rgba(245,158,11,0.12)', t:'Opérationnel en semaines', d:'Nos packs clé en main sont calibrés pour que votre équipe soit autonome rapidement.'},
+                  {Icon:Target,   color:'#00D4C8', bg:'rgba(0,212,200,0.12)',  t:'Prix fixe, sans surprise', d:'Un engagement clair. Un périmètre défini. Pas de ticket surprise a chaque modification.'},
+                  {Icon:Users,    color:'#F59E0B', bg:'rgba(245,158,11,0.12)', t:'Un chef de projet dédié',  d:'Une vraie personne, pas un ticket support. Quelqu un qui connait votre activité.'},
                 ].map((p,i) => (
                   <div key={i} className="p3" style={{display:'flex',flexDirection:'column',gap:16}}>
                     <div style={{width:52,height:52,borderRadius:14,background:p.bg,border:'1px solid '+p.color+'40',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
@@ -524,7 +524,7 @@ export default function OdooPage() {
                 <a href="tel:+41764344595" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',backgroundColor:'#00D4C8',color:'#FFFFFF',fontWeight:700,borderRadius:12,textDecoration:'none',fontSize:'0.95rem'}}>+41 (0)76 434 45 95</a>
                 <a href="mailto:antonio@d4e.cool" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:10,padding:'13px 20px',border:'1.5px solid #CBD5E1',color:'#334155',fontWeight:600,borderRadius:12,textDecoration:'none',fontSize:'0.88rem'}}>antonio@d4e.cool</a>
               </div>
-              <div style={{fontSize:'0.75rem',color:'#64748B',borderTop:'1px solid rgba(0,212,200,0.15)',paddingTop:14,width:'100%'}}>Geneve - Sion - Barcelone</div>
+              <div style={{fontSize:'0.75rem',color:'#64748B',borderTop:'1px solid rgba(0,212,200,0.15)',paddingTop:14,width:'100%'}}>Genève - Sion - Barcelone</div>
             </div>
           </div>
         </div>
