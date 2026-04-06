@@ -6,6 +6,46 @@
   NODE_VERSION = "20"
 
 [[redirects]]
+  from = "/odoo-erp"
+  to = "/odoo"
+  status = 301
+
+[[redirects]]
+  from = "/batiment"
+  to = "/elvybat"
+  status = 301
+
+[[redirects]]
+  from = "/contactez-nous"
+  to = "/support"
+  status = 301
+
+[[redirects]]
+  from = "/references"
+  to = "/entreprise"
+  status = 301
+
+[[redirects]]
+  from = "/offre-service"
+  to = "/tarifs"
+  status = 301
+
+[[redirects]]
+  from = "/helpdesk"
+  to = "/support"
+  status = 301
+
+[[redirects]]
+  from = "/cgu"
+  to = "/conditions-generales"
+  status = 301
+
+[[redirects]]
+  from = "/politique-de-cookie"
+  to = "/conditions-generales"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

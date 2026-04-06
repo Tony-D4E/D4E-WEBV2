@@ -1,3 +1,4 @@
+# Redirections 301 (ancien site)
 /odoo-erp          /odoo                 301
 /batiment          /elvybat              301
 /contactez-nous    /support              301
@@ -13,4 +14,5 @@
 /politique-de-cookie  /conditions-generales  301
 /cgu               /conditions-generales 301
 
+# SPA Fallback
 /*    /index.html   200
