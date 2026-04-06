@@ -1,12 +1,15 @@
 # Redirections 301 (ancien site)
 /odoo-erp          /odoo                 301
+/odoo/achats       /odoo                 301
+/odoo/crm          /odoo                 301
+/odoo/comptabilite /odoo                 301
+/odoo/marketing    /odoo                 301
+/odoo/rh           /odoo                 301
+/odoo/ventes       /odoo                 301
 /batiment          /elvybat              301
 /contactez-nous    /support              301
 /references        /entreprise           301
 /offre-service     /tarifs               301
-/odoo/*            /odoo                 301
-/references/*      /entreprise           301
-/blog/*            /                     301
 /helpdesk          /support              301
 /LYA-app           /elvy                 301
 /eDoc              /elvy                 301
