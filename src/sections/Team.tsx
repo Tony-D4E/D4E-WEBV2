@@ -80,7 +80,7 @@ export function Team() {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', className: 'team-grid', gap: '32px', marginBottom: '48px' }}>
+          <div className="team-grid-wrapper" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '32px', marginBottom: '48px' }}>
             {members.map((m, i) => (
               <div key={m.name} className="team-card" style={{
                 backgroundColor: '#FFFFFF', borderRadius: '28px', padding: '52px 40px',
