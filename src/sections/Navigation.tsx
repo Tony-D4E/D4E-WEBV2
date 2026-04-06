@@ -71,8 +71,8 @@ export function Navigation() {
   };
 
   const navBg = isScrolled
-    ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm'
-    : 'bg-white/80 backdrop-blur-md border-b border-slate-100';
+    ? 'bg-white backdrop-blur-xl border-b border-slate-200 shadow-sm'
+    : 'bg-white backdrop-blur-md border-b border-slate-100';
 
   const linkBase = 'relative px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200';
   const linkActive = 'text-[#00B4A6] bg-[#00B4A6]/8';
