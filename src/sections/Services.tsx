@@ -5,29 +5,29 @@ const services = [
     Icon: Settings,
     color: '#00D4C8',
     bg: 'rgba(0,212,200,0.1)',
-    title: 'Implementation Odoo',
-    description: 'Deploiement complet de votre ERP. Analyse approfondie de vos processus, configuration sur mesure, migration de donnees et go-live accompagne.',
+    title: 'Implémentation Odoo',
+    description: 'Déploiement complet de votre ERP. Analyse approfondie de vos processus, configuration sur mesure, migration de données et go-live accompagné.',
   },
   {
     Icon: Code,
     color: '#F59E0B',
     bg: 'rgba(245,158,11,0.1)',
     title: 'Personnalisation',
-    description: 'Solutions sur mesure pour votre metier. Modules custom, integrations API, workflows avances et rapports adaptes a vos besoins.',
+    description: 'Solutions sur mesure pour votre métier. Modules custom, intégrations API, workflows avancés et rapports adaptés à vos besoins.',
   },
   {
     Icon: GraduationCap,
     color: '#00D4C8',
     bg: 'rgba(0,212,200,0.1)',
     title: 'Formation',
-    description: 'Transfert de competences complet. Formations personnalisees pour tous les profils — utilisateurs, administrateurs, responsables.',
+    description: 'Transfert de compétences complet. Formations personnalisées pour tous les profils — utilisateurs, administrateurs, responsables.',
   },
   {
     Icon: Headphones,
     color: '#F59E0B',
     bg: 'rgba(245,158,11,0.1)',
     title: 'Support',
-    description: 'Accompagnement continu apres le go-live. Support reactif, mises a jour, optimisations et maintenance proactive de votre systeme.',
+    description: 'Accompagnement continu après le go-live. Support réactif, mises à jour, optimisations et maintenance proactive de votre système.',
   },
 ];
 
@@ -75,7 +75,7 @@ export function Services() {
                 Nos <span style={{ color: '#00D4C8' }}>Services</span>
               </h2>
               <p style={{ color: '#94A3B8', fontSize: 'clamp(0.95rem, 1.3vw, 1.1rem)', margin: 0, lineHeight: 1.6 }}>
-                Une offre complete pour votre transformation digitale.
+                Une offre complète pour votre transformation digitale.
               </p>
             </div>
 

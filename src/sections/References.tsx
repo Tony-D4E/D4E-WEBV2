@@ -1,10 +1,10 @@
 const clients = [
-  { logo: '/logo-alc.png',             name: 'ALC Tolerie',       sector: 'Tolerie industrielle'    },
-  { logo: '/logo-cave.svg',            name: 'La Cave de Geneve', sector: 'Cooperative viticole'    },
-  { logo: '/logo-mbg.png',             name: 'MBG SA',            sector: 'Metiers techniques BTP'  },
-  { logo: '/logo-ingeni.jpg',          name: 'Ingeni SA',         sector: 'Ingenierie structurale'  },
-  { logo: '/logo-global-securite.png', name: 'Global Securite',   sector: 'Securite en Suisse'      },
-  { logo: '/logo-czapek.png',          name: 'Czapek Geneve',     sector: 'Manufacture horlogere'   },
+  { logo: '/logo-alc.png',             name: 'ALC Tolerie',       sector: 'Tôlerie industrielle'    },
+  { logo: '/logo-cave.svg',            name: 'La Cave de Geneve', sector: 'Coopérative viticole'    },
+  { logo: '/logo-mbg.png',             name: 'MBG SA',            sector: 'Métiers techniques BTP'  },
+  { logo: '/logo-ingeni.jpg',          name: 'Ingeni SA',         sector: 'Ingénierie structurale'  },
+  { logo: '/logo-global-securite.png', name: 'Global Sécurité',   sector: 'Sécurité en Suisse'      },
+  { logo: '/logo-czapek.png',          name: 'Czapek Genève',     sector: 'Manufacture horlogère'   },
 ];
 
 export function References() {
@@ -76,7 +76,7 @@ export function References() {
               ILS NOUS FONT CONFIANCE
             </p>
             <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 900, color: '#0F1D3A', letterSpacing: '-1px', marginTop: 0 }}>
-              Nos references clients
+              Nos références clients
             </h2>
           </div>
 

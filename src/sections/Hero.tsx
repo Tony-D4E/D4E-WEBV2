@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, MapPin, Users, Briefcase, TrendingUp, Clock } from 'lucide-react';
 
 const heroStats = [
-  { icon: Briefcase, value: '150+', label: 'Projets', sublabel: 'depuis 2019' },
+  { icon: Briefcase, value: '150+', label: 'Projets', sublabel: 'depuis 2017' },
   { icon: Users, value: '50+', label: 'Clients', sublabel: 'nous font confiance' },
   { icon: TrendingUp, value: '20%', label: 'Rentabilité', sublabel: 'en moyenne' },
   { icon: Clock, value: '50%', label: 'Temps gagné', sublabel: 'sur la facturation' },
@@ -47,7 +47,7 @@ export function Hero() {
               <p className="text-xl text-gray-400 max-w-xl leading-relaxed">
                 Partenaire Odoo Gold certifié à Genève et Sion. 150+ projets ERP réalisés 
                 pour PME et grandes entreprises. Solutions sur mesure, ElvyBat pour le BTP, 
-                Starter Pack à 2500 CHF.
+                Starter Pack Odoo.
               </p>
             </div>
             
@@ -57,7 +57,7 @@ export function Hero() {
               Nous proposons des solutions ERP complètes : implémentation Odoo, 
               personnalisation, formation et support. Notre solution métier ElvyBat 
               révolutionne la gestion de chantiers pour les entreprises du BTP. 
-              Découvrez notre Starter Pack Odoo à 2500 CHF pour démarrer rapidement 
+              Découvrez notre Starter Pack Odoo pour démarrer rapidement 
               avec CRM, facturation, comptabilité et site web.
             </p>
 
@@ -67,7 +67,7 @@ export function Hero() {
               className="inline-flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-[#F59E0B]/20 via-[#FBBF24]/10 to-[#F59E0B]/20 rounded-xl border border-[#F59E0B]/40 hover:border-[#FBBF24]/60 transition-all group"
             >
               <span className="px-2 py-1 bg-[#F59E0B] text-white text-xs font-bold rounded">OFFRE</span>
-              <span className="text-[#FBBF24] font-semibold">Starter Pack à 2'500 CHF</span>
+              <span className="text-[#FBBF24] font-semibold">Starter Pack Odoo</span>
               <ArrowRight className="h-4 w-4 text-[#FBBF24] group-hover:translate-x-1 transition-transform" />
             </a>
 

@@ -9,7 +9,7 @@ const integrateurServices = [
 ];
 
 const elvySectors = [
-  { name: 'ElvyBat',       tag: 'BTP',        tagColor: 'bg-[#00D4C8] text-white',      desc: 'Construction & chantiers', link: '/#/elvybat', active: true  },
+  { name: 'ElvyBat',       tag: 'BTP',        tagColor: 'bg-[#00D4C8] text-white',      desc: 'Construction & chantiers', link: '/elvybat', active: true  },
   { name: 'ElvyPrint',     tag: 'Disponible', tagColor: 'bg-[#00D4C8] text-white',      desc: 'Imprimerie & machines',    link: '#',          active: true  },
   { name: 'ElvyLaw',       tag: 'Bientôt',    tagColor: 'bg-gray-200 text-gray-500',    desc: 'Juridique & notaires',     link: '#',          active: false },
   { name: 'ElvyImmo',      tag: 'Bientôt',    tagColor: 'bg-gray-200 text-gray-500',    desc: 'Immobilier & location',    link: '#',          active: false },
@@ -56,7 +56,7 @@ export function NosMetiers() {
                   </div>
                 </div>
                 <p className="text-gray-500 text-sm leading-relaxed">
-                  Experts Odoo depuis 2019, nous accompagnons les entreprises suisses dans
+                  Experts Odoo depuis 2017, nous accompagnons les entreprises suisses dans
                   leur transformation digitale. De l'audit initial au support quotidien,
                   nous sommes à vos côtés à chaque étape.
                 </p>
@@ -117,7 +117,7 @@ export function NosMetiers() {
                   d'activité, avec un déploiement rapide et un coût maîtrisé.
                 </p>
                 <a
-                  href="/#/elvy"
+                  href="/elvy"
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold rounded-xl transition-colors"
                 >
                   Découvrir la gamme Elvy

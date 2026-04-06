@@ -11,7 +11,7 @@ const members = [
   {
     name: 'Antonio Spedicato',
     role: 'Consultant Odoo & Fondateur',
-    bio: '15 ans experience - Expert ERP BTP',
+    bio: '15 ans expérience - Expert ERP BTP',
     phone: '+41 (0)76 434 45 95',
     phoneTel: 'tel:+41764344595',
     whatsapp: 'https://wa.me/41764344595',
@@ -23,7 +23,7 @@ const members = [
   {
     name: 'Laetitia Andre',
     role: 'Ambassadrice Odoo - D4E',
-    bio: 'Specialiste deploiement BTP - Suisse & France',
+    bio: 'Spécialiste déploiement BTP - Suisse & France',
     phone: '+41 (0)76 482 21 39',
     phoneTel: 'tel:+41764822139',
     whatsapp: 'https://wa.me/41764822139',
@@ -61,6 +61,10 @@ export function Team() {
         .pulse-teal { animation: pulse-teal 2.5s ease-out infinite; }
         .pulse-gold { animation: pulse-gold 2.5s ease-out 0.4s infinite; }
         .team-card:hover .team-photo { animation-play-state: paused; }
+        @media (max-width: 768px) {
+          .team-grid-wrapper { grid-template-columns: 1fr !important; gap: 24px !important; }
+          .team-card { padding: 36px 24px !important; }
+        }
         .wa-btn:hover { background-color: #1da851 !important; }
       `}</style>
 
@@ -69,14 +73,14 @@ export function Team() {
 
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <p style={{ fontSize: '12px', fontWeight: 700, color: '#00D4C8', letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: '12px', marginTop: 0 }}>
-              NOTRE EQUIPE
+              NOTRE ÉQUIPE
             </p>
             <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', fontWeight: 900, color: '#0F1D3A', letterSpacing: '-1px', marginTop: 0 }}>
-              Des experts a votre service
+              Des experts à votre service
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '32px', marginBottom: '48px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', className: 'team-grid', gap: '32px', marginBottom: '48px' }}>
             {members.map((m, i) => (
               <div key={m.name} className="team-card" style={{
                 backgroundColor: '#FFFFFF', borderRadius: '28px', padding: '52px 40px',
@@ -134,7 +138,7 @@ export function Team() {
               Prendre contact maintenant
             </a>
             <p style={{ color: '#94A3B8', fontSize: '0.9rem', marginTop: '12px' }}>
-              Reponse garantie sous 24h
+              Réponse garantie sous 24h
             </p>
           </div>
 

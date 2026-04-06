@@ -15,7 +15,7 @@ export function WhyChooseUs() {
           <h2 className="text-4xl sm:text-5xl font-black text-[#0F1D3A] mb-6 tracking-tight">
             Pourquoi <span className="text-[#00D4C8]">nous</span> choisir ?
           </h2>
-          <p className="text-lg text-gray-500">Depuis 2019, nous accompagnons les entreprises suisses avec expertise et passion.</p>
+          <p className="text-lg text-gray-500">Depuis 2017, nous accompagnons les entreprises suisses avec expertise et passion.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {differentiators.map((d, i) => (

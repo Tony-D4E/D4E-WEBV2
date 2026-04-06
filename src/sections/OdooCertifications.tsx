@@ -20,7 +20,7 @@ export function OdooCertifications() {
               marginBottom: '14px',
               marginTop: 0,
             }}>
-              EXPERTISE ODOO CERTIFIEE
+              EXPERTISE ODOO CERTIFIÉE
             </p>
             <h3 style={{
               fontSize: 'clamp(1.6rem, 2.8vw, 2.5rem)',
@@ -30,7 +30,7 @@ export function OdooCertifications() {
               letterSpacing: '-0.5px',
               lineHeight: 1.1,
             }}>
-              Partenaire Gold Odoo certifie depuis la v13
+              Partenaire Gold Odoo certifié depuis la v13
             </h3>
           </div>
 

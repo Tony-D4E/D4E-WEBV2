@@ -9,7 +9,7 @@ const subjects = [
   { value: 'formation', label: 'Formation' },
   { value: 'support', label: 'Support technique' },
   { value: 'elvybat', label: 'ElvyBat BTP' },
-  { value: 'starterpack', label: 'Starter Pack 2500 CHF' },
+  { value: 'starterpack', label: 'Starter Pack Odoo' },
   { value: 'autre', label: 'Autre demande' },
 ];
 

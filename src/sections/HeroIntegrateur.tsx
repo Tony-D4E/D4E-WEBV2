@@ -263,7 +263,7 @@ export function HeroIntegrateur() {
               <a onClick={(e) => { e.preventDefault(); document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' }); }} className="hero-cta-primary">
                 Discuter de mon projet <ArrowRight style={{ width: '18px', height: '18px' }} />
               </a>
-              <a href="/#elvy" className="hero-cta-secondary">
+              <a href="/elvy" className="hero-cta-secondary">
                 Découvrir la suite Elvy
               </a>
             </div>
