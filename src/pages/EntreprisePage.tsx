@@ -166,6 +166,7 @@ const EntreprisePage: React.FC = () => {
                 src="/team-antonio-new.jpg"
                 alt="Antonio Spedicato"
                 className="ent-founder-photo"
+                pictureStyle={{ flexShrink: 0 }}
                 widths={[160, 320]}
                 sizes="180px"
                 width={180}
@@ -189,6 +190,7 @@ const EntreprisePage: React.FC = () => {
                 src="/team-alexandre.jpg"
                 alt="Alexandre"
                 className="ent-founder-photo"
+                pictureStyle={{ flexShrink: 0 }}
                 widths={[160, 320]}
                 sizes="180px"
                 width={180}
