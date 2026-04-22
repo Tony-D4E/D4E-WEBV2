@@ -1,4 +1,5 @@
 import { Phone, Mail } from 'lucide-react';
+import { ResponsiveImage } from '../components/ResponsiveImage';
 
 const WaIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -92,7 +93,15 @@ export function Team() {
                   border: '4px solid ' + m.color, overflow: 'hidden', marginBottom: '28px', flexShrink: 0,
                 }}>
                   <div className="team-photo" style={{ width: '100%', height: '100%', animationDelay: m.delay }}>
-                    <img src={m.photo} alt={m.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <ResponsiveImage
+                      src={m.photo}
+                      alt={m.name}
+                      widths={[160, 320]}
+                      sizes="148px"
+                      width={148}
+                      height={148}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
                   </div>
                 </div>
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F1D3A', margin: '0 0 6px' }}>{m.name}</h3>

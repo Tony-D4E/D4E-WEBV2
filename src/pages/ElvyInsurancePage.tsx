@@ -6,6 +6,7 @@ import {
   Cpu, Building2, Users, RefreshCw
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 /* -- DONNEES -- */
@@ -380,9 +381,16 @@ export default function ElvyInsurancePage() {
           <div className="grid md:grid-cols-2 gap-8">
             {equipe.map((p, i) => (
               <div key={i} className="bg-white rounded-3xl p-8 flex flex-col items-center text-center border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-500">
-                <img src={p.photo} alt={p.nom}
+                <ResponsiveImage
+                  src={p.photo}
+                  alt={p.nom}
+                  widths={[160, 320, 640]}
+                  sizes="128px"
+                  width={128}
+                  height={128}
                   className="w-32 h-32 rounded-full object-cover mb-6 shadow-lg"
-                  style={{ border: `4px solid ${p.couleur}` }} />
+                  style={{ border: `4px solid ${p.couleur}` }}
+                />
                 <h3 className="text-2xl font-black text-[#0F1D3A] mb-1">{p.nom}</h3>
                 <p className="font-semibold mb-1" style={{ color: p.couleur }}>{p.role}</p>
                 <p className="text-gray-400 text-sm mb-6">{p.desc}</p>

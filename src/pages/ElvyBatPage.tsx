@@ -6,6 +6,7 @@ import {
   FolderOpen, Timer, Receipt, Truck, ChevronRight
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 // ─── DONNÉES ──────────────────────────────────────────────────────────────
@@ -112,10 +113,15 @@ export default function ElvyBatPage() {
       ══════════════════════════════════════════ */}
       <section className="relative overflow-hidden bg-[#0B0F19] min-h-screen flex items-center">
         <div className="absolute inset-0">
-          <img
+          <ResponsiveImage
             src="/btp-hero.jpg"
             alt="Chantier BTP : logiciel gestion de chantier ElvyBat Odoo"
             className="w-full h-full object-cover opacity-25"
+            pictureStyle={{ position: 'absolute', inset: 0, display: 'block' }}
+            widths={[640, 1024]}
+            sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/90 to-[#0B0F19]/50" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/60 via-transparent to-transparent" />
@@ -549,9 +555,16 @@ export default function ElvyBatPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {equipe.map((p, i) => (
               <div key={i} className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center hover:bg-white/10 transition-all">
-                <img src={p.photo} alt={p.nom}
+                <ResponsiveImage
+                  src={p.photo}
+                  alt={p.nom}
+                  widths={[160, 320, 640]}
+                  sizes="128px"
+                  width={128}
+                  height={128}
                   className="w-32 h-32 rounded-full object-cover mb-6 shadow-xl"
-                  style={{ border: `4px solid ${p.couleur}` }} />
+                  style={{ border: `4px solid ${p.couleur}` }}
+                />
                 <h3 className="text-2xl font-black text-white mb-1">{p.nom}</h3>
                 <p className="font-semibold mb-1" style={{ color: p.couleur }}>{p.role}</p>
                 <p className="text-gray-400 text-sm mb-6">{p.desc}</p>

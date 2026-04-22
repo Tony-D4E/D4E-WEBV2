@@ -1,5 +1,6 @@
 import { Search, FileText, Cog, Rocket, HeadphonesIcon, CheckCircle } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 const steps = [
   { number: '01', icon: Search,          title: 'Analyse',        desc: 'Étude de vos processus et besoins.' },
@@ -46,8 +47,13 @@ export function Methodology() {
           <div ref={imageRef} className={`flex justify-center animate-scale ${imageVisible ? 'is-visible' : ''}`}>
             <div className="w-full rounded-3xl overflow-hidden h-72 flex items-center justify-center"
               style={{ background: 'linear-gradient(135deg, #818cf8 0%, #00D4C8 100%)' }}>
-              <img src="/team-working.jpg" alt="Méthodologie D4E"
-                className="w-full h-full object-cover mix-blend-overlay opacity-80" />
+              <ResponsiveImage
+                src="/team-working.jpg"
+                alt="Méthodologie D4E"
+                className="w-full h-full object-cover mix-blend-overlay opacity-80"
+                widths={[640, 1024, 1600]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
               <div className="absolute text-center text-white/90">
                 <div className="text-5xl font-black">6</div>
                 <div className="text-sm">étapes éprouvées</div>

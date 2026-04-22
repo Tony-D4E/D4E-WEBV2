@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { BarChart3, Wrench, HardHat, Factory, ShoppingCart, Truck, Heart, GraduationCap, Zap, Target, Users, Store, RefreshCw, Cpu, CreditCard, Package, Webhook } from 'lucide-react';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 const CSS = `
   .op * { box-sizing: border-box; }
@@ -319,7 +320,15 @@ export default function OdooPage() {
               "Ce qu'on aime chez Odoo, c'est que le logiciel respecte l'intelligence de vos équipes. Il automatise ce qui est répétitif et libère du temps pour ce qui demande du jugement, de la relation, de l'expertise."
             ].map((p,i) => <p key={i} className={`aos d${i+2}`} style={{fontSize:19,color:'#334155',lineHeight:1.8,marginBottom:20,maxWidth:'100%'}}>{p}</p>)}
             <div className="aos d4" style={{display:'flex',alignItems:'center',gap:24,marginTop:40,paddingTop:32,borderTop:'1px solid #e2e8f0'}}>
-              <img src="/team-laetitia.jpg" alt="Laetitia Andre" style={{width:120,height:120,borderRadius:'50%',objectFit:'cover',objectPosition:'top',border:'3px solid #00D4C8',flexShrink:0,boxShadow:'0 0 40px rgba(0,212,200,.25)'}}/>
+              <ResponsiveImage
+                src="/team-laetitia.jpg"
+                alt="Laetitia Andre"
+                widths={[160, 320, 640]}
+                sizes="120px"
+                width={120}
+                height={120}
+                style={{width:120,height:120,borderRadius:'50%',objectFit:'cover',objectPosition:'top',border:'3px solid #00D4C8',flexShrink:0,boxShadow:'0 0 40px rgba(0,212,200,.25)'}}
+              />
               <div>
                 <div style={{fontWeight:800,fontSize:22,color:'#1e293b',fontFamily:'Space Grotesk,sans-serif',marginBottom:4}}>Laetitia Andre</div>
                 <div style={{fontSize:14,color:'#00B4A6',fontWeight:600,marginBottom:12}}>Ambassadrice Odoo -- D4E</div>
