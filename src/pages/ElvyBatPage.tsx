@@ -140,7 +140,7 @@ export default function ElvyBatPage() {
 
               <p style={{ color: '#FFFFFF', textShadow: '0 2px 12px rgba(0,0,0,0.9)' }}
                 className="text-xl mb-10 leading-relaxed max-w-xl">
-                ElvyBat est le logiciel de gestion de chantier sur Odoo conçu pour
+                ElvyBât est le logiciel de gestion de chantier sur Odoo conçu pour
                 les dirigeants du bâtiment : rentabilité en temps réel, facturation
                 de situation automatisée, déploiement clé en main en quelques jours.
               </p>
@@ -240,7 +240,7 @@ export default function ElvyBatPage() {
             </div>
             <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">Tout ce qu'il faut pour démarrer</h2>
             <p className="text-lg text-gray-500">
-              Le pack ElvyBat Entreprise inclut d'office tout ce dont une entreprise BTP
+              Le pack ElvyBât Entreprise inclut d'office tout ce dont une entreprise BTP
               a besoin pour piloter ses chantiers dès le premier jour.
             </p>
           </div>
@@ -260,12 +260,12 @@ export default function ElvyBatPage() {
           {/* Description complète du pack */}
           <div className="bg-[#0F1D3A] rounded-3xl p-8 md:p-12 text-white">
             <div className="text-center mb-10">
-              <h3 style={{ color: '#00D4C8' }} className="text-5xl font-black mb-4">ElvyBat</h3>
+              <h3 style={{ color: '#00D4C8' }} className="text-5xl font-black mb-4">ElvyBât</h3>
               <p style={{ color: '#FFFFFF' }} className="text-3xl font-bold max-w-3xl mx-auto leading-snug mb-4">
                 Démarrez votre gestion de chantier sur Odoo, rapidement et simplement.
               </p>
               <p style={{ color: '#CBD5E1' }} className="text-base max-w-2xl mx-auto leading-relaxed">
-                Le Pack de mise en place ElvyBat vous permet de déployer une solution métier complète,
+                Le Pack de mise en place ElvyBât vous permet de déployer une solution métier complète,
                 prête à l'emploi, sans complexité.
               </p>
             </div>
@@ -280,7 +280,7 @@ export default function ElvyBatPage() {
                 <p style={{ color: '#CBD5E1' }} className="text-sm mb-4">Nous configurons pour vous un environnement opérationnel :</p>
                 <ul className="space-y-2">
                   {[
-                    'Installation et paramétrage ElvyBat',
+                    'Installation et paramétrage ElvyBât',
                     'Création des utilisateurs et des accès',
                     'Mise en place de vos documents et de votre image',
                     'Structuration des articles et des ouvrages',
@@ -473,7 +473,7 @@ export default function ElvyBatPage() {
             <h2 className="text-4xl font-black text-[#0F1D3A] mb-4">Conçu pour les entreprises du BTP</h2>
             <p className="text-lg text-gray-500">
               Que vous gériez des chantiers complexes ou des interventions rapides,
-              ElvyBat s'adapte à votre activité.
+              ElvyBât s'adapte à votre activité.
             </p>
           </div>
 
@@ -501,7 +501,7 @@ export default function ElvyBatPage() {
 
           <div className="mt-12 text-center">
             <Button size="lg" className="bg-[#00D4C8] hover:bg-[#00B4A6] text-white font-bold px-10 rounded-xl text-base" onClick={() => scrollTo('contact')}>
-                  Parler à un expert ElvyBat
+                  Parler à un expert ElvyBât
                 <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
           </div>
@@ -514,7 +514,7 @@ export default function ElvyBatPage() {
       <section className="py-20 bg-[#F0FDF9]">
         <div ref={refsRef} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll ${refsVisible ? 'is-visible' : ''}`}>
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-[#0F1D3A] mb-3">Ils ont choisi ElvyBat</h2>
+            <h2 className="text-3xl font-black text-[#0F1D3A] mb-3">Ils ont choisi ElvyBât</h2>
             <p className="text-gray-500">Des entreprises du BTP qui font confiance à D4E pour piloter leurs chantiers</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">

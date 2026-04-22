@@ -182,7 +182,7 @@ const EntreprisePage: React.FC = () => {
           {[
             { year: '2017', text: 'Création de D4E. On installe Odoo pour nos propres besoins. Le déclic.' },
             { year: '2019', text: 'Partenaire Odoo officiel. Premiers clients en Suisse romande.' },
-            { year: '2022', text: '25 collaborateurs. Lancement d\'ElvyBat pour le secteur BTP.' },
+            { year: '2022', text: '25 collaborateurs. Lancement d\'ElvyBât pour le secteur BTP.' },
             { year: '2025', text: 'Partenaire Odoo Gold. Bureau à Barcelone. Gamme Elvy complète.' },
           ].map((t, i) => (
             <div key={i} className="ent-tl-item">

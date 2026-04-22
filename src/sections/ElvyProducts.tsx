@@ -15,7 +15,7 @@ import { Button } from '@/components/ui/button';
 
 const products = [
   {
-    name: 'ElvyBat',
+    name: 'ElvyBât',
     tagline: 'BTP & Construction',
     description: 'Gestion de chantiers, facturation par situation, planning.',
     features: ['Facturation situation', 'Suivi temps réel', 'Planning', 'Bons régie IA', 'Rapports vocaux'],
