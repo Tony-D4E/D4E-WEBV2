@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ResponsiveImage } from '../components/ResponsiveImage';
 
 /* ═══════════════════════════════════════════
    ANNONCES - Modifier ici pour ajouter/retirer des offres
@@ -160,7 +161,16 @@ const JobsPage: React.FC = () => {
       <div id="d4e-jobs">
         {/* HERO */}
         <div className="jb-hero">
-          <img src="/team-jobs-2.jpg" alt="Equipe D4E" className="jb-hero-img" />
+          <ResponsiveImage
+            src="/team-jobs-2.jpg"
+            alt="Equipe D4E"
+            className="jb-hero-img"
+            pictureStyle={{ position: 'absolute', inset: 0, display: 'block' }}
+            widths={[640, 1024]}
+            sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
+          />
           <div className="jb-hero-overlay" />
           <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" className="jb-gold-logo" />
           <div className="jb-hero-inner">
@@ -237,7 +247,13 @@ const JobsPage: React.FC = () => {
 
         {/* PHOTO */}
         <div style={{ padding: '0 32px 72px', maxWidth: 1280, margin: '0 auto' }}>
-          <img src="/team-jobs-1.jpg" alt="Equipe" className="jb-photo-band" />
+          <ResponsiveImage
+            src="/team-jobs-1.jpg"
+            alt="Equipe"
+            className="jb-photo-band"
+            widths={[320, 640]}
+            sizes="(max-width: 1280px) calc(100vw - 64px), 1280px"
+          />
         </div>
 
         {/* FORM */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ResponsiveImage } from '../components/ResponsiveImage';
 
 const EntreprisePage: React.FC = () => {
   return (
@@ -103,7 +104,16 @@ const EntreprisePage: React.FC = () => {
       <div id="d4e-ent">
         {/* HERO FULL WIDTH */}
         <div className="ent-hero">
-          <img src="/team-odoo-event.jpg" alt="Equipe D4E à Odoo Experience" className="ent-hero-img" />
+          <ResponsiveImage
+            src="/team-odoo-event.jpg"
+            alt="Equipe D4E à Odoo Experience"
+            className="ent-hero-img"
+            pictureStyle={{ position: 'absolute', inset: 0, display: 'block' }}
+            widths={[640, 1024]}
+            sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
+          />
           <div className="ent-hero-overlay" />
           <img src="/odoo-gold-partner.svg" alt="Odoo Gold Partner" className="ent-gold-logo" />
           <div className="ent-hero-inner">
@@ -152,7 +162,17 @@ const EntreprisePage: React.FC = () => {
         <div style={{ padding: '0 32px 80px', maxWidth: 1280, margin: '0 auto' }}>
           <div className="ent-founders-grid" style={{ display: 'flex', gap: 28, flexWrap: 'wrap' }}>
             <div className="ent-founder ent-dark" style={{ flex: '1 1 440px' }}>
-              <img src="/team-antonio-new.jpg" alt="Antonio Spedicato" className="ent-founder-photo" style={{ borderColor: '#00D4C8' }} />
+              <ResponsiveImage
+                src="/team-antonio-new.jpg"
+                alt="Antonio Spedicato"
+                className="ent-founder-photo"
+                pictureStyle={{ flexShrink: 0 }}
+                widths={[160, 320]}
+                sizes="180px"
+                width={180}
+                height={180}
+                style={{ borderColor: '#00D4C8' }}
+              />
               <div>
                 <div className="ent-founder-name">Antonio Spedicato</div>
                 <div className="ent-founder-role" style={{ color: '#00D4C8' }}>Fondateur &amp; Commercial</div>
@@ -166,7 +186,17 @@ const EntreprisePage: React.FC = () => {
             </div>
 
             <div className="ent-founder ent-dark" style={{ flex: '1 1 440px' }}>
-              <img src="/team-alexandre.jpg" alt="Alexandre" className="ent-founder-photo" style={{ borderColor: '#F59E0B' }} />
+              <ResponsiveImage
+                src="/team-alexandre.jpg"
+                alt="Alexandre"
+                className="ent-founder-photo"
+                pictureStyle={{ flexShrink: 0 }}
+                widths={[160, 320]}
+                sizes="180px"
+                width={180}
+                height={180}
+                style={{ borderColor: '#F59E0B' }}
+              />
               <div>
                 <div className="ent-founder-name">Alexandre</div>
                 <div className="ent-founder-role" style={{ color: '#F59E0B' }}>Co-fondateur &amp; Technique</div>
