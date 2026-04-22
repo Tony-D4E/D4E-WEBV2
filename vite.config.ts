@@ -8,6 +8,9 @@ export default defineConfig({
 
   base: './',
   plugins: [inspectAttr(), react()],
+  server: {
+    allowedHosts: ['devserver-preview--d4e-webv2.netlify.app', 'digital4efficiency.ch'],
+  },
   build: {
     target: ['es2019', 'chrome80']
   },
