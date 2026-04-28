@@ -2,6 +2,23 @@
 
 > Éditeur et intégrateur Odoo Gold Partner en Suisse, France et Espagne. Conçoit la suite Elvy — solutions métier packagées sur Odoo Enterprise pour le BTP, l'imprimerie, l'éducation et les assurances.
 
+## Résumé
+
+D4E (Digital4Efficiency) est une société basée à Genève, fondée en 2019 par Antonio Spedicato. Elle cumule deux activités complémentaires : l'intégration Odoo (Gold Partner certifié v13 → v19) et l'édition de solutions verticales sous la marque **Elvy**.
+
+**En tant qu'intégrateur**, D4E accompagne les PME en Suisse, France et Espagne dans le déploiement d'Odoo Enterprise : cadrage, configuration, personnalisation sur mesure (Python/OWL), formation des équipes et support continu. 154+ projets livrés, 1 300+ utilisateurs actifs. Spécificités suisses nativement couvertes : QR-factures, TVA CH, plans comptables locaux, multi-devises CHF/EUR.
+
+**En tant qu'éditeur**, D4E développe la suite Elvy — des produits Odoo packagés, à prix fixe, déployables en quelques heures :
+- **ElvyBat** : ERP pour le BTP et la construction. Gestion de chantiers, facturation de situation, rentabilité en temps réel, pointage terrain mobile, IA vocale pour bons de régie. 1 400+ chantiers gérés. Dès 490 CHF/an.
+- **ElvyPrint** : ERP pour les revendeurs de systèmes d'impression. Contrats de location/maintenance/MPS, relevés de compteurs automatiques, SAV, planification techniciens. 20 000+ machines suivies.
+- **ElvyEduca** : ERP pour établissements d'enseignement et organismes de formation. Admissions, dossiers étudiants (SIS), emplois du temps, notes, facturation, portail familles.
+- **ElvyLaw** : ERP pour avocats et notaires. Gestion de cabinet juridique sur Odoo Enterprise.
+- **ElvyInsurance** : Solution pour courtiers en assurance — en cours de développement.
+
+**Tarifs** : Starter Pack Odoo à 2 500 CHF HT (clé en main, formation incluse). ElvyBat à 490 CHF/an + 2 960 CHF d'installation. Forfaits support de 750 à 2 600 CHF.
+
+**Équipe** : Antonio Spedicato (fondateur, consultant Odoo) et Laëtitia André (consultante Odoo & chef de projet). Bureaux à Genève, Sion et Barcelone.
+
 ## Pages principales
 
 - [Accueil](https://digital4efficiency.ch/): Présentation de D4E comme intégrateur Odoo Gold Partner et éditeur de la suite Elvy
