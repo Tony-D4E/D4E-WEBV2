@@ -1,0 +1,32 @@
+# Digital4Efficiency (D4E)
+
+> Éditeur et intégrateur Odoo Gold Partner en Suisse, France et Espagne. Conçoit la suite Elvy — solutions métier packagées sur Odoo Enterprise pour le BTP, l'imprimerie, l'éducation et les assurances.
+
+## Pages principales
+
+- [Accueil](https://digital4efficiency.ch/): Présentation de D4E comme intégrateur Odoo Gold Partner et éditeur de la suite Elvy
+- [Odoo](https://digital4efficiency.ch/odoo): Vision d'Odoo par D4E — modules déployés, secteurs couverts, intégrations tierces, 8 ans d'expertise
+- [Suite Elvy](https://digital4efficiency.ch/elvy): Vue d'ensemble des solutions verticales Elvy construites sur Odoo Enterprise
+- [ElvyBat](https://digital4efficiency.ch/elvybat): Solution ERP BTP/Construction — gestion de chantiers, rentabilité, facturation de situation, pointage terrain
+- [ElvyPrint](https://digital4efficiency.ch/elvyprint): Solution ERP imprimerie — contrats, relevés de compteurs, SAV et facturation automatisés
+- [ElvyEduca](https://digital4efficiency.ch/elvyeduca): Solution ERP éducation — admissions, scolarité, emplois du temps et facturation unifiés
+- [ElvyInsurance](https://digital4efficiency.ch/elvyinsurance): Solution ERP courtiers en assurance (bientôt disponible)
+- [Tarifs](https://digital4efficiency.ch/tarifs): Starter Pack Odoo (2 500 CHF HT), ElvyBat (490 CHF/an + 2 960 CHF installation), forfaits support
+- [À propos](https://digital4efficiency.ch/entreprise): Histoire de D4E, fondateurs Antonio Spedicato et Laëtitia André, équipe et références
+- [Rejoindre D4E](https://digital4efficiency.ch/jobs): Offres d'emploi — Consultant Odoo (Genève/Sion), Développeur Odoo Python (Genève/Barcelone)
+- [Support](https://digital4efficiency.ch/support): Formulaire de ticket support et assistance technique Odoo
+- [Conditions générales](https://digital4efficiency.ch/conditions-generales): CGV, politique de cookies et mentions légales
+
+## Contact
+
+- Téléphone : +41 58 255 11 15
+- WhatsApp : +41 76 434 45 95
+- Email : info@digital4efficiency.ch
+- Genève : Chemin du Pavillon 2, 1218 Le Grand-Saconnex
+- Sion : Place du Midi 48, 1950 Sion
+- Barcelone : Carrer de la Riera de Sant Miquel 1 BIS, 08029 Barcelona
+
+## Versions Markdown des pages
+
+Ajoutez `.md` à n'importe quelle URL pour obtenir le contenu en Markdown :
+`https://digital4efficiency.ch/odoo.md`, `https://digital4efficiency.ch/elvybat.md`, etc.
