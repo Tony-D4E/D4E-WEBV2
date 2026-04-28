@@ -1,0 +1,415 @@
+# Digital4Efficiency (D4E) — Contenu complet du site
+
+> Source : https://digital4efficiency.ch
+> Généré depuis : https://digital4efficiency.ch/llms-full.txt
+> Dernière mise à jour : 2025
+
+---
+
+## Page d'accueil — digital4efficiency.ch/
+
+### En-tête
+
+**Badge** : Gold Partner Odoo · Suisse · France · Espagne
+**Titre** : Éditeur & intégrateur Odoo en Suisse
+**Description** : D4E conçoit la suite Elvy — des solutions métier prêtes à l'emploi pour le BTP, le juridique et l'imprimerie, construites sur Odoo Enterprise.
+
+**Points forts** :
+- Prix fixe transparent
+- Déploiement en 8h
+- Spécificités suisses incluses
+
+**Statistiques** :
+- 154+ projets livrés
+- 3 produits en production
+- 7+ années d'expérience
+- 3 pays
+
+### Éditeur ET intégrateur — la différence qui compte
+
+**Intégrateur Odoo — Gold Partner**
+Gold Partner Odoo depuis 2019. Spécificités suisses nativement intégrées.
+- Implémentation : Déploiement complet d'Odoo adapté à vos processus
+- Personnalisation : Développements sur mesure et intégrations
+- Formation : Formation de vos équipes à tous les modules
+- Support : Assistance technique réactive et maintenance
+
+**Éditeur de solutions — Gamme Elvy**
+Suite Elvy — solutions verticales packagées sur Odoo. Prix fixe, déploiement rapide.
+- ElvyBat (BTP & Construction) — En production — /elvybat
+- ElvyPrint (Imprimerie & Bureautique) — En production — /elvy
+- ElvyLaw (Avocats & Notaires) — En production — /elvy
+- ElvyAssurance (Courtiers en assurance) — Bientôt — #
+
+### Résultats mesurés
+
+- −50% délais de facturation (avec ElvyBat)
+- +20% rentabilité chantier (clients BTP)
+- 154+ projets livrés depuis 2019
+- 8h mise en place standard, chef de projet inclus
+
+### Tarifs transparents
+
+**Starter Pack Odoo** — 2 500 CHF HT
+Démarrez avec Odoo rapidement. Configuration complète, formation incluse.
+- CRM & Pipeline commercial
+- Devis & Facturation
+- Comptabilité Suisse QR-factures
+- Site Web inclus
+- Configuration initiale, formation utilisateur, support 30 jours
+- Note : Licences Odoo et hébergement non inclus.
+
+**ElvyBat Pack BTP** — Licence 490 CHF/an + Installation 2 960 CHF
+Solution BTP complète. Déploiement en 8h, chef de projet inclus.
+- Facturation de situation automatisée
+- Suivi rentabilité par chantier
+- Planification équipes & ressources
+- GED & rapports d'intervention
+- 8h chef de projet + 1 déplacement inclus
+
+**Support & Formation** :
+- Forfait 5h : 750 CHF
+- Forfait 10h : 1 400 CHF
+- Forfait 20h : 2 600 CHF
+
+### Équipe
+
+**Antonio Spedicato** — Consultant Odoo & Fondateur
+Expert Odoo depuis 2019. Accompagne les PME suisses dans leur transformation digitale.
+Email : antonio@d4e.cool | Tél : +41 76 434 45 95
+LinkedIn : https://www.linkedin.com/in/antoniospedicato
+
+**Laëtitia André** — Consultante Odoo & Chef de projet
+Spécialiste en implémentation ERP et gestion de projet. À l'écoute de vos besoins.
+Email : laetita@d4e.cool | Tél : +41 76 482 21 39
+LinkedIn : https://www.linkedin.com/in/laetitia-andre
+
+### FAQ
+
+**Quelle différence avec un intégrateur classique ?**
+D4E est Gold Partner Odoo ET éditeur de la suite Elvy. Solutions verticales packagées, prix fixe, déploiement en 8h.
+
+**Qu'est-ce qu'ElvyBat ?**
+Solution BTP sur Odoo Enterprise. Gestion chantiers, facturation situation, rentabilité. Dès 490 CHF/an, en 8h.
+
+**Prix d'une implémentation Odoo ?**
+Starter Pack à 2 500 CHF. ElvyBat à 490 CHF/an + 2 960 CHF installation clé en main.
+
+**Intervenez-vous en France ?**
+Oui, clients en France sur ElvyBat BTP. Bureau à Barcelone pour l'Espagne.
+
+### Contact
+
+Téléphone : +41 58 255 11 15
+WhatsApp : +41 76 434 45 95
+Email : info@digital4efficiency.ch
+Genève : Chemin du Pavillon 2, 1218 Le Grand-Saconnex
+Sion : Place du Midi 48, 1950 Sion
+Barcelone : Carrer de la Riera de Sant Miquel 1 BIS, 08029 Barcelona
+
+---
+
+## Page Odoo — digital4efficiency.ch/odoo
+
+### Héro
+
+**Titre** : On ne vend pas Odoo. On y croit vraiment.
+**Sous-titre** : Chez D4E, on a choisi Odoo avant que ce soit tendance. On l'a déployé sur des chantiers, dans des ateliers, des cabinets. Et on le redéploierait demain sans hésiter.
+
+**Statistiques** :
+- 1 300+ utilisateurs actifs (Suisse, France, Espagne, Italie)
+- 8 ans d'expertise Odoo & BTP, certifié Gold v13 → v19
+- Support humain garanti — pas de bot
+
+**Citation d'Antonio** : "Odoo, c'est le premier logiciel que j'ai vu grandir aussi vite que les problèmes de mes clients."
+
+### Notre conviction — Fini le ballet des logiciels
+
+On a tous vécu ce cauchemar : un CRM d'un côté, une compta de l'autre, un Excel de stock quelque part sur le réseau, et une réunion hebdomadaire pour réconcilier tout ça à la main. C'est du temps humain gaspillé.
+
+Odoo, c'est 40+ applications qui naissent déjà connectées. Votre commercial crée un devis : la comptabilité le voit. Le stock se met à jour : l'atelier est prévenu. Une facture est payée : le rapport de trésorerie bouge en temps réel.
+
+Ce qu'on aime chez Odoo, c'est que le logiciel respecte l'intelligence de vos équipes. Il automatise ce qui est répétitif et libère du temps pour ce qui demande du jugement, de la relation, de l'expertise.
+
+**Citation de Laëtitia** : "Elle ne vend pas Odoo. Elle le vit, le déploie, et le défend chaque jour sur le terrain."
+
+### Les modules les plus déployés
+
+**CRM et Ventes** — Pipeline Kanban temps réel, lead scoring IA, devis en un clic. Devis → Commande → Facture sans copier-coller. Multi-canal dans la même vue. Résultat : +30% de ventes.
+
+**Inventaire** — Stock temps réel, FIFO/FEFO, multi-entrepôts. Une commande déclenche le réapprovisionnement automatiquement. Résultat : −40% de ruptures.
+
+**Comptabilité** — Réconciliation bancaire IA, facturation auto, multi-devises. La clôture mensuelle de 3 jours passe à quelques heures. Résultat : 15h/semaine récupérées.
+
+**Fabrication (MRP)** — Nomenclatures, ordres de fab, contrôle qualité, maintenance prédictive. La production arrête de subir.
+
+**Ressources Humaines** — Recrutement, paie, congés, évaluations. Portail self-service collaborateur. Une RH qui pilote.
+
+**E-commerce** — Boutique native, catalogue synchronisé avec le stock physique. Un produit épuisé disparaît automatiquement du site. Résultat : ×2 ventes online en 6 mois.
+
+### Intégrations & API
+
+L'API REST d'Odoo est ouverte, documentée et battle-tested. On ne remplace pas ce qui fonctionne bien. On connecte Odoo à votre existant, on construit des ponts, et on migre progressivement quand ça a du sens.
+
+**Connecteurs courants** : Shopify, WooCommerce, Magento, EDI EDIFACT, Amazon, Stripe, PayPal, Twint, DHL/UPS, Salesforce, SAP, Sage, API bancaires, Webhooks
+
+**Types d'intégration** :
+- E-commerce (Shopify, WooCommerce, Amazon)
+- EDI (EDIFACT, X12, commandes auto)
+- MRP / ERP (SAP, Sage, logiciels métier)
+- Paiement (Stripe, PayPal, Twint)
+- Logistique (DHL, UPS, FedEx, La Poste)
+- API custom (REST, webhooks)
+
+### Odoo par secteur
+
+**Finance** : Réconciliation bancaire automatique par IA, multi-devises/sociétés/taxes, KPIs financiers en temps réel, packages de localisation fiscale par pays.
+Modules : Comptabilité, Analytique BI, Trésorerie, Notes de frais.
+
+**Services** : Timesheets liés directement à la facturation, vue Gantt/Kanban/liste, portail client pour validation des livrables, rentabilité par projet/consultant/client.
+Modules : Project, Timesheets, Helpdesk, Field Service.
+
+**Construction BTP — ElvyBat** (solution Elvy) : Rentabilité chantier visible en temps réel, pointage terrain mobile même hors ligne, IA vocale multilingue pour bons de régie, chiffrage intégré, devis en quelques clics. 1 400+ chantiers gérés.
+Modules : ElvyBat (Gestion chantiers), ElvyCalc (Chiffrage), ElvyTime (Pointage), ElvyService IA (Rapports vocaux).
+
+**Industrie** : MRP et ordonnancement intelligent des ateliers, nomenclatures multicouches, contrôle qualité et traçabilité lot/série, maintenance préventive et prédictive.
+Modules : Manufacturing, Maintenance, Qualité, PLM.
+
+**Commerce** (solution Elvy) : Caisse, e-commerce, marketplace dans un seul back-office. Quand un produit est épuisé en boutique, il disparaît automatiquement du site.
+Modules : Point of Sale, eCommerce, CRM, Inventory.
+
+**Logistique** : Picking optimisé par route dans l'entrepôt, multi-entrepôts/cross-docking/dropshipping, intégration transporteurs, traçabilité par lot/série/date péremption. Certains clients gagnent 2h par jour.
+Modules : Inventory, Barcode, Delivery, Purchase.
+
+**Santé** : Traçabilité complète par lot et numéro de série, alertes automatiques sur dates de péremption, gestion des recalls produit, conformité réglementaire documentée.
+Modules : Inventory + Lots, Qualité, Facturation, Portail client.
+
+**Éducation** : Inscriptions en ligne et suivi des paiements, plannings de cours/salles/formateurs, portail apprenant, tableaux de bord progression et assiduité. Les relances de paiement deviennent automatiques.
+Modules : eLearning, Events, Facturation, Employés.
+
+### 6 raisons de choisir Odoo
+
+1. **Modulaire par nature** — Commencez avec une app. Ajoutez-en 40+ quand vous voulez. Aucun contrat bloquant.
+2. **Open source** — Personnalisation illimitée. Zéro vendor lock-in. Le code vous appartient.
+3. **Tout parle à tout** — CRM, Compta, Stock, Production. Zéro connecteur. Zéro synchro manuelle.
+4. **Coût maîtrisé** — Jusqu'à −35% de coûts opérationnels vs des solutions fragmentées.
+5. **Mobile first** — Application refaite de zéro en v18. Votre équipe travaille depuis le terrain.
+6. **Il grandit avec vous** — Du TPE au multinational. Odoo ne plafonne pas.
+
+### La promesse D4E
+
+On ne livre pas un logiciel. On livre votre système. Configurer Odoo, n'importe qui peut l'apprendre. Comprendre votre métier, vos contraintes, vos angles morts et traduire tout ça en un système qui tient dans le temps — c'est ce qu'on fait chaque jour depuis 8 ans.
+
+- **Opérationnel en semaines** — Nos packs clé en main sont calibrés pour que votre équipe soit autonome rapidement.
+- **Prix fixe, sans surprise** — Un engagement clair. Un périmètre défini. Pas de ticket surprise à chaque modification.
+- **Un chef de projet dédié** — Une vraie personne, pas un ticket support. Quelqu'un qui connaît votre activité.
+
+---
+
+## Suite Elvy — digital4efficiency.ch/elvy
+
+La suite Elvy est l'ensemble des solutions verticales packagées développées par D4E sur Odoo Enterprise.
+
+### ElvyBat — Construction & BTP
+Statut : En production
+Pilotez vos chantiers, maîtrisez vos marges.
+→ https://digital4efficiency.ch/elvybat
+
+### ElvyPrint — Systèmes d'impression
+Statut : En production
+Contrats, compteurs et interventions automatisés.
+→ https://digital4efficiency.ch/elvyprint
+
+### ElvyEduca — Éducation & Formation
+Statut : En production
+Admissions, scolarité et facturation unifiées.
+→ https://digital4efficiency.ch/elvyeduca
+
+### ElvyLaw — Avocats & Notaires
+Statut : En production
+Gestion de cabinet juridique sur Odoo Enterprise.
+
+### ElvyInsurance — Courtiers en assurance
+Statut : Bientôt disponible
+→ https://digital4efficiency.ch/elvyinsurance
+
+---
+
+## ElvyBat — digital4efficiency.ch/elvybat
+
+### Présentation
+
+Solution ERP dédiée au BTP et à la construction, construite sur Odoo Enterprise.
+
+**Statistiques** :
+- 1 400+ chantiers gérés
+- 260+ utilisateurs actifs
+- 4 ans d'expertise terrain BTP
+- Visibilité rentabilité en temps réel
+
+**Pays** : Suisse (CHF · TVA CH) · France (EUR · TVA FR) · Espagne (EUR · TVA ES) · Italie (EUR · TVA IT)
+
+### Pack inclus
+
+- **Devis & Facturation BTP** : Gestion complète des devis et factures avec processus spécifiques au secteur du bâtiment.
+- **Comptabilité ElvyBat** : Plan comptable CH, liaison bancaire, TVA, imputations et suivi financier des chantiers.
+- **Rentabilité chantier** : Analytique complète par projet : marges, coûts réels vs prévisionnels, indicateurs financiers.
+- **Planning & Suivi chantier** : Planifiez vos équipes, suivez l'avancement et les délais en temps réel.
+- **8h d'accompagnement incluses** : Un chef de projet D4E vous accompagne de la mise en place à la prise en main.
+- **1 déplacement sur site inclus** : Nous venons chez vous pour sécuriser le démarrage et former vos équipes.
+
+### Modules optionnels
+
+- **ElvyCalc** (Chiffrage) : Automatise le chiffrage des devis et le calcul du prix de revient avec coefficient de marge automatique.
+- **ElvyTime** (Pointage) : Pointage des temps de travail via portail internet — sans licence Odoo supplémentaire.
+- **ElvyTrack** (Terrain) : Saisie du temps, machines, matériel et bons de livraison sur chantier. Coûts affectés automatiquement.
+- **ElvyService IA** (IA) : Interventions terrain avec dictée multilingue, reconnaissance bons de régie et facturation automatique.
+- **ElvyDoc** (GED) : Gestion électronique de documents intégrée à Odoo. 600 pages/mois incluses.
+- **ElvyLeave** (Congés) : Gestion des congés via portail web sans licence utilisateur.
+- **ElvyExpense** (Notes de frais) : Saisie et validation des notes de frais via portail, sans licence Odoo.
+- **ElvyPortail** (Collaborateur) : Portail sécurisé pour accéder à ElvyTime, ElvyLeave et ElvyExpense sans licence Odoo.
+
+### Pour qui ?
+
+**Entreprises de chantier** : Charpentiers, maçons, sanitaires, peintres, électriciens. Exemples : Charpente & menuiserie · Sanitaires & plomberie · Peinture & gypserie · Électricité & CVSE.
+
+**Entreprises d'intervention** : Techniciens de maintenance, SAV, dépannage. Exemples : Maintenance & SAV · Chauffagistes · Nettoyage & entretien · Sécurité & alarmes.
+
+### Tarif
+
+- Licence ElvyBat : 490 CHF / an
+- Installation clé en main : + 2 960 CHF (une fois)
+- Inclus : 8h chef de projet + 1 déplacement sur site
+
+---
+
+## ElvyPrint — digital4efficiency.ch/elvyprint
+
+### Présentation
+
+Solution ERP dédiée à l'imprimerie et aux systèmes d'impression, construite sur Odoo Enterprise.
+
+**Statistiques** :
+- 20 000+ machines suivies
+- 9 000+ contrats actifs
+- −60% temps de facturation
+- Suivi des compteurs en temps réel
+
+**Pays** : Suisse · France · Espagne
+
+### Fonctionnalités
+
+- **Contrats sur mesure** : Location, maintenance, MPS — définissez vos règles de facturation par contrat. Engagement avec régularisation, prix dégressif, forfait global.
+- **Facturation automatique des compteurs** : Les relevés de compteurs remontent automatiquement dans Odoo. Les factures se génèrent selon les conditions du contrat, sans saisie manuelle.
+- **Suivi des interventions SAV** : Planifiez les dépannages, documentez chaque intervention avec rapport détaillé et pièces utilisées, collectez la signature client sur place.
+- **Planification des techniciens** : Organisez les tournées, suivez la disponibilité des équipes et des pièces détachées en temps réel. Alertes en cas de surcharge.
+
+---
+
+## ElvyEduca — digital4efficiency.ch/elvyeduca
+
+### Présentation
+
+Solution ERP dédiée à l'éducation et à la formation, construite sur Odoo Enterprise.
+
+**Statistiques** :
+- 70+ modules disponibles
+- 3M+ utilisateurs dans le monde
+- 90+ pays
+- 100% intégré à Odoo
+
+**Pays** : Suisse · France · Espagne
+
+### Fonctionnalités
+
+- **Dossiers étudiants (SIS)** : Inscriptions, parcours, documents, historique complet. Chaque étudiant a un dossier centralisé accessible en un clic.
+- **Admissions en ligne** : Formulaire de candidature en ligne, suivi du pipeline d'admission, notifications automatiques. Du premier contact à l'inscription validée.
+- **Emplois du temps et planning** : Création des emplois du temps par classe, enseignant et salle. Gestion des créneaux, des remplacements et des conflits.
+- **Examens, notes et LMS** : Gestion des examens, saisie des notes, bulletins automatisés. Plateforme d'apprentissage en ligne intégrée avec cours, devoirs et suivi de progression.
+- **Facturation et paiements** : Facturation des frais de scolarité, gestion des acomptes, relances automatiques. Intégration OPCO.
+- **Portail familles et apprenants** : Accès sécurisé aux notes, absences, documents administratifs et communications.
+
+---
+
+## ElvyInsurance — digital4efficiency.ch/elvyinsurance
+
+Solution dédiée aux courtiers en assurance. En cours de développement — bientôt disponible.
+
+---
+
+## Tarifs — digital4efficiency.ch/tarifs
+
+### Starter Pack Odoo
+Prix : 2 500 CHF HT
+Démarrez avec Odoo rapidement. Configuration complète, formation incluse.
+Inclus : CRM & Pipeline commercial · Devis & Facturation · Comptabilité Suisse QR-factures · Site Web · Configuration initiale · Formation utilisateur · Support 30 jours
+Note : Licences Odoo et hébergement non inclus.
+
+### ElvyBat Pack BTP
+Licence : 490 CHF / an | Installation : + 2 960 CHF
+Solution BTP complète. Déploiement en 8h, chef de projet inclus.
+Inclus : Facturation de situation automatisée · Suivi rentabilité par chantier · Planification équipes & ressources · GED & rapports d'intervention · 8h chef de projet + 1 déplacement
+
+### Support & Formation
+- Forfait 5h : 750 CHF
+- Forfait 10h : 1 400 CHF
+- Forfait 20h : 2 600 CHF
+
+---
+
+## À propos — digital4efficiency.ch/entreprise
+
+### Histoire
+
+D4E (Digital4Efficiency) est une société suisse spécialisée dans l'implémentation Odoo et le développement de solutions métier verticales. Fondée par Antonio Spedicato en 2019, Gold Partner Odoo certifié.
+
+### Fondateurs
+
+**Antonio Spedicato** — Consultant Odoo & Fondateur
+Expert Odoo depuis 2019. Accompagne les PME suisses dans leur transformation digitale.
+Email : antonio@d4e.cool | Tél : +41 76 434 45 95
+LinkedIn : https://www.linkedin.com/in/antoniospedicato
+Citation : "Odoo, c'est le premier logiciel que j'ai vu grandir aussi vite que les problèmes de mes clients."
+
+**Laëtitia André** — Consultante Odoo & Chef de projet
+Spécialiste en implémentation ERP et gestion de projet.
+Email : laetita@d4e.cool | Tél : +41 76 482 21 39
+LinkedIn : https://www.linkedin.com/in/laetitia-andre
+
+### Bureaux
+
+- Genève : Chemin du Pavillon 2, 1218 Le Grand-Saconnex
+- Sion : Place du Midi 48, 1950 Sion
+- Barcelone : Carrer de la Riera de Sant Miquel 1 BIS, 08029 Barcelona
+
+---
+
+## Rejoindre D4E — digital4efficiency.ch/jobs
+
+### Offres ouvertes
+
+**Consultant Odoo** — CDI, Genève ou Sion
+Accompagnement des clients dans leur projet Odoo : cadrage, configuration, formation, support. Expérience Odoo ou ERP requise.
+
+**Développeur Odoo (Python)** — CDI, Genève ou Barcelone
+Développement de modules sur mesure et contribution à la gamme Elvy. Python, OWL et connaissance Odoo appréciés.
+
+---
+
+## Support — digital4efficiency.ch/support
+
+Formulaire de support technique Odoo et solutions Elvy.
+Informations requises : prénom, nom, email, entreprise, module concerné, niveau d'urgence, description du problème.
+
+Forfaits support : 5h (750 CHF) · 10h (1 400 CHF) · 20h (2 600 CHF)
+
+---
+
+## Contact global
+
+Téléphone : +41 58 255 11 15
+WhatsApp : +41 76 434 45 95
+Email : info@digital4efficiency.ch
+Genève : Chemin du Pavillon 2, 1218 Le Grand-Saconnex, Suisse
+Sion : Place du Midi 48, 1950 Sion, Suisse
+Barcelone : Carrer de la Riera de Sant Miquel 1 BIS, 08029 Barcelona, Espagne

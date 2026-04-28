@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
 Sitemap: https://digital4efficiency.ch/sitemap.xml
+
+# LLM-friendly content
+# https://digital4efficiency.ch/llms.txt
+# https://digital4efficiency.ch/llms-full.txt
