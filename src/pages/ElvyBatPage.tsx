@@ -181,11 +181,11 @@ export default function ElvyBatPage() {
                 </p>
                 <div className="flex flex-row flex-wrap gap-3">
                   {pays.map((p, i) => (
-                    <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/25 rounded-lg">
+                    <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.25)' }}>
                       <span className="text-lg">{p.flag}</span>
                       <div>
-                        <p className="text-white font-bold text-sm leading-none">{p.nom}</p>
-                        <p className="text-white/70 text-xs mt-0.5">{p.detail}</p>
+                        <p className="font-bold text-sm leading-none" style={{ color: 'white' }}>{p.nom}</p>
+                        <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.7)' }}>{p.detail}</p>
                       </div>
                     </div>
                   ))}
