@@ -100,7 +100,7 @@ function App() {
     <BrowserRouter>
       <SeoMeta />
       <Navigation />
-      <WhatsAppWidget />
+      <WhatsAppWidget phoneNumber="41764344595" />
       <Suspense fallback={<div style={{ minHeight: '60vh' }} />}>
         <Routes>
           <Route path="/"              element={<Home />} />
