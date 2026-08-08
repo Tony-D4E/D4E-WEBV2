@@ -1,49 +1,23 @@
-# Digital4Efficiency (D4E)
+# D4E - Digital4Efficiency
 
-> Éditeur et intégrateur Odoo Gold Partner en Suisse, France et Espagne. Conçoit la suite Elvy — solutions métier packagées sur Odoo Enterprise pour le BTP, l'imprimerie, l'éducation et les assurances.
+> Intégrateur Odoo Gold Partner en Suisse romande (Le Grand-Saconnex, Sion) et Barcelone.
+> Éditeur de la gamme Elvy : solutions métiers verticalisées sur Odoo.
 
-## Résumé
+## Produits Elvy
 
-D4E (Digital4Efficiency) est une société basée à Genève, fondée en 2019 par Antonio Spedicato. Elle cumule deux activités complémentaires : l'intégration Odoo (Gold Partner certifié v13 → v19) et l'édition de solutions verticales sous la marque **Elvy**.
+- ElvyBât : gestion de chantiers pour le bâtiment (devis, situations, avancements, régie, facturation) - https://digital4efficiency.ch/elvybat
+- ElvyScan : lecture automatique des soumissions BTP CAN/CFC, chiffrage à l'écran et réécriture des prix sur le PDF original de l'architecte - https://digital4efficiency.ch/elvyscan
+- ElvyPrint : gestion des systèmes d'impression (contrats, compteurs, interventions) - https://digital4efficiency.ch/elvyprint
+- ElvyInsurance : courtage en assurance (polices, commissions, comptabilité) - https://digital4efficiency.ch/elvyinsurance
+- ElvyEduca : écoles et centres de formation (admissions, scolarité, facturation) - https://digital4efficiency.ch/elvyeduca
 
-**En tant qu'intégrateur**, D4E accompagne les PME en Suisse, France et Espagne dans le déploiement d'Odoo Enterprise : cadrage, configuration, personnalisation sur mesure (Python/OWL), formation des équipes et support continu. 154+ projets livrés, 1 300+ utilisateurs actifs. Spécificités suisses nativement couvertes : QR-factures, TVA CH, plans comptables locaux, multi-devises CHF/EUR.
+## Services
 
-**En tant qu'éditeur**, D4E développe la suite Elvy — des produits Odoo packagés, à prix fixe, déployables en quelques heures :
-- **ElvyBat** : ERP pour le BTP et la construction. Gestion de chantiers, facturation de situation, rentabilité en temps réel, pointage terrain mobile, IA vocale pour bons de régie. 1 400+ chantiers gérés. Dès 490 CHF/an.
-- **ElvyPrint** : ERP pour les revendeurs de systèmes d'impression. Contrats de location/maintenance/MPS, relevés de compteurs automatiques, SAV, planification techniciens. 20 000+ machines suivies.
-- **ElvyEduca** : ERP pour établissements d'enseignement et organismes de formation. Admissions, dossiers étudiants (SIS), emplois du temps, notes, facturation, portail familles.
-- **ElvyLaw** : ERP pour avocats et notaires. Gestion de cabinet juridique sur Odoo Enterprise.
-- **ElvyInsurance** : Solution pour courtiers en assurance — en cours de développement.
-
-**Tarifs** : Starter Pack Odoo à 2 500 CHF HT (clé en main, formation incluse). ElvyBat à 490 CHF/an + 2 960 CHF d'installation. Forfaits support de 750 à 2 600 CHF.
-
-**Équipe** : Antonio Spedicato (fondateur, consultant Odoo) et Laëtitia André (consultante Odoo & chef de projet). Bureaux à Genève, Sion et Barcelone.
-
-## Pages principales
-
-- [Accueil](https://digital4efficiency.ch/): Présentation de D4E comme intégrateur Odoo Gold Partner et éditeur de la suite Elvy
-- [Odoo](https://digital4efficiency.ch/odoo): Vision d'Odoo par D4E — modules déployés, secteurs couverts, intégrations tierces, 8 ans d'expertise
-- [Suite Elvy](https://digital4efficiency.ch/elvy): Vue d'ensemble des solutions verticales Elvy construites sur Odoo Enterprise
-- [ElvyBat](https://digital4efficiency.ch/elvybat): Solution ERP BTP/Construction — gestion de chantiers, rentabilité, facturation de situation, pointage terrain
-- [ElvyPrint](https://digital4efficiency.ch/elvyprint): Solution ERP imprimerie — contrats, relevés de compteurs, SAV et facturation automatisés
-- [ElvyEduca](https://digital4efficiency.ch/elvyeduca): Solution ERP éducation — admissions, scolarité, emplois du temps et facturation unifiés
-- [ElvyInsurance](https://digital4efficiency.ch/elvyinsurance): Solution ERP courtiers en assurance (bientôt disponible)
-- [Tarifs](https://digital4efficiency.ch/tarifs): Starter Pack Odoo (2 500 CHF HT), ElvyBat (490 CHF/an + 2 960 CHF installation), forfaits support
-- [À propos](https://digital4efficiency.ch/entreprise): Histoire de D4E, fondateurs Antonio Spedicato et Laëtitia André, équipe et références
-- [Rejoindre D4E](https://digital4efficiency.ch/jobs): Offres d'emploi — Consultant Odoo (Genève/Sion), Développeur Odoo Python (Genève/Barcelone)
-- [Support](https://digital4efficiency.ch/support): Formulaire de ticket support et assistance technique Odoo
-- [Conditions générales](https://digital4efficiency.ch/conditions-generales): CGV, politique de cookies et mentions légales
+- Intégration Odoo : https://digital4efficiency.ch/odoo
+- Offres et packs : https://digital4efficiency.ch/tarifs
+- Support et formation : https://digital4efficiency.ch/support
 
 ## Contact
 
-- Téléphone : +41 58 255 11 15
-- WhatsApp : +41 76 434 45 95
-- Email : info@digital4efficiency.ch
-- Genève : Chemin du Pavillon 2, 1218 Le Grand-Saconnex
-- Sion : Place du Midi 48, 1950 Sion
-- Barcelone : Carrer de la Riera de Sant Miquel 1 BIS, 08029 Barcelona
-
-## Versions Markdown des pages
-
-Ajoutez `.md` à n'importe quelle URL pour obtenir le contenu en Markdown :
-`https://digital4efficiency.ch/odoo.md`, `https://digital4efficiency.ch/elvybat.md`, etc.
+- Site : https://digital4efficiency.ch
+- Entreprise : https://digital4efficiency.ch/entreprise

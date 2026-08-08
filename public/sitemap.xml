@@ -4,12 +4,13 @@
   <url><loc>https://digital4efficiency.ch/odoo</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital4efficiency.ch/elvy</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital4efficiency.ch/elvybat</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digital4efficiency.ch/elvyscan</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital4efficiency.ch/elvyprint</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital4efficiency.ch/elvyinsurance</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital4efficiency.ch/elvyeduca</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital4efficiency.ch/tarifs</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital4efficiency.ch/entreprise</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital4efficiency.ch/jobs</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://digital4efficiency.ch/support</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digital4efficiency.ch/conditions-generales</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://digital4efficiency.ch/cgu</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
 </urlset>

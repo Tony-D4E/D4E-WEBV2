@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
             <a className="ft-link" href="/elvybat">ElvyBât</a>
             <a className="ft-link" href="/elvyscan">ElvyScan</a>
             <a className="ft-link" href="/elvyprint">ElvyPrint</a>
-            <a className="ft-link" href="/elvyinsurance">ElvyAssurance</a>
+            <a className="ft-link" href="/elvyinsurance">ElvyInsurance</a>
             <a className="ft-link" href="/elvyeduca">ElvyEduca</a>
           </div>
 
