@@ -1,6 +1,6 @@
 import {
   ArrowRight, Phone, Mail,
-  ChevronRight, Printer, Shield,
+  ChevronRight, Printer, Shield, ScanLine,
   GraduationCap, HardHat, Grape, Building,
   Users, Database, Heart, Rocket
 } from 'lucide-react';
@@ -18,6 +18,14 @@ const solutionsReady = [
     accroche: 'Pilotez vos chantiers, ma\u00eetrisez vos marges.',
     icon: HardHat,
     accent: '#00D4C8',
+  },
+  {
+    to: '/elvyscan',
+    label: 'ElvyScan',
+    secteur: 'Soumissions BTP · CAN/CFC',
+    accroche: 'La soumission lue, chiffr\u00e9e et renvoy\u00e9e sans ressaisie.',
+    icon: ScanLine,
+    accent: '#00a1af',
   },
   {
     to: '/elvyprint',
@@ -343,6 +351,7 @@ export function Elvy() {
                 <select name="interet" required className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white w-full focus:outline-none focus:border-[#00D4C8] transition-colors">
                   <option value="">{`Ce qui m'int\u00e9resse *`}</option>
                   <option>ElvyBat - Construction</option>
+                  <option>ElvyScan - Soumissions</option>
                   <option>ElvyPrint - Impression</option>
                   <option>{`ElvyEduca - \u00c9ducation`}</option>
                   <option>ElvyInsurance - Assurance</option>
