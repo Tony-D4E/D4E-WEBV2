@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const solutions = [
   { to: '/elvybat',       label: 'ElvyBât',       desc: 'Construction & chantiers', accent: '#00D4C8' },
+  { to: '/elvyscan',      label: 'ElvyScan',      desc: 'Soumissions & chiffrage',  accent: '#00a1af' },
   { to: '/elvyprint',     label: 'ElvyPrint',     desc: 'Impression & production',  accent: '#F59E0B' },
   { to: '/elvyeduca',     label: 'ElvyEduca',     desc: 'Education & formation',    accent: '#8B5CF6' },
   { to: '/elvyinsurance', label: 'ElvyInsurance', desc: 'Assurance & courtage',     accent: '#3B82F6' },
